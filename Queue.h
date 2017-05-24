@@ -1,6 +1,18 @@
 //
 // Created by chad on 5/24/17.
 //
+/*
+ * I want to implement the following functions
+    empty
+    size
+    front
+    back
+    push_back
+    pop_front
+
+ */
+
+
 
 #ifndef ACA_PROJECT_QUEUE_H
 #define ACA_PROJECT_QUEUE_H
