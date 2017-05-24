@@ -18,12 +18,26 @@
 #define ACA_PROJECT_QUEUE_H
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 //borrowed linkedlist code from http://www.learn-c.org/en/Linked_lists
 
 typedef struct node {
     int val;
     struct node * next;
 } node_t;
+
+
+typedef struct queue {
+    struct node * head;
+    struct node * tail;
+} queue;
+
+bool isEmpty(node_t* head){
+    if(head == NULL){
+        return true;
+    }
+    return false;
+}
 
 void print_list(node_t * head) {
     node_t * current = head;
@@ -34,7 +48,7 @@ void print_list(node_t * head) {
     }
 }
 
-void push_end(node_t * head, int val) {
+void push_back(node_t * head, int val) {
     node_t * current = head;
     while (current->next != NULL) {
         current = current->next;
@@ -46,7 +60,7 @@ void push_end(node_t * head, int val) {
     current->next->next = NULL;
 }
 
-void push_beginning(node_t ** head, int val) {
+node_t front(node_t ** head, int val) {
     node_t * new_node;
     new_node = malloc(sizeof(node_t));
 
