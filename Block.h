@@ -13,10 +13,15 @@ typedef struct BlockTag{
     UT_hash_handle hh; /* make this structure hashable*/
     //Used in HashMap
 
+    struct BlockTag (*Constructor)(int id,int offset);
+    int (*func)(int x , int y);
+
     bool validBit;
     bool dirtyBit;
     int offset;//set associative, so offset refers to the block
-    int blockSize;//16 KB
+    int size;//64 byte block size
 } Block;
+
+Block BlockConstructor(int id,int offset);
 
 #endif //ACA_PROJECT_BLOCK_H
