@@ -20,7 +20,7 @@ void Add_Block_Check_If_Exists(int id, Block* value) {
 
     HASH_FIND_INT(HashTable, &id, s);  /* id already in the hash? */
     if (s==NULL) {
-        s = (struct my_struct*)malloc(sizeof(struct my_struct));
+        s = (struct BlockTag*)malloc(sizeof(struct BlockTag));
         s->id = id;
         HASH_ADD_INT( HashTable, id, s );  /* id: name of key field */
     }
