@@ -4,10 +4,16 @@
 
 #ifndef ACA_PROJECT_SET_H
 #define ACA_PROJECT_SET_H
+#include "uthash/include/uthash.h"
 
+typedef struct SetTag {
+    //Used in HashMap
+    int size; /* use this field as the key */
+    UT_hash_handle hh; /* make this structure hashable*/
+    //Used in HashMap
 
-typedef struct SetTag{
     int (*close)(void *self);
+    int index;//refers to the Set
     //contain blocks
     //maybe store how many blocks
 } Set;
