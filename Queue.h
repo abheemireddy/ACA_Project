@@ -27,13 +27,13 @@ typedef struct node {
 } node_t;
 
 
-typedef struct queue {
+typedef struct QueueTag {
     struct node * head;
     struct node * tail;
-} queue;
+} Queue;
 
-bool isEmpty(node_t* head){
-    if(head == NULL){
+bool isEmpty(Queue queue){
+    if(queue.head == NULL){
         return true;
     }
     return false;
