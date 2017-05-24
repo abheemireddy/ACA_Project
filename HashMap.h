@@ -18,21 +18,21 @@ struct my_struct {
 Block *block = NULL;
 
 void add_user(Block *s) {
-    HASH_ADD_INT( block, id, s );
+    HASH_ADD_INT( block, id, s );//add s and id to hashmap
 }
 
 //look up item in hashmap
 Block *find_user(int block_id) {
     Block *s;
 
-    HASH_FIND_INT( block, &block_id, s );
+    HASH_FIND_INT( block, &block_id, s );//find block_id and put into s
     return s;
 }
 
 
 //delete from hashmap
 void delete_user(Block *blocks) {
-    HASH_DEL( block, blocks);
+    HASH_DEL( block, blocks);//removes blocks of type block
 }
 
 
