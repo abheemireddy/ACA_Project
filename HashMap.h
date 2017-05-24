@@ -9,11 +9,6 @@
 #include "uthash.h"
 #include "Block.h"
 
-struct my_struct {
-    int id;            /* we'll use this field as the key */
-    char name[10];
-    UT_hash_handle hh; /* makes this structure hashable */
-};
 
 Block *block = NULL;
 

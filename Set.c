@@ -27,8 +27,6 @@ void Add_Block_Check_If_Exists(int id, Block* value) {
 }
 
 
-
-
 //look up item in hashmap
 Block* Get_Block(int block_id) {
     Block *s;
@@ -36,7 +34,6 @@ Block* Get_Block(int block_id) {
     HASH_FIND_INT( HashTable, &block_id, s );//find block_id and put into s
     return s;
 }
-
 
 //delete from hashmap
 void Delete_Block(Block *blocks) {

@@ -18,7 +18,7 @@ typedef struct BlockTag{
 
     bool validBit;
     bool dirtyBit;
-    int offset;//set associative, so offset refers to the block
+    int tag;//set associative, so offset refers to the block
     int size;//64 byte block size
 } Block;
 
