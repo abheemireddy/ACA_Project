@@ -9,7 +9,7 @@
 
 typedef struct BlockTag{
     //Used in HashMap
-    int size; /* use this field as the key */
+    int id; /* use this field as the key */
     UT_hash_handle hh; /* make this structure hashable*/
     //Used in HashMap
 
