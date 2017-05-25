@@ -19,8 +19,8 @@ Set Constructor_Set(){
     return set;
 }
 
-void put(Block** HashTable,Block *value) {  //key is tag of the block.  Seems magical
-    HASH_ADD_INT( *HashTable, tag, value );//add s and id to hashmap
+void put(Block** HashTable,Block *value) {  //key is useFrequency of the block.  Seems magical
+    HASH_ADD_INT( *HashTable, useFrequency, value );//add s and id to hashmap
     //The last parameter is a pointer to the structure being added
 }
 
@@ -31,8 +31,8 @@ void replace(Block** HashTable,int key) {
     HASH_FIND_INT(*HashTable, &key, hashTableStoresInThisBlock);  /* id already in the hash? */
     if (hashTableStoresInThisBlock==NULL) {
         hashTableStoresInThisBlock = (struct BlockTag*)malloc(sizeof(struct BlockTag));
-        hashTableStoresInThisBlock->tag = key;
-        HASH_ADD_INT( *HashTable, tag, hashTableStoresInThisBlock );  /* id: name of key field */
+        hashTableStoresInThisBlock->useFrequency = key;
+        HASH_ADD_INT( *HashTable, useFrequency, hashTableStoresInThisBlock );  /* id: name of key field */
     }
 }
 

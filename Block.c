@@ -4,12 +4,7 @@
 
 #include <Block.h>
 
-Block BlockConstructor(int tag){
-    Block block = {tag:tag,size:64};
+Block Constructor_Block(){
+    Block block = {};
     return block;
 }
-
-
-
-//Below, assume block contains char* data
-

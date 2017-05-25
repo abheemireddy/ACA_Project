@@ -8,22 +8,17 @@
 #include "uthash/include/uthash.h"//troydhanson.github.io/uthash
 
 typedef struct BlockTag{
-    //Used in HashMap
-    int tag; /* use this field as the key */
-    UT_hash_handle hh; /* make this structure hashable*/
-    //Used in HashMap
-
-    //Anu, use this to get the Block
-    struct BlockTag (*Constructor)(int id,int offset);
-    int (*func)(int x , int y);
+    int size;
 
     bool validBit;
     bool dirtyBit;
-    int size;//64 byte block size
+
+    int useFrequency;
+
+
+    UT_hash_handle hh; /* make this structure hashable*/
 } Block;//Block is synonymous for struct BlockTag (they mean the same thing).
 
-
-
-Block BlockConstructor(int tag);//function header
+Block Constructor_Block();//construct to call to obtain a Block Instance
 
 #endif //ACA_PROJECT_BLOCK_H
