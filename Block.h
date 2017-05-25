@@ -9,19 +9,21 @@
 
 typedef struct BlockTag{
     //Used in HashMap
-    int id; /* use this field as the key */
+    int tag; /* use this field as the key */
     UT_hash_handle hh; /* make this structure hashable*/
     //Used in HashMap
 
+    //Anu, use this to get the Block
     struct BlockTag (*Constructor)(int id,int offset);
     int (*func)(int x , int y);
 
     bool validBit;
     bool dirtyBit;
-    int tag;//set associative, so offset refers to the block
     int size;//64 byte block size
-} Block;
+} Block;//Block is synonymous for struct BlockTag (they mean the same thing).
 
-Block BlockConstructor(int id,int offset);
+
+
+Block BlockConstructor(int tag);//function header
 
 #endif //ACA_PROJECT_BLOCK_H

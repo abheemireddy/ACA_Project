@@ -12,12 +12,12 @@ typedef struct SetTag { //4 blocks per set, 4000 blocks in cache = 1000 sets, 64
 
     int size; //4 in 4 way set-associative
 
-    void (*put)(struct BlockTag* HashTable,struct BlockTag *value);
-    void (*Add_Or_Replace)(struct BlockTag* HashTable,int key);
-    struct BlockTag* (*get)(struct BlockTag* HashTable,int key);
-    void (*removeFromTable)(struct BlockTag* HashTable,struct BlockTag *blockToRemove);
-    void (*delete_all)(struct BlockTag* HashTable);
-    int (*Count)(struct BlockTag* HashTable);
+    void (*put)(struct BlockTag** HashTable,struct BlockTag *value);
+    void (*Add_Or_Replace)(struct BlockTag** HashTable,int key);
+    struct BlockTag* (*get)(struct BlockTag** HashTable,int key);
+    void (*removeFromTable)(struct BlockTag** HashTable,struct BlockTag *blockToRemove);
+    void (*delete_all)(struct BlockTag** HashTable);
+    int (*Count)(struct BlockTag** HashTable);
 
     //---------Used in HashMap
     int index;/* use this field as the key */
@@ -31,11 +31,11 @@ typedef struct SetTag { //4 blocks per set, 4000 blocks in cache = 1000 sets, 64
 
 Set Constructor_Set();
 
-void put(struct BlockTag* HashTable,struct BlockTag *value);
-void Add_Or_Replace(struct BlockTag* HashTable,int key);
-struct BlockTag* get(struct BlockTag* HashTable,int key);
-void removeFromTable(struct BlockTag* HashTable,struct BlockTag *blockToRemove);
-void delete_all(struct BlockTag* HashTable);
-int Count(struct BlockTag* HashTable);
+void put(struct BlockTag** HashTable,struct BlockTag *value);
+void Add_Or_Replace(struct BlockTag** HashTable,int key);
+struct BlockTag* get(struct BlockTag** HashTable,int key);
+void removeFromTable(struct BlockTag** HashTable,struct BlockTag *blockToRemove);
+void delete_all(struct BlockTag** HashTable);
+int Count(struct BlockTag** HashTable);
 
 #endif //ACA_PROJECT_SET_H
