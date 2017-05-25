@@ -17,12 +17,12 @@ typedef struct BlockTag{
     int useFrequency;//for LRU in Set
 
     void (*SetCacheLines)(struct BlockTag* block,CacheLine cacheLines[]);
-    CacheLine* cacheLines;//number in array is the number of cache lines in the block
+    CacheLine** cacheLines;//number in array is the number of cache lines in the block
 
     UT_hash_handle hh; /* make this structure hashable*/
 } Block;//Block is synonymous for struct BlockTag (they mean the same thing).
 
-Block Constructor_Block();//construct to call to obtain a Block Instance
+Block Constructor_Block(int numberOfCacheLines);//construct to call to obtain a Block Instance
 
 void SetCacheLines(Block block,CacheLine* cacheLines[]);
 
