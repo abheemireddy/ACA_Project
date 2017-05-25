@@ -8,9 +8,9 @@ void ExampleUsingHash(){
     Block case2 = {useFrequency:2,data:"bitString2"};
     Block* block = malloc(sizeof(Block));
     block = &case1;
-    //set.put(&set.HashTable,block);
+    set.put(set.hh,&set.HashTable,block);
     block = &case2;
-    //set.put(&set.HashTable,block);
+    set.put(set.hh,&set.HashTable,block);
     Block* returned = set.get(&set.HashTable,block->data);
     printf("%d",returned->useFrequency);
 }
