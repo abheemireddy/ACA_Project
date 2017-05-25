@@ -1,0 +1,1 @@
+/usr/bin/cc  -g   CMakeFiles/ACA_Project2.dir/main.c.o CMakeFiles/ACA_Project2.dir/Block.c.o CMakeFiles/ACA_Project2.dir/Set.c.o  -o ACA_Project2 
