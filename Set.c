@@ -27,7 +27,12 @@ void AddBlock(Set set,Block** HashTable,struct BlockTag* blockToAdd){
         set.put(set.hh,HashTable,blockToAdd);
     }else{
         set.SortHash(HashTable);
-
+        Block* blockToRemove = (*HashTable)->hh.next;
+        if(blockToRemove->dirtyBit == false){
+            set.removeFromTable(HashTable,(*HashTable)->hh.next);//remove block from top of hash
+        }else {
+            //write to L2 via the L2 Queue
+        }
     }
 }
 
