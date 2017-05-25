@@ -22,8 +22,11 @@ typedef struct SetTag { //4 blocks per set, 4000 blocks in cache = 1000 sets, 64
     void (*replace)(UT_hash_handle hh,struct BlockTag** HashTable,struct BlockTag *value);
     struct BlockTag* (*get)(struct BlockTag** HashTable,char* key);
 
-    //---------Used in HashMap
-    int index;/* use this field as the key */
+    int tag;
+    int index;
+    int offset;
+
+    //---------Used in Cache HashMap to find set
     UT_hash_handle hh; /* make this structure hashable*/
     //---------Used in HashMap
 
