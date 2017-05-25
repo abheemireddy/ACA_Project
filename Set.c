@@ -10,7 +10,7 @@
 Set Constructor_Set(){
     Set set = {};
     set.put = &put;
-    set.Add_Or_Replace = &Add_Or_Replace;
+    set.replace = &replace;
     set.get = &get;
     set.removeFromTable = &removeFromTable;
     set.delete_all = &delete_all;
@@ -25,7 +25,7 @@ void put(Block** HashTable,Block *value) {  //key is tag of the block.  Seems ma
 }
 
 //HASH_REPLACE  is equivalent to HASH_ADD but it finds and deletes that item first
-void Add_Or_Replace(Block** HashTable,int key) {
+void replace(Block** HashTable,int key) {
     struct BlockTag *hashTableStoresInThisBlock;//to store getter
 
     HASH_FIND_INT(*HashTable, &key, hashTableStoresInThisBlock);  /* id already in the hash? */
