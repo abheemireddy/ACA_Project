@@ -8,7 +8,7 @@
 
 struct BlockTag;//forward declaration
 
-typedef struct SetTag { //4 blocks per set, 4000 blocks in cache = 1000 sets, 64KB/16B = 4000
+typedef struct SetTag {
 
     int numberOfBlocks;
 

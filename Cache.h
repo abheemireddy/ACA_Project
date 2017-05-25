@@ -6,8 +6,9 @@
 #define ACA_PROJECT_CACHE_H
 
 typedef struct CacheTag{
-    //some reference to sets
-    //maybe how many sets
+    int setAssociativity;
 } Cache;
+
+Cache Constructor_Cache(int setAssociativity);
 
 #endif //ACA_PROJECT_CACHE_H

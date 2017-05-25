@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/ACA_Project2.dir/Block.c.o"
   "CMakeFiles/ACA_Project2.dir/Set.c.o"
   "CMakeFiles/ACA_Project2.dir/cache_line.c.o"
+  "CMakeFiles/ACA_Project2.dir/Cache.c.o"
   "ACA_Project2.pdb"
   "ACA_Project2"
 )

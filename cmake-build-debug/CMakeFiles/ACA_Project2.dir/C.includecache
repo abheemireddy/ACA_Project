@@ -56,6 +56,12 @@ uthash/include/uthash.h
 cache_line.h
 /home/chad/Desktop/ACA_Project/cache_line.h
 
+/home/chad/Desktop/ACA_Project/Cache.c
+Cache.h
+/home/chad/Desktop/ACA_Project/Cache.h
+
+/home/chad/Desktop/ACA_Project/Cache.h
+
 /home/chad/Desktop/ACA_Project/Set.c
 Block.h
 /home/chad/Desktop/ACA_Project/Block.h

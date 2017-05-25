@@ -150,6 +150,33 @@ Block.c.s:
 	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/Block.c.s
 .PHONY : Block.c.s
 
+Cache.o: Cache.c.o
+
+.PHONY : Cache.o
+
+# target to build an object file
+Cache.c.o:
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/Cache.c.o
+.PHONY : Cache.c.o
+
+Cache.i: Cache.c.i
+
+.PHONY : Cache.i
+
+# target to preprocess a source file
+Cache.c.i:
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/Cache.c.i
+.PHONY : Cache.c.i
+
+Cache.s: Cache.c.s
+
+.PHONY : Cache.s
+
+# target to generate assembly for a file
+Cache.c.s:
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/Cache.c.s
+.PHONY : Cache.c.s
+
 Set.o: Set.c.o
 
 .PHONY : Set.o
@@ -243,6 +270,9 @@ help:
 	@echo "... Block.o"
 	@echo "... Block.i"
 	@echo "... Block.s"
+	@echo "... Cache.o"
+	@echo "... Cache.i"
+	@echo "... Cache.s"
 	@echo "... Set.o"
 	@echo "... Set.i"
 	@echo "... Set.s"
