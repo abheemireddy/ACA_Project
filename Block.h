@@ -15,6 +15,7 @@ typedef struct BlockTag{
     bool dirtyBit;
 
     int useFrequency;//for LRU in Set
+    char* data;//chunk of memory it holds
 
     void (*SetCacheLines)(struct BlockTag block,CacheLine* cacheLines[]);
     CacheLine** cacheLines;//number in array is the number of cache lines in the block

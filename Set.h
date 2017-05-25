@@ -12,12 +12,15 @@ typedef struct SetTag { //4 blocks per set, 4000 blocks in cache = 1000 sets, 64
 
     int numberOfBlocks;
 
-    void (*put)(struct BlockTag** HashTable,struct BlockTag *value);
-    void (*replace)(struct BlockTag** HashTable,int key);
-    struct BlockTag* (*get)(struct BlockTag** HashTable,int key);
+    void (*put)(UT_hash_handle hh,struct BlockTag** HashTable,struct BlockTag *value);
+    void (*replaceByUseFrequency)(struct BlockTag** HashTable,int key);
+    struct BlockTag* (*getByUseFrequency)(struct BlockTag** HashTable,int key);
     void (*removeFromTable)(struct BlockTag** HashTable,struct BlockTag *blockToRemove);
     void (*delete_all)(struct BlockTag** HashTable);
     int (*Count)(struct BlockTag** HashTable);
+
+    void (*replace)(UT_hash_handle hh,struct BlockTag** HashTable,struct BlockTag *value);
+    struct BlockTag* (*get)(struct BlockTag** HashTable,char* key);
 
     //---------Used in HashMap
     int index;/* use this field as the key */
@@ -33,11 +36,14 @@ Set Constructor_Set(int numberOfBlocks);
 void AddBlock(struct BlockTag* block);
 
 //HashTable functions
-void put(struct BlockTag** HashTable,struct BlockTag *value);
-void replace(struct BlockTag** HashTable,int key);
-struct BlockTag* get(struct BlockTag** HashTable,int key);
+void put(UT_hash_handle hh,struct BlockTag** HashTable,struct BlockTag *value);
+void replaceByUseFrequency(struct BlockTag** HashTable,int key);
+struct BlockTag* getByUseFrequency(struct BlockTag** HashTable,int key);
 void removeFromTable(struct BlockTag** HashTable,struct BlockTag *blockToRemove);
 void delete_all(struct BlockTag** HashTable);
 int Count(struct BlockTag** HashTable);
+
+void replace(UT_hash_handle hh,struct BlockTag** HashTable,struct BlockTag *value);
+struct BlockTag* get(struct BlockTag** HashTable,char* key);
 
 #endif //ACA_PROJECT_SET_H

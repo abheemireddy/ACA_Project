@@ -12,9 +12,11 @@ Set Constructor_Set(int numberOfBlocks){
     set.put = &put;
     set.replace = &replace;
     set.get = &get;
+    set.getByUseFrequency = &getByUseFrequency;
     set.removeFromTable = &removeFromTable;
     set.delete_all = &delete_all;
     set.Count = &Count;
+    set.replaceByUseFrequency = &replaceByUseFrequency;
     set.HashTable = NULL;
     return set;
 }
@@ -24,13 +26,13 @@ void AddBlock(struct BlockTag* block){
 }
 
 
-void put(Block** HashTable,Block *value) {  //key is useFrequency of the block.  Seems magical
-    HASH_ADD_INT( *HashTable, useFrequency, value );//add s and id to hashmap
+void put(UT_hash_handle hh,Block** HashTable,Block *value) {  //key is useFrequency of the block.  Seems magical
+    HASH_ADD_KEYPTR(hh,*HashTable, value->data, strlen(value->data),value );
     //The last parameter is a pointer to the structure being added
 }
 
 //HASH_REPLACE  is equivalent to HASH_ADD but it finds and deletes that item first
-void replace(Block** HashTable,int key) {
+void replaceByUseFrequency(Block** HashTable,int key) {
     struct BlockTag *hashTableStoresInThisBlock;//to store getter
 
     HASH_FIND_INT(*HashTable, &key, hashTableStoresInThisBlock);  /* id already in the hash? */
@@ -40,13 +42,28 @@ void replace(Block** HashTable,int key) {
         HASH_ADD_INT( *HashTable, useFrequency, hashTableStoresInThisBlock );  /* id: name of key field */
     }
 }
+void replace(UT_hash_handle hh,Block** HashTable,Block *value) {
+    struct BlockTag *hashTableStoresInThisBlock;//to store getter
 
+    HASH_FIND_STR( *HashTable, value->data, hashTableStoresInThisBlock );
+    if (hashTableStoresInThisBlock==NULL) {
+        hashTableStoresInThisBlock = (struct BlockTag*)malloc(sizeof(struct BlockTag));
+        hashTableStoresInThisBlock->data = value->data;
+        HASH_ADD_KEYPTR(hh,*HashTable, value->data, strlen(value->data),value );
+    }
+}
 
 //look up item in hashmap
-Block* get(Block** HashTable,int key) {
+Block* getByUseFrequency(Block** HashTable,int key) {
     Block *hashTableStoresInThisBlock;
 
     HASH_FIND_INT( *HashTable, &key, hashTableStoresInThisBlock );//find block_id and put into s
+    return hashTableStoresInThisBlock;
+}
+Block* get(Block** HashTable,char* key) {
+    Block *hashTableStoresInThisBlock;
+
+    HASH_FIND_STR( *HashTable, key, hashTableStoresInThisBlock );//find block_id and put into s
     return hashTableStoresInThisBlock;
 }
 
