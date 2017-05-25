@@ -12,23 +12,30 @@ typedef struct SetTag { //4 blocks per set, 4000 blocks in cache = 1000 sets, 64
 
     int size; //4 in 4 way set-associative
 
-    int (*close)(void *self);
-    void (*Add_Block)(struct BlockTag* s);
-    struct BlockTag* (*Get_Block)(int block_id);
-    void (*Delete_Block)(struct BlockTag* blocks);
+    void (*put)(struct BlockTag* HashTable,struct BlockTag *value);
+    void (*Add_Or_Replace)(struct BlockTag* HashTable,int key);
+    struct BlockTag* (*get)(struct BlockTag* HashTable,int key);
+    void (*removeFromTable)(struct BlockTag* HashTable,struct BlockTag *blockToRemove);
+    void (*delete_all)(struct BlockTag* HashTable);
+    int (*Count)(struct BlockTag* HashTable);
 
     //---------Used in HashMap
     int index;/* use this field as the key */
     UT_hash_handle hh; /* make this structure hashable*/
     //---------Used in HashMap
 
+    struct BlockTag *HashTable; //This is my hashTable for blocks
     //contain blocks
     //maybe store how many blocks
 } Set;
 
+Set Constructor_Set();
 
-void Add_Block(struct BlockTag *s);
-struct BlockTag* Get_Block(int block_id);
-void Delete_Block(struct BlockTag *blocks);
+void put(struct BlockTag* HashTable,struct BlockTag *value);
+void Add_Or_Replace(struct BlockTag* HashTable,int key);
+struct BlockTag* get(struct BlockTag* HashTable,int key);
+void removeFromTable(struct BlockTag* HashTable,struct BlockTag *blockToRemove);
+void delete_all(struct BlockTag* HashTable);
+int Count(struct BlockTag* HashTable);
 
 #endif //ACA_PROJECT_SET_H
