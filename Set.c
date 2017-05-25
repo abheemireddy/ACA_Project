@@ -20,7 +20,7 @@ Set Constructor_Set(int numberOfBlocks){
 }
 
 void AddBlock(struct BlockTag* block){
-    
+
 }
 
 
@@ -70,4 +70,22 @@ int Count(Block** HashTable){
     int num_in_hashtable;
     num_in_hashtable = HASH_COUNT(*HashTable);
     return num_in_hashtable;
+}
+
+int block_comparator(void* a,void* b){
+    Block* aBlock = (Block*)a;
+    Block* bBlock = (Block*)b;
+    if (aBlock->useFrequency < bBlock->useFrequency){
+        return -1;
+    }
+    if (aBlock->useFrequency == bBlock->useFrequency){
+        return 0;
+    }
+    if (aBlock->useFrequency > bBlock->useFrequency){
+        return 1;
+    }
+}
+
+void SortHash(Block** HashTable){
+    HASH_SORT(*HashTable,block_comparator);
 }

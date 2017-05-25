@@ -16,7 +16,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ACA_Project2.dir/Set.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ACA_Project2.dir/Set.c.o" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Set.c" afterPath="$PROJECT_DIR$/Set.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Set.h" afterPath="$PROJECT_DIR$/Set.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/glib/.idea/workspace.xml" afterPath="$PROJECT_DIR$/glib/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -118,8 +118,8 @@
       <file leaf-file-name="Set.c" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Set.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="22" column="4" lean-forward="false" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
+            <state relative-caret-position="401">
+              <caret line="84" column="5" lean-forward="false" selection-start-line="84" selection-start-column="5" selection-end-line="84" selection-end-column="5" />
               <folding>
                 <element signature="e#38#56#0" expanded="true" />
               </folding>
@@ -195,7 +195,7 @@
     <option name="x" value="65" />
     <option name="y" value="-4" />
     <option name="width" value="1855" />
-    <option name="height" value="954" />
+    <option name="height" value="964" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -480,7 +480,7 @@
       <option name="presentableId" value="Default" />
       <updated>1495633368078</updated>
       <workItem from="1495633369604" duration="12505000" />
-      <workItem from="1495653263207" duration="15968000" />
+      <workItem from="1495653263207" duration="16950000" />
     </task>
     <task id="LOCAL-00001" summary="Okay, now it is all hooked up to the IDE for committing my changes.">
       <created>1495633456158</created>
@@ -650,19 +650,26 @@
       <option name="project" value="LOCAL" />
       <updated>1495724706778</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Adding block functions to set, e.g. AddBlock">
+      <created>1495724861745</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1495724861745</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28473000" />
+    <option name="totallyTimeSpent" value="29455000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="-4" width="1855" height="954" extended-state="6" />
+    <frame x="65" y="-4" width="1855" height="964" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18867925" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21621622" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21370499" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329849" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -711,7 +718,8 @@
     <MESSAGE value="Created cache_line struct for Anu to manipulate.  Blocks then contain cache_lines." />
     <MESSAGE value="Fixed cache pointer array problem." />
     <MESSAGE value="Updated Block Constructor" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated Block Constructor" />
+    <MESSAGE value="Adding block functions to set, e.g. AddBlock" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding block functions to set, e.g. AddBlock" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -933,8 +941,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Set.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="22" column="4" lean-forward="false" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
+        <state relative-caret-position="401">
+          <caret line="84" column="5" lean-forward="false" selection-start-line="84" selection-start-column="5" selection-end-line="84" selection-end-column="5" />
           <folding>
             <element signature="e#38#56#0" expanded="true" />
           </folding>
