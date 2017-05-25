@@ -177,6 +177,33 @@ Set.c.s:
 	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/Set.c.s
 .PHONY : Set.c.s
 
+cache_line.o: cache_line.c.o
+
+.PHONY : cache_line.o
+
+# target to build an object file
+cache_line.c.o:
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/cache_line.c.o
+.PHONY : cache_line.c.o
+
+cache_line.i: cache_line.c.i
+
+.PHONY : cache_line.i
+
+# target to preprocess a source file
+cache_line.c.i:
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/cache_line.c.i
+.PHONY : cache_line.c.i
+
+cache_line.s: cache_line.c.s
+
+.PHONY : cache_line.s
+
+# target to generate assembly for a file
+cache_line.c.s:
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/cache_line.c.s
+.PHONY : cache_line.c.s
+
 main.o: main.c.o
 
 .PHONY : main.o
@@ -219,6 +246,9 @@ help:
 	@echo "... Set.o"
 	@echo "... Set.i"
 	@echo "... Set.s"
+	@echo "... cache_line.o"
+	@echo "... cache_line.i"
+	@echo "... cache_line.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

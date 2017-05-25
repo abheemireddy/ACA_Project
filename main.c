@@ -2,7 +2,7 @@
 #include "Set.h"
 #include "Block.h"
 
-void ExampleUsingHash(){
+void ExampleUsingSetHash(){
     Set set = Constructor_Set(4);
     Block case1 = {useFrequency:1,data:"bitString1"};
     Block case2 = {useFrequency:2,data:"bitString2"};
@@ -16,5 +16,5 @@ void ExampleUsingHash(){
 }
 
 int main() {
-    ExampleUsingHash();
+    ExampleUsingSetHash();
 }
