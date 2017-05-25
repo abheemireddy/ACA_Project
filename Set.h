@@ -10,7 +10,7 @@ struct BlockTag;//forward declaration
 
 typedef struct SetTag { //4 blocks per set, 4000 blocks in cache = 1000 sets, 64KB/16B = 4000
 
-    int size; //4 in 4 way set-associative
+    int numberOfBlocks;
 
     void (*put)(struct BlockTag** HashTable,struct BlockTag *value);
     void (*replace)(struct BlockTag** HashTable,int key);
@@ -29,7 +29,7 @@ typedef struct SetTag { //4 blocks per set, 4000 blocks in cache = 1000 sets, 64
     //maybe store how many blocks
 } Set;
 
-Set Constructor_Set();
+Set Constructor_Set(int numberOfBlocks);
 
 void put(struct BlockTag** HashTable,struct BlockTag *value);
 void replace(struct BlockTag** HashTable,int key);

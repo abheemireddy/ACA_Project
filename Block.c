@@ -5,8 +5,8 @@
 #include <Block.h>
 
 Block Constructor_Block(int numberOfCacheLines){
-    Block block = {};
-    block.cacheLines = (struct CacheLineTag*)malloc(numberOfCacheLines*sizeof(struct CacheLineTag));
+    Block block = {dirtyBit:false,validBit:false,useFrequency:0};
+    *block.cacheLines = (struct CacheLineTag*)malloc(numberOfCacheLines*sizeof(struct CacheLineTag));
     block.SetCacheLines = &SetCacheLines;
     return block;
 }

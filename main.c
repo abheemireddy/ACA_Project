@@ -3,7 +3,7 @@
 #include "Block.h"
 
 void ExampleUsingHash(){
-    Set set = Constructor_Set();
+    Set set = Constructor_Set(4);
     Block case1 = {useFrequency:1};
     Block case2 = {useFrequency:2};
     Block* block = malloc(sizeof(Block));

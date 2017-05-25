@@ -7,8 +7,8 @@
 #include <stdio.h>
 
 
-Set Constructor_Set(){
-    Set set = {};
+Set Constructor_Set(int numberOfBlocks){
+    Set set = {numberOfBlocks:numberOfBlocks};
     set.put = &put;
     set.replace = &replace;
     set.get = &get;

@@ -16,7 +16,7 @@ typedef struct BlockTag{
 
     int useFrequency;//for LRU in Set
 
-    void (*SetCacheLines)(struct BlockTag* block,CacheLine cacheLines[]);
+    void (*SetCacheLines)(struct BlockTag block,CacheLine* cacheLines[]);
     CacheLine** cacheLines;//number in array is the number of cache lines in the block
 
     UT_hash_handle hh; /* make this structure hashable*/
