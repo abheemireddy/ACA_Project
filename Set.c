@@ -21,8 +21,14 @@ Set Constructor_Set(int numberOfBlocks){
     return set;
 }
 
-void AddBlock(struct BlockTag* block){
+void AddBlock(Set set,Block** HashTable,struct BlockTag* blockToAdd){
+    int blocksInSet = set.Count(HashTable);
+    if(blocksInSet < set.numberOfBlocks){
+        set.put(set.hh,HashTable,blockToAdd);
+    }else{
+        set.SortHash(HashTable);
 
+    }
 }
 
 
