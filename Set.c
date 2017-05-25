@@ -19,6 +19,11 @@ Set Constructor_Set(int numberOfBlocks){
     return set;
 }
 
+void AddBlock(struct BlockTag* block){
+    
+}
+
+
 void put(Block** HashTable,Block *value) {  //key is useFrequency of the block.  Seems magical
     HASH_ADD_INT( *HashTable, useFrequency, value );//add s and id to hashmap
     //The last parameter is a pointer to the structure being added

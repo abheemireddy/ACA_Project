@@ -13,15 +13,10 @@
   <component name="ChangeListManager">
     <list default="true" id="874cd3ee-283a-48e2-bbb0-bde542e13d07" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/ACA_Project2" afterPath="$PROJECT_DIR$/cmake-build-debug/ACA_Project2" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ACA_Project2.dir/Block.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ACA_Project2.dir/Block.c.o" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ACA_Project2.dir/Set.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ACA_Project2.dir/Set.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ACA_Project2.dir/main.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ACA_Project2.dir/main.c.o" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Block.c" afterPath="$PROJECT_DIR$/Block.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Block.h" afterPath="$PROJECT_DIR$/Block.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Set.c" afterPath="$PROJECT_DIR$/Set.c" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Set.h" afterPath="$PROJECT_DIR$/Set.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.c" afterPath="$PROJECT_DIR$/main.c" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -90,11 +85,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Block.c" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Block.c" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Block.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+            <state relative-caret-position="180">
+              <caret line="10" column="17" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -113,18 +108,18 @@
       <file leaf-file-name="Set.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Set.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="341">
-              <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+            <state relative-caret-position="377">
+              <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="38" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Set.c" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Set.c" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Set.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="39" />
+            <state relative-caret-position="396">
+              <caret line="22" column="4" lean-forward="false" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
               <folding>
                 <element signature="e#38#56#0" expanded="true" />
               </folding>
@@ -182,11 +177,11 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/Queue.h" />
         <option value="$PROJECT_DIR$/cache_line.h" />
-        <option value="$PROJECT_DIR$/Set.c" />
-        <option value="$PROJECT_DIR$/Set.h" />
         <option value="$PROJECT_DIR$/main.c" />
         <option value="$PROJECT_DIR$/Block.c" />
         <option value="$PROJECT_DIR$/Block.h" />
+        <option value="$PROJECT_DIR$/Set.h" />
+        <option value="$PROJECT_DIR$/Set.c" />
       </list>
     </option>
   </component>
@@ -200,7 +195,7 @@
     <option name="x" value="65" />
     <option name="y" value="-4" />
     <option name="width" value="1855" />
-    <option name="height" value="964" />
+    <option name="height" value="954" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -485,7 +480,7 @@
       <option name="presentableId" value="Default" />
       <updated>1495633368078</updated>
       <workItem from="1495633369604" duration="12505000" />
-      <workItem from="1495653263207" duration="15828000" />
+      <workItem from="1495653263207" duration="15968000" />
     </task>
     <task id="LOCAL-00001" summary="Okay, now it is all hooked up to the IDE for committing my changes.">
       <created>1495633456158</created>
@@ -648,19 +643,26 @@
       <option name="project" value="LOCAL" />
       <updated>1495723409658</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Updated Block Constructor">
+      <created>1495724706778</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1495724706778</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28333000" />
+    <option name="totallyTimeSpent" value="28473000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="-4" width="1855" height="964" extended-state="6" />
+    <frame x="65" y="-4" width="1855" height="954" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18867925" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21370499" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21621622" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329849" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -708,7 +710,8 @@
     <MESSAGE value="Changed API of Set for the function replace." />
     <MESSAGE value="Created cache_line struct for Anu to manipulate.  Blocks then contain cache_lines." />
     <MESSAGE value="Fixed cache pointer array problem." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed cache pointer array problem." />
+    <MESSAGE value="Updated Block Constructor" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated Block Constructor" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -892,24 +895,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Set.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="39" />
-          <folding>
-            <element signature="e#38#56#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Set.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -932,9 +917,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Block.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+        <state relative-caret-position="180">
+          <caret line="10" column="17" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Set.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Set.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="22" column="4" lean-forward="false" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
+          <folding>
+            <element signature="e#38#56#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

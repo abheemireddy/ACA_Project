@@ -30,7 +30,9 @@ typedef struct SetTag { //4 blocks per set, 4000 blocks in cache = 1000 sets, 64
 } Set;
 
 Set Constructor_Set(int numberOfBlocks);
+void AddBlock(struct BlockTag* block);
 
+//HashTable functions
 void put(struct BlockTag** HashTable,struct BlockTag *value);
 void replace(struct BlockTag** HashTable,int key);
 struct BlockTag* get(struct BlockTag** HashTable,int key);
