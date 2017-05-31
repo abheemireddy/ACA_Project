@@ -39,6 +39,14 @@ bool isEmpty(Queue queue){
     return false;
 }
 
+node_t front(Queue queue){
+    return *queue.head;
+}
+
+node_t tail(Queue queue){
+    return *queue.tail;
+}
+
 void print_list(node_t * head) {
     node_t * current = head;
 
