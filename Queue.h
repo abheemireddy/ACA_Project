@@ -30,6 +30,7 @@ typedef struct node {
 typedef struct QueueTag {
     struct node * head;
     struct node * tail;
+    char* value;
 } Queue;
 
 bool isEmpty(Queue queue){
@@ -47,11 +48,10 @@ node_t tail(Queue queue){
     return *queue.tail;
 }
 
-void print_list(node_t * head) {
-    node_t * current = head;
-
-    while (current != NULL) {
-        printf("%d\n", current->val);
+void print_queue(Queue queue) {
+    struct node * current = queue.head;
+    while(current != NULL){
+        printf("%d\n",*queue.value);
         current = current->next;
     }
 }
