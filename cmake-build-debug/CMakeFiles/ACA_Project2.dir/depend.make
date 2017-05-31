@@ -9,6 +9,9 @@ CMakeFiles/ACA_Project2.dir/Block.c.o: ../Block.c
 CMakeFiles/ACA_Project2.dir/Cache.c.o: ../Cache.c
 CMakeFiles/ACA_Project2.dir/Cache.c.o: ../Cache.h
 
+CMakeFiles/ACA_Project2.dir/Queue.c.o: ../Queue.c
+CMakeFiles/ACA_Project2.dir/Queue.c.o: ../Queue.h
+
 CMakeFiles/ACA_Project2.dir/Set.c.o: ../uthash/include/uthash.h
 CMakeFiles/ACA_Project2.dir/Set.c.o: ../Block.h
 CMakeFiles/ACA_Project2.dir/Set.c.o: ../Set.c

@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_C
   "/home/chad/Desktop/ACA_Project/Block.c" "/home/chad/Desktop/ACA_Project/cmake-build-debug/CMakeFiles/ACA_Project2.dir/Block.c.o"
   "/home/chad/Desktop/ACA_Project/Cache.c" "/home/chad/Desktop/ACA_Project/cmake-build-debug/CMakeFiles/ACA_Project2.dir/Cache.c.o"
+  "/home/chad/Desktop/ACA_Project/Queue.c" "/home/chad/Desktop/ACA_Project/cmake-build-debug/CMakeFiles/ACA_Project2.dir/Queue.c.o"
   "/home/chad/Desktop/ACA_Project/Set.c" "/home/chad/Desktop/ACA_Project/cmake-build-debug/CMakeFiles/ACA_Project2.dir/Set.c.o"
   "/home/chad/Desktop/ACA_Project/cache_line.c" "/home/chad/Desktop/ACA_Project/cmake-build-debug/CMakeFiles/ACA_Project2.dir/cache_line.c.o"
   "/home/chad/Desktop/ACA_Project/main.c" "/home/chad/Desktop/ACA_Project/cmake-build-debug/CMakeFiles/ACA_Project2.dir/main.c.o"
