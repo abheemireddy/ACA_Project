@@ -14,7 +14,13 @@ void ExampleUsingSetHash(){
     Block* returned = set.get(&set.HashTable,block->data);
     printf("%d",returned->useFrequency);
 }
+void AddTooManyBlocksTest(){
+    Set set = Constructor_Set(4);
+    Block toAdd = Constructor_Block(4);
+    set.AddBlock(set,&set.HashTable,&toAdd);
+    printf("%d",set.Count(&set.HashTable));
+}
 
 int main() {
-    ExampleUsingSetHash();
+    AddTooManyBlocksTest();
 }

@@ -26,38 +26,39 @@ typedef struct node {
     struct node * next;
 } node_t;
 
-
 typedef struct QueueTag {
-    struct node * head;
-    struct node * tail;
-    char* value;
+    int head;
+    int tail;
+    node_t* valueArray[];
 } Queue;
 
+Queue Queue_Constructor();
+
 bool isEmpty(Queue queue){
-    if(queue.head == NULL){
+    if(queue.valueArray[0] == NULL){
         return true;
     }
     return false;
 }
 
-node_t front(Queue queue){
-    return *queue.head;
+node_t* front(Queue queue){
+    return queue.valueArray[queue.head];
 }
 
-node_t tail(Queue queue){
-    return *queue.tail;
+node_t* tail(Queue queue){
+    return queue.valueArray[queue.tail];
 }
 
 void print_queue(Queue queue) {
-    struct node * current = queue.head;
+    struct node * current = queue.valueArray[queue.head];
     while(current != NULL){
-        printf("%d\n",*queue.value);
+        printf("%d\n",current->val);
         current = current->next;
     }
 }
 
-void push_back(node_t * head, int val) {
-    node_t * current = head;
+void push_back(Queue queue,char* valueToPush) {
+    char** temp = queue.head.
     while (current->next != NULL) {
         current = current->next;
     }
@@ -68,17 +69,10 @@ void push_back(node_t * head, int val) {
     current->next->next = NULL;
 }
 
-node_t front(node_t ** head, int val) {
-    node_t * new_node;
-    new_node = malloc(sizeof(node_t));
+//push back
+//pop front
 
-    new_node->val = val;
-    new_node->next = *head;
-    *head = new_node;
-}
-
-
-int pop(node_t ** head) {
+int pop_front(Queue queue) {
     int retval = -1;
     node_t * next_node = NULL;
 

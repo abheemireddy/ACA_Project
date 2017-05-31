@@ -20,7 +20,6 @@ Set Constructor_Set(int numberOfBlocks){
     set.HashTable = NULL;
     return set;
 }
-
 void AddBlock(Set set,Block** HashTable,struct BlockTag* blockToAdd){
     int blocksInSet = set.Count(HashTable);
     if(blocksInSet < set.numberOfBlocks){
