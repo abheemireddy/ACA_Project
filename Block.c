@@ -9,11 +9,12 @@ Block Constructor_Block(int numberOfCacheLines){
     //*block.cacheLines = (struct CacheLineTag*)malloc(numberOfCacheLines*sizeof(struct CacheLineTag));
     block.SetCacheLines = &SetCacheLines;
     block.Set_Data = &Set_Data;
+    block.data = "";
     return block;
 }
 
-void Set_Data(Block block,char* data){
-    block.data = data;
+void Set_Data(Block* block,char* data){
+    block->data = data;
 }
 
 void SetCacheLines(Block block,CacheLine* cacheLines[]){

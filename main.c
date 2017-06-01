@@ -14,12 +14,34 @@ void ExampleUsingSetHash(){
     Block* returned = set.get(&set.HashTable,block1->data);
     printf("%d",returned->useFrequency);
 }
+Block GetDummyBlockInstance(){
+    Block toAdd = Constructor_Block(4);
+    toAdd.Set_Data(&toAdd,"new data");
+    return toAdd;
+}
 void AddTooManyBlocksTest(){
     Set set = Constructor_Set(4);
-    Block toAdd = Constructor_Block(4);
-    toAdd.Set_Data(toAdd,"new data");
-    set.AddBlock(set,&set.HashTable,&toAdd);
-    printf("%d",set.Count(&set.HashTable));
+    Block block1 = GetDummyBlockInstance();
+    Block block2 = GetDummyBlockInstance();
+    Block block3 = GetDummyBlockInstance();
+    Block block4 = GetDummyBlockInstance();
+    Block block5 = GetDummyBlockInstance();
+    Block block6 = GetDummyBlockInstance();
+    Block block7 = GetDummyBlockInstance();
+    set.AddBlock(set,&set.HashTable,&block1);
+    printf("%d\n",set.Count(&set.HashTable));
+    set.AddBlock(set,&set.HashTable,&block2);
+    printf("%d\n",set.Count(&set.HashTable));
+    set.AddBlock(set,&set.HashTable,&block3);
+    printf("%d\n",set.Count(&set.HashTable));
+    set.AddBlock(set,&set.HashTable,&block4);
+    printf("%d\n",set.Count(&set.HashTable));
+    set.AddBlock(set,&set.HashTable,&block5);
+    printf("%d\n",set.Count(&set.HashTable));
+    set.AddBlock(set,&set.HashTable,&block6);
+    printf("%d\n",set.Count(&set.HashTable));
+    set.AddBlock(set,&set.HashTable,&block7);
+    printf("%d\n",set.Count(&set.HashTable));
 }
 
 int main() {

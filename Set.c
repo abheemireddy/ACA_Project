@@ -39,6 +39,9 @@ void AddBlock(Set set,Block** HashTable,struct BlockTag* blockToAdd){
 
 
 void put(UT_hash_handle hh,Block** HashTable,Block *value) {  //key is useFrequency of the block.  Seems magical
+    if(value->data == NULL){
+        printf("The passed block needs to have attribute data set");
+    }
     HASH_ADD_KEYPTR(hh,*HashTable, value->data, strlen(value->data),value );
     //The last parameter is a pointer to the structure being added
 }
