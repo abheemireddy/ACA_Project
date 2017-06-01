@@ -12,6 +12,8 @@ Set Constructor_Set(int numberOfBlocks){
     set.put = &put;
     set.replace = &replace;
     set.get = &get;
+    set.SortHash = &SortHash;
+    set.AddBlock = &AddBlock;
     set.getByUseFrequency = &getByUseFrequency;
     set.removeFromTable = &removeFromTable;
     set.delete_all = &delete_all;

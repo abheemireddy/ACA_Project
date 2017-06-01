@@ -71,6 +71,8 @@ stdlib.h
 -
 stdio.h
 -
+stdbool.h
+-
 
 /home/chad/Desktop/ACA_Project/Set.c
 Block.h
