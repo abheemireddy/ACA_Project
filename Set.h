@@ -14,7 +14,7 @@ typedef struct SetTag {
 
     void (*AddBlock)(struct SetTag set,struct BlockTag** HashTable,struct BlockTag* blockToAdd);
 
-    void (*put)(UT_hash_handle hh,struct BlockTag** HashTable,struct BlockTag *value);
+    void (*put)(UT_hash_handle* hh,struct BlockTag** HashTable,struct BlockTag *value);
     void (*replaceByUseFrequency)(struct BlockTag** HashTable,int key);
     struct BlockTag* (*getByUseFrequency)(struct BlockTag** HashTable,int key);
     void (*removeFromTable)(struct BlockTag** HashTable,struct BlockTag *blockToRemove);
@@ -43,7 +43,7 @@ Set Constructor_Set(int numberOfBlocks);
 void AddBlock(Set set,struct BlockTag** HashTable,struct BlockTag* blockToAdd);
 
 //HashTable functions
-void put(UT_hash_handle hh,struct BlockTag** HashTable,struct BlockTag *value);
+void put(UT_hash_handle* hh,struct BlockTag** HashTable,struct BlockTag *value);
 void replaceByUseFrequency(struct BlockTag** HashTable,int key);
 struct BlockTag* getByUseFrequency(struct BlockTag** HashTable,int key);
 void removeFromTable(struct BlockTag** HashTable,struct BlockTag *blockToRemove);

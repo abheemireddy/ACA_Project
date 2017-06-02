@@ -8,9 +8,9 @@ void ExampleUsingSetHash(){
     Block case2 = {useFrequency:2,data:"bitString2"};
     Block* block1 = malloc(sizeof(Block));
     block1 = &case1;
-    set.put(set.hh,&set.HashTable,block1);
+    set.put(&set.hh,&set.HashTable,block1);
     Block* block2 = &case2;
-    set.put(set.hh,&set.HashTable,block2);
+    set.put(&set.hh,&set.HashTable,block2);
     Block* returned = set.get(&set.HashTable,block1->data);
     printf("%d",returned->useFrequency);
 }
@@ -34,6 +34,6 @@ void AddTooManyBlocksTest(){
 }
 
 int main() {
-    //ExampleUsingSetHash();
+    ExampleUsingSetHash();
     AddTooManyBlocksTest();
 }
