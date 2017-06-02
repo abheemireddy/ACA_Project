@@ -12,7 +12,7 @@ typedef struct SetTag {
 
     int numberOfBlocks;
 
-    void (*AddBlock)(struct SetTag set,struct BlockTag** HashTable,struct BlockTag* blockToAdd);
+    void (*AddBlock)(struct SetTag set,struct BlockTag** HashTable,struct BlockTag** blockToAdd);
 
     void (*put)(struct BlockTag** HashTable,struct BlockTag *value);
     void (*replaceByUseFrequency)(struct BlockTag** HashTable,int key);
@@ -40,7 +40,7 @@ typedef struct SetTag {
 } Set;
 
 Set Constructor_Set(int numberOfBlocks);
-void AddBlock(Set set,struct BlockTag** HashTable,struct BlockTag* blockToAdd);
+void AddBlock(Set set,struct BlockTag** HashTable,struct BlockTag** blockToAdd);
 
 //HashTable functions
 void put(struct BlockTag** HashTable,struct BlockTag *value);

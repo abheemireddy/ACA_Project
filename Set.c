@@ -24,10 +24,10 @@ Set Constructor_Set(int numberOfBlocks){
     return set;
 }
 
-void AddBlock(Set set,Block** HashTable,struct BlockTag* blockToAdd){
+void AddBlock(Set set,Block** HashTable,struct BlockTag** blockToAdd){
     int blocksInSet = set.Count(HashTable);
     if(blocksInSet < set.numberOfBlocks){
-        set.put(HashTable,blockToAdd);
+        set.put(HashTable,*blockToAdd);
     }else{
         set.SortHash(HashTable);
         Block* blockToRemove = (*HashTable)->hh.next;
