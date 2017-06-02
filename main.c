@@ -19,9 +19,8 @@ Block GetDummyBlockInstance(char* data){
     toAdd.Set_Data(&toAdd,data);
     return toAdd;
 }
-/*void AddTooManyBlocksTest(){
+void AddTooManyBlocksTest(){
     Set set = Constructor_Set(4);
-    Set* pset = &set;
     Block block1 = GetDummyBlockInstance("2");
     Block block2 = GetDummyBlockInstance("3");
     Block block3 = GetDummyBlockInstance("4");
@@ -29,32 +28,12 @@ Block GetDummyBlockInstance(char* data){
     Block block5 = GetDummyBlockInstance("6");
     Block block6 = GetDummyBlockInstance("7");
     Block block7 = GetDummyBlockInstance("8");
-    pset->AddBlock(pset,&pset->HashTable,&block1);
-    printf("%d\n",pset->Count(&pset->HashTable));
-    print_blocks_in_set(&pset);
-    pset->AddBlock(pset,&pset->HashTable,&block2);
-    printf("%d\n",pset->Count(&pset->HashTable));
-    print_blocks_in_set(&pset);
-    pset->AddBlock(pset,&pset->HashTable,&block3);
-    printf("%d\n",pset->Count(&pset->HashTable));
-    print_blocks_in_set(&pset);
-    pset->AddBlock(pset,&pset->HashTable,&block4);
-    printf("%d\n",pset->Count(&pset->HashTable));
-    print_blocks_in_set(&pset);
-    pset->AddBlock(pset,&pset->HashTable,&block5);
-    printf("%d\n",pset->Count(&pset->HashTable));
-    print_blocks_in_set(&pset);
-    pset->AddBlock(pset,&pset->HashTable,&block6);
-    printf("%d\n",pset->Count(&pset->HashTable));
-    print_blocks_in_set(&pset);
-    pset->AddBlock(pset,&pset->HashTable,&block7);
-    printf("%d\n",pset->Count(&pset->HashTable));
-    printf("\n");
-    pset->SortHash(set.HashTable);
-    print_blocks_in_set(&pset);
-}*/
+
+    set.SortHash(&set.HashTable);
+    print_blocks_in_set(set,&set.HashTable);
+}
 
 int main() {
-    ExampleUsingSetHash();
-    //AddTooManyBlocksTest();
+    //ExampleUsingSetHash();
+    AddTooManyBlocksTest();
 }

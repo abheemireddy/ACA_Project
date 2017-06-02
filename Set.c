@@ -106,11 +106,10 @@ int Count(Block** HashTable){
     return num_in_hashtable;
 }
 
-void print_blocks_in_set(Set** set) {
+void print_blocks_in_set(Set set,Block** HashTable) {
     Block* s;
     Block* tmp;
-    struct UT_hash_handle hh = (*(*set)).hh;
-    Block** HashTable = &(*set)->HashTable;
+    struct UT_hash_handle hh = set.hh;
     HASH_ITER(hh,*HashTable,s,tmp){
         printf("%s",s->data);
     }
