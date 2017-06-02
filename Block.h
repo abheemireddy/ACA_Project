@@ -32,4 +32,6 @@ Block Constructor_Block(int numberOfCacheLines);//construct to call to obtain a 
 void Set_Data(Block* block,char* data);
 void SetCacheLines(Block block,CacheLine* cacheLines[]);
 
+void IncrementBlockFrequency(Block** block);
+
 #endif //ACA_PROJECT_BLOCK_H

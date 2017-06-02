@@ -20,3 +20,7 @@ void Set_Data(Block* block,char* data){
 void SetCacheLines(Block block,CacheLine* cacheLines[]){
     block.cacheLines = cacheLines;
 }
+
+void IncrementBlockFrequency(Block** block){
+    (*block)->useFrequency += 1;
+}

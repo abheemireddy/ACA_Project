@@ -110,20 +110,18 @@ void print_blocks_in_set(Block** HashTable) {
     Block* s;
     Block* tmp;
     HASH_ITER(hh,*HashTable,s,tmp){
-        printf("%s\n",s->data);
+        printf("%s %d\n",s->data,s->useFrequency);
     }
 }
 
-int block_comparator(void* a,void* b){
-    Block* aBlock = (Block*)a;
-    Block* bBlock = (Block*)b;
-    if (aBlock->useFrequency < bBlock->useFrequency){
+int block_comparator(Block* a,Block* b){
+    if (a->useFrequency < b->useFrequency){
         return -1;
     }
-    if (aBlock->useFrequency == bBlock->useFrequency){
+    if (a->useFrequency == b->useFrequency){
         return 0;
     }
-    if (aBlock->useFrequency > bBlock->useFrequency){
+    if (a->useFrequency > b->useFrequency){
         return 1;
     }
 }

@@ -30,6 +30,11 @@ void AddTooManyBlocksTest(){
     Block block6 = GetDummyBlockInstance("2");
     Block block7 = GetDummyBlockInstance("1");
 
+    Block* pblock = &block7;
+    IncrementBlockFrequency(&pblock);
+    IncrementBlockFrequency(&pblock);
+    IncrementBlockFrequency(&pblock);
+
     set.put(&set.HashTable,&block1);
     set.put(&set.HashTable,&block2);
     set.put(&set.HashTable,&block3);
