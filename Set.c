@@ -27,7 +27,7 @@ Set Constructor_Set(int numberOfBlocks){
 void AddBlock(Set set,Block** HashTable,struct BlockTag* blockToAdd){
     int blocksInSet = set.Count(HashTable);
     if(blocksInSet < set.numberOfBlocks){
-        set.put(&set.hh,HashTable,blockToAdd);
+        set.put(HashTable,blockToAdd);
     }else{
         set.SortHash(HashTable);
         Block* blockToRemove = (*HashTable)->hh.next;
@@ -40,7 +40,7 @@ void AddBlock(Set set,Block** HashTable,struct BlockTag* blockToAdd){
 }
 
 
-void put(UT_hash_handle* hh,Block** HashTable,Block *value) {  //key is useFrequency of the block.  Seems magical
+void put(Block** HashTable,Block *value) {  //key is useFrequency of the block.  Seems magical
     if(value->data == NULL){
         printf("The passed block needs to have attribute data set");
     }
@@ -106,12 +106,11 @@ int Count(Block** HashTable){
     return num_in_hashtable;
 }
 
-void print_blocks_in_set(Set set,Block** HashTable) {
+void print_blocks_in_set(Block** HashTable) {
     Block* s;
     Block* tmp;
-    struct UT_hash_handle hh = set.hh;
     HASH_ITER(hh,*HashTable,s,tmp){
-        printf("%s",s->data);
+        printf("%s\n",s->data);
     }
 }
 

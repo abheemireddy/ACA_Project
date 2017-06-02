@@ -8,9 +8,9 @@ void ExampleUsingSetHash(){
     Block case2 = {useFrequency:2,data:"bitString2"};
     Block* block1 = malloc(sizeof(Block));
     block1 = &case1;
-    set.put(&set.hh,&set.HashTable,block1);
+    set.put(&set.HashTable,block1);
     Block* block2 = &case2;
-    set.put(&set.hh,&set.HashTable,block2);
+    set.put(&set.HashTable,block2);
     Block* returned = set.get(&set.HashTable,block1->data);
     printf("%d",returned->useFrequency);
 }
@@ -21,16 +21,25 @@ Block GetDummyBlockInstance(char* data){
 }
 void AddTooManyBlocksTest(){
     Set set = Constructor_Set(4);
-    Block block1 = GetDummyBlockInstance("2");
-    Block block2 = GetDummyBlockInstance("3");
-    Block block3 = GetDummyBlockInstance("4");
-    Block block4 = GetDummyBlockInstance("5");
-    Block block5 = GetDummyBlockInstance("6");
-    Block block6 = GetDummyBlockInstance("7");
-    Block block7 = GetDummyBlockInstance("8");
+
+    Block block1 = GetDummyBlockInstance("7");
+    Block block2 = GetDummyBlockInstance("6");
+    Block block3 = GetDummyBlockInstance("5");
+    Block block4 = GetDummyBlockInstance("4");
+    Block block5 = GetDummyBlockInstance("3");
+    Block block6 = GetDummyBlockInstance("2");
+    Block block7 = GetDummyBlockInstance("1");
+
+    set.put(&set.HashTable,&block1);
+    set.put(&set.HashTable,&block2);
+    set.put(&set.HashTable,&block3);
+    set.put(&set.HashTable,&block4);
+    set.put(&set.HashTable,&block5);
+    set.put(&set.HashTable,&block6);
+    set.put(&set.HashTable,&block7);
 
     set.SortHash(&set.HashTable);
-    print_blocks_in_set(set,&set.HashTable);
+    print_blocks_in_set(&set.HashTable);
 }
 
 int main() {
