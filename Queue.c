@@ -28,10 +28,9 @@ void Queue_Destructor(Queue *queue) {
 
 void print_queue(Queue* queue){
     Node* current = queue->head;
-    while (!isEmpty(queue)) {
+    while (current->prev != NULL) {
         printf("Node Value:%s\n",current->val);
         current = current->prev;
-        queue->Dequeue(queue);
     }
 }
 
