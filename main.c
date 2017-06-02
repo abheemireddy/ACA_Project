@@ -8,9 +8,9 @@ void ExampleUsingSetHash(){
     Block case2 = {useFrequency:2,data:"bitString2"};
     Block* block1 = malloc(sizeof(Block));
     block1 = &case1;
-    set.put(&set,block1);
+    set.put(set.hh,&set.HashTable,block1);
     Block* block2 = &case2;
-    set.put(&set,block2);
+    set.put(set.hh,&set.HashTable,block2);
     Block* returned = set.get(&set.HashTable,block1->data);
     printf("%d",returned->useFrequency);
 }
@@ -19,8 +19,9 @@ Block GetDummyBlockInstance(char* data){
     toAdd.Set_Data(&toAdd,data);
     return toAdd;
 }
-void AddTooManyBlocksTest(){
+/*void AddTooManyBlocksTest(){
     Set set = Constructor_Set(4);
+    Set* pset = &set;
     Block block1 = GetDummyBlockInstance("2");
     Block block2 = GetDummyBlockInstance("3");
     Block block3 = GetDummyBlockInstance("4");
@@ -28,32 +29,32 @@ void AddTooManyBlocksTest(){
     Block block5 = GetDummyBlockInstance("6");
     Block block6 = GetDummyBlockInstance("7");
     Block block7 = GetDummyBlockInstance("8");
-    set.AddBlock(set,&set.HashTable,&block1);
-    printf("%d\n",set.Count(&set.HashTable));
-    print_blocks_in_set(&set);
-    set.AddBlock(set,&set.HashTable,&block2);
-    printf("%d\n",set.Count(&set.HashTable));
-    print_blocks_in_set(&set);
-    set.AddBlock(set,&set.HashTable,&block3);
-    printf("%d\n",set.Count(&set.HashTable));
-    print_blocks_in_set(&set);
-    set.AddBlock(set,&set.HashTable,&block4);
-    printf("%d\n",set.Count(&set.HashTable));
-    print_blocks_in_set(&set);
-    set.AddBlock(set,&set.HashTable,&block5);
-    printf("%d\n",set.Count(&set.HashTable));
-    print_blocks_in_set(&set);
-    set.AddBlock(set,&set.HashTable,&block6);
-    printf("%d\n",set.Count(&set.HashTable));
-    print_blocks_in_set(&set);
-    set.AddBlock(set,&set.HashTable,&block7);
-    printf("%d\n",set.Count(&set.HashTable));
+    pset->AddBlock(pset,&pset->HashTable,&block1);
+    printf("%d\n",pset->Count(&pset->HashTable));
+    print_blocks_in_set(&pset);
+    pset->AddBlock(pset,&pset->HashTable,&block2);
+    printf("%d\n",pset->Count(&pset->HashTable));
+    print_blocks_in_set(&pset);
+    pset->AddBlock(pset,&pset->HashTable,&block3);
+    printf("%d\n",pset->Count(&pset->HashTable));
+    print_blocks_in_set(&pset);
+    pset->AddBlock(pset,&pset->HashTable,&block4);
+    printf("%d\n",pset->Count(&pset->HashTable));
+    print_blocks_in_set(&pset);
+    pset->AddBlock(pset,&pset->HashTable,&block5);
+    printf("%d\n",pset->Count(&pset->HashTable));
+    print_blocks_in_set(&pset);
+    pset->AddBlock(pset,&pset->HashTable,&block6);
+    printf("%d\n",pset->Count(&pset->HashTable));
+    print_blocks_in_set(&pset);
+    pset->AddBlock(pset,&pset->HashTable,&block7);
+    printf("%d\n",pset->Count(&pset->HashTable));
     printf("\n");
-    set.SortHash(&set.HashTable);
-    print_blocks_in_set(&set);
-}
+    pset->SortHash(set.HashTable);
+    print_blocks_in_set(&pset);
+}*/
 
 int main() {
-    //ExampleUsingSetHash();
-    AddTooManyBlocksTest();
+    ExampleUsingSetHash();
+    //AddTooManyBlocksTest();
 }
