@@ -11,49 +11,62 @@ Queue *Queue_Constructor(int limit) {
     queue->size = 0;
     queue->head = NULL;
     queue->tail = NULL;
+    queue->Dequeue = &Dequeue;
+    queue->Enqueue = &Enqueue;
+    queue->isEmpty = &isEmpty;
+    queue->Queue_Destructor = &Queue_Destructor;
+    queue->print_queue = &print_queue;
     return queue;
 }
 
 void Queue_Destructor(Queue *queue) {
-    Node *node2Free;
     while (!isEmpty(queue)) {
-        node2Free = Dequeue(queue);
-        free(node2Free);
+        Dequeue(queue);
     }
     free(queue);
 }
 
-bool Enqueue(Queue *queue, Node *item) {
-    if ((queue == NULL) || (item == NULL)) {
+void print_queue(Queue* queue){
+    Node* current = queue->head;
+    while (!isEmpty(queue)) {
+        printf("Node Value:%s\n",current->val);
+        current = current->prev;
+        queue->Dequeue(queue);
+    }
+}
+
+bool Enqueue(Queue **queue, Node **node) {
+    if (((*queue) == NULL) || (node == NULL)) {
         return false;
     }
 
     //good size check!
-    if (queue->size >= queue->limit) {
+    if ((*queue)->size >= (*queue)->limit) {
         return false;
     }
 
-    item->prev = NULL;
-    if (queue->size == 0) {
-        queue->tail = item;
-        queue->head = item;
+    (*node)->prev = NULL;
+    if ((*queue)->size == 0) {
+        (*queue)->tail = *node;
+        (*queue)->head = *node;
 
     } else {
-        queue->tail->prev = item;
-        queue->tail = item;
+        (*queue)->tail->prev = *node;
+        (*queue)->tail = *node;
     }
-    queue->size++;
+    (*queue)->size++;
     return true;
 }
 
-Node * Dequeue(Queue *queue) {
+char * Dequeue(Queue *queue) {
     Node *node;
     if (isEmpty(queue))
         return NULL;
     node = queue->head;
+    //free(node);
     queue->head = (queue->head)->prev;
     queue->size -= 1;
-    return node;
+    return node->val;
 }
 
 bool isEmpty(Queue* queue) {

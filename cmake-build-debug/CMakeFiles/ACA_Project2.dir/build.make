@@ -201,6 +201,54 @@ CMakeFiles/ACA_Project2.dir/Queue.c.o.provides: CMakeFiles/ACA_Project2.dir/Queu
 CMakeFiles/ACA_Project2.dir/Queue.c.o.provides.build: CMakeFiles/ACA_Project2.dir/Queue.c.o
 
 
+CMakeFiles/ACA_Project2.dir/Set_and_Block_Examples.c.o: CMakeFiles/ACA_Project2.dir/flags.make
+CMakeFiles/ACA_Project2.dir/Set_and_Block_Examples.c.o: ../Set_and_Block_Examples.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chad/Desktop/ACA_Project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/ACA_Project2.dir/Set_and_Block_Examples.c.o"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ACA_Project2.dir/Set_and_Block_Examples.c.o   -c /home/chad/Desktop/ACA_Project/Set_and_Block_Examples.c
+
+CMakeFiles/ACA_Project2.dir/Set_and_Block_Examples.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ACA_Project2.dir/Set_and_Block_Examples.c.i"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/chad/Desktop/ACA_Project/Set_and_Block_Examples.c > CMakeFiles/ACA_Project2.dir/Set_and_Block_Examples.c.i
+
+CMakeFiles/ACA_Project2.dir/Set_and_Block_Examples.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ACA_Project2.dir/Set_and_Block_Examples.c.s"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/chad/Desktop/ACA_Project/Set_and_Block_Examples.c -o CMakeFiles/ACA_Project2.dir/Set_and_Block_Examples.c.s
+
+CMakeFiles/ACA_Project2.dir/Set_and_Block_Examples.c.o.requires:
+
+.PHONY : CMakeFiles/ACA_Project2.dir/Set_and_Block_Examples.c.o.requires
+
+CMakeFiles/ACA_Project2.dir/Set_and_Block_Examples.c.o.provides: CMakeFiles/ACA_Project2.dir/Set_and_Block_Examples.c.o.requires
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/Set_and_Block_Examples.c.o.provides.build
+.PHONY : CMakeFiles/ACA_Project2.dir/Set_and_Block_Examples.c.o.provides
+
+CMakeFiles/ACA_Project2.dir/Set_and_Block_Examples.c.o.provides.build: CMakeFiles/ACA_Project2.dir/Set_and_Block_Examples.c.o
+
+
+CMakeFiles/ACA_Project2.dir/Queue_the_examples.c.o: CMakeFiles/ACA_Project2.dir/flags.make
+CMakeFiles/ACA_Project2.dir/Queue_the_examples.c.o: ../Queue_the_examples.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chad/Desktop/ACA_Project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object CMakeFiles/ACA_Project2.dir/Queue_the_examples.c.o"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ACA_Project2.dir/Queue_the_examples.c.o   -c /home/chad/Desktop/ACA_Project/Queue_the_examples.c
+
+CMakeFiles/ACA_Project2.dir/Queue_the_examples.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ACA_Project2.dir/Queue_the_examples.c.i"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/chad/Desktop/ACA_Project/Queue_the_examples.c > CMakeFiles/ACA_Project2.dir/Queue_the_examples.c.i
+
+CMakeFiles/ACA_Project2.dir/Queue_the_examples.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ACA_Project2.dir/Queue_the_examples.c.s"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/chad/Desktop/ACA_Project/Queue_the_examples.c -o CMakeFiles/ACA_Project2.dir/Queue_the_examples.c.s
+
+CMakeFiles/ACA_Project2.dir/Queue_the_examples.c.o.requires:
+
+.PHONY : CMakeFiles/ACA_Project2.dir/Queue_the_examples.c.o.requires
+
+CMakeFiles/ACA_Project2.dir/Queue_the_examples.c.o.provides: CMakeFiles/ACA_Project2.dir/Queue_the_examples.c.o.requires
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/Queue_the_examples.c.o.provides.build
+.PHONY : CMakeFiles/ACA_Project2.dir/Queue_the_examples.c.o.provides
+
+CMakeFiles/ACA_Project2.dir/Queue_the_examples.c.o.provides.build: CMakeFiles/ACA_Project2.dir/Queue_the_examples.c.o
+
+
 # Object files for target ACA_Project2
 ACA_Project2_OBJECTS = \
 "CMakeFiles/ACA_Project2.dir/main.c.o" \
@@ -208,7 +256,9 @@ ACA_Project2_OBJECTS = \
 "CMakeFiles/ACA_Project2.dir/Set.c.o" \
 "CMakeFiles/ACA_Project2.dir/cache_line.c.o" \
 "CMakeFiles/ACA_Project2.dir/Cache.c.o" \
-"CMakeFiles/ACA_Project2.dir/Queue.c.o"
+"CMakeFiles/ACA_Project2.dir/Queue.c.o" \
+"CMakeFiles/ACA_Project2.dir/Set_and_Block_Examples.c.o" \
+"CMakeFiles/ACA_Project2.dir/Queue_the_examples.c.o"
 
 # External object files for target ACA_Project2
 ACA_Project2_EXTERNAL_OBJECTS =
@@ -219,9 +269,11 @@ ACA_Project2: CMakeFiles/ACA_Project2.dir/Set.c.o
 ACA_Project2: CMakeFiles/ACA_Project2.dir/cache_line.c.o
 ACA_Project2: CMakeFiles/ACA_Project2.dir/Cache.c.o
 ACA_Project2: CMakeFiles/ACA_Project2.dir/Queue.c.o
+ACA_Project2: CMakeFiles/ACA_Project2.dir/Set_and_Block_Examples.c.o
+ACA_Project2: CMakeFiles/ACA_Project2.dir/Queue_the_examples.c.o
 ACA_Project2: CMakeFiles/ACA_Project2.dir/build.make
 ACA_Project2: CMakeFiles/ACA_Project2.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/chad/Desktop/ACA_Project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking C executable ACA_Project2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/chad/Desktop/ACA_Project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking C executable ACA_Project2"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ACA_Project2.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -235,6 +287,8 @@ CMakeFiles/ACA_Project2.dir/requires: CMakeFiles/ACA_Project2.dir/Set.c.o.requir
 CMakeFiles/ACA_Project2.dir/requires: CMakeFiles/ACA_Project2.dir/cache_line.c.o.requires
 CMakeFiles/ACA_Project2.dir/requires: CMakeFiles/ACA_Project2.dir/Cache.c.o.requires
 CMakeFiles/ACA_Project2.dir/requires: CMakeFiles/ACA_Project2.dir/Queue.c.o.requires
+CMakeFiles/ACA_Project2.dir/requires: CMakeFiles/ACA_Project2.dir/Set_and_Block_Examples.c.o.requires
+CMakeFiles/ACA_Project2.dir/requires: CMakeFiles/ACA_Project2.dir/Queue_the_examples.c.o.requires
 
 .PHONY : CMakeFiles/ACA_Project2.dir/requires
 

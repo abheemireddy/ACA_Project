@@ -110,7 +110,7 @@ void print_blocks_in_set(Block** HashTable) {
     Block* s;
     Block* tmp;
     HASH_ITER(hh,*HashTable,s,tmp){
-        printf("%s %d\n",s->data,s->useFrequency);
+        printf("data: %s, LFU:%d\n",s->data,s->useFrequency);
     }
 }
 

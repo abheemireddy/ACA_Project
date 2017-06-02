@@ -106,10 +106,22 @@
 		<Unit filename="/home/chad/Desktop/ACA_Project/Queue.h">
 			<Option target="ACA_Project2"/>
 		</Unit>
+		<Unit filename="/home/chad/Desktop/ACA_Project/Queue_the_examples.c">
+			<Option target="ACA_Project2"/>
+		</Unit>
+		<Unit filename="/home/chad/Desktop/ACA_Project/Queue_the_examples.h">
+			<Option target="ACA_Project2"/>
+		</Unit>
 		<Unit filename="/home/chad/Desktop/ACA_Project/Set.c">
 			<Option target="ACA_Project2"/>
 		</Unit>
 		<Unit filename="/home/chad/Desktop/ACA_Project/Set.h">
+			<Option target="ACA_Project2"/>
+		</Unit>
+		<Unit filename="/home/chad/Desktop/ACA_Project/Set_and_Block_Examples.c">
+			<Option target="ACA_Project2"/>
+		</Unit>
+		<Unit filename="/home/chad/Desktop/ACA_Project/Set_and_Block_Examples.h">
 			<Option target="ACA_Project2"/>
 		</Unit>
 		<Unit filename="/home/chad/Desktop/ACA_Project/cache_line.c">

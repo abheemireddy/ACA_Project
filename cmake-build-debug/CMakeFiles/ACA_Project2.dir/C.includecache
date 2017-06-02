@@ -74,6 +74,14 @@ stdio.h
 stdbool.h
 -
 
+/home/chad/Desktop/ACA_Project/Queue_the_examples.c
+Queue_the_examples.h
+/home/chad/Desktop/ACA_Project/Queue_the_examples.h
+
+/home/chad/Desktop/ACA_Project/Queue_the_examples.h
+Queue.h
+/home/chad/Desktop/ACA_Project/Queue.h
+
 /home/chad/Desktop/ACA_Project/Set.c
 Block.h
 /home/chad/Desktop/ACA_Project/Block.h
@@ -86,17 +94,27 @@ stdio.h
 uthash.h
 /home/chad/Desktop/ACA_Project/uthash.h
 
-/home/chad/Desktop/ACA_Project/cache_line.c
+/home/chad/Desktop/ACA_Project/Set_and_Block_Examples.c
+Set_and_Block_Examples.h
+/home/chad/Desktop/ACA_Project/Set_and_Block_Examples.h
 
-/home/chad/Desktop/ACA_Project/cache_line.h
-
-/home/chad/Desktop/ACA_Project/main.c
+/home/chad/Desktop/ACA_Project/Set_and_Block_Examples.h
 stdio.h
 -
 Set.h
 /home/chad/Desktop/ACA_Project/Set.h
 Block.h
 /home/chad/Desktop/ACA_Project/Block.h
+
+/home/chad/Desktop/ACA_Project/cache_line.c
+
+/home/chad/Desktop/ACA_Project/cache_line.h
+
+/home/chad/Desktop/ACA_Project/main.c
+Set_and_Block_Examples.h
+/home/chad/Desktop/ACA_Project/Set_and_Block_Examples.h
+Queue_the_examples.h
+/home/chad/Desktop/ACA_Project/Queue_the_examples.h
 
 /home/chad/Desktop/ACA_Project/uthash/include/uthash.h
 string.h
