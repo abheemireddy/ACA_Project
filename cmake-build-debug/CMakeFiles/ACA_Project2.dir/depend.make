@@ -9,12 +9,20 @@ CMakeFiles/ACA_Project2.dir/Block.c.o: ../Block.c
 CMakeFiles/ACA_Project2.dir/Cache.c.o: ../Cache.c
 CMakeFiles/ACA_Project2.dir/Cache.c.o: ../Cache.h
 
+CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Queue/Queue_the_examples.c.o: .././Queue.h
+CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Queue/Queue_the_examples.c.o: ../Data_Structure_Examples/Queue/Queue_the_examples.c
+CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Queue/Queue_the_examples.c.o: ../Data_Structure_Examples/Queue/Queue_the_examples.h
+
+CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Set/Set_and_Block_Examples.c.o: .././Block.h
+CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Set/Set_and_Block_Examples.c.o: .././Set.h
+CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Set/Set_and_Block_Examples.c.o: .././cache_line.h
+CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Set/Set_and_Block_Examples.c.o: .././uthash/include/uthash.h
+CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Set/Set_and_Block_Examples.c.o: ../uthash/include/uthash.h
+CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Set/Set_and_Block_Examples.c.o: ../Data_Structure_Examples/Set/Set_and_Block_Examples.c
+CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Set/Set_and_Block_Examples.c.o: ../Data_Structure_Examples/Set/Set_and_Block_Examples.h
+
 CMakeFiles/ACA_Project2.dir/Queue.c.o: ../Queue.c
 CMakeFiles/ACA_Project2.dir/Queue.c.o: ../Queue.h
-
-CMakeFiles/ACA_Project2.dir/Queue_the_examples.c.o: ../Queue.h
-CMakeFiles/ACA_Project2.dir/Queue_the_examples.c.o: ../Queue_the_examples.c
-CMakeFiles/ACA_Project2.dir/Queue_the_examples.c.o: ../Queue_the_examples.h
 
 CMakeFiles/ACA_Project2.dir/Set.c.o: ../uthash/include/uthash.h
 CMakeFiles/ACA_Project2.dir/Set.c.o: ../Block.h
@@ -23,23 +31,15 @@ CMakeFiles/ACA_Project2.dir/Set.c.o: ../Set.h
 CMakeFiles/ACA_Project2.dir/Set.c.o: ../cache_line.h
 CMakeFiles/ACA_Project2.dir/Set.c.o: ../uthash/include/uthash.h
 
-CMakeFiles/ACA_Project2.dir/Set_and_Block_Examples.c.o: ../uthash/include/uthash.h
-CMakeFiles/ACA_Project2.dir/Set_and_Block_Examples.c.o: ../Block.h
-CMakeFiles/ACA_Project2.dir/Set_and_Block_Examples.c.o: ../Set.h
-CMakeFiles/ACA_Project2.dir/Set_and_Block_Examples.c.o: ../Set_and_Block_Examples.c
-CMakeFiles/ACA_Project2.dir/Set_and_Block_Examples.c.o: ../Set_and_Block_Examples.h
-CMakeFiles/ACA_Project2.dir/Set_and_Block_Examples.c.o: ../cache_line.h
-CMakeFiles/ACA_Project2.dir/Set_and_Block_Examples.c.o: ../uthash/include/uthash.h
-
 CMakeFiles/ACA_Project2.dir/cache_line.c.o: ../cache_line.c
 
+CMakeFiles/ACA_Project2.dir/main.c.o: .././Block.h
+CMakeFiles/ACA_Project2.dir/main.c.o: .././Queue.h
+CMakeFiles/ACA_Project2.dir/main.c.o: .././Set.h
+CMakeFiles/ACA_Project2.dir/main.c.o: .././cache_line.h
+CMakeFiles/ACA_Project2.dir/main.c.o: .././uthash/include/uthash.h
 CMakeFiles/ACA_Project2.dir/main.c.o: ../uthash/include/uthash.h
-CMakeFiles/ACA_Project2.dir/main.c.o: ../Block.h
-CMakeFiles/ACA_Project2.dir/main.c.o: ../Queue.h
-CMakeFiles/ACA_Project2.dir/main.c.o: ../Queue_the_examples.h
-CMakeFiles/ACA_Project2.dir/main.c.o: ../Set.h
-CMakeFiles/ACA_Project2.dir/main.c.o: ../Set_and_Block_Examples.h
-CMakeFiles/ACA_Project2.dir/main.c.o: ../cache_line.h
+CMakeFiles/ACA_Project2.dir/main.c.o: ../Data_Structure_Examples/Queue/Queue_the_examples.h
+CMakeFiles/ACA_Project2.dir/main.c.o: ../Data_Structure_Examples/Set/Set_and_Block_Examples.h
 CMakeFiles/ACA_Project2.dir/main.c.o: ../main.c
-CMakeFiles/ACA_Project2.dir/main.c.o: ../uthash/include/uthash.h
 

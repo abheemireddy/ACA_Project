@@ -14,6 +14,18 @@ uthash/include/uthash.h
 cache_line.h
 .././cache_line.h
 
+.././Queue.h
+stdlib.h
+-
+stdio.h
+-
+stdbool.h
+-
+
+.././Set.h
+uthash.h
+.././uthash.h
+
 .././cache_line.h
 
 .././uthash/include/uthash.h
@@ -62,6 +74,26 @@ Cache.h
 
 /home/chad/Desktop/ACA_Project/Cache.h
 
+/home/chad/Desktop/ACA_Project/Data_Structure_Examples/Queue/Queue_the_examples.c
+Queue_the_examples.h
+/home/chad/Desktop/ACA_Project/Data_Structure_Examples/Queue/Queue_the_examples.h
+
+/home/chad/Desktop/ACA_Project/Data_Structure_Examples/Queue/Queue_the_examples.h
+Queue.h
+/home/chad/Desktop/ACA_Project/Data_Structure_Examples/Queue/Queue.h
+
+/home/chad/Desktop/ACA_Project/Data_Structure_Examples/Set/Set_and_Block_Examples.c
+Set_and_Block_Examples.h
+/home/chad/Desktop/ACA_Project/Data_Structure_Examples/Set/Set_and_Block_Examples.h
+
+/home/chad/Desktop/ACA_Project/Data_Structure_Examples/Set/Set_and_Block_Examples.h
+stdio.h
+-
+Set.h
+/home/chad/Desktop/ACA_Project/Data_Structure_Examples/Set/Set.h
+Block.h
+/home/chad/Desktop/ACA_Project/Data_Structure_Examples/Set/Block.h
+
 /home/chad/Desktop/ACA_Project/Queue.c
 Queue.h
 /home/chad/Desktop/ACA_Project/Queue.h
@@ -73,14 +105,6 @@ stdio.h
 -
 stdbool.h
 -
-
-/home/chad/Desktop/ACA_Project/Queue_the_examples.c
-Queue_the_examples.h
-/home/chad/Desktop/ACA_Project/Queue_the_examples.h
-
-/home/chad/Desktop/ACA_Project/Queue_the_examples.h
-Queue.h
-/home/chad/Desktop/ACA_Project/Queue.h
 
 /home/chad/Desktop/ACA_Project/Set.c
 Block.h
@@ -94,27 +118,15 @@ stdio.h
 uthash.h
 /home/chad/Desktop/ACA_Project/uthash.h
 
-/home/chad/Desktop/ACA_Project/Set_and_Block_Examples.c
-Set_and_Block_Examples.h
-/home/chad/Desktop/ACA_Project/Set_and_Block_Examples.h
-
-/home/chad/Desktop/ACA_Project/Set_and_Block_Examples.h
-stdio.h
--
-Set.h
-/home/chad/Desktop/ACA_Project/Set.h
-Block.h
-/home/chad/Desktop/ACA_Project/Block.h
-
 /home/chad/Desktop/ACA_Project/cache_line.c
 
 /home/chad/Desktop/ACA_Project/cache_line.h
 
 /home/chad/Desktop/ACA_Project/main.c
-Set_and_Block_Examples.h
-/home/chad/Desktop/ACA_Project/Set_and_Block_Examples.h
-Queue_the_examples.h
-/home/chad/Desktop/ACA_Project/Queue_the_examples.h
+Data_Structure_Examples/Set/Set_and_Block_Examples.h
+/home/chad/Desktop/ACA_Project/Data_Structure_Examples/Set/Set_and_Block_Examples.h
+Data_Structure_Examples/Queue/Queue_the_examples.h
+/home/chad/Desktop/ACA_Project/Data_Structure_Examples/Queue/Queue_the_examples.h
 
 /home/chad/Desktop/ACA_Project/uthash/include/uthash.h
 string.h
