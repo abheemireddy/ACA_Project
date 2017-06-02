@@ -14,7 +14,7 @@ typedef struct SetTag {
 
     void (*AddBlock)(struct SetTag set,struct BlockTag** HashTable,struct BlockTag* blockToAdd);
 
-    void (*put)(UT_hash_handle hh,struct BlockTag** HashTable,struct BlockTag *value);
+    void (*put)(struct SetTag** set,struct BlockTag *value);
     void (*replaceByUseFrequency)(struct BlockTag** HashTable,int key);
     struct BlockTag* (*getByUseFrequency)(struct BlockTag** HashTable,int key);
     void (*removeFromTable)(struct BlockTag** HashTable,struct BlockTag *blockToRemove);
@@ -24,6 +24,7 @@ typedef struct SetTag {
     void (*replace)(UT_hash_handle hh,struct BlockTag** HashTable,struct BlockTag *value);
     struct BlockTag* (*get)(struct BlockTag** HashTable,char* key);
     void (*SortHash)(struct BlockTag** HashTable);
+    void (*print_blocks_in_set)(struct SetTag** set);
 
     int tag;
     int index;
@@ -42,7 +43,8 @@ Set Constructor_Set(int numberOfBlocks);
 void AddBlock(Set set,struct BlockTag** HashTable,struct BlockTag* blockToAdd);
 
 //HashTable functions
-void put(UT_hash_handle hh,struct BlockTag** HashTable,struct BlockTag *value);
+void put(Set** set,struct BlockTag *value);
+void print_blocks_in_set(Set** set);
 void replaceByUseFrequency(struct BlockTag** HashTable,int key);
 struct BlockTag* getByUseFrequency(struct BlockTag** HashTable,int key);
 void removeFromTable(struct BlockTag** HashTable,struct BlockTag *blockToRemove);
@@ -52,5 +54,6 @@ int Count(struct BlockTag** HashTable);
 void replace(UT_hash_handle hh,struct BlockTag** HashTable,struct BlockTag *value);
 struct BlockTag* get(struct BlockTag** HashTable,char* key);
 void SortHash(struct BlockTag** HashTable);
+void print_blocks_in_set(Set** set);
 
 #endif //ACA_PROJECT_SET_H

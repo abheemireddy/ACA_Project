@@ -19,13 +19,14 @@ Set Constructor_Set(int numberOfBlocks){
     set.delete_all = &delete_all;
     set.Count = &Count;
     set.replaceByUseFrequency = &replaceByUseFrequency;
+    set.print_blocks_in_set = &print_blocks_in_set;
     set.HashTable = NULL;
     return set;
 }
 void AddBlock(Set set,Block** HashTable,struct BlockTag* blockToAdd){
     int blocksInSet = set.Count(HashTable);
     if(blocksInSet < set.numberOfBlocks){
-        set.put(set.hh,HashTable,blockToAdd);
+        set.put(&set,blockToAdd);
     }else{
         set.SortHash(HashTable);
         Block* blockToRemove = (*HashTable)->hh.next;
@@ -38,10 +39,12 @@ void AddBlock(Set set,Block** HashTable,struct BlockTag* blockToAdd){
 }
 
 
-void put(UT_hash_handle hh,Block** HashTable,Block *value) {  //key is useFrequency of the block.  Seems magical
+void put(Set** set,Block *value) {  //key is useFrequency of the block.  Seems magical
     if(value->data == NULL){
         printf("The passed block needs to have attribute data set");
     }
+    Block** HashTable = &(*set)->HashTable;
+    struct UT_hash_handle* hh = &(*set)->hh;
     HASH_ADD_KEYPTR(hh,*HashTable, value->data, strlen(value->data),value );
     //The last parameter is a pointer to the structure being added
 }
@@ -78,7 +81,7 @@ Block* getByUseFrequency(Block** HashTable,int key) {
 Block* get(Block** HashTable,char* key) {
     Block *hashTableStoresInThisBlock;
 
-    HASH_FIND_STR( *HashTable, key, hashTableStoresInThisBlock );//find block_id and put into s
+    HASH_FIND_STR( *HashTable, key, hashTableStoresInThisBlock );//find block_id and put into hashTableStoresInThisBlock
     return hashTableStoresInThisBlock;
 }
 
@@ -102,6 +105,16 @@ int Count(Block** HashTable){
     int num_in_hashtable;
     num_in_hashtable = HASH_COUNT(*HashTable);
     return num_in_hashtable;
+}
+
+void print_blocks_in_set(Set** set) {
+    Block* s;
+    Block* tmp;
+    struct UT_hash_handle hh = (*(*set)).hh;
+    Block** HashTable = (*set)->HashTable;
+    HASH_ITER(hh,*HashTable,s,tmp){
+        printf("%s",s->data);
+    }
 }
 
 int block_comparator(void* a,void* b){
