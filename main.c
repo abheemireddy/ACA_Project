@@ -37,9 +37,9 @@ void AddTooManyBlocksTest(){
     Block block7 = GetDummyBlockInstance("1");
     Block* pblock7 = &block7;
 
-    IncrementBlockFrequency(&pblock7);
-    IncrementBlockFrequency(&pblock7);
-    IncrementBlockFrequency(&pblock7);
+    IncrementBlockFrequency(&pblock1);
+    IncrementBlockFrequency(&pblock1);
+    IncrementBlockFrequency(&pblock1);
 
     set.put(&set.HashTable,pblock1);
     set.put(&set.HashTable,pblock2);

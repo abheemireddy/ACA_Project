@@ -13,12 +13,8 @@
   <component name="ChangeListManager">
     <list default="true" id="874cd3ee-283a-48e2-bbb0-bde542e13d07" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/ACA_Project2" afterPath="$PROJECT_DIR$/cmake-build-debug/ACA_Project2" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ACA_Project2.dir/Block.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ACA_Project2.dir/Block.c.o" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ACA_Project2.dir/main.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ACA_Project2.dir/main.c.o" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Block.c" afterPath="$PROJECT_DIR$/Block.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Block.h" afterPath="$PROJECT_DIR$/Block.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Set.c" afterPath="$PROJECT_DIR$/Set.c" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.c" afterPath="$PROJECT_DIR$/main.c" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -32,11 +28,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.c" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.c" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="45" column="33" lean-forward="true" selection-start-line="45" selection-start-column="33" selection-end-line="45" selection-end-column="33" />
+            <state relative-caret-position="363">
+              <caret line="40" column="36" lean-forward="false" selection-start-line="40" selection-start-column="36" selection-end-line="40" selection-end-column="36" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -47,7 +43,7 @@
       <file leaf-file-name="Block.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Block.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="372">
+            <state relative-caret-position="594">
               <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
               <folding>
                 <element signature="e#94#114#0" expanded="true" />
@@ -59,8 +55,8 @@
       <file leaf-file-name="Block.c" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Block.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="21" column="1" lean-forward="true" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
+            <state relative-caret-position="288">
+              <caret line="16" column="23" lean-forward="true" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -89,18 +85,18 @@
       <file leaf-file-name="Set.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Set.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-117">
-              <caret line="28" column="12" lean-forward="true" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
+            <state relative-caret-position="108">
+              <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Set.c" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Set.c" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Set.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="309">
-              <caret line="107" column="0" lean-forward="true" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
+            <state relative-caret-position="597">
+              <caret line="129" column="25" lean-forward="false" selection-start-line="129" selection-start-column="25" selection-end-line="129" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -192,11 +188,11 @@
         <option value="$PROJECT_DIR$/Cache.c" />
         <option value="$PROJECT_DIR$/Queue.h" />
         <option value="$PROJECT_DIR$/Queue.c" />
-        <option value="$PROJECT_DIR$/Set.h" />
         <option value="$PROJECT_DIR$/Block.c" />
         <option value="$PROJECT_DIR$/Block.h" />
-        <option value="$PROJECT_DIR$/main.c" />
+        <option value="$PROJECT_DIR$/Set.h" />
         <option value="$PROJECT_DIR$/Set.c" />
+        <option value="$PROJECT_DIR$/main.c" />
       </list>
     </option>
   </component>
@@ -482,7 +478,7 @@
       <updated>1495633368078</updated>
       <workItem from="1495633369604" duration="12505000" />
       <workItem from="1495653263207" duration="23810000" />
-      <workItem from="1496196382047" duration="21108000" />
+      <workItem from="1496196382047" duration="22833000" />
     </task>
     <task id="LOCAL-00001" summary="Okay, now it is all hooked up to the IDE for committing my changes.">
       <created>1495633456158</created>
@@ -799,11 +795,25 @@
       <option name="project" value="LOCAL" />
       <updated>1496420862688</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="created useFrequency example.">
+      <created>1496435112165</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1496435112165</updated>
+    </task>
+    <task id="LOCAL-00047" summary="Running frequency/data tests in main">
+      <created>1496436353587</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1496436353587</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57423000" />
+    <option name="totallyTimeSpent" value="59148000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="964" extended-state="6" />
@@ -837,8 +847,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Created Example successfully using the HashTable in the Set class to get/set blocks!" />
-    <MESSAGE value="Changed API of Set for the function replace." />
     <MESSAGE value="Created cache_line struct for Anu to manipulate.  Blocks then contain cache_lines." />
     <MESSAGE value="Fixed cache pointer array problem." />
     <MESSAGE value="Updated Block Constructor" />
@@ -862,11 +870,13 @@
     <MESSAGE value="Adding case where I add too many blocks to hashtable to see what happens." />
     <MESSAGE value="Modified hash put.  Working on printing out contents on the hashtable." />
     <MESSAGE value="Put and printing hashTable is working.  Note that sort sorts by LFU, not by data." />
-    <option name="LAST_COMMIT_MESSAGE" value="Put and printing hashTable is working.  Note that sort sorts by LFU, not by data." />
+    <MESSAGE value="created useFrequency example." />
+    <MESSAGE value="Running frequency/data tests in main" />
+    <option name="LAST_COMMIT_MESSAGE" value="Running frequency/data tests in main" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="58" />
+      <option name="time" value="76" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1088,22 +1098,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Cache.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Cache.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Queue.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
@@ -1122,9 +1116,25 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Cache.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Cache.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Block.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
+        <state relative-caret-position="594">
           <caret line="33" column="0" lean-forward="true" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
           <folding>
             <element signature="e#94#114#0" expanded="true" />
@@ -1134,35 +1144,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Block.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="21" column="1" lean-forward="true" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
+        <state relative-caret-position="288">
+          <caret line="16" column="23" lean-forward="true" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Set.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-117">
-          <caret line="28" column="12" lean-forward="true" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
+        <state relative-caret-position="108">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Set.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="597">
+          <caret line="129" column="25" lean-forward="false" selection-start-line="129" selection-start-column="25" selection-end-line="129" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="45" column="33" lean-forward="true" selection-start-line="45" selection-start-column="33" selection-end-line="45" selection-end-column="33" />
+        <state relative-caret-position="363">
+          <caret line="40" column="36" lean-forward="false" selection-start-line="40" selection-start-column="36" selection-end-line="40" selection-end-column="36" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Set.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="107" column="0" lean-forward="true" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
