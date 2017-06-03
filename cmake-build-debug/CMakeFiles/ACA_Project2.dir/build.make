@@ -129,28 +129,28 @@ CMakeFiles/ACA_Project2.dir/Set.c.o.provides: CMakeFiles/ACA_Project2.dir/Set.c.
 CMakeFiles/ACA_Project2.dir/Set.c.o.provides.build: CMakeFiles/ACA_Project2.dir/Set.c.o
 
 
-CMakeFiles/ACA_Project2.dir/cache_line.c.o: CMakeFiles/ACA_Project2.dir/flags.make
-CMakeFiles/ACA_Project2.dir/cache_line.c.o: ../cache_line.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chad/Desktop/ACA_Project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/ACA_Project2.dir/cache_line.c.o"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ACA_Project2.dir/cache_line.c.o   -c /home/chad/Desktop/ACA_Project/cache_line.c
+CMakeFiles/ACA_Project2.dir/CacheLine.c.o: CMakeFiles/ACA_Project2.dir/flags.make
+CMakeFiles/ACA_Project2.dir/CacheLine.c.o: ../CacheLine.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chad/Desktop/ACA_Project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/ACA_Project2.dir/CacheLine.c.o"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ACA_Project2.dir/CacheLine.c.o   -c /home/chad/Desktop/ACA_Project/CacheLine.c
 
-CMakeFiles/ACA_Project2.dir/cache_line.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ACA_Project2.dir/cache_line.c.i"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/chad/Desktop/ACA_Project/cache_line.c > CMakeFiles/ACA_Project2.dir/cache_line.c.i
+CMakeFiles/ACA_Project2.dir/CacheLine.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ACA_Project2.dir/CacheLine.c.i"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/chad/Desktop/ACA_Project/CacheLine.c > CMakeFiles/ACA_Project2.dir/CacheLine.c.i
 
-CMakeFiles/ACA_Project2.dir/cache_line.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ACA_Project2.dir/cache_line.c.s"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/chad/Desktop/ACA_Project/cache_line.c -o CMakeFiles/ACA_Project2.dir/cache_line.c.s
+CMakeFiles/ACA_Project2.dir/CacheLine.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ACA_Project2.dir/CacheLine.c.s"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/chad/Desktop/ACA_Project/CacheLine.c -o CMakeFiles/ACA_Project2.dir/CacheLine.c.s
 
-CMakeFiles/ACA_Project2.dir/cache_line.c.o.requires:
+CMakeFiles/ACA_Project2.dir/CacheLine.c.o.requires:
 
-.PHONY : CMakeFiles/ACA_Project2.dir/cache_line.c.o.requires
+.PHONY : CMakeFiles/ACA_Project2.dir/CacheLine.c.o.requires
 
-CMakeFiles/ACA_Project2.dir/cache_line.c.o.provides: CMakeFiles/ACA_Project2.dir/cache_line.c.o.requires
-	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/cache_line.c.o.provides.build
-.PHONY : CMakeFiles/ACA_Project2.dir/cache_line.c.o.provides
+CMakeFiles/ACA_Project2.dir/CacheLine.c.o.provides: CMakeFiles/ACA_Project2.dir/CacheLine.c.o.requires
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/CacheLine.c.o.provides.build
+.PHONY : CMakeFiles/ACA_Project2.dir/CacheLine.c.o.provides
 
-CMakeFiles/ACA_Project2.dir/cache_line.c.o.provides.build: CMakeFiles/ACA_Project2.dir/cache_line.c.o
+CMakeFiles/ACA_Project2.dir/CacheLine.c.o.provides.build: CMakeFiles/ACA_Project2.dir/CacheLine.c.o
 
 
 CMakeFiles/ACA_Project2.dir/Cache.c.o: CMakeFiles/ACA_Project2.dir/flags.make
@@ -254,7 +254,7 @@ ACA_Project2_OBJECTS = \
 "CMakeFiles/ACA_Project2.dir/main.c.o" \
 "CMakeFiles/ACA_Project2.dir/Block.c.o" \
 "CMakeFiles/ACA_Project2.dir/Set.c.o" \
-"CMakeFiles/ACA_Project2.dir/cache_line.c.o" \
+"CMakeFiles/ACA_Project2.dir/CacheLine.c.o" \
 "CMakeFiles/ACA_Project2.dir/Cache.c.o" \
 "CMakeFiles/ACA_Project2.dir/Queue.c.o" \
 "CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Set/Set_and_Block_Examples.c.o" \
@@ -266,7 +266,7 @@ ACA_Project2_EXTERNAL_OBJECTS =
 ACA_Project2: CMakeFiles/ACA_Project2.dir/main.c.o
 ACA_Project2: CMakeFiles/ACA_Project2.dir/Block.c.o
 ACA_Project2: CMakeFiles/ACA_Project2.dir/Set.c.o
-ACA_Project2: CMakeFiles/ACA_Project2.dir/cache_line.c.o
+ACA_Project2: CMakeFiles/ACA_Project2.dir/CacheLine.c.o
 ACA_Project2: CMakeFiles/ACA_Project2.dir/Cache.c.o
 ACA_Project2: CMakeFiles/ACA_Project2.dir/Queue.c.o
 ACA_Project2: CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Set/Set_and_Block_Examples.c.o
@@ -284,7 +284,7 @@ CMakeFiles/ACA_Project2.dir/build: ACA_Project2
 CMakeFiles/ACA_Project2.dir/requires: CMakeFiles/ACA_Project2.dir/main.c.o.requires
 CMakeFiles/ACA_Project2.dir/requires: CMakeFiles/ACA_Project2.dir/Block.c.o.requires
 CMakeFiles/ACA_Project2.dir/requires: CMakeFiles/ACA_Project2.dir/Set.c.o.requires
-CMakeFiles/ACA_Project2.dir/requires: CMakeFiles/ACA_Project2.dir/cache_line.c.o.requires
+CMakeFiles/ACA_Project2.dir/requires: CMakeFiles/ACA_Project2.dir/CacheLine.c.o.requires
 CMakeFiles/ACA_Project2.dir/requires: CMakeFiles/ACA_Project2.dir/Cache.c.o.requires
 CMakeFiles/ACA_Project2.dir/requires: CMakeFiles/ACA_Project2.dir/Queue.c.o.requires
 CMakeFiles/ACA_Project2.dir/requires: CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Set/Set_and_Block_Examples.c.o.requires

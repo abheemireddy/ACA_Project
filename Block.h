@@ -6,7 +6,7 @@
 #define ACA_PROJECT_BLOCK_H
 #include <stdbool.h>
 #include "uthash/include/uthash.h"//troydhanson.github.io/uthash
-#include "cache_line.h"
+#include "CacheLine.h"
 
 typedef struct BlockTag{
     int size;
@@ -16,13 +16,13 @@ typedef struct BlockTag{
 
     int useFrequency;//for LRU in Set
     char* address;//address
+    CacheLine** cacheLines;//number in array is the number of cache lines in the block
 
     int tag;
     int index;
     int offset;
 
     void (*SetCacheLines)(struct BlockTag block,CacheLine* cacheLines[]);
-    CacheLine** cacheLines;//number in array is the number of cache lines in the block
     void (*Set_Data)(struct BlockTag* block,char* data);
     bool (*IsInBlock)(char* address);
 
