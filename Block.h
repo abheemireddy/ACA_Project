@@ -15,7 +15,7 @@ typedef struct BlockTag{
     bool dirtyBit;
 
     int useFrequency;//for LRU in Set
-    char* data;//chunk of memory it holds
+    char* address;//address
 
     int tag;
     int index;

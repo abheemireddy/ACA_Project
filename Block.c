@@ -10,7 +10,7 @@ Block Constructor_Block(int numberOfCacheLines){
     block.SetCacheLines = &SetCacheLines;
     block.Set_Data = &Set_Data;
     block.IsInBlock = &IsInBlock;
-    block.data = "";
+    block.address = "";
     return block;
 }
 
@@ -18,8 +18,8 @@ bool IsInBlock(char* address){
     return true;
 }
 
-void Set_Data(Block* block,char* data){
-    block->data = data;
+void Set_Data(Block* block,char* address){
+    block->address = address;
 }
 
 void SetCacheLines(Block block,CacheLine* cacheLines[]){

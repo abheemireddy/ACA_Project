@@ -41,10 +41,10 @@ void AddBlock(Set set,Block** HashTable,struct BlockTag** blockToAdd){
 
 
 void put(Block** HashTable,Block *value) {  //key is useFrequency of the block.  Seems magical
-    if(value->data == NULL){
-        printf("The passed block needs to have attribute data set");
+    if(value->address == NULL){
+        printf("The passed block needs to have attribute address set");
     }
-    HASH_ADD_KEYPTR(hh,*HashTable, value->data, strlen(value->data),value );
+    HASH_ADD_KEYPTR(hh,*HashTable, value->address, strlen(value->address),value );
     //The last parameter is a pointer to the structure being added
 }
 
@@ -62,11 +62,11 @@ void replaceByUseFrequency(Block** HashTable,int key) {
 void replace(UT_hash_handle hh,Block** HashTable,Block *value) {
     struct BlockTag *hashTableStoresInThisBlock;//to store getter
 
-    HASH_FIND_STR( *HashTable, value->data, hashTableStoresInThisBlock );
+    HASH_FIND_STR( *HashTable, value->address, hashTableStoresInThisBlock );
     if (hashTableStoresInThisBlock==NULL) {
         hashTableStoresInThisBlock = (struct BlockTag*)malloc(sizeof(struct BlockTag));
-        hashTableStoresInThisBlock->data = value->data;
-        HASH_ADD_KEYPTR(hh,*HashTable, value->data, strlen(value->data),value );
+        hashTableStoresInThisBlock->address = value->address;
+        HASH_ADD_KEYPTR(hh,*HashTable, value->address, strlen(value->address),value );
     }
 }
 
@@ -110,7 +110,7 @@ void print_blocks_in_set(Block** HashTable) {
     Block* s;
     Block* tmp;
     HASH_ITER(hh,*HashTable,s,tmp){
-        printf("data: %s, LFU:%d\n",s->data,s->useFrequency);
+        printf("address: %s, LFU:%d\n",s->address,s->useFrequency);
     }
 }
 
