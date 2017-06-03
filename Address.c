@@ -15,13 +15,13 @@ int fromBinary(char *s) {
     return (int) strtol(s, NULL, 2);
 }
 
-Address ParseAddress(char* bitString){
+Address Constructor_Address(char* bitString){
     char* TagString = GetChar(bitString,0,8);
     char* IndexString = GetChar(bitString,8,6);
     char* OffsetString = GetChar(bitString,14,3);
     int Tag = fromBinary(TagString);
     int Index = fromBinary(IndexString);
     int Offset = fromBinary(OffsetString);
-    Address address = {Tag:Tag,Index:Index,Offset:Offset};
+    Address address = {Tag:Tag,Index:Index,Offset:Offset,bitString:bitString};
     return address;
 }

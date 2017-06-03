@@ -25,10 +25,10 @@ Set Constructor_Set(int numberOfBlocks){
 }
 
 void put(Block** HashTable,Block *value) {  //key is useFrequency of the block.  Seems magical
-    if(value->address == NULL){
+    if(value->address.bitString == NULL){
         printf("The passed block needs to have attribute address set");
     }
-    HASH_ADD_KEYPTR(hh,*HashTable, value->address, strlen(value->address),value );
+    HASH_ADD_KEYPTR(hh,*HashTable, value->address.bitString, strlen(value->address.bitString),value );
     //The last parameter is a pointer to the structure being added
 }
 
@@ -46,11 +46,11 @@ void replaceByUseFrequency(Block** HashTable,int key) {
 void replace(UT_hash_handle hh,Block** HashTable,Block *value) {
     struct BlockTag *hashTableStoresInThisBlock;//to store getter
 
-    HASH_FIND_STR( *HashTable, value->address, hashTableStoresInThisBlock );
+    HASH_FIND_STR( *HashTable, value->address.bitString, hashTableStoresInThisBlock );
     if (hashTableStoresInThisBlock==NULL) {
         hashTableStoresInThisBlock = (struct BlockTag*)malloc(sizeof(struct BlockTag));
-        hashTableStoresInThisBlock->address = value->address;
-        HASH_ADD_KEYPTR(hh,*HashTable, value->address, strlen(value->address),value );
+        hashTableStoresInThisBlock->address.bitString = value->address.bitString;
+        HASH_ADD_KEYPTR(hh,*HashTable, value->address.bitString, strlen(value->address.bitString),value );
     }
 }
 

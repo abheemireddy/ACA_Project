@@ -3,7 +3,7 @@
 //
 #include "Block.h"
 
-Block Constructor_Block(char* address){
+Block Constructor_Block(Address address){
     Block block = {dirtyBit:false,validBit:false,useFrequency:0,address:address};
     //*block.cacheLines = (struct CacheLineTag*)malloc(numberOfCacheLines*sizeof(struct CacheLineTag));
     block.IsInBlock = &IsInBlock;
@@ -31,7 +31,7 @@ struct CacheLineTag* (*getCacheLine)(struct CacheLineTag** HashTable,char* key);
 void (*print_cache_lines_in_set)(struct CacheLineTag** HashTable);
 */
 
-void Set_Data(Block* block,char* address){
+void Set_Data(Block* block,Address address){
     block->address = address;
 }
 

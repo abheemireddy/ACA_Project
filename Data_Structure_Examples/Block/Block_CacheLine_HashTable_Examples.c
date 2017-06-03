@@ -4,7 +4,8 @@
 #include "Block_CacheLine_HashTable_Examples.h"
 
 int AddCacheLinesToBlock(){
-    Block block = Constructor_Block("001");
+    Address address1 = Constructor_Address("00000000000000000");
+    Block block = Constructor_Block(address1);
     CacheLine case1 = {offset:"1000000"};
     CacheLine case2 = {offset:"0000001"};
     CacheLine* cacheLine1 = malloc(sizeof(CacheLine));

@@ -6,6 +6,7 @@
 #define ACA_PROJECT_BLOCK_H
 #include <stdbool.h>
 #include "CacheLine.h"
+#include "Address.h"
 #include <stdlib.h>
 #include <stdio.h>
 #include <printf.h>
@@ -17,13 +18,10 @@ typedef struct BlockTag{
     bool dirtyBit;
 
     int useFrequency;//for LRU in Set
-    char* address;//address
     CacheLine** cacheLines;//number in array is the number of cache lines in the block
     struct CacheLine *HashTable;
 
-    int tag;
-    int index;
-    int offset;
+    Address address;
 
     void (*SetCacheLines)(struct BlockTag block,struct CacheLineTag* cacheLines[]);
     void (*Set_Offset)(struct CacheLineTag* block,char* offset);
@@ -42,7 +40,7 @@ typedef struct BlockTag{
     UT_hash_handle hh; /* make this structure hashable*/
 } Block;//Block is synonymous for struct BlockTag (they mean the same thing).
 
-Block Constructor_Block(char* offset);
+Block Constructor_Block(Address address);
 void Set_Offset(struct CacheLineTag* block,char* offset);
 void SetCacheLines(Block block,struct CacheLineTag* cacheLines[]);
 void IncrementBlockFrequency(Block** block);

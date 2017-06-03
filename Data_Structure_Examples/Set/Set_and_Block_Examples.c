@@ -5,18 +5,21 @@
 
 void ExampleUsingSetHash(){
     Set set = Constructor_Set(4);
-    Block case1 = {useFrequency:1,address:"bitString1"};
-    Block case2 = {useFrequency:2,address:"bitString2"};
+    Address address1 = Constructor_Address("00000000000000000");
+    Address address2 = Constructor_Address("00000000000000001");
+    Block case1 = {useFrequency:1,address:address1};
+    Block case2 = {useFrequency:2,address:address2};
     Block* block1 = malloc(sizeof(Block));
     block1 = &case1;
     set.put(&set.HashTable,block1);
     Block* block2 = &case2;
     set.put(&set.HashTable,block2);
-    Block* returned = set.get(&set.HashTable,block2->address);
+    Block* returned = set.get(&set.HashTable,block2->address.bitString);
     printf("use Frequency: %d\n",returned->useFrequency);
 }
 Block GetDummyBlockInstance(char* data){
-    Block toAdd = Constructor_Block("4");
+    Address address1 = Constructor_Address("00000000000000000");
+    Block toAdd = Constructor_Block(address1);
     return toAdd;
 }
 void AddTooManyBlocksTest(){
