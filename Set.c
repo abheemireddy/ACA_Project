@@ -94,7 +94,7 @@ void print_blocks_in_set(Block** HashTable) {
     Block* s;
     Block* tmp;
     HASH_ITER(hh,*HashTable,s,tmp){
-        printf("address: %s, LFU:%d\n",s->address,s->useFrequency);
+        printf("address: %s, LFU:%d\n",s->address.bitString,s->useFrequency);
     }
 }
 

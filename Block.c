@@ -44,26 +44,26 @@ void IncrementBlockFrequency(Block** block){
 }
 
 
-bool IsInBlock(char* offset){
+bool IsInBlock(Address address){
     return true;
 }
 
 void putCacheLine(CacheLine** HashTable,CacheLine* value) {  //key is useFrequency of the block.  Seems magical
-    if(value->offset == NULL){
-        printf("The passed block needs to have attribute offset set");
+    if(value->address.bitString == NULL){
+        printf("The passed block needs to have attribute address.bitString set");
     }
-    HASH_ADD_KEYPTR(hh,*HashTable, value->offset, strlen(value->offset),value );
+    HASH_ADD_KEYPTR(hh,*HashTable, value->address.bitString, strlen(value->address.bitString),value );
     //The last parameter is a pointer to the structure being added
 }
 
 void replaceCacheLine(UT_hash_handle hh,CacheLine** HashTable,CacheLine *value) {
     CacheLine *hashTableStoresInThisBlock;//to store getter
 
-    HASH_FIND_STR( *HashTable, value->offset, hashTableStoresInThisBlock );
+    HASH_FIND_STR( *HashTable, value->address.bitString, hashTableStoresInThisBlock );
     if (hashTableStoresInThisBlock==NULL) {
         hashTableStoresInThisBlock = (CacheLine*)malloc(sizeof(CacheLine));
-        hashTableStoresInThisBlock->offset = value->offset;
-        HASH_ADD_KEYPTR(hh,*HashTable, value->offset, strlen(value->offset),value );
+        hashTableStoresInThisBlock->address.bitString = value->address.bitString;
+        HASH_ADD_KEYPTR(hh,*HashTable, value->address.bitString, strlen(value->address.bitString),value );
     }
 }
 
@@ -107,7 +107,7 @@ void print_cache_lines_in_set(CacheLine** HashTable) {
     CacheLine* s;
     CacheLine* tmp;
     HASH_ITER(hh,*HashTable,s,tmp){
-        printf("offset: %s",s->offset);
+        printf("address.bitString: %s",s->address.bitString);
     }
 }
 

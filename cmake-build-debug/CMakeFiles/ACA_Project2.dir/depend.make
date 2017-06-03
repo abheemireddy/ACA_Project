@@ -17,7 +17,9 @@ CMakeFiles/ACA_Project2.dir/Cache.c.o: ../Cache.c
 CMakeFiles/ACA_Project2.dir/Cache.c.o: ../Cache.h
 CMakeFiles/ACA_Project2.dir/Cache.c.o: ../Set.h
 
+CMakeFiles/ACA_Project2.dir/CacheLine.c.o: .././uthash/include/uthash.h
 CMakeFiles/ACA_Project2.dir/CacheLine.c.o: ../uthash/include/uthash.h
+CMakeFiles/ACA_Project2.dir/CacheLine.c.o: ../Address.h
 CMakeFiles/ACA_Project2.dir/CacheLine.c.o: ../CacheLine.c
 CMakeFiles/ACA_Project2.dir/CacheLine.c.o: ../CacheLine.h
 

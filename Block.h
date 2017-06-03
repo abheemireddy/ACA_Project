@@ -25,7 +25,7 @@ typedef struct BlockTag{
 
     void (*SetCacheLines)(struct BlockTag block,struct CacheLineTag* cacheLines[]);
     void (*Set_Offset)(struct CacheLineTag* block,char* offset);
-    bool (*IsInBlock)(char* address);
+    bool (*IsInBlock)(Address address);
 
     void (*putCacheLine)(struct CacheLineTag** HashTable, struct CacheLineTag* value);
     struct CacheLineTag* (*getCacheLineByAddress)(struct CacheLineTag** HashTable,int key);
@@ -44,7 +44,7 @@ Block Constructor_Block(Address address);
 void Set_Offset(struct CacheLineTag* block,char* offset);
 void SetCacheLines(Block block,struct CacheLineTag* cacheLines[]);
 void IncrementBlockFrequency(Block** block);
-bool IsInBlock(char* address);
+bool IsInBlock(Address address);
 
 
 void putCacheLine(struct CacheLineTag** HashTable, struct CacheLineTag* value);
