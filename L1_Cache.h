@@ -37,7 +37,7 @@ Cache BuildL1Cache(){
             set.put(block.HashTable,pblock);
         }
     }
-
+    return cache;
 }
 
 
