@@ -15,7 +15,7 @@ typedef struct AddressTag{
     UT_hash_handle hh;
 } Address;
 
-char* GetChar(char* originalString,int start,int length);
+char* GetChar(char* originalString,int start,int length,char* substring);
 int fromBinary(char *s);
 Address Constructor_Address(char* bitString);
 
