@@ -5,6 +5,7 @@
 #ifndef ACA_PROJECT_SET_H
 #define ACA_PROJECT_SET_H
 #include "uthash.h"
+#include "Address.h"
 
 struct BlockTag;//forward declaration
 
@@ -27,9 +28,7 @@ typedef struct SetTag {
     void (*SortHash)(struct BlockTag** HashTable);
     void (*print_blocks_in_set)(struct BlockTag** HashTable);
 
-    int tag;
-    int index;
-    int offset;
+    Address address;
 
     //---------Used in Cache HashMap to find set
     UT_hash_handle hh; /* make this structure hashable*/

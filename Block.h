@@ -28,7 +28,7 @@ typedef struct BlockTag{
     bool (*IsInBlock)(Address address);
 
     void (*putCacheLine)(struct CacheLineTag** HashTable, struct CacheLineTag* value);
-    struct CacheLineTag* (*getCacheLineByAddress)(struct CacheLineTag** HashTable,int key);
+    struct CacheLineTag* (*getCacheLineByOffset)(struct CacheLineTag** HashTable,int key);
     void (*removeCacheLineFromTable)(struct CacheLineTag** HashTable,struct CacheLineTag* blockToRemove);
     void (*deleteAllCacheLine)(struct CacheLineTag** HashTable);
     int (*CountCacheLines)(struct CacheLineTag** HashTable);
@@ -48,7 +48,7 @@ bool IsInBlock(Address address);
 
 
 void putCacheLine(struct CacheLineTag** HashTable, struct CacheLineTag* value);
-struct CacheLineTag* getCacheLineByAddress(struct CacheLineTag** HashTable,int key);
+struct CacheLineTag* getCacheLineByOffset(struct CacheLineTag** HashTable,int key);
 void removeCacheLineFromTable(struct CacheLineTag** HashTable,struct CacheLineTag* blockToRemove);
 void deleteAllCacheLine(struct CacheLineTag** HashTable);
 int CountCacheLines(struct CacheLineTag** HashTable);

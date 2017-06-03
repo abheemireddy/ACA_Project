@@ -11,8 +11,7 @@ Block Constructor_Block(Address address){
     //HashTable Functions
     block.putCacheLine = &putCacheLine;
     block.replaceCacheLine = &replaceCacheLine;
-    block.getCacheLine = &getCacheLine;
-    block.getCacheLineByAddress = &getCacheLineByAddress;
+    block.getCacheLineByOffset = &getCacheLineByOffset;
     block.removeCacheLineFromTable = &removeCacheLineFromTable;
     block.deleteAllCacheLine = &deleteAllCacheLine;
     block.CountCacheLines = &CountCacheLines;
@@ -52,32 +51,26 @@ void putCacheLine(CacheLine** HashTable,CacheLine* value) {  //key is useFrequen
     if(value->address.bitString == NULL){
         printf("The passed block needs to have attribute address.bitString set");
     }
-    HASH_ADD_KEYPTR(hh,*HashTable, value->address.bitString, strlen(value->address.bitString),value );
+    HASH_ADD_INT(*HashTable, address.Offset, value );
     //The last parameter is a pointer to the structure being added
 }
 
 void replaceCacheLine(UT_hash_handle hh,CacheLine** HashTable,CacheLine *value) {
-    CacheLine *hashTableStoresInThisBlock;//to store getter
+    CacheLine *hashTableStoresInThis;//to store getter
 
-    HASH_FIND_STR( *HashTable, value->address.bitString, hashTableStoresInThisBlock );
-    if (hashTableStoresInThisBlock==NULL) {
-        hashTableStoresInThisBlock = (CacheLine*)malloc(sizeof(CacheLine));
-        hashTableStoresInThisBlock->address.bitString = value->address.bitString;
-        HASH_ADD_KEYPTR(hh,*HashTable, value->address.bitString, strlen(value->address.bitString),value );
+    HASH_FIND_INT( *HashTable, &value->address.Offset, hashTableStoresInThis );
+    if (hashTableStoresInThis==NULL) {
+        hashTableStoresInThis = (CacheLine*)malloc(sizeof(CacheLine));
+        hashTableStoresInThis->address.bitString = value->address.bitString;
+        HASH_ADD_INT(*HashTable, address.Offset, value );
     }
 }
 
 //look up item in hashmap
-CacheLine* getCacheLineByAddress(CacheLine** HashTable,int key) {
+CacheLine* getCacheLineByOffset(CacheLine** HashTable,int key) {
     CacheLine* hashTableStoresInThisBlock;
 
     HASH_FIND_INT( *HashTable, &key, hashTableStoresInThisBlock );//find block_id and put into s
-    return hashTableStoresInThisBlock;
-}
-CacheLine* getCacheLine(CacheLine** HashTable,char* key) {
-    CacheLine* hashTableStoresInThisBlock;
-
-    HASH_FIND_STR( *HashTable, key, hashTableStoresInThisBlock );//find block_id and put into hashTableStoresInThisBlock
     return hashTableStoresInThisBlock;
 }
 
