@@ -4,9 +4,11 @@
 
 #ifndef ACA_PROJECT_CACHELINE_H
 #define ACA_PROJECT_CACHELINE_H
+#include "uthash.h"
 
 typedef struct CacheLineTag{
-   char* data;
+    char* index;
+    char* data;
 } CacheLine;
 
 #endif //ACA_PROJECT_CACHELINE_H
