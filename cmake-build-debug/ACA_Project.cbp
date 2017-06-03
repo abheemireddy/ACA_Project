@@ -106,6 +106,12 @@
 		<Unit filename="/home/chad/Desktop/ACA_Project/CacheLine.h">
 			<Option target="ACA_Project2"/>
 		</Unit>
+		<Unit filename="/home/chad/Desktop/ACA_Project/Data_Structure_Examples/Block/Block_CacheLine_HashTable_Examples.c">
+			<Option target="ACA_Project2"/>
+		</Unit>
+		<Unit filename="/home/chad/Desktop/ACA_Project/Data_Structure_Examples/Block/Block_CacheLine_HashTable_Examples.h">
+			<Option target="ACA_Project2"/>
+		</Unit>
 		<Unit filename="/home/chad/Desktop/ACA_Project/Data_Structure_Examples/Queue/Queue_the_examples.c">
 			<Option target="ACA_Project2"/>
 		</Unit>
