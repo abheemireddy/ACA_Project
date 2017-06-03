@@ -16,8 +16,7 @@ void ExampleUsingSetHash(){
     printf("use Frequency: %d\n",returned->useFrequency);
 }
 Block GetDummyBlockInstance(char* data){
-    Block toAdd = Constructor_Block(4);
-    toAdd.Set_Data(&toAdd,data);
+    Block toAdd = Constructor_Block("4");
     return toAdd;
 }
 void AddTooManyBlocksTest(){

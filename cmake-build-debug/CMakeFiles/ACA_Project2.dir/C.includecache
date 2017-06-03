@@ -9,14 +9,20 @@
 .././Block.h
 stdbool.h
 -
-uthash/include/uthash.h
-.././uthash/include/uthash.h
 CacheLine.h
 .././CacheLine.h
+stdlib.h
+-
+stdio.h
+-
+printf.h
+-
 
 .././CacheLine.h
+stdio.h
+-
 uthash.h
-.././uthash.h
+-
 
 .././Queue.h
 stdlib.h
@@ -29,20 +35,6 @@ stdbool.h
 .././Set.h
 uthash.h
 .././uthash.h
-
-.././uthash/include/uthash.h
-string.h
--
-stddef.h
--
-stdlib.h
--
-stdint.h
--
-stdint.h
--
-stdint.h
--
 
 ../uthash/include/uthash.h
 string.h
@@ -60,15 +52,19 @@ stdint.h
 
 /home/chad/Desktop/ACA_Project/Block.c
 Block.h
--
+/home/chad/Desktop/ACA_Project/Block.h
 
 /home/chad/Desktop/ACA_Project/Block.h
 stdbool.h
 -
-uthash/include/uthash.h
-/home/chad/Desktop/ACA_Project/uthash/include/uthash.h
 CacheLine.h
 /home/chad/Desktop/ACA_Project/CacheLine.h
+stdlib.h
+-
+stdio.h
+-
+printf.h
+-
 
 /home/chad/Desktop/ACA_Project/Cache.c
 Cache.h
@@ -83,8 +79,10 @@ CacheLine.h
 /home/chad/Desktop/ACA_Project/CacheLine.h
 
 /home/chad/Desktop/ACA_Project/CacheLine.h
+stdio.h
+-
 uthash.h
-/home/chad/Desktop/ACA_Project/uthash.h
+-
 
 /home/chad/Desktop/ACA_Project/Data_Structure_Examples/Queue/Queue_the_examples.c
 Queue_the_examples.h
@@ -135,18 +133,4 @@ Data_Structure_Examples/Set/Set_and_Block_Examples.h
 /home/chad/Desktop/ACA_Project/Data_Structure_Examples/Set/Set_and_Block_Examples.h
 Data_Structure_Examples/Queue/Queue_the_examples.h
 /home/chad/Desktop/ACA_Project/Data_Structure_Examples/Queue/Queue_the_examples.h
-
-/home/chad/Desktop/ACA_Project/uthash/include/uthash.h
-string.h
--
-stddef.h
--
-stdlib.h
--
-stdint.h
--
-stdint.h
--
-stdint.h
--
 

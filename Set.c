@@ -8,12 +8,12 @@
 
 
 Set Constructor_Set(int numberOfBlocks){
-    Set set = {numberOfBlocks:numberOfBlocks};
+    Set set = {};
     set.put = &put;
     set.replace = &replace;
     set.get = &get;
     set.SortHash = &SortHash;
-    set.AddBlock = &AddBlock;
+    //set.AddBlock = &AddBlock;
     set.getByUseFrequency = &getByUseFrequency;
     set.removeFromTable = &removeFromTable;
     set.delete_all = &delete_all;
@@ -23,22 +23,6 @@ Set Constructor_Set(int numberOfBlocks){
     set.HashTable = NULL;
     return set;
 }
-
-void AddBlock(Set set,Block** HashTable,struct BlockTag** blockToAdd){
-    int blocksInSet = set.Count(HashTable);
-    if(blocksInSet < set.numberOfBlocks){
-        set.put(HashTable,*blockToAdd);
-    }else{
-        set.SortHash(HashTable);
-        Block* blockToRemove = (*HashTable)->hh.next;
-        if(blockToRemove->dirtyBit == false){
-            set.removeFromTable(HashTable,(*HashTable)->hh.next);//remove block from top of hash
-        }else {
-            //write to L2 via the L2 Queue
-        }
-    }
-}
-
 
 void put(Block** HashTable,Block *value) {  //key is useFrequency of the block.  Seems magical
     if(value->address == NULL){
