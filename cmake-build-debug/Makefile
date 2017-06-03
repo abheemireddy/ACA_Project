@@ -123,6 +123,33 @@ ACA_Project2/fast:
 	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/build
 .PHONY : ACA_Project2/fast
 
+Address.o: Address.c.o
+
+.PHONY : Address.o
+
+# target to build an object file
+Address.c.o:
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/Address.c.o
+.PHONY : Address.c.o
+
+Address.i: Address.c.i
+
+.PHONY : Address.i
+
+# target to preprocess a source file
+Address.c.i:
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/Address.c.i
+.PHONY : Address.c.i
+
+Address.s: Address.c.s
+
+.PHONY : Address.s
+
+# target to generate assembly for a file
+Address.c.s:
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/Address.c.s
+.PHONY : Address.c.s
+
 Block.o: Block.c.o
 
 .PHONY : Block.o
@@ -375,6 +402,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... ACA_Project2"
+	@echo "... Address.o"
+	@echo "... Address.i"
+	@echo "... Address.s"
 	@echo "... Block.o"
 	@echo "... Block.i"
 	@echo "... Block.s"

@@ -25,7 +25,7 @@
 //Offset = 3 bits
 Cache BuildL1Cache(){
     Cache cache = Constructor_Cache(4);//set associativity is 4-way
-    
+
 
 }
 
