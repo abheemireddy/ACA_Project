@@ -20,7 +20,7 @@ Cache Constructor_Cache(int setAssociativity){
 /*
  *
  * void putSet(struct Set** HashTable, struct Set* value);
-struct Set* getSetByOffset(struct Set** HashTable,int key);
+struct Set* getSetByIndex(struct Set** HashTable,int key);
 void removeSetFromTable(struct Set** HashTable,struct Set* blockToRemove);
 void deleteAllSet(struct Set** HashTable);
 int CountSets(struct Set** HashTable);
@@ -31,21 +31,21 @@ void print_cache_lines_in_set(struct Set** HashTable);
 
 
 void putSet(Set** HashTable,Set* value) {  //key is useFrequency of the block.  Seems magical
-    if(value->address.bitString == NULL){
-        printf("The passed block needs to have attribute address.bitString set");
+    if(value->address.Index == NULL){
+        printf("The passed block needs to have attribute address.Index set");
     }
-    HASH_ADD_INT(*HashTable, address.Offset, value );
+    HASH_ADD_INT(*HashTable, address.Index, value );
     //The last parameter is a pointer to the structure being added
 }
 
 void replaceSet(UT_hash_handle hh,Set** HashTable,Set *value) {
     Set *hashTableStoresInThis;//to store getter
 
-    HASH_FIND_INT( *HashTable, &value->address.Offset, hashTableStoresInThis );
+    HASH_FIND_INT( *HashTable, &value->address.Index, hashTableStoresInThis );
     if (hashTableStoresInThis==NULL) {
         hashTableStoresInThis = (Set*)malloc(sizeof(Set));
-        hashTableStoresInThis->address.bitString = value->address.bitString;
-        HASH_ADD_INT(*HashTable, address.Offset, value );
+        hashTableStoresInThis->address.Index = value->address.Index;
+        HASH_ADD_INT(*HashTable, address.Index, value );
     }
 }
 
@@ -83,7 +83,7 @@ void print_sets(Set** HashTable) {
     Set* s;
     Set* tmp;
     HASH_ITER(hh,*HashTable,s,tmp){
-        printf("address.bitString: %s",s->address.bitString);
+        printf("address.Index: %d",s->address.Index);
     }
 }
 

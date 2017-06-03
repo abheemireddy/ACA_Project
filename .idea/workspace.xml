@@ -13,13 +13,9 @@
   <component name="ChangeListManager">
     <list default="true" id="874cd3ee-283a-48e2-bbb0-bde542e13d07" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/ACA_Project2" afterPath="$PROJECT_DIR$/cmake-build-debug/ACA_Project2" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ACA_Project2.dir/Block.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ACA_Project2.dir/Block.c.o" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ACA_Project2.dir/Cache.c.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ACA_Project2.dir/Cache.c.o" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Block.c" afterPath="$PROJECT_DIR$/Block.c" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cache.c" afterPath="$PROJECT_DIR$/Cache.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cache.h" afterPath="$PROJECT_DIR$/Cache.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ACA_Project2.dir/C.includecache" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ACA_Project2.dir/C.includecache" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -104,11 +100,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Cache.h" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Cache.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Cache.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="410">
-              <caret line="28" column="20" lean-forward="false" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
+            <state relative-caret-position="374">
+              <caret line="26" column="43" lean-forward="true" selection-start-line="26" selection-start-column="43" selection-end-line="26" selection-end-column="43" />
               <folding>
                 <element signature="e#94#110#0" expanded="true" />
               </folding>
@@ -116,11 +112,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Cache.c" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Cache.c" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Cache.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="9" column="40" lean-forward="false" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
+            <state relative-caret-position="18">
+              <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
               <folding>
                 <element signature="e#38#57#0" expanded="true" />
               </folding>
@@ -142,7 +138,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Node</find>
       <find>pQueue</find>
       <find>next</find>
       <find>print</find>
@@ -172,6 +167,7 @@
       <find>CacheLine</find>
       <find>struct</find>
       <find>getSet</find>
+      <find>Offset</find>
     </findStrings>
     <replaceStrings>
       <replace>Block</replace>
@@ -195,6 +191,7 @@
       <replace>offset</replace>
       <replace>address.bitString</replace>
       <replace>Set</replace>
+      <replace>Index</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -235,8 +232,8 @@
         <option value="$PROJECT_DIR$/Set.h" />
         <option value="$PROJECT_DIR$/Block.h" />
         <option value="$PROJECT_DIR$/Block.c" />
-        <option value="$PROJECT_DIR$/Cache.c" />
         <option value="$PROJECT_DIR$/Cache.h" />
+        <option value="$PROJECT_DIR$/Cache.c" />
       </list>
     </option>
   </component>
@@ -580,14 +577,7 @@
       <workItem from="1495653263207" duration="23810000" />
       <workItem from="1496196382047" duration="25149000" />
       <workItem from="1496439561784" duration="1144000" />
-      <workItem from="1496507496449" duration="18839000" />
-    </task>
-    <task id="LOCAL-00021" summary="Changed API of Set for the function replace.">
-      <created>1495717697020</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1495717697020</updated>
+      <workItem from="1496507496449" duration="19044000" />
     </task>
     <task id="LOCAL-00022" summary="Created cache_line struct for Anu to manipulate.  Blocks then contain cache_lines.">
       <created>1495723198523</created>
@@ -925,11 +915,18 @@
       <option name="project" value="LOCAL" />
       <updated>1496528179655</updated>
     </task>
-    <option name="localTasksCounter" value="70" />
+    <task id="LOCAL-00070" summary="Cache HashTable is now referenced by the address">
+      <created>1496529246771</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1496529246771</updated>
+    </task>
+    <option name="localTasksCounter" value="71" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81447000" />
+    <option name="totallyTimeSpent" value="81652000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="954" extended-state="6" />
@@ -963,7 +960,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Trying to fix put on the hashTable" />
     <MESSAGE value="Reverted hashtable back a bit. Working on traversing the hashtable." />
     <MESSAGE value="Adding case where I add too many blocks to hashtable to see what happens." />
     <MESSAGE value="Modified hash put.  Working on printing out contents on the hashtable." />
@@ -988,7 +984,8 @@
     <MESSAGE value="Integrated Address as part of the Block" />
     <MESSAGE value="Added address to CacheLines" />
     <MESSAGE value="Block HashTable (refers to CachLines) now uses the Offset." />
-    <option name="LAST_COMMIT_MESSAGE" value="Block HashTable (refers to CachLines) now uses the Offset." />
+    <MESSAGE value="Cache HashTable is now referenced by the address" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cache HashTable is now referenced by the address" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1340,22 +1337,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Cache.c">
+    <entry file="file://$PROJECT_DIR$/Cache.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="9" column="40" lean-forward="false" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
+        <state relative-caret-position="374">
+          <caret line="26" column="43" lean-forward="true" selection-start-line="26" selection-start-column="43" selection-end-line="26" selection-end-column="43" />
           <folding>
-            <element signature="e#38#57#0" expanded="true" />
+            <element signature="e#94#110#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Cache.h">
+    <entry file="file://$PROJECT_DIR$/Cache.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="28" column="20" lean-forward="false" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="20" />
+        <state relative-caret-position="18">
+          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding>
-            <element signature="e#94#110#0" expanded="true" />
+            <element signature="e#38#57#0" expanded="true" />
           </folding>
         </state>
       </provider>
