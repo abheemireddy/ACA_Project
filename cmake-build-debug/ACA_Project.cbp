@@ -124,6 +124,9 @@
 		<Unit filename="/home/chad/Desktop/ACA_Project/Data_Structure_Examples/Set/Set_and_Block_Examples.h">
 			<Option target="ACA_Project2"/>
 		</Unit>
+		<Unit filename="/home/chad/Desktop/ACA_Project/L1_Cache.h">
+			<Option target="ACA_Project2"/>
+		</Unit>
 		<Unit filename="/home/chad/Desktop/ACA_Project/Queue.c">
 			<Option target="ACA_Project2"/>
 		</Unit>
