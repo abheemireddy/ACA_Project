@@ -5,15 +5,31 @@
 #ifndef ACA_PROJECT_CACHE_H
 #define ACA_PROJECT_CACHE_H
 #include "Set.h"
-
+#include <stdlib.h>
+#include <stdio.h>
 
 typedef struct CacheTag{
     int setAssociativity;
-    Set ** sets;
-    //write-back for L1 & L2
-    //write-allocate for L1 & L2
+    Set *HashTable;
+
+    void (*putSet)(Set** HashTable, Set* value);
+    Set* (*getSetByIndex)(Set** HashTable,int key);
+    void (*removeSetFromTable)(Set** HashTable,Set* blockToRemove);
+    void (*deleteAllSet)(Set** HashTable);
+    int (*CountSets)(Set** HashTable);
+    void (*replaceSet)(UT_hash_handle hh,Set** HashTable,Set* value);
+    Set* (*getSet)(Set** HashTable,char* key);
+    void (*print_sets)(Set** HashTable);
 } Cache;
 
 Cache Constructor_Cache(int setAssociativity);
+
+void putSet( Set** HashTable,  Set* value);
+ Set* getSetByIndex( Set** HashTable,int key);
+void removeSetFromTable( Set** HashTable, Set* blockToRemove);
+void deleteAllSet( Set** HashTable);
+int CountSets( Set** HashTable);
+void replaceSet(UT_hash_handle hh, Set** HashTable, Set* value);
+void print_sets( Set** HashTable);
 
 #endif //ACA_PROJECT_CACHE_H

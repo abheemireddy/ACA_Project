@@ -19,16 +19,6 @@ Block Constructor_Block(Address address){
     block.HashTable = NULL;
     return block;
 }
-/*
-void (*putCacheLine)(struct CacheLineTag** HashTable, struct CacheLineTag* value);
-struct CacheLineTag* (*getCacheLineByAddress)(struct CacheLineTag** HashTable,int key);
-void (*removeCacheLineFromTable)(struct CacheLineTag** HashTable,struct CacheLineTag* blockToRemove);
-void (*deleteAllCacheLine)(struct CacheLineTag** HashTable);
-int (*CountCacheLines)(struct CacheLineTag** HashTable);
-void (*replaceCacheLine)(UT_hash_handle hh,struct CacheLineTag** HashTable,struct CacheLineTag* value);
-struct CacheLineTag* (*getCacheLine)(struct CacheLineTag** HashTable,char* key);
-void (*print_cache_lines_in_set)(struct CacheLineTag** HashTable);
-*/
 
 void Set_Data(Block* block,Address address){
     block->address = address;

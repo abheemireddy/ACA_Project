@@ -101,12 +101,18 @@ printf.h
 -
 
 /home/chad/Desktop/ACA_Project/Cache.c
+printf.h
+-
 Cache.h
 /home/chad/Desktop/ACA_Project/Cache.h
 
 /home/chad/Desktop/ACA_Project/Cache.h
 Set.h
 /home/chad/Desktop/ACA_Project/Set.h
+stdlib.h
+-
+stdio.h
+-
 
 /home/chad/Desktop/ACA_Project/CacheLine.c
 CacheLine.h
