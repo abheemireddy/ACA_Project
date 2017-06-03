@@ -5,8 +5,9 @@
 #include <printf.h>
 #include "Cache.h"
 
-Cache Constructor_Cache(){
-    Cache cache = {};
+Cache Constructor_Cache(int numberOfSets){
+    Cache cache = {NumberOfSets:numberOfSets};
+    cache.HashTable = NULL;
     cache.getSetByIndex = &getSetByIndex;
     cache.putSet = &putSet;
     cache.removeSetFromTable = &removeSetFromTable;

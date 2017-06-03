@@ -24,10 +24,18 @@
 //Index = 6 bits
 //Offset = 3 bits
 Cache BuildL1Cache(){
-    Cache cache = Constructor_Cache();
     //create 2^8 sets
-    for(int i =0; i<2^8;i++){
+    Cache cache = Constructor_Cache(2^8);
+    for(int i =0; i<cache.NumberOfSets;i++){
         Set set = Constructor_Set(4);
+        Set* pset = &set;
+        cache.putSet(&set.HashTable,pset);
+        for(int j = 0;j< set.numberOfBlocks;j++){
+            Address blockAddress = Constructor_Address("00000000000000000"); //17 bit address = 8 + 6 + 3
+            Block block = Constructor_Block(blockAddress);
+            Block* pblock = &block;
+            set.put(block.HashTable,pblock);
+        }
     }
 
 }
