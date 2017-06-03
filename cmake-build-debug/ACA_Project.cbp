@@ -94,6 +94,9 @@
 		<Unit filename="/home/chad/Desktop/ACA_Project/Block.h">
 			<Option target="ACA_Project2"/>
 		</Unit>
+		<Unit filename="/home/chad/Desktop/ACA_Project/Block_Cache_HashTable.h">
+			<Option target="ACA_Project2"/>
+		</Unit>
 		<Unit filename="/home/chad/Desktop/ACA_Project/Cache.c">
 			<Option target="ACA_Project2"/>
 		</Unit>
@@ -128,9 +131,6 @@
 			<Option target="ACA_Project2"/>
 		</Unit>
 		<Unit filename="/home/chad/Desktop/ACA_Project/Set.h">
-			<Option target="ACA_Project2"/>
-		</Unit>
-		<Unit filename="/home/chad/Desktop/ACA_Project/cache_line.h">
 			<Option target="ACA_Project2"/>
 		</Unit>
 		<Unit filename="/home/chad/Desktop/ACA_Project/main.c">

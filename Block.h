@@ -32,9 +32,9 @@ typedef struct BlockTag{
 Block Constructor_Block(int numberOfCacheLines);//construct to call to obtain a Block Instance
 void Set_Data(Block* block,char* data);
 void SetCacheLines(Block block,CacheLine* cacheLines[]);
-
 void IncrementBlockFrequency(Block** block);
-
 bool IsInBlock(char* address);
+
+
 
 #endif //ACA_PROJECT_BLOCK_H

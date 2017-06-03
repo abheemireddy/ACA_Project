@@ -4,6 +4,7 @@
 CMakeFiles/ACA_Project2.dir/Block.c.o: .././Block.h
 CMakeFiles/ACA_Project2.dir/Block.c.o: .././CacheLine.h
 CMakeFiles/ACA_Project2.dir/Block.c.o: .././uthash/include/uthash.h
+CMakeFiles/ACA_Project2.dir/Block.c.o: ../uthash/include/uthash.h
 CMakeFiles/ACA_Project2.dir/Block.c.o: ../Block.c
 
 CMakeFiles/ACA_Project2.dir/Cache.c.o: ../uthash/include/uthash.h
@@ -11,7 +12,9 @@ CMakeFiles/ACA_Project2.dir/Cache.c.o: ../Cache.c
 CMakeFiles/ACA_Project2.dir/Cache.c.o: ../Cache.h
 CMakeFiles/ACA_Project2.dir/Cache.c.o: ../Set.h
 
+CMakeFiles/ACA_Project2.dir/CacheLine.c.o: ../uthash/include/uthash.h
 CMakeFiles/ACA_Project2.dir/CacheLine.c.o: ../CacheLine.c
+CMakeFiles/ACA_Project2.dir/CacheLine.c.o: ../CacheLine.h
 
 CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Queue/Queue_the_examples.c.o: .././Queue.h
 CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Queue/Queue_the_examples.c.o: ../Data_Structure_Examples/Queue/Queue_the_examples.c
