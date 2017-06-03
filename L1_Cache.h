@@ -24,8 +24,11 @@
 //Index = 6 bits
 //Offset = 3 bits
 Cache BuildL1Cache(){
-    Cache cache = Constructor_Cache(4);//set associativity is 4-way
-
+    Cache cache = Constructor_Cache();
+    //create 2^8 sets
+    for(int i =0; i<2^8;i++){
+        Set set = Constructor_Set(4);
+    }
 
 }
 

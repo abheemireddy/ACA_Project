@@ -5,8 +5,8 @@
 #include <printf.h>
 #include "Cache.h"
 
-Cache Constructor_Cache(int setAssociativity){
-    Cache cache = {setAssociativity:setAssociativity};
+Cache Constructor_Cache(){
+    Cache cache = {};
     cache.getSetByIndex = &getSetByIndex;
     cache.putSet = &putSet;
     cache.removeSetFromTable = &removeSetFromTable;
@@ -17,23 +17,7 @@ Cache Constructor_Cache(int setAssociativity){
     return cache;
 }
 
-/*
- *
- * void putSet(struct Set** HashTable, struct Set* value);
-struct Set* getSetByIndex(struct Set** HashTable,int key);
-void removeSetFromTable(struct Set** HashTable,struct Set* blockToRemove);
-void deleteAllSet(struct Set** HashTable);
-int CountSets(struct Set** HashTable);
-void replaceSet(UT_hash_handle hh,struct Set** HashTable,struct Set* value);
-struct Set* getSet(struct Set** HashTable,char* key);
-void print_cache_lines_in_set(struct Set** HashTable);
- */
-
-
 void putSet(Set** HashTable,Set* value) {  //key is useFrequency of the block.  Seems magical
-    if(value->address.Index == NULL){
-        printf("The passed block needs to have attribute address.Index set");
-    }
     HASH_ADD_INT(*HashTable, address.Index, value );
     //The last parameter is a pointer to the structure being added
 }

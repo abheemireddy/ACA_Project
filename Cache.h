@@ -9,7 +9,6 @@
 #include <stdio.h>
 
 typedef struct CacheTag{
-    int setAssociativity;
     Set *HashTable;
 
     void (*putSet)(Set** HashTable, Set* value);
@@ -22,7 +21,7 @@ typedef struct CacheTag{
     void (*print_sets)(Set** HashTable);
 } Cache;
 
-Cache Constructor_Cache(int setAssociativity);
+Cache Constructor_Cache();
 
 void putSet( Set** HashTable,  Set* value);
  Set* getSetByIndex( Set** HashTable,int key);
