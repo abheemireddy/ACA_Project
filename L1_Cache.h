@@ -34,9 +34,14 @@ void BuildL1Cache(Cache** cache){
         for(int j = 0;j< set.numberOfBlocks;j++){
             Block block = Constructor_Block(set.address);
             Block* pblock = &block;
-            set.put(&pblock->HashTable,pblock);
+            Cache cache = Constructor_Cache(4);
+            Cache* pcache = &cache;
+            block.putCacheLine(&block.HashTable,pcache);
+            int cache_count = block.CountCacheLines(&pblock->HashTable);
+            printf("\ncache:%d\n",cache_count);
+            set.put(&set.HashTable,pblock);
         }
-        int count = set.Count(&set.HashTable);
+        int count = set.Count(&pset->HashTable);
         printf("\nset:%d\n",count);
     }
 }

@@ -4,10 +4,10 @@
 #include "L1_Cache.h"
 
 int main() {
-    AddCacheLinesToBlock();
-    ExampleUsingSetHash();
-    AddTooManyBlocksTest();
-    Work_with_queue();
+    //AddCacheLinesToBlock();
+    //ExampleUsingSetHash();
+    //AddTooManyBlocksTest();
+    //Work_with_queue();
 
     Cache cache = Constructor_Cache(256);
     Cache* pcache = &cache;

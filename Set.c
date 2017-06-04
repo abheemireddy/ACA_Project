@@ -8,7 +8,7 @@
 
 
 Set Constructor_Set(int numberOfBlocks,Address address){
-    Set set = {address:address};
+    Set set = {address:address,numberOfBlocks:numberOfBlocks};
     set.put = &put;
     set.replace = &replace;
     set.get = &get;
