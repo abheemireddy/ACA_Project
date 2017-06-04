@@ -50,5 +50,36 @@ void BuildL1Cache(Cache** cache){
     printf("\nCache:%d\n",(*cache)->CountSets(&(*cache)->HashTable));
 }
 
+void Sample_Add_Overlapping_Key_to_set(){
+    Address address1 = Constructor_Address("00000000000000000");
+    Set set = Constructor_Set(4,address1);
+    Set* pset = &set;
+
+    Block block = Constructor_Block(set.address);
+    Block* pblock = &block;
+
+    set.put(&set.HashTable,&block);
+
+    Block newBlock = Constructor_Block(set.address);
+    Block* pnewBlock = &newBlock;
+
+    Block* alreadyInHashTable = set.get(&set.HashTable,newBlock.address.bitString);
+    if(alreadyInHashTable != NULL){
+        set.removeFromTable(&set.HashTable,alreadyInHashTable);
+        //write alreadyInHashTable to write-buffer or victim cache
+        int numberOfBlocksInSet = set.Count(&set.HashTable);
+        printf("Number of blocks in current set:%d\n",numberOfBlocksInSet);
+
+        //put new block into set's HashTable
+        set.put(&set.HashTable,&newBlock);
+        numberOfBlocksInSet = set.Count(&set.HashTable);
+        printf("Number of blocks in current set:%d\n",numberOfBlocksInSet);
+    }
+
+    //check to make sure it is in cache
+
+}
+
+
 
 #endif //ACA_PROJECT_L1_CACHE_H

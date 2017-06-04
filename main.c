@@ -12,4 +12,6 @@ int main() {
     Cache cache = Constructor_Cache(256);
     Cache* pcache = &cache;
     BuildL1Cache(&pcache);
+
+    Sample_Add_Overlapping_Key_to_set();
 }
