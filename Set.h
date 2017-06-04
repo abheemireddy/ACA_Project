@@ -39,7 +39,7 @@ typedef struct SetTag {
     //maybe store how many blocks
 } Set;
 
-Set Constructor_Set(int numberOfBlocks);
+Set Constructor_Set(int numberOfBlocks,Address address);
 void AddBlock(Set set,struct BlockTag** HashTable,struct BlockTag** blockToAdd);
 
 //HashTable functions

@@ -4,10 +4,10 @@
 #include "Set_and_Block_Examples.h"
 
 void ExampleUsingSetHash(){
-    Set set = Constructor_Set(4);
     Address address1 = Constructor_Address("00000000000000000");
     Address address2 = Constructor_Address("00000000000000001");
-    Block case1 = {useFrequency:1,address:address1};
+    Set set = Constructor_Set(4,address1);
+    Block case1 = {useFrequency:1,address:set.address};
     Block case2 = {useFrequency:2,address:address2};
     Block* block1 = malloc(sizeof(Block));
     block1 = &case1;
@@ -23,7 +23,8 @@ Block GetDummyBlockInstance(char* data){
     return toAdd;
 }
 void AddTooManyBlocksTest(){
-    Set set = Constructor_Set(4);
+    Address address1 = Constructor_Address("00000000000000000");
+    Set set = Constructor_Set(4,address1);
 
     Block block1 = GetDummyBlockInstance("Some memory location 1");
     Block* pblock1 = &block1;

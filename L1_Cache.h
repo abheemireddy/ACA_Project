@@ -23,21 +23,22 @@
 //Tag = 8 bits
 //Index = 6 bits
 //Offset = 3 bits
-Cache BuildL1Cache(){
+void BuildL1Cache(Cache** cache){
     //create 2^8 sets
-    Cache cache = Constructor_Cache(2^8);
-    for(int i =0; i<cache.NumberOfSets;i++){
-        Set set = Constructor_Set(4);
+    //Cache cache = Constructor_Cache(2^8);
+    for(int i =0; i<(*cache)->NumberOfSets;i++){
+        Address blockAddress = Constructor_Address("00000000000000000"); //17 bit address = 8 + 6 + 3
+        Set set = Constructor_Set(4,blockAddress);
         Set* pset = &set;
-        cache.putSet(&set.HashTable,pset);
+        (*cache)->putSet(&pset->HashTable,pset);
         for(int j = 0;j< set.numberOfBlocks;j++){
-            Address blockAddress = Constructor_Address("00000000000000000"); //17 bit address = 8 + 6 + 3
-            Block block = Constructor_Block(blockAddress);
+            Block block = Constructor_Block(set.address);
             Block* pblock = &block;
-            set.put(block.HashTable,pblock);
+            set.put(&pblock->HashTable,pblock);
         }
+        int count = set.Count(&set.HashTable);
+        printf("\nset:%d\n",count);
     }
-    return cache;
 }
 
 
