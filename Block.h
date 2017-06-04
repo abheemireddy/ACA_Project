@@ -19,7 +19,7 @@ typedef struct BlockTag{
 
     int useFrequency;//for LRU in Set
     CacheLine** cacheLines;//number in array is the number of cache lines in the block
-    struct CacheLine *HashTable;
+    CacheLine *HashTable;
 
     Address address;
 
