@@ -14,8 +14,7 @@
     <list default="true" id="874cd3ee-283a-48e2-bbb0-bde542e13d07" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ACA_Project2.dir/main.c.o" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/L1_Cache.h" afterPath="$PROJECT_DIR$/L1_Cache.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.c" afterPath="$PROJECT_DIR$/main.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -52,11 +51,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="L1_Cache.h" pinned="false" current-in-tab="true">
+      <file leaf-file-name="L1_Cache.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/L1_Cache.h">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="392">
               <caret line="73" column="42" lean-forward="true" selection-start-line="73" selection-start-column="42" selection-end-line="73" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -89,16 +98,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="378">
               <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -226,7 +225,6 @@
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/Block.h" />
         <option value="$PROJECT_DIR$/Data_Structure_Examples/Block/Block_CacheLine_HashTable_Examples.c" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/Data_Structure_Examples/Set/Set_and_Block_Examples.c" />
         <option value="$PROJECT_DIR$/Address.c" />
         <option value="$PROJECT_DIR$/Address.h" />
@@ -234,6 +232,7 @@
         <option value="$PROJECT_DIR$/Set.c" />
         <option value="$PROJECT_DIR$/main.c" />
         <option value="$PROJECT_DIR$/L1_Cache.h" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -582,14 +581,7 @@
       <workItem from="1496196382047" duration="25149000" />
       <workItem from="1496439561784" duration="1144000" />
       <workItem from="1496507496449" duration="23872000" />
-      <workItem from="1496584125122" duration="9422000" />
-    </task>
-    <task id="LOCAL-00033" summary="Finished a Set's AddBlock feature.">
-      <created>1495735930115</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1495735930115</updated>
+      <workItem from="1496584125122" duration="10105000" />
     </task>
     <task id="LOCAL-00034" summary="Added head and tail for queue">
       <created>1496196960827</created>
@@ -927,11 +919,18 @@
       <option name="project" value="LOCAL" />
       <updated>1496617004180</updated>
     </task>
-    <option name="localTasksCounter" value="82" />
+    <task id="LOCAL-00082" summary="Added example of inserting block into a set for Anu.  Everything is working really smoothly!">
+      <created>1496617848368</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1496617848368</updated>
+    </task>
+    <option name="localTasksCounter" value="83" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="95902000" />
+    <option name="totallyTimeSpent" value="96585000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="954" extended-state="6" />
@@ -943,7 +942,7 @@
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32314923" sideWeight="0.53207546" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32902467" sideWeight="0.49811321" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32314923" sideWeight="0.46792454" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32314923" sideWeight="0.46792454" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -965,7 +964,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added structure for checking if address is contained within the block" />
     <MESSAGE value="Changed block variable &quot;Data&quot; to &quot;address.&quot;  This will be the block address we reference." />
     <MESSAGE value="Added CacheLines to Block." />
     <MESSAGE value="Trying to fix the renaming of cache_line file" />
@@ -990,7 +988,8 @@
     <MESSAGE value="Updated ReadMe" />
     <MESSAGE value="Working on L1 Cache Builder.  Issues with pointers." />
     <MESSAGE value="I build a proto-L1 cache.  Note that inputting the same key twice into the table is an error." />
-    <option name="LAST_COMMIT_MESSAGE" value="I build a proto-L1 cache.  Note that inputting the same key twice into the table is an error." />
+    <MESSAGE value="Added example of inserting block into a set for Anu.  Everything is working really smoothly!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added example of inserting block into a set for Anu.  Everything is working really smoothly!" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1192,14 +1191,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Cache.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
@@ -1342,6 +1333,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="392">
           <caret line="73" column="42" lean-forward="true" selection-start-line="73" selection-start-column="42" selection-end-line="73" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding />
         </state>
       </provider>
