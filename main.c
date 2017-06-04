@@ -12,5 +12,4 @@ int main() {
     Cache cache = Constructor_Cache(256);
     Cache* pcache = &cache;
     BuildL1Cache(&pcache);
-    printf("\nCache:%d\n",cache.CountSets(&cache.HashTable));
 }

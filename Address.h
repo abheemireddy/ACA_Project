@@ -18,5 +18,6 @@ typedef struct AddressTag{
 char* GetChar(char* originalString,int start,int length,char* substring);
 int fromBinary(char *s);
 Address Constructor_Address(char* bitString);
+char *int2bin(int n);
 
 #endif //ACA_PROJECT_ADDRESS_H

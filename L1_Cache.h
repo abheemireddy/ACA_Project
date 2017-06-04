@@ -26,24 +26,28 @@
 void BuildL1Cache(Cache** cache){
     //create 2^8 sets
     //Cache cache = Constructor_Cache(2^8);
-    for(int i =0; i<(*cache)->NumberOfSets;i++){
-        Address blockAddress = Constructor_Address("00000000000000000"); //17 bit address = 8 + 6 + 3
-        Set set = Constructor_Set(4,blockAddress);
+    for(int i =0; i<1;i++){
+        Address address1 = Constructor_Address("00000000000000000");
+        Set set = Constructor_Set(4,address1);
         Set* pset = &set;
-        (*cache)->putSet(&pset->HashTable,pset);
-        for(int j = 0;j< set.numberOfBlocks;j++){
+        for(int j = 0;j< 1;j++){
             Block block = Constructor_Block(set.address);
             Block* pblock = &block;
-            Cache cache = Constructor_Cache(4);
-            Cache* pcache = &cache;
-            block.putCacheLine(&block.HashTable,pcache);
-            int cache_count = block.CountCacheLines(&pblock->HashTable);
+
+            CacheLine cacheLine = Constructor_CacheLine(block.address,"cacheLine data");
+            CacheLine* pcacheLine = &cacheLine;
+            block.putCacheLine(&block.HashTable,pcacheLine);
+
+            int cache_count = block.CountCacheLines(&block.HashTable);
             printf("\ncache:%d\n",cache_count);
+
             set.put(&set.HashTable,pblock);
         }
         int count = set.Count(&pset->HashTable);
         printf("\nset:%d\n",count);
+        (*cache)->putSet(&(*cache)->HashTable,pset);
     }
+    printf("\nCache:%d\n",(*cache)->CountSets(&(*cache)->HashTable));
 }
 
 

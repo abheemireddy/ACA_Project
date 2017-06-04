@@ -9,8 +9,8 @@
 
 Set Constructor_Set(int numberOfBlocks,Address address){
     Set set = {address:address,numberOfBlocks:numberOfBlocks};
+    set.HashTable = NULL;
     set.put = &put;
-    set.replace = &replace;
     set.get = &get;
     set.SortHash = &SortHash;
     //set.AddBlock = &AddBlock;
@@ -20,7 +20,6 @@ Set Constructor_Set(int numberOfBlocks,Address address){
     set.Count = &Count;
     set.replaceByUseFrequency = &replaceByUseFrequency;
     set.print_blocks_in_set = &print_blocks_in_set;
-    set.HashTable = NULL;
     return set;
 }
 
@@ -67,6 +66,7 @@ Block* get(Block** HashTable,char* key) {
     HASH_FIND_STR( *HashTable, key, hashTableStoresInThisBlock );//find block_id and put into hashTableStoresInThisBlock
     return hashTableStoresInThisBlock;
 }
+
 
 //delete from hashmap
 void removeFromTable(Block** HashTable,Block *blockToRemove) {
