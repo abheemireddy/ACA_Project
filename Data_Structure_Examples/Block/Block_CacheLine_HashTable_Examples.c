@@ -14,6 +14,8 @@ int AddCacheLinesToBlock(){
     block.putCacheLine(&block.HashTable,cacheLine1);
     CacheLine* cacheLine2 = &case2;
     block.putCacheLine(&block.HashTable,cacheLine2);
-    CacheLine* returned = block.getCacheLine(&block.HashTable,cacheLine2->address.bitString);
-    printf("use Frequency: %s\n",returned->address.bitString);
+    int count = block.CountCacheLines(&block.HashTable);
+    printf("Count: %d",count);
+    CacheLine* returned = block.getCacheLineByOffset(&block.HashTable,cacheLine2->address.Offset);
+    printf("data at offset: %s\n",returned->data);
 }
