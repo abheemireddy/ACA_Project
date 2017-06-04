@@ -12,7 +12,7 @@ void Work_with_queue(){
     Node* pnode2 = &node2;
     queue->Enqueue(&queue,&pnode2);
 
-    Node node3 = {val:"Store 0011"};
+    Node node3 = {val:"Read 1000"};
     Node* pnode3 = &node3;
     queue->Enqueue(&queue,&pnode3);
 
