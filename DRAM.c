@@ -9,18 +9,18 @@
 DRAM Constructor_DRAM(){
     DRAM dram = {};
     dram.HashTable = NULL;
-    dram.put = &put;
-    dram.get = &get;
-    dram.Count = &Count;
+    dram.putBlock = &putBlock;
+    dram.getBlock = &getBlock;
+    dram.CountBlocks = &CountBlocks;
     dram.print_all_blocks = &print_all_blocks;
     return dram;
 }
 
-void put(Block** HashTable,Block *value) {  //key is useFrequency of the block.  Seems magical
+void putBlock(Block** HashTable,Block *value) {  //key is useFrequency of the block.  Seems magical
     if(value->address.bitString == NULL){
         printf("The passed block needs to have attribute address set");
     }
-    HASH_ADD_KEYPTR(hh,*HashTable, value->address.bitString, strlen(value->address.bitString),value );
+    HASH_ADD_INT(*HashTable, address.bitStringValue,value );
     //The last parameter is a pointer to the structure being added
 }
 
@@ -35,15 +35,15 @@ void put(Block** HashTable,Block *value) {  //key is useFrequency of the block. 
     }
 }*/
 
-Block* get(Block** HashTable,char* key) {
+Block* getBlock(Block** HashTable,int key) {
     Block *hashTableStoresInThisBlock;
 
-    HASH_FIND_STR( *HashTable, key, hashTableStoresInThisBlock );//find block_id and put into hashTableStoresInThisBlock
+    HASH_FIND_INT( *HashTable, &key, hashTableStoresInThisBlock );//find block_id and put into hashTableStoresInThisBlock
     return hashTableStoresInThisBlock;
 }
 
 //count items
-int Count(Block** HashTable){
+int CountBlocks(Block** HashTable){
     int num_in_hashtable;
     num_in_hashtable = HASH_COUNT(*HashTable);
     return num_in_hashtable;

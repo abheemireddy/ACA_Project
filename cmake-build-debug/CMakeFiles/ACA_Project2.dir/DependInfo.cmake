@@ -1,7 +1,6 @@
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
   "C"
-  "CXX"
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
@@ -9,6 +8,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/home/chad/Desktop/ACA_Project/Block.c" "/home/chad/Desktop/ACA_Project/cmake-build-debug/CMakeFiles/ACA_Project2.dir/Block.c.o"
   "/home/chad/Desktop/ACA_Project/Cache.c" "/home/chad/Desktop/ACA_Project/cmake-build-debug/CMakeFiles/ACA_Project2.dir/Cache.c.o"
   "/home/chad/Desktop/ACA_Project/CacheLine.c" "/home/chad/Desktop/ACA_Project/cmake-build-debug/CMakeFiles/ACA_Project2.dir/CacheLine.c.o"
+  "/home/chad/Desktop/ACA_Project/DRAM.c" "/home/chad/Desktop/ACA_Project/cmake-build-debug/CMakeFiles/ACA_Project2.dir/DRAM.c.o"
   "/home/chad/Desktop/ACA_Project/Data_Structure_Examples/Block/Block_CacheLine_HashTable_Examples.c" "/home/chad/Desktop/ACA_Project/cmake-build-debug/CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Block/Block_CacheLine_HashTable_Examples.c.o"
   "/home/chad/Desktop/ACA_Project/Data_Structure_Examples/Queue/Queue_the_examples.c" "/home/chad/Desktop/ACA_Project/cmake-build-debug/CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Queue/Queue_the_examples.c.o"
   "/home/chad/Desktop/ACA_Project/Data_Structure_Examples/Set/Set_and_Block_Examples.c" "/home/chad/Desktop/ACA_Project/cmake-build-debug/CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Set/Set_and_Block_Examples.c.o"
@@ -20,16 +20,6 @@ set(CMAKE_C_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH
-  "../."
-  "../uthash/include"
-  )
-set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/chad/Desktop/ACA_Project/DRAM.cpp" "/home/chad/Desktop/ACA_Project/cmake-build-debug/CMakeFiles/ACA_Project2.dir/DRAM.cpp.o"
-  )
-set(CMAKE_CXX_COMPILER_ID "GNU")
-
-# The include file search paths:
-set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../."
   "../uthash/include"
   )

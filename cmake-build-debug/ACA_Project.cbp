@@ -115,7 +115,7 @@
 		<Unit filename="/home/chad/Desktop/ACA_Project/CacheLine.h">
 			<Option target="ACA_Project2"/>
 		</Unit>
-		<Unit filename="/home/chad/Desktop/ACA_Project/DRAM.cpp">
+		<Unit filename="/home/chad/Desktop/ACA_Project/DRAM.c">
 			<Option target="ACA_Project2"/>
 		</Unit>
 		<Unit filename="/home/chad/Desktop/ACA_Project/DRAM.h">

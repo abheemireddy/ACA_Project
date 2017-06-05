@@ -25,6 +25,14 @@ CMakeFiles/ACA_Project2.dir/CacheLine.c.o: ../Address.h
 CMakeFiles/ACA_Project2.dir/CacheLine.c.o: ../CacheLine.c
 CMakeFiles/ACA_Project2.dir/CacheLine.c.o: ../CacheLine.h
 
+CMakeFiles/ACA_Project2.dir/DRAM.c.o: .././uthash/include/uthash.h
+CMakeFiles/ACA_Project2.dir/DRAM.c.o: ../uthash/include/uthash.h
+CMakeFiles/ACA_Project2.dir/DRAM.c.o: ../Address.h
+CMakeFiles/ACA_Project2.dir/DRAM.c.o: ../Block.h
+CMakeFiles/ACA_Project2.dir/DRAM.c.o: ../CacheLine.h
+CMakeFiles/ACA_Project2.dir/DRAM.c.o: ../DRAM.c
+CMakeFiles/ACA_Project2.dir/DRAM.c.o: ../DRAM.h
+
 CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Block/Block_CacheLine_HashTable_Examples.c.o: .././Address.h
 CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Block/Block_CacheLine_HashTable_Examples.c.o: .././Block.h
 CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Block/Block_CacheLine_HashTable_Examples.c.o: .././CacheLine.h
@@ -70,12 +78,4 @@ CMakeFiles/ACA_Project2.dir/main.c.o: ../Data_Structure_Examples/Queue/Queue_the
 CMakeFiles/ACA_Project2.dir/main.c.o: ../Data_Structure_Examples/Set/Set_and_Block_Examples.h
 CMakeFiles/ACA_Project2.dir/main.c.o: ../L1_Cache.h
 CMakeFiles/ACA_Project2.dir/main.c.o: ../main.c
-
-CMakeFiles/ACA_Project2.dir/DRAM.cpp.o: .././uthash/include/uthash.h
-CMakeFiles/ACA_Project2.dir/DRAM.cpp.o: ../uthash/include/uthash.h
-CMakeFiles/ACA_Project2.dir/DRAM.cpp.o: ../Address.h
-CMakeFiles/ACA_Project2.dir/DRAM.cpp.o: ../Block.h
-CMakeFiles/ACA_Project2.dir/DRAM.cpp.o: ../CacheLine.h
-CMakeFiles/ACA_Project2.dir/DRAM.cpp.o: ../DRAM.cpp
-CMakeFiles/ACA_Project2.dir/DRAM.cpp.o: ../DRAM.h
 

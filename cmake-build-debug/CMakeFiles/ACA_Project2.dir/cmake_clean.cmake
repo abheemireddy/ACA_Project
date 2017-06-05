@@ -9,12 +9,12 @@ file(REMOVE_RECURSE
   "CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Queue/Queue_the_examples.c.o"
   "CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Block/Block_CacheLine_HashTable_Examples.c.o"
   "CMakeFiles/ACA_Project2.dir/Address.c.o"
-  "CMakeFiles/ACA_Project2.dir/DRAM.cpp.o"
+  "CMakeFiles/ACA_Project2.dir/DRAM.c.o"
   "ACA_Project2.pdb"
   "ACA_Project2"
 )
 
 # Per-language clean rules from dependency scanning.
-foreach(lang C CXX)
+foreach(lang C)
   include(CMakeFiles/ACA_Project2.dir/cmake_clean_${lang}.cmake OPTIONAL)
 endforeach()

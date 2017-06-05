@@ -231,32 +231,32 @@ CacheLine.c.s:
 	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/CacheLine.c.s
 .PHONY : CacheLine.c.s
 
-DRAM.o: DRAM.cpp.o
+DRAM.o: DRAM.c.o
 
 .PHONY : DRAM.o
 
 # target to build an object file
-DRAM.cpp.o:
-	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/DRAM.cpp.o
-.PHONY : DRAM.cpp.o
+DRAM.c.o:
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/DRAM.c.o
+.PHONY : DRAM.c.o
 
-DRAM.i: DRAM.cpp.i
+DRAM.i: DRAM.c.i
 
 .PHONY : DRAM.i
 
 # target to preprocess a source file
-DRAM.cpp.i:
-	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/DRAM.cpp.i
-.PHONY : DRAM.cpp.i
+DRAM.c.i:
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/DRAM.c.i
+.PHONY : DRAM.c.i
 
-DRAM.s: DRAM.cpp.s
+DRAM.s: DRAM.c.s
 
 .PHONY : DRAM.s
 
 # target to generate assembly for a file
-DRAM.cpp.s:
-	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/DRAM.cpp.s
-.PHONY : DRAM.cpp.s
+DRAM.c.s:
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/DRAM.c.s
+.PHONY : DRAM.c.s
 
 Data_Structure_Examples/Block/Block_CacheLine_HashTable_Examples.o: Data_Structure_Examples/Block/Block_CacheLine_HashTable_Examples.c.o
 
