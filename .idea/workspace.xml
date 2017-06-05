@@ -15,7 +15,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/ACA_Project2" afterPath="$PROJECT_DIR$/cmake-build-debug/ACA_Project2" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DRAM.cpp" afterPath="$PROJECT_DIR$/DRAM.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DRAM.h" afterPath="$PROJECT_DIR$/DRAM.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ACA_Project2.dir/depend.internal" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ACA_Project2.dir/depend.internal" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ACA_Project2.dir/depend.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ACA_Project2.dir/depend.make" />
     </list>
@@ -84,7 +83,7 @@
         <entry file="file://$PROJECT_DIR$/DRAM.cpp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="310">
-              <caret line="80" column="25" lean-forward="true" selection-start-line="80" selection-start-column="25" selection-end-line="80" selection-end-column="25" />
+              <caret line="34" column="21" lean-forward="true" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
               <folding>
                 <element signature="e#84#101#0" expanded="true" />
               </folding>
@@ -584,14 +583,7 @@
       <workItem from="1496196382047" duration="25149000" />
       <workItem from="1496439561784" duration="1144000" />
       <workItem from="1496507496449" duration="23872000" />
-      <workItem from="1496584125122" duration="12234000" />
-    </task>
-    <task id="LOCAL-00038" summary="finished queue implementation">
-      <created>1496200648264</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1496200648264</updated>
+      <workItem from="1496584125122" duration="12290000" />
     </task>
     <task id="LOCAL-00039" summary="Adding methods to block">
       <created>1496337305929</created>
@@ -929,11 +921,18 @@
       <option name="project" value="LOCAL" />
       <updated>1496678952488</updated>
     </task>
-    <option name="localTasksCounter" value="87" />
+    <task id="LOCAL-00087" summary="Added functions to DRAM for storing/getting blocks of memory">
+      <created>1496679463435</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1496679463435</updated>
+    </task>
+    <option name="localTasksCounter" value="88" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="98714000" />
+    <option name="totallyTimeSpent" value="98770000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="964" extended-state="6" />
@@ -967,7 +966,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="deleted cache_line.h" />
     <MESSAGE value="Adding data to CacheLine" />
     <MESSAGE value="Adding hashtable functions to block" />
     <MESSAGE value="Adding hashtable for a block and cacheline" />
@@ -992,7 +990,8 @@
     <MESSAGE value="Updated Queue Example.  All data structures working." />
     <MESSAGE value="Created BlockTransferer basic struct" />
     <MESSAGE value="Added DRAM header/source.  This will have methods for storing/getting blocks of data.  I also added members for the BlockTransferer struct." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added DRAM header/source.  This will have methods for storing/getting blocks of data.  I also added members for the BlockTransferer struct." />
+    <MESSAGE value="Added functions to DRAM for storing/getting blocks of memory" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added functions to DRAM for storing/getting blocks of memory" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1343,7 +1342,7 @@
     <entry file="file://$PROJECT_DIR$/DRAM.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="310">
-          <caret line="80" column="25" lean-forward="true" selection-start-line="80" selection-start-column="25" selection-end-line="80" selection-end-column="25" />
+          <caret line="34" column="21" lean-forward="true" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
           <folding>
             <element signature="e#84#101#0" expanded="true" />
           </folding>
