@@ -8,9 +8,15 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <stdbool.h>
+#include "Address.h"
+
+typedef struct InstructionTag{
+    Address Address;
+    char* instruction;
+} Instruction;
 
 typedef struct NodeTag {
-    char* val;
+    Instruction data;
     struct NodeTag *prev;
 } Node;
 
@@ -22,16 +28,16 @@ typedef struct QueueTag {
 
     void (*Queue_Destructor)(struct QueueTag *queue);
     bool (*Enqueue)(struct QueueTag **queue, Node **node);
-    char* (*Dequeue)(struct QueueTag *pQueue);
+    Instruction (*Dequeue)(struct QueueTag *pQueue);
     bool (*isEmpty)(struct QueueTag* pQueue);
     void (*print_queue)(struct QueueTag* queue);
 
 } Queue;
 
-Queue *Queue_Constructor(int limit);
+Queue *Queue_Constructor();
 void Queue_Destructor(Queue *queue);
 bool Enqueue(Queue **queue, Node **node);
-char* Dequeue(Queue *pQueue);
+Instruction Dequeue(Queue *queue);
 bool isEmpty(Queue* pQueue);
 void print_queue(Queue* queue);
 

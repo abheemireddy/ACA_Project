@@ -177,6 +177,33 @@ Block.c.s:
 	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/Block.c.s
 .PHONY : Block.c.s
 
+BlockTransferer.o: BlockTransferer.c.o
+
+.PHONY : BlockTransferer.o
+
+# target to build an object file
+BlockTransferer.c.o:
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/BlockTransferer.c.o
+.PHONY : BlockTransferer.c.o
+
+BlockTransferer.i: BlockTransferer.c.i
+
+.PHONY : BlockTransferer.i
+
+# target to preprocess a source file
+BlockTransferer.c.i:
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/BlockTransferer.c.i
+.PHONY : BlockTransferer.c.i
+
+BlockTransferer.s: BlockTransferer.c.s
+
+.PHONY : BlockTransferer.s
+
+# target to generate assembly for a file
+BlockTransferer.c.s:
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/BlockTransferer.c.s
+.PHONY : BlockTransferer.c.s
+
 Cache.o: Cache.c.o
 
 .PHONY : Cache.o
@@ -489,6 +516,9 @@ help:
 	@echo "... Block.o"
 	@echo "... Block.i"
 	@echo "... Block.s"
+	@echo "... BlockTransferer.o"
+	@echo "... BlockTransferer.i"
+	@echo "... BlockTransferer.s"
 	@echo "... Cache.o"
 	@echo "... Cache.i"
 	@echo "... Cache.s"

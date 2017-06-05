@@ -3,24 +3,28 @@
 //
 #include "Queue_the_examples.h"
 void Work_with_queue(){
-    Queue* queue = Queue_Constructor(4);
-    Node node1 = {val:"Store 0001"};
+    Queue* queue = Queue_Constructor();
+    Instruction data = {instruction:"Store 0001"};
+    Node node1 = {data:data};
     Node* pnode1 = &node1;
     queue->Enqueue(&queue,&pnode1);
 
-    Node node2 = {val:"Store 0010"};
+    Instruction data2 = {instruction:"Store 0010"};
+    Node node2 = {data:data2};
     Node* pnode2 = &node2;
     queue->Enqueue(&queue,&pnode2);
 
-    Node node3 = {val:"Read 1000"};
+    Instruction data3 = {instruction:"Store 0001"};
+    Node node3 = {data:data3};
     Node* pnode3 = &node3;
     queue->Enqueue(&queue,&pnode3);
 
-    Node node4 = {val:"Store 0100"};
+    Instruction data4 = {instruction:"Store 0001"};
+    Node node4 = {data:data4};
     Node* pnode4 = &node4;
     queue->Enqueue(&queue,&pnode4);
 
     print_queue(queue);
-    char* val = queue->Dequeue(queue);
-    printf("dequeued: %s",val);
+    Instruction val = queue->Dequeue(queue);
+    printf("dequeued: %s",val.instruction);
 }

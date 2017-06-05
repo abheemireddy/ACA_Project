@@ -12,6 +12,15 @@ CMakeFiles/ACA_Project2.dir/Block.c.o: ../Block.c
 CMakeFiles/ACA_Project2.dir/Block.c.o: ../Block.h
 CMakeFiles/ACA_Project2.dir/Block.c.o: ../CacheLine.h
 
+CMakeFiles/ACA_Project2.dir/BlockTransferer.c.o: .././uthash/include/uthash.h
+CMakeFiles/ACA_Project2.dir/BlockTransferer.c.o: ../uthash/include/uthash.h
+CMakeFiles/ACA_Project2.dir/BlockTransferer.c.o: ../Address.h
+CMakeFiles/ACA_Project2.dir/BlockTransferer.c.o: ../Block.h
+CMakeFiles/ACA_Project2.dir/BlockTransferer.c.o: ../BlockTransferer.c
+CMakeFiles/ACA_Project2.dir/BlockTransferer.c.o: ../BlockTransferer.h
+CMakeFiles/ACA_Project2.dir/BlockTransferer.c.o: ../CacheLine.h
+CMakeFiles/ACA_Project2.dir/BlockTransferer.c.o: ../Queue.h
+
 CMakeFiles/ACA_Project2.dir/Cache.c.o: .././uthash/include/uthash.h
 CMakeFiles/ACA_Project2.dir/Cache.c.o: ../uthash/include/uthash.h
 CMakeFiles/ACA_Project2.dir/Cache.c.o: ../Address.h
@@ -50,7 +59,9 @@ CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/DRAM/DRAM_Examples.c.o: ../u
 CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/DRAM/DRAM_Examples.c.o: ../Data_Structure_Examples/DRAM/DRAM_Examples.c
 CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/DRAM/DRAM_Examples.c.o: ../Data_Structure_Examples/DRAM/DRAM_Examples.h
 
+CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Queue/Queue_the_examples.c.o: .././Address.h
 CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Queue/Queue_the_examples.c.o: .././Queue.h
+CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Queue/Queue_the_examples.c.o: .././uthash/include/uthash.h
 CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Queue/Queue_the_examples.c.o: ../Data_Structure_Examples/Queue/Queue_the_examples.c
 CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Queue/Queue_the_examples.c.o: ../Data_Structure_Examples/Queue/Queue_the_examples.h
 
@@ -63,6 +74,8 @@ CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Set/Set_and_Block_Examples.c
 CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Set/Set_and_Block_Examples.c.o: ../Data_Structure_Examples/Set/Set_and_Block_Examples.c
 CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Set/Set_and_Block_Examples.c.o: ../Data_Structure_Examples/Set/Set_and_Block_Examples.h
 
+CMakeFiles/ACA_Project2.dir/Queue.c.o: .././uthash/include/uthash.h
+CMakeFiles/ACA_Project2.dir/Queue.c.o: ../Address.h
 CMakeFiles/ACA_Project2.dir/Queue.c.o: ../Queue.c
 CMakeFiles/ACA_Project2.dir/Queue.c.o: ../Queue.h
 
@@ -78,7 +91,9 @@ CMakeFiles/ACA_Project2.dir/buffers.c.o: .././uthash/include/uthash.h
 CMakeFiles/ACA_Project2.dir/buffers.c.o: ../uthash/include/uthash.h
 CMakeFiles/ACA_Project2.dir/buffers.c.o: ../Address.h
 CMakeFiles/ACA_Project2.dir/buffers.c.o: ../Block.h
+CMakeFiles/ACA_Project2.dir/buffers.c.o: ../BlockTransferer.h
 CMakeFiles/ACA_Project2.dir/buffers.c.o: ../CacheLine.h
+CMakeFiles/ACA_Project2.dir/buffers.c.o: ../Queue.h
 CMakeFiles/ACA_Project2.dir/buffers.c.o: ../buffers.c
 CMakeFiles/ACA_Project2.dir/buffers.c.o: ../buffers.h
 

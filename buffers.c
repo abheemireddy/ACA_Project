@@ -7,6 +7,7 @@
 
 Buffer Constructor_Buffer(){
     Buffer buffer = {};
+    //Transferer transferer = Con
     buffer.HashTable = NULL;
     buffer.putBlock = &putBlockInBuffer;
     buffer.getBlock = &getBlockFromBuffer;

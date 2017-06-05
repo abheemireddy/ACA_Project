@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_C
   "/home/chad/Desktop/ACA_Project/Address.c" "/home/chad/Desktop/ACA_Project/cmake-build-debug/CMakeFiles/ACA_Project2.dir/Address.c.o"
   "/home/chad/Desktop/ACA_Project/Block.c" "/home/chad/Desktop/ACA_Project/cmake-build-debug/CMakeFiles/ACA_Project2.dir/Block.c.o"
+  "/home/chad/Desktop/ACA_Project/BlockTransferer.c" "/home/chad/Desktop/ACA_Project/cmake-build-debug/CMakeFiles/ACA_Project2.dir/BlockTransferer.c.o"
   "/home/chad/Desktop/ACA_Project/Cache.c" "/home/chad/Desktop/ACA_Project/cmake-build-debug/CMakeFiles/ACA_Project2.dir/Cache.c.o"
   "/home/chad/Desktop/ACA_Project/CacheLine.c" "/home/chad/Desktop/ACA_Project/cmake-build-debug/CMakeFiles/ACA_Project2.dir/CacheLine.c.o"
   "/home/chad/Desktop/ACA_Project/DRAM.c" "/home/chad/Desktop/ACA_Project/cmake-build-debug/CMakeFiles/ACA_Project2.dir/DRAM.c.o"

@@ -6,13 +6,13 @@
 #define ACA_PROJECT_BLOCKTRANSFERER_H
 
 #include "Block.h"
+#include "Queue.h"
 
 //This struct will handle block transfers between memory and the L1/L2 caches.
 typedef struct TransfererTag{
-    Address addressOfBlockBeingTransferred;
-    Block* beingTransferred;
-    int clockCyclesRequiredForTransfer;
+    Queue* TransferQueue;
 } Transferer;
 
+Transferer Constructor_Transferer();
 
 #endif //ACA_PROJECT_BLOCKTRANSFERER_H

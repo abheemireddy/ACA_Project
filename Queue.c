@@ -5,9 +5,9 @@
 
 //used queue implementation from https://gist.github.com/ArnonEilat/4471278
 
-Queue *Queue_Constructor(int limit) {
+Queue *Queue_Constructor() {
     Queue *queue = (Queue*) malloc(sizeof (Queue));
-    queue->limit = limit;
+    queue->limit = 10000;
     queue->size = 0;
     queue->head = NULL;
     queue->tail = NULL;
@@ -29,7 +29,7 @@ void Queue_Destructor(Queue *queue) {
 void print_queue(Queue* queue){
     Node* current = queue->head;
     while (current->prev != NULL) {
-        printf("Node Value:%s\n",current->val);
+        printf("Node Value:%s\n",current->data);
         current = current->prev;
     }
 }
@@ -57,15 +57,17 @@ bool Enqueue(Queue **queue, Node **node) {
     return true;
 }
 
-char * Dequeue(Queue *queue) {
+Instruction Dequeue(Queue *queue) {
     Node *node;
-    if (isEmpty(queue))
-        return NULL;
+    if (isEmpty(queue)){
+        Instruction emptyInstruction = {instruction:NULL};
+        return emptyInstruction;
+    }
     node = queue->head;
-    //free(node);
+    free(node);
     queue->head = (queue->head)->prev;
     queue->size -= 1;
-    return node->val;
+    return node->data;
 }
 
 bool isEmpty(Queue* queue) {
