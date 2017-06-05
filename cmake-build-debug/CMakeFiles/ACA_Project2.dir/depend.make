@@ -41,7 +41,11 @@ CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Block/Block_CacheLine_HashTa
 CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Block/Block_CacheLine_HashTable_Examples.c.o: ../Data_Structure_Examples/Block/Block_CacheLine_HashTable_Examples.c
 CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Block/Block_CacheLine_HashTable_Examples.c.o: ../Data_Structure_Examples/Block/Block_CacheLine_HashTable_Examples.h
 
+CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/DRAM/DRAM_Examples.c.o: .././Address.h
+CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/DRAM/DRAM_Examples.c.o: .././Block.h
+CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/DRAM/DRAM_Examples.c.o: .././CacheLine.h
 CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/DRAM/DRAM_Examples.c.o: .././DRAM.h
+CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/DRAM/DRAM_Examples.c.o: .././uthash/include/uthash.h
 CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/DRAM/DRAM_Examples.c.o: ../uthash/include/uthash.h
 CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/DRAM/DRAM_Examples.c.o: ../Data_Structure_Examples/DRAM/DRAM_Examples.c
 CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/DRAM/DRAM_Examples.c.o: ../Data_Structure_Examples/DRAM/DRAM_Examples.h
@@ -73,12 +77,14 @@ CMakeFiles/ACA_Project2.dir/Set.c.o: ../Set.h
 CMakeFiles/ACA_Project2.dir/main.c.o: .././Address.h
 CMakeFiles/ACA_Project2.dir/main.c.o: .././Block.h
 CMakeFiles/ACA_Project2.dir/main.c.o: .././CacheLine.h
+CMakeFiles/ACA_Project2.dir/main.c.o: .././DRAM.h
 CMakeFiles/ACA_Project2.dir/main.c.o: .././Queue.h
 CMakeFiles/ACA_Project2.dir/main.c.o: .././Set.h
 CMakeFiles/ACA_Project2.dir/main.c.o: .././uthash/include/uthash.h
 CMakeFiles/ACA_Project2.dir/main.c.o: ../uthash/include/uthash.h
 CMakeFiles/ACA_Project2.dir/main.c.o: ../Cache.h
 CMakeFiles/ACA_Project2.dir/main.c.o: ../Data_Structure_Examples/Block/Block_CacheLine_HashTable_Examples.h
+CMakeFiles/ACA_Project2.dir/main.c.o: ../Data_Structure_Examples/DRAM/DRAM_Examples.h
 CMakeFiles/ACA_Project2.dir/main.c.o: ../Data_Structure_Examples/Queue/Queue_the_examples.h
 CMakeFiles/ACA_Project2.dir/main.c.o: ../Data_Structure_Examples/Set/Set_and_Block_Examples.h
 CMakeFiles/ACA_Project2.dir/main.c.o: ../L1_Cache.h

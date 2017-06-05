@@ -7,4 +7,6 @@
 
 #include "DRAM.h"
 
+void Add_to_DRAM();
+
 #endif //ACA_PROJECT_DRAM_EXAMPLES_H

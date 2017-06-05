@@ -13,6 +13,7 @@ DRAM Constructor_DRAM(){
     dram.getBlock = &getBlock;
     dram.CountBlocks = &CountBlocks;
     dram.print_all_blocks = &print_all_blocks;
+    dram.removeBlockFromDRAM = &removeBlockFromDRAM;
     return dram;
 }
 
@@ -20,10 +21,10 @@ void putBlock(Block** HashTable,Block *value) {  //key is useFrequency of the bl
     if(value->address.bitString == NULL){
         printf("The passed block needs to have attribute address set");
     }
-    Block* alreadyInHashTable = getBlock(HashTable,value->address.bitStringValue);//overwrite duplicate keys
+    /*Block* alreadyInHashTable = getBlock(HashTable,value->address.bitStringValue);//overwrite duplicate keys
     if(alreadyInHashTable != NULL){
         removeBlockFromDRAM(HashTable,alreadyInHashTable);
-    }
+    }*/
     HASH_ADD_INT(*HashTable, address.bitStringValue,value );
 }
 

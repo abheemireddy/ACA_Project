@@ -157,6 +157,8 @@ CacheLine.h
 /home/chad/Desktop/ACA_Project/Data_Structure_Examples/Block/CacheLine.h
 
 /home/chad/Desktop/ACA_Project/Data_Structure_Examples/DRAM/DRAM_Examples.c
+Block.h
+-
 DRAM_Examples.h
 /home/chad/Desktop/ACA_Project/Data_Structure_Examples/DRAM/DRAM_Examples.h
 
@@ -227,6 +229,8 @@ Data_Structure_Examples/Queue/Queue_the_examples.h
 /home/chad/Desktop/ACA_Project/Data_Structure_Examples/Queue/Queue_the_examples.h
 Data_Structure_Examples/Block/Block_CacheLine_HashTable_Examples.h
 /home/chad/Desktop/ACA_Project/Data_Structure_Examples/Block/Block_CacheLine_HashTable_Examples.h
+Data_Structure_Examples/DRAM/DRAM_Examples.h
+/home/chad/Desktop/ACA_Project/Data_Structure_Examples/DRAM/DRAM_Examples.h
 L1_Cache.h
 /home/chad/Desktop/ACA_Project/L1_Cache.h
 
