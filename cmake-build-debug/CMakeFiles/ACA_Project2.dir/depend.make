@@ -74,6 +74,14 @@ CMakeFiles/ACA_Project2.dir/Set.c.o: ../CacheLine.h
 CMakeFiles/ACA_Project2.dir/Set.c.o: ../Set.c
 CMakeFiles/ACA_Project2.dir/Set.c.o: ../Set.h
 
+CMakeFiles/ACA_Project2.dir/buffers.c.o: .././uthash/include/uthash.h
+CMakeFiles/ACA_Project2.dir/buffers.c.o: ../uthash/include/uthash.h
+CMakeFiles/ACA_Project2.dir/buffers.c.o: ../Address.h
+CMakeFiles/ACA_Project2.dir/buffers.c.o: ../Block.h
+CMakeFiles/ACA_Project2.dir/buffers.c.o: ../CacheLine.h
+CMakeFiles/ACA_Project2.dir/buffers.c.o: ../buffers.c
+CMakeFiles/ACA_Project2.dir/buffers.c.o: ../buffers.h
+
 CMakeFiles/ACA_Project2.dir/main.c.o: .././Address.h
 CMakeFiles/ACA_Project2.dir/main.c.o: .././Block.h
 CMakeFiles/ACA_Project2.dir/main.c.o: .././CacheLine.h

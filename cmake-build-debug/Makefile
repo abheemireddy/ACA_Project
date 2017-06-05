@@ -420,6 +420,33 @@ Set.c.s:
 	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/Set.c.s
 .PHONY : Set.c.s
 
+buffers.o: buffers.c.o
+
+.PHONY : buffers.o
+
+# target to build an object file
+buffers.c.o:
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/buffers.c.o
+.PHONY : buffers.c.o
+
+buffers.i: buffers.c.i
+
+.PHONY : buffers.i
+
+# target to preprocess a source file
+buffers.c.i:
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/buffers.c.i
+.PHONY : buffers.c.i
+
+buffers.s: buffers.c.s
+
+.PHONY : buffers.s
+
+# target to generate assembly for a file
+buffers.c.s:
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/buffers.c.s
+.PHONY : buffers.c.s
+
 main.o: main.c.o
 
 .PHONY : main.o
@@ -489,6 +516,9 @@ help:
 	@echo "... Set.o"
 	@echo "... Set.i"
 	@echo "... Set.s"
+	@echo "... buffers.o"
+	@echo "... buffers.i"
+	@echo "... buffers.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
