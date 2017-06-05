@@ -21,6 +21,8 @@ typedef struct DRAMTag {
 
 } DRAM;
 
+DRAM Constructor_DRAM();
+
 void removeBlockFromDRAM(struct BlockTag** HashTable,struct BlockTag* blockToRemove);
 void putBlock(struct BlockTag** HashTable,struct BlockTag *value);
 int CountBlocks(struct BlockTag** HashTable);
