@@ -20,4 +20,9 @@ typedef struct DRAMTag {
 
 } DRAM;
 
+void put(struct BlockTag** HashTable,struct BlockTag *value);
+int Count(struct BlockTag** HashTable);
+struct BlockTag* get(struct BlockTag** HashTable,char* key);
+void print_all_blocks(struct BlockTag** HashTable);
+
 #endif //ACA_PROJECT_DRAM_H
