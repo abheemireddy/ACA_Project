@@ -17,3 +17,8 @@ Blocks then contain CacheLines.  CacheLines are referenced by Address.Offset, an
 OVERALL:
 I have a few examples for using the Cache/Set/Block.  Look within the "Data_Structure_Examples" folder.  Those examples are being run from main for your convenience (to see how they work).
 These are mature building blocks from which you can implement your controllers/storing data.
+
+6/5/17
+I am working on creating the write buffers/victim cache.
+    These are very similar to DRAM.  They will need more functions, e.g. flush data, isInBuffer, ect.
+    These will be separate objects we create and use in our L1 cache.
