@@ -20,7 +20,15 @@ void putBlock(Block** HashTable,Block *value) {  //key is useFrequency of the bl
     if(value->address.bitString == NULL){
         printf("The passed block needs to have attribute address set");
     }
+    Block* alreadyInHashTable = getBlock(HashTable,value->address.bitStringValue);//overwrite duplicate keys
+    if(alreadyInHashTable != NULL){
+        removeBlockFromDRAM(HashTable,alreadyInHashTable);
+    }
     HASH_ADD_INT(*HashTable, address.bitStringValue,value );
+}
+
+void removeBlockFromDRAM(Block** HashTable,Block* blockToRemove) {
+    HASH_DEL( *HashTable, blockToRemove);//removes blocks of type block
 }
 
 Block* getBlock(Block** HashTable,int key) {
