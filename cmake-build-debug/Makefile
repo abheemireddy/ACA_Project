@@ -231,6 +231,33 @@ CacheLine.c.s:
 	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/CacheLine.c.s
 .PHONY : CacheLine.c.s
 
+DRAM.o: DRAM.cpp.o
+
+.PHONY : DRAM.o
+
+# target to build an object file
+DRAM.cpp.o:
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/DRAM.cpp.o
+.PHONY : DRAM.cpp.o
+
+DRAM.i: DRAM.cpp.i
+
+.PHONY : DRAM.i
+
+# target to preprocess a source file
+DRAM.cpp.i:
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/DRAM.cpp.i
+.PHONY : DRAM.cpp.i
+
+DRAM.s: DRAM.cpp.s
+
+.PHONY : DRAM.s
+
+# target to generate assembly for a file
+DRAM.cpp.s:
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/DRAM.cpp.s
+.PHONY : DRAM.cpp.s
+
 Data_Structure_Examples/Block/Block_CacheLine_HashTable_Examples.o: Data_Structure_Examples/Block/Block_CacheLine_HashTable_Examples.c.o
 
 .PHONY : Data_Structure_Examples/Block/Block_CacheLine_HashTable_Examples.o
@@ -414,6 +441,9 @@ help:
 	@echo "... CacheLine.o"
 	@echo "... CacheLine.i"
 	@echo "... CacheLine.s"
+	@echo "... DRAM.o"
+	@echo "... DRAM.i"
+	@echo "... DRAM.s"
 	@echo "... Data_Structure_Examples/Block/Block_CacheLine_HashTable_Examples.o"
 	@echo "... Data_Structure_Examples/Block/Block_CacheLine_HashTable_Examples.i"
 	@echo "... Data_Structure_Examples/Block/Block_CacheLine_HashTable_Examples.s"
