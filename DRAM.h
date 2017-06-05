@@ -13,6 +13,7 @@ typedef struct DRAMTag {
     UT_hash_handle hh; /* make this structure hashable*/
     struct BlockTag *HashTable; //This is my hashTable for blocks
 
+    void (*removeBlockFromDRAM)(struct BlockTag** HashTable,struct BlockTag* blockToRemove);
     void (*putBlock)(struct BlockTag** HashTable,struct BlockTag *value);
     int (*CountBlocks)(struct BlockTag** HashTable);
     struct BlockTag* (*getBlock)(struct BlockTag** HashTable,int key);
@@ -20,6 +21,7 @@ typedef struct DRAMTag {
 
 } DRAM;
 
+void removeBlockFromDRAM(struct BlockTag** HashTable,struct BlockTag* blockToRemove);
 void putBlock(struct BlockTag** HashTable,struct BlockTag *value);
 int CountBlocks(struct BlockTag** HashTable);
 struct BlockTag* getBlock(struct BlockTag** HashTable,int key);
