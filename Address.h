@@ -11,6 +11,7 @@ typedef struct AddressTag{
     int Tag;
     int Index;
     int Offset;
+    int bitStringValue;
     char* bitString;
     UT_hash_handle hh;
 } Address;

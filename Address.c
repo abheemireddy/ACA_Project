@@ -48,6 +48,7 @@ Address Constructor_Address(char* bitString){
     int Tag = fromBinary(TagString);
     int Index = fromBinary(IndexString);
     int Offset = fromBinary(OffsetString);
-    Address address = {Tag:Tag,Index:Index,Offset:Offset,bitString:bitString};
+    int bitStringValue = fromBinary(bitString);
+    Address address = {Tag:Tag,Index:Index,Offset:Offset,bitString:bitString,bitStringValue:bitStringValue};
     return address;
 }
