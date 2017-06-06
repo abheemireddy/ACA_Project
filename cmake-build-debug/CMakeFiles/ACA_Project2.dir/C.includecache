@@ -139,8 +139,6 @@ uthash.h
 -
 stdbool.h
 -
-BlockTransferer/BlockTransferer.h
-/home/chad/Desktop/ACA_Project/Buffers/BlockTransferer/BlockTransferer.h
 
 /home/chad/Desktop/ACA_Project/Cache/Cache.c
 printf.h
@@ -154,6 +152,8 @@ Set/Set.h
 stdlib.h
 -
 stdio.h
+-
+BlockTransferer/BlockTransferer.h
 -
 
 /home/chad/Desktop/ACA_Project/CacheLine/CacheLine.c

@@ -6,12 +6,10 @@
 #define ACA_PROJECT_BUFFERS_H
 #include <uthash.h>
 #include <stdbool.h>
-#include "BlockTransferer/BlockTransferer.h"
 
 struct BlockTag;//forward declaration
 
 typedef struct BufferTag {
-    Transferer transferer;
     bool isWriteBuffer;//otherwise is victim cache
     UT_hash_handle hh; /* make this structure hashable*/
     struct BlockTag *HashTable; //This is my hashTable for blocks

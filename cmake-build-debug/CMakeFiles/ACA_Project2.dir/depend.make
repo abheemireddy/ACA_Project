@@ -23,15 +23,17 @@ CMakeFiles/ACA_Project2.dir/BlockTransferer/BlockTransferer.c.o: ../BlockTransfe
 
 CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.o: .././Address/Address.h
 CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.o: .././Block/Block.h
-CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.o: .././BlockTransferer/BlockTransferer.h
 CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.o: .././CacheLine/CacheLine.h
-CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.o: .././Queue/Queue.h
 CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.o: .././uthash/include/uthash.h
 CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.o: ../uthash/include/uthash.h
 CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.o: ../Buffers/buffers.c
 CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.o: ../Buffers/buffers.h
 
 CMakeFiles/ACA_Project2.dir/Cache/Cache.c.o: .././Address/Address.h
+CMakeFiles/ACA_Project2.dir/Cache/Cache.c.o: .././Block/Block.h
+CMakeFiles/ACA_Project2.dir/Cache/Cache.c.o: .././BlockTransferer/BlockTransferer.h
+CMakeFiles/ACA_Project2.dir/Cache/Cache.c.o: .././CacheLine/CacheLine.h
+CMakeFiles/ACA_Project2.dir/Cache/Cache.c.o: .././Queue/Queue.h
 CMakeFiles/ACA_Project2.dir/Cache/Cache.c.o: .././Set/Set.h
 CMakeFiles/ACA_Project2.dir/Cache/Cache.c.o: .././uthash/include/uthash.h
 CMakeFiles/ACA_Project2.dir/Cache/Cache.c.o: ../uthash/include/uthash.h
@@ -99,6 +101,7 @@ CMakeFiles/ACA_Project2.dir/Set/Set.c.o: ../Set/Set.h
 
 CMakeFiles/ACA_Project2.dir/main.c.o: .././Address/Address.h
 CMakeFiles/ACA_Project2.dir/main.c.o: .././Block/Block.h
+CMakeFiles/ACA_Project2.dir/main.c.o: .././BlockTransferer/BlockTransferer.h
 CMakeFiles/ACA_Project2.dir/main.c.o: .././CacheLine/CacheLine.h
 CMakeFiles/ACA_Project2.dir/main.c.o: .././DRAM/DRAM.h
 CMakeFiles/ACA_Project2.dir/main.c.o: .././Queue/Queue.h

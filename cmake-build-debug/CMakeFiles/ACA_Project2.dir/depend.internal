@@ -24,15 +24,17 @@ CMakeFiles/ACA_Project2.dir/BlockTransferer/BlockTransferer.c.o
 CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.o
  .././Address/Address.h
  .././Block/Block.h
- .././BlockTransferer/BlockTransferer.h
  .././CacheLine/CacheLine.h
- .././Queue/Queue.h
  .././uthash/include/uthash.h
  ../uthash/include/uthash.h
  /home/chad/Desktop/ACA_Project/Buffers/buffers.c
  /home/chad/Desktop/ACA_Project/Buffers/buffers.h
 CMakeFiles/ACA_Project2.dir/Cache/Cache.c.o
  .././Address/Address.h
+ .././Block/Block.h
+ .././BlockTransferer/BlockTransferer.h
+ .././CacheLine/CacheLine.h
+ .././Queue/Queue.h
  .././Set/Set.h
  .././uthash/include/uthash.h
  ../uthash/include/uthash.h
@@ -100,6 +102,7 @@ CMakeFiles/ACA_Project2.dir/Set/Set.c.o
 CMakeFiles/ACA_Project2.dir/main.c.o
  .././Address/Address.h
  .././Block/Block.h
+ .././BlockTransferer/BlockTransferer.h
  .././CacheLine/CacheLine.h
  .././DRAM/DRAM.h
  .././Queue/Queue.h

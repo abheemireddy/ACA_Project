@@ -11,7 +11,7 @@
 #include "Address/Address.h"
 
 typedef struct InstructionTag{
-    Address Address;
+    char* RawData;
     char* instruction;
 } Instruction;
 
