@@ -6,17 +6,17 @@
 
 #IncludeRegexTransform: 
 
-.././Address.h
+.././Address/Address.h
 uthash/include/uthash.h
 -
 
-.././Block.h
+.././Block/Block.h
 stdbool.h
 -
-CacheLine.h
-.././CacheLine.h
-Address.h
-.././Address.h
+CacheLine/CacheLine.h
+.././Block/CacheLine/CacheLine.h
+Address/Address.h
+.././Block/Address/Address.h
 stdlib.h
 -
 stdio.h
@@ -24,37 +24,71 @@ stdio.h
 printf.h
 -
 
-.././CacheLine.h
+.././BlockTransferer/BlockTransferer.h
+Block/Block.h
+.././BlockTransferer/Block/Block.h
+Queue/Queue.h
+.././BlockTransferer/Queue/Queue.h
+
+.././CacheLine/CacheLine.h
 stdio.h
 -
 uthash.h
 -
-Address.h
-.././Address.h
+Address/Address.h
+.././CacheLine/Address/Address.h
 
-.././DRAM.h
+.././DRAM/DRAM.h
 uthash.h
 -
 
-.././Queue.h
+.././Queue/Queue.h
 stdlib.h
 -
 stdio.h
 -
 stdbool.h
 -
-Address.h
-.././Address.h
+Address/Address.h
+.././Queue/Address/Address.h
 
-.././Set.h
+.././Set/Set.h
 uthash.h
-.././uthash.h
-Address.h
-.././Address.h
+.././Set/uthash.h
+Address/Address.h
+.././Set/Address/Address.h
 
-/home/chad/Desktop/ACA_Project/Address.c
+.././uthash/include/uthash.h
+string.h
+-
+stddef.h
+-
+stdlib.h
+-
+stdint.h
+-
+stdint.h
+-
+stdint.h
+-
+
+../uthash/include/uthash.h
+string.h
+-
+stddef.h
+-
+stdlib.h
+-
+stdint.h
+-
+stdint.h
+-
+stdint.h
+-
+
+/home/chad/Desktop/ACA_Project/Address/Address.c
 Address.h
-/home/chad/Desktop/ACA_Project/Address.h
+/home/chad/Desktop/ACA_Project/Address/Address.h
 stdio.h
 -
 unistd.h
@@ -62,21 +96,21 @@ unistd.h
 math.h
 -
 
-/home/chad/Desktop/ACA_Project/Address.h
+/home/chad/Desktop/ACA_Project/Address/Address.h
 uthash/include/uthash.h
 -
 
-/home/chad/Desktop/ACA_Project/Block.c
+/home/chad/Desktop/ACA_Project/Block/Block.c
 Block.h
-/home/chad/Desktop/ACA_Project/Block.h
+/home/chad/Desktop/ACA_Project/Block/Block.h
 
-/home/chad/Desktop/ACA_Project/Block.h
+/home/chad/Desktop/ACA_Project/Block/Block.h
 stdbool.h
 -
-CacheLine.h
-/home/chad/Desktop/ACA_Project/CacheLine.h
-Address.h
-/home/chad/Desktop/ACA_Project/Address.h
+CacheLine/CacheLine.h
+/home/chad/Desktop/ACA_Project/Block/CacheLine/CacheLine.h
+Address/Address.h
+/home/chad/Desktop/ACA_Project/Block/Address/Address.h
 stdlib.h
 -
 stdio.h
@@ -84,49 +118,63 @@ stdio.h
 printf.h
 -
 
-/home/chad/Desktop/ACA_Project/BlockTransferer.c
+/home/chad/Desktop/ACA_Project/BlockTransferer/BlockTransferer.c
 BlockTransferer.h
-/home/chad/Desktop/ACA_Project/BlockTransferer.h
+/home/chad/Desktop/ACA_Project/BlockTransferer/BlockTransferer.h
 
-/home/chad/Desktop/ACA_Project/BlockTransferer.h
-Block.h
-/home/chad/Desktop/ACA_Project/Block.h
-Queue.h
-/home/chad/Desktop/ACA_Project/Queue.h
+/home/chad/Desktop/ACA_Project/BlockTransferer/BlockTransferer.h
+Block/Block.h
+/home/chad/Desktop/ACA_Project/BlockTransferer/Block/Block.h
+Queue/Queue.h
+/home/chad/Desktop/ACA_Project/BlockTransferer/Queue/Queue.h
 
-/home/chad/Desktop/ACA_Project/Cache.c
+/home/chad/Desktop/ACA_Project/Buffers/buffers.c
+buffers.h
+/home/chad/Desktop/ACA_Project/Buffers/buffers.h
+Block/Block.h
+/home/chad/Desktop/ACA_Project/Buffers/Block/Block.h
+
+/home/chad/Desktop/ACA_Project/Buffers/buffers.h
+uthash.h
+-
+stdbool.h
+-
+BlockTransferer/BlockTransferer.h
+/home/chad/Desktop/ACA_Project/Buffers/BlockTransferer/BlockTransferer.h
+
+/home/chad/Desktop/ACA_Project/Cache/Cache.c
 printf.h
 -
 Cache.h
-/home/chad/Desktop/ACA_Project/Cache.h
+/home/chad/Desktop/ACA_Project/Cache/Cache.h
 
-/home/chad/Desktop/ACA_Project/Cache.h
-Set.h
-/home/chad/Desktop/ACA_Project/Set.h
+/home/chad/Desktop/ACA_Project/Cache/Cache.h
+Set/Set.h
+/home/chad/Desktop/ACA_Project/Cache/Set/Set.h
 stdlib.h
 -
 stdio.h
 -
 
-/home/chad/Desktop/ACA_Project/CacheLine.c
+/home/chad/Desktop/ACA_Project/CacheLine/CacheLine.c
 CacheLine.h
-/home/chad/Desktop/ACA_Project/CacheLine.h
+/home/chad/Desktop/ACA_Project/CacheLine/CacheLine.h
 
-/home/chad/Desktop/ACA_Project/CacheLine.h
+/home/chad/Desktop/ACA_Project/CacheLine/CacheLine.h
 stdio.h
 -
 uthash.h
 -
-Address.h
-/home/chad/Desktop/ACA_Project/Address.h
+Address/Address.h
+/home/chad/Desktop/ACA_Project/CacheLine/Address/Address.h
 
-/home/chad/Desktop/ACA_Project/DRAM.c
+/home/chad/Desktop/ACA_Project/DRAM/DRAM.c
 DRAM.h
-/home/chad/Desktop/ACA_Project/DRAM.h
-Block.h
-/home/chad/Desktop/ACA_Project/Block.h
+/home/chad/Desktop/ACA_Project/DRAM/DRAM.h
+Block/Block.h
+/home/chad/Desktop/ACA_Project/DRAM/Block/Block.h
 
-/home/chad/Desktop/ACA_Project/DRAM.h
+/home/chad/Desktop/ACA_Project/DRAM/DRAM.h
 uthash.h
 -
 
@@ -135,28 +183,28 @@ Block_CacheLine_HashTable_Examples.h
 /home/chad/Desktop/ACA_Project/Data_Structure_Examples/Block/Block_CacheLine_HashTable_Examples.h
 
 /home/chad/Desktop/ACA_Project/Data_Structure_Examples/Block/Block_CacheLine_HashTable_Examples.h
-Block.h
-/home/chad/Desktop/ACA_Project/Data_Structure_Examples/Block/Block.h
-CacheLine.h
-/home/chad/Desktop/ACA_Project/Data_Structure_Examples/Block/CacheLine.h
+Block/Block.h
+/home/chad/Desktop/ACA_Project/Data_Structure_Examples/Block/Block/Block.h
+CacheLine/CacheLine.h
+/home/chad/Desktop/ACA_Project/Data_Structure_Examples/Block/CacheLine/CacheLine.h
 
 /home/chad/Desktop/ACA_Project/Data_Structure_Examples/DRAM/DRAM_Examples.c
-Block.h
+Block/Block.h
 -
 DRAM_Examples.h
 /home/chad/Desktop/ACA_Project/Data_Structure_Examples/DRAM/DRAM_Examples.h
 
 /home/chad/Desktop/ACA_Project/Data_Structure_Examples/DRAM/DRAM_Examples.h
-DRAM.h
-/home/chad/Desktop/ACA_Project/Data_Structure_Examples/DRAM/DRAM.h
+DRAM/DRAM.h
+/home/chad/Desktop/ACA_Project/Data_Structure_Examples/DRAM/DRAM/DRAM.h
 
 /home/chad/Desktop/ACA_Project/Data_Structure_Examples/Queue/Queue_the_examples.c
 Queue_the_examples.h
 /home/chad/Desktop/ACA_Project/Data_Structure_Examples/Queue/Queue_the_examples.h
 
 /home/chad/Desktop/ACA_Project/Data_Structure_Examples/Queue/Queue_the_examples.h
-Queue.h
-/home/chad/Desktop/ACA_Project/Data_Structure_Examples/Queue/Queue.h
+Queue/Queue.h
+/home/chad/Desktop/ACA_Project/Data_Structure_Examples/Queue/Queue/Queue.h
 
 /home/chad/Desktop/ACA_Project/Data_Structure_Examples/Set/Set_and_Block_Examples.c
 Set_and_Block_Examples.h
@@ -165,62 +213,48 @@ Set_and_Block_Examples.h
 /home/chad/Desktop/ACA_Project/Data_Structure_Examples/Set/Set_and_Block_Examples.h
 stdio.h
 -
-Set.h
-/home/chad/Desktop/ACA_Project/Data_Structure_Examples/Set/Set.h
-Block.h
-/home/chad/Desktop/ACA_Project/Data_Structure_Examples/Set/Block.h
+Set/Set.h
+/home/chad/Desktop/ACA_Project/Data_Structure_Examples/Set/Set/Set.h
+Block/Block.h
+/home/chad/Desktop/ACA_Project/Data_Structure_Examples/Set/Block/Block.h
 
 /home/chad/Desktop/ACA_Project/L1_Cache.h
-Cache.h
-/home/chad/Desktop/ACA_Project/Cache.h
-Set.h
-/home/chad/Desktop/ACA_Project/Set.h
-Block.h
-/home/chad/Desktop/ACA_Project/Block.h
-CacheLine.h
-/home/chad/Desktop/ACA_Project/CacheLine.h
+Cache/Cache.h
+/home/chad/Desktop/ACA_Project/Cache/Cache.h
+Set/Set.h
+/home/chad/Desktop/ACA_Project/Set/Set.h
+Block/Block.h
+/home/chad/Desktop/ACA_Project/Block/Block.h
+CacheLine/CacheLine.h
+/home/chad/Desktop/ACA_Project/CacheLine/CacheLine.h
 
-/home/chad/Desktop/ACA_Project/Queue.c
+/home/chad/Desktop/ACA_Project/Queue/Queue.c
 Queue.h
-/home/chad/Desktop/ACA_Project/Queue.h
+/home/chad/Desktop/ACA_Project/Queue/Queue.h
 
-/home/chad/Desktop/ACA_Project/Queue.h
+/home/chad/Desktop/ACA_Project/Queue/Queue.h
 stdlib.h
 -
 stdio.h
 -
 stdbool.h
 -
-Address.h
-/home/chad/Desktop/ACA_Project/Address.h
+Address/Address.h
+/home/chad/Desktop/ACA_Project/Queue/Address/Address.h
 
-/home/chad/Desktop/ACA_Project/Set.c
-Block.h
-/home/chad/Desktop/ACA_Project/Block.h
+/home/chad/Desktop/ACA_Project/Set/Set.c
+Block/Block.h
+/home/chad/Desktop/ACA_Project/Set/Block/Block.h
 Set.h
-/home/chad/Desktop/ACA_Project/Set.h
+/home/chad/Desktop/ACA_Project/Set/Set.h
 stdio.h
 -
 
-/home/chad/Desktop/ACA_Project/Set.h
+/home/chad/Desktop/ACA_Project/Set/Set.h
 uthash.h
-/home/chad/Desktop/ACA_Project/uthash.h
-Address.h
-/home/chad/Desktop/ACA_Project/Address.h
-
-/home/chad/Desktop/ACA_Project/buffers.c
-buffers.h
-/home/chad/Desktop/ACA_Project/buffers.h
-Block.h
-/home/chad/Desktop/ACA_Project/Block.h
-
-/home/chad/Desktop/ACA_Project/buffers.h
-uthash.h
--
-stdbool.h
--
-BlockTransferer.h
-/home/chad/Desktop/ACA_Project/BlockTransferer.h
+/home/chad/Desktop/ACA_Project/Set/uthash.h
+Address/Address.h
+/home/chad/Desktop/ACA_Project/Set/Address/Address.h
 
 /home/chad/Desktop/ACA_Project/main.c
 Data_Structure_Examples/Set/Set_and_Block_Examples.h

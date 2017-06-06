@@ -6,7 +6,7 @@
 #define ACA_PROJECT_BUFFERS_H
 #include <uthash.h>
 #include <stdbool.h>
-#include "BlockTransferer.h"
+#include "BlockTransferer/BlockTransferer.h"
 
 struct BlockTag;//forward declaration
 

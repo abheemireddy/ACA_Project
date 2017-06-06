@@ -81,124 +81,124 @@ CMakeFiles/ACA_Project2.dir/main.c.o.provides: CMakeFiles/ACA_Project2.dir/main.
 CMakeFiles/ACA_Project2.dir/main.c.o.provides.build: CMakeFiles/ACA_Project2.dir/main.c.o
 
 
-CMakeFiles/ACA_Project2.dir/Block.c.o: CMakeFiles/ACA_Project2.dir/flags.make
-CMakeFiles/ACA_Project2.dir/Block.c.o: ../Block.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chad/Desktop/ACA_Project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/ACA_Project2.dir/Block.c.o"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ACA_Project2.dir/Block.c.o   -c /home/chad/Desktop/ACA_Project/Block.c
+CMakeFiles/ACA_Project2.dir/Block/Block.c.o: CMakeFiles/ACA_Project2.dir/flags.make
+CMakeFiles/ACA_Project2.dir/Block/Block.c.o: ../Block/Block.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chad/Desktop/ACA_Project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/ACA_Project2.dir/Block/Block.c.o"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ACA_Project2.dir/Block/Block.c.o   -c /home/chad/Desktop/ACA_Project/Block/Block.c
 
-CMakeFiles/ACA_Project2.dir/Block.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ACA_Project2.dir/Block.c.i"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/chad/Desktop/ACA_Project/Block.c > CMakeFiles/ACA_Project2.dir/Block.c.i
+CMakeFiles/ACA_Project2.dir/Block/Block.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ACA_Project2.dir/Block/Block.c.i"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/chad/Desktop/ACA_Project/Block/Block.c > CMakeFiles/ACA_Project2.dir/Block/Block.c.i
 
-CMakeFiles/ACA_Project2.dir/Block.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ACA_Project2.dir/Block.c.s"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/chad/Desktop/ACA_Project/Block.c -o CMakeFiles/ACA_Project2.dir/Block.c.s
+CMakeFiles/ACA_Project2.dir/Block/Block.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ACA_Project2.dir/Block/Block.c.s"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/chad/Desktop/ACA_Project/Block/Block.c -o CMakeFiles/ACA_Project2.dir/Block/Block.c.s
 
-CMakeFiles/ACA_Project2.dir/Block.c.o.requires:
+CMakeFiles/ACA_Project2.dir/Block/Block.c.o.requires:
 
-.PHONY : CMakeFiles/ACA_Project2.dir/Block.c.o.requires
+.PHONY : CMakeFiles/ACA_Project2.dir/Block/Block.c.o.requires
 
-CMakeFiles/ACA_Project2.dir/Block.c.o.provides: CMakeFiles/ACA_Project2.dir/Block.c.o.requires
-	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/Block.c.o.provides.build
-.PHONY : CMakeFiles/ACA_Project2.dir/Block.c.o.provides
+CMakeFiles/ACA_Project2.dir/Block/Block.c.o.provides: CMakeFiles/ACA_Project2.dir/Block/Block.c.o.requires
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/Block/Block.c.o.provides.build
+.PHONY : CMakeFiles/ACA_Project2.dir/Block/Block.c.o.provides
 
-CMakeFiles/ACA_Project2.dir/Block.c.o.provides.build: CMakeFiles/ACA_Project2.dir/Block.c.o
-
-
-CMakeFiles/ACA_Project2.dir/Set.c.o: CMakeFiles/ACA_Project2.dir/flags.make
-CMakeFiles/ACA_Project2.dir/Set.c.o: ../Set.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chad/Desktop/ACA_Project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/ACA_Project2.dir/Set.c.o"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ACA_Project2.dir/Set.c.o   -c /home/chad/Desktop/ACA_Project/Set.c
-
-CMakeFiles/ACA_Project2.dir/Set.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ACA_Project2.dir/Set.c.i"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/chad/Desktop/ACA_Project/Set.c > CMakeFiles/ACA_Project2.dir/Set.c.i
-
-CMakeFiles/ACA_Project2.dir/Set.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ACA_Project2.dir/Set.c.s"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/chad/Desktop/ACA_Project/Set.c -o CMakeFiles/ACA_Project2.dir/Set.c.s
-
-CMakeFiles/ACA_Project2.dir/Set.c.o.requires:
-
-.PHONY : CMakeFiles/ACA_Project2.dir/Set.c.o.requires
-
-CMakeFiles/ACA_Project2.dir/Set.c.o.provides: CMakeFiles/ACA_Project2.dir/Set.c.o.requires
-	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/Set.c.o.provides.build
-.PHONY : CMakeFiles/ACA_Project2.dir/Set.c.o.provides
-
-CMakeFiles/ACA_Project2.dir/Set.c.o.provides.build: CMakeFiles/ACA_Project2.dir/Set.c.o
+CMakeFiles/ACA_Project2.dir/Block/Block.c.o.provides.build: CMakeFiles/ACA_Project2.dir/Block/Block.c.o
 
 
-CMakeFiles/ACA_Project2.dir/CacheLine.c.o: CMakeFiles/ACA_Project2.dir/flags.make
-CMakeFiles/ACA_Project2.dir/CacheLine.c.o: ../CacheLine.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chad/Desktop/ACA_Project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/ACA_Project2.dir/CacheLine.c.o"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ACA_Project2.dir/CacheLine.c.o   -c /home/chad/Desktop/ACA_Project/CacheLine.c
+CMakeFiles/ACA_Project2.dir/Set/Set.c.o: CMakeFiles/ACA_Project2.dir/flags.make
+CMakeFiles/ACA_Project2.dir/Set/Set.c.o: ../Set/Set.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chad/Desktop/ACA_Project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/ACA_Project2.dir/Set/Set.c.o"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ACA_Project2.dir/Set/Set.c.o   -c /home/chad/Desktop/ACA_Project/Set/Set.c
 
-CMakeFiles/ACA_Project2.dir/CacheLine.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ACA_Project2.dir/CacheLine.c.i"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/chad/Desktop/ACA_Project/CacheLine.c > CMakeFiles/ACA_Project2.dir/CacheLine.c.i
+CMakeFiles/ACA_Project2.dir/Set/Set.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ACA_Project2.dir/Set/Set.c.i"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/chad/Desktop/ACA_Project/Set/Set.c > CMakeFiles/ACA_Project2.dir/Set/Set.c.i
 
-CMakeFiles/ACA_Project2.dir/CacheLine.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ACA_Project2.dir/CacheLine.c.s"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/chad/Desktop/ACA_Project/CacheLine.c -o CMakeFiles/ACA_Project2.dir/CacheLine.c.s
+CMakeFiles/ACA_Project2.dir/Set/Set.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ACA_Project2.dir/Set/Set.c.s"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/chad/Desktop/ACA_Project/Set/Set.c -o CMakeFiles/ACA_Project2.dir/Set/Set.c.s
 
-CMakeFiles/ACA_Project2.dir/CacheLine.c.o.requires:
+CMakeFiles/ACA_Project2.dir/Set/Set.c.o.requires:
 
-.PHONY : CMakeFiles/ACA_Project2.dir/CacheLine.c.o.requires
+.PHONY : CMakeFiles/ACA_Project2.dir/Set/Set.c.o.requires
 
-CMakeFiles/ACA_Project2.dir/CacheLine.c.o.provides: CMakeFiles/ACA_Project2.dir/CacheLine.c.o.requires
-	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/CacheLine.c.o.provides.build
-.PHONY : CMakeFiles/ACA_Project2.dir/CacheLine.c.o.provides
+CMakeFiles/ACA_Project2.dir/Set/Set.c.o.provides: CMakeFiles/ACA_Project2.dir/Set/Set.c.o.requires
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/Set/Set.c.o.provides.build
+.PHONY : CMakeFiles/ACA_Project2.dir/Set/Set.c.o.provides
 
-CMakeFiles/ACA_Project2.dir/CacheLine.c.o.provides.build: CMakeFiles/ACA_Project2.dir/CacheLine.c.o
-
-
-CMakeFiles/ACA_Project2.dir/Cache.c.o: CMakeFiles/ACA_Project2.dir/flags.make
-CMakeFiles/ACA_Project2.dir/Cache.c.o: ../Cache.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chad/Desktop/ACA_Project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/ACA_Project2.dir/Cache.c.o"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ACA_Project2.dir/Cache.c.o   -c /home/chad/Desktop/ACA_Project/Cache.c
-
-CMakeFiles/ACA_Project2.dir/Cache.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ACA_Project2.dir/Cache.c.i"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/chad/Desktop/ACA_Project/Cache.c > CMakeFiles/ACA_Project2.dir/Cache.c.i
-
-CMakeFiles/ACA_Project2.dir/Cache.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ACA_Project2.dir/Cache.c.s"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/chad/Desktop/ACA_Project/Cache.c -o CMakeFiles/ACA_Project2.dir/Cache.c.s
-
-CMakeFiles/ACA_Project2.dir/Cache.c.o.requires:
-
-.PHONY : CMakeFiles/ACA_Project2.dir/Cache.c.o.requires
-
-CMakeFiles/ACA_Project2.dir/Cache.c.o.provides: CMakeFiles/ACA_Project2.dir/Cache.c.o.requires
-	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/Cache.c.o.provides.build
-.PHONY : CMakeFiles/ACA_Project2.dir/Cache.c.o.provides
-
-CMakeFiles/ACA_Project2.dir/Cache.c.o.provides.build: CMakeFiles/ACA_Project2.dir/Cache.c.o
+CMakeFiles/ACA_Project2.dir/Set/Set.c.o.provides.build: CMakeFiles/ACA_Project2.dir/Set/Set.c.o
 
 
-CMakeFiles/ACA_Project2.dir/Queue.c.o: CMakeFiles/ACA_Project2.dir/flags.make
-CMakeFiles/ACA_Project2.dir/Queue.c.o: ../Queue.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chad/Desktop/ACA_Project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/ACA_Project2.dir/Queue.c.o"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ACA_Project2.dir/Queue.c.o   -c /home/chad/Desktop/ACA_Project/Queue.c
+CMakeFiles/ACA_Project2.dir/CacheLine/CacheLine.c.o: CMakeFiles/ACA_Project2.dir/flags.make
+CMakeFiles/ACA_Project2.dir/CacheLine/CacheLine.c.o: ../CacheLine/CacheLine.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chad/Desktop/ACA_Project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/ACA_Project2.dir/CacheLine/CacheLine.c.o"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ACA_Project2.dir/CacheLine/CacheLine.c.o   -c /home/chad/Desktop/ACA_Project/CacheLine/CacheLine.c
 
-CMakeFiles/ACA_Project2.dir/Queue.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ACA_Project2.dir/Queue.c.i"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/chad/Desktop/ACA_Project/Queue.c > CMakeFiles/ACA_Project2.dir/Queue.c.i
+CMakeFiles/ACA_Project2.dir/CacheLine/CacheLine.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ACA_Project2.dir/CacheLine/CacheLine.c.i"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/chad/Desktop/ACA_Project/CacheLine/CacheLine.c > CMakeFiles/ACA_Project2.dir/CacheLine/CacheLine.c.i
 
-CMakeFiles/ACA_Project2.dir/Queue.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ACA_Project2.dir/Queue.c.s"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/chad/Desktop/ACA_Project/Queue.c -o CMakeFiles/ACA_Project2.dir/Queue.c.s
+CMakeFiles/ACA_Project2.dir/CacheLine/CacheLine.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ACA_Project2.dir/CacheLine/CacheLine.c.s"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/chad/Desktop/ACA_Project/CacheLine/CacheLine.c -o CMakeFiles/ACA_Project2.dir/CacheLine/CacheLine.c.s
 
-CMakeFiles/ACA_Project2.dir/Queue.c.o.requires:
+CMakeFiles/ACA_Project2.dir/CacheLine/CacheLine.c.o.requires:
 
-.PHONY : CMakeFiles/ACA_Project2.dir/Queue.c.o.requires
+.PHONY : CMakeFiles/ACA_Project2.dir/CacheLine/CacheLine.c.o.requires
 
-CMakeFiles/ACA_Project2.dir/Queue.c.o.provides: CMakeFiles/ACA_Project2.dir/Queue.c.o.requires
-	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/Queue.c.o.provides.build
-.PHONY : CMakeFiles/ACA_Project2.dir/Queue.c.o.provides
+CMakeFiles/ACA_Project2.dir/CacheLine/CacheLine.c.o.provides: CMakeFiles/ACA_Project2.dir/CacheLine/CacheLine.c.o.requires
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/CacheLine/CacheLine.c.o.provides.build
+.PHONY : CMakeFiles/ACA_Project2.dir/CacheLine/CacheLine.c.o.provides
 
-CMakeFiles/ACA_Project2.dir/Queue.c.o.provides.build: CMakeFiles/ACA_Project2.dir/Queue.c.o
+CMakeFiles/ACA_Project2.dir/CacheLine/CacheLine.c.o.provides.build: CMakeFiles/ACA_Project2.dir/CacheLine/CacheLine.c.o
+
+
+CMakeFiles/ACA_Project2.dir/Cache/Cache.c.o: CMakeFiles/ACA_Project2.dir/flags.make
+CMakeFiles/ACA_Project2.dir/Cache/Cache.c.o: ../Cache/Cache.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chad/Desktop/ACA_Project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/ACA_Project2.dir/Cache/Cache.c.o"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ACA_Project2.dir/Cache/Cache.c.o   -c /home/chad/Desktop/ACA_Project/Cache/Cache.c
+
+CMakeFiles/ACA_Project2.dir/Cache/Cache.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ACA_Project2.dir/Cache/Cache.c.i"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/chad/Desktop/ACA_Project/Cache/Cache.c > CMakeFiles/ACA_Project2.dir/Cache/Cache.c.i
+
+CMakeFiles/ACA_Project2.dir/Cache/Cache.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ACA_Project2.dir/Cache/Cache.c.s"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/chad/Desktop/ACA_Project/Cache/Cache.c -o CMakeFiles/ACA_Project2.dir/Cache/Cache.c.s
+
+CMakeFiles/ACA_Project2.dir/Cache/Cache.c.o.requires:
+
+.PHONY : CMakeFiles/ACA_Project2.dir/Cache/Cache.c.o.requires
+
+CMakeFiles/ACA_Project2.dir/Cache/Cache.c.o.provides: CMakeFiles/ACA_Project2.dir/Cache/Cache.c.o.requires
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/Cache/Cache.c.o.provides.build
+.PHONY : CMakeFiles/ACA_Project2.dir/Cache/Cache.c.o.provides
+
+CMakeFiles/ACA_Project2.dir/Cache/Cache.c.o.provides.build: CMakeFiles/ACA_Project2.dir/Cache/Cache.c.o
+
+
+CMakeFiles/ACA_Project2.dir/Queue/Queue.c.o: CMakeFiles/ACA_Project2.dir/flags.make
+CMakeFiles/ACA_Project2.dir/Queue/Queue.c.o: ../Queue/Queue.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chad/Desktop/ACA_Project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/ACA_Project2.dir/Queue/Queue.c.o"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ACA_Project2.dir/Queue/Queue.c.o   -c /home/chad/Desktop/ACA_Project/Queue/Queue.c
+
+CMakeFiles/ACA_Project2.dir/Queue/Queue.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ACA_Project2.dir/Queue/Queue.c.i"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/chad/Desktop/ACA_Project/Queue/Queue.c > CMakeFiles/ACA_Project2.dir/Queue/Queue.c.i
+
+CMakeFiles/ACA_Project2.dir/Queue/Queue.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ACA_Project2.dir/Queue/Queue.c.s"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/chad/Desktop/ACA_Project/Queue/Queue.c -o CMakeFiles/ACA_Project2.dir/Queue/Queue.c.s
+
+CMakeFiles/ACA_Project2.dir/Queue/Queue.c.o.requires:
+
+.PHONY : CMakeFiles/ACA_Project2.dir/Queue/Queue.c.o.requires
+
+CMakeFiles/ACA_Project2.dir/Queue/Queue.c.o.provides: CMakeFiles/ACA_Project2.dir/Queue/Queue.c.o.requires
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/Queue/Queue.c.o.provides.build
+.PHONY : CMakeFiles/ACA_Project2.dir/Queue/Queue.c.o.provides
+
+CMakeFiles/ACA_Project2.dir/Queue/Queue.c.o.provides.build: CMakeFiles/ACA_Project2.dir/Queue/Queue.c.o
 
 
 CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Set/Set_and_Block_Examples.c.o: CMakeFiles/ACA_Project2.dir/flags.make
@@ -273,52 +273,52 @@ CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Block/Block_CacheLine_HashTa
 CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Block/Block_CacheLine_HashTable_Examples.c.o.provides.build: CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Block/Block_CacheLine_HashTable_Examples.c.o
 
 
-CMakeFiles/ACA_Project2.dir/Address.c.o: CMakeFiles/ACA_Project2.dir/flags.make
-CMakeFiles/ACA_Project2.dir/Address.c.o: ../Address.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chad/Desktop/ACA_Project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/ACA_Project2.dir/Address.c.o"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ACA_Project2.dir/Address.c.o   -c /home/chad/Desktop/ACA_Project/Address.c
+CMakeFiles/ACA_Project2.dir/Address/Address.c.o: CMakeFiles/ACA_Project2.dir/flags.make
+CMakeFiles/ACA_Project2.dir/Address/Address.c.o: ../Address/Address.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chad/Desktop/ACA_Project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object CMakeFiles/ACA_Project2.dir/Address/Address.c.o"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ACA_Project2.dir/Address/Address.c.o   -c /home/chad/Desktop/ACA_Project/Address/Address.c
 
-CMakeFiles/ACA_Project2.dir/Address.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ACA_Project2.dir/Address.c.i"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/chad/Desktop/ACA_Project/Address.c > CMakeFiles/ACA_Project2.dir/Address.c.i
+CMakeFiles/ACA_Project2.dir/Address/Address.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ACA_Project2.dir/Address/Address.c.i"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/chad/Desktop/ACA_Project/Address/Address.c > CMakeFiles/ACA_Project2.dir/Address/Address.c.i
 
-CMakeFiles/ACA_Project2.dir/Address.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ACA_Project2.dir/Address.c.s"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/chad/Desktop/ACA_Project/Address.c -o CMakeFiles/ACA_Project2.dir/Address.c.s
+CMakeFiles/ACA_Project2.dir/Address/Address.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ACA_Project2.dir/Address/Address.c.s"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/chad/Desktop/ACA_Project/Address/Address.c -o CMakeFiles/ACA_Project2.dir/Address/Address.c.s
 
-CMakeFiles/ACA_Project2.dir/Address.c.o.requires:
+CMakeFiles/ACA_Project2.dir/Address/Address.c.o.requires:
 
-.PHONY : CMakeFiles/ACA_Project2.dir/Address.c.o.requires
+.PHONY : CMakeFiles/ACA_Project2.dir/Address/Address.c.o.requires
 
-CMakeFiles/ACA_Project2.dir/Address.c.o.provides: CMakeFiles/ACA_Project2.dir/Address.c.o.requires
-	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/Address.c.o.provides.build
-.PHONY : CMakeFiles/ACA_Project2.dir/Address.c.o.provides
+CMakeFiles/ACA_Project2.dir/Address/Address.c.o.provides: CMakeFiles/ACA_Project2.dir/Address/Address.c.o.requires
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/Address/Address.c.o.provides.build
+.PHONY : CMakeFiles/ACA_Project2.dir/Address/Address.c.o.provides
 
-CMakeFiles/ACA_Project2.dir/Address.c.o.provides.build: CMakeFiles/ACA_Project2.dir/Address.c.o
+CMakeFiles/ACA_Project2.dir/Address/Address.c.o.provides.build: CMakeFiles/ACA_Project2.dir/Address/Address.c.o
 
 
-CMakeFiles/ACA_Project2.dir/DRAM.c.o: CMakeFiles/ACA_Project2.dir/flags.make
-CMakeFiles/ACA_Project2.dir/DRAM.c.o: ../DRAM.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chad/Desktop/ACA_Project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/ACA_Project2.dir/DRAM.c.o"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ACA_Project2.dir/DRAM.c.o   -c /home/chad/Desktop/ACA_Project/DRAM.c
+CMakeFiles/ACA_Project2.dir/DRAM/DRAM.c.o: CMakeFiles/ACA_Project2.dir/flags.make
+CMakeFiles/ACA_Project2.dir/DRAM/DRAM.c.o: ../DRAM/DRAM.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chad/Desktop/ACA_Project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object CMakeFiles/ACA_Project2.dir/DRAM/DRAM.c.o"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ACA_Project2.dir/DRAM/DRAM.c.o   -c /home/chad/Desktop/ACA_Project/DRAM/DRAM.c
 
-CMakeFiles/ACA_Project2.dir/DRAM.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ACA_Project2.dir/DRAM.c.i"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/chad/Desktop/ACA_Project/DRAM.c > CMakeFiles/ACA_Project2.dir/DRAM.c.i
+CMakeFiles/ACA_Project2.dir/DRAM/DRAM.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ACA_Project2.dir/DRAM/DRAM.c.i"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/chad/Desktop/ACA_Project/DRAM/DRAM.c > CMakeFiles/ACA_Project2.dir/DRAM/DRAM.c.i
 
-CMakeFiles/ACA_Project2.dir/DRAM.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ACA_Project2.dir/DRAM.c.s"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/chad/Desktop/ACA_Project/DRAM.c -o CMakeFiles/ACA_Project2.dir/DRAM.c.s
+CMakeFiles/ACA_Project2.dir/DRAM/DRAM.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ACA_Project2.dir/DRAM/DRAM.c.s"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/chad/Desktop/ACA_Project/DRAM/DRAM.c -o CMakeFiles/ACA_Project2.dir/DRAM/DRAM.c.s
 
-CMakeFiles/ACA_Project2.dir/DRAM.c.o.requires:
+CMakeFiles/ACA_Project2.dir/DRAM/DRAM.c.o.requires:
 
-.PHONY : CMakeFiles/ACA_Project2.dir/DRAM.c.o.requires
+.PHONY : CMakeFiles/ACA_Project2.dir/DRAM/DRAM.c.o.requires
 
-CMakeFiles/ACA_Project2.dir/DRAM.c.o.provides: CMakeFiles/ACA_Project2.dir/DRAM.c.o.requires
-	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/DRAM.c.o.provides.build
-.PHONY : CMakeFiles/ACA_Project2.dir/DRAM.c.o.provides
+CMakeFiles/ACA_Project2.dir/DRAM/DRAM.c.o.provides: CMakeFiles/ACA_Project2.dir/DRAM/DRAM.c.o.requires
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/DRAM/DRAM.c.o.provides.build
+.PHONY : CMakeFiles/ACA_Project2.dir/DRAM/DRAM.c.o.provides
 
-CMakeFiles/ACA_Project2.dir/DRAM.c.o.provides.build: CMakeFiles/ACA_Project2.dir/DRAM.c.o
+CMakeFiles/ACA_Project2.dir/DRAM/DRAM.c.o.provides.build: CMakeFiles/ACA_Project2.dir/DRAM/DRAM.c.o
 
 
 CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/DRAM/DRAM_Examples.c.o: CMakeFiles/ACA_Project2.dir/flags.make
@@ -345,88 +345,88 @@ CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/DRAM/DRAM_Examples.c.o.provi
 CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/DRAM/DRAM_Examples.c.o.provides.build: CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/DRAM/DRAM_Examples.c.o
 
 
-CMakeFiles/ACA_Project2.dir/buffers.c.o: CMakeFiles/ACA_Project2.dir/flags.make
-CMakeFiles/ACA_Project2.dir/buffers.c.o: ../buffers.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chad/Desktop/ACA_Project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/ACA_Project2.dir/buffers.c.o"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ACA_Project2.dir/buffers.c.o   -c /home/chad/Desktop/ACA_Project/buffers.c
+CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.o: CMakeFiles/ACA_Project2.dir/flags.make
+CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.o: ../Buffers/buffers.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chad/Desktop/ACA_Project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.o"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.o   -c /home/chad/Desktop/ACA_Project/Buffers/buffers.c
 
-CMakeFiles/ACA_Project2.dir/buffers.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ACA_Project2.dir/buffers.c.i"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/chad/Desktop/ACA_Project/buffers.c > CMakeFiles/ACA_Project2.dir/buffers.c.i
+CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.i"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/chad/Desktop/ACA_Project/Buffers/buffers.c > CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.i
 
-CMakeFiles/ACA_Project2.dir/buffers.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ACA_Project2.dir/buffers.c.s"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/chad/Desktop/ACA_Project/buffers.c -o CMakeFiles/ACA_Project2.dir/buffers.c.s
+CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.s"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/chad/Desktop/ACA_Project/Buffers/buffers.c -o CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.s
 
-CMakeFiles/ACA_Project2.dir/buffers.c.o.requires:
+CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.o.requires:
 
-.PHONY : CMakeFiles/ACA_Project2.dir/buffers.c.o.requires
+.PHONY : CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.o.requires
 
-CMakeFiles/ACA_Project2.dir/buffers.c.o.provides: CMakeFiles/ACA_Project2.dir/buffers.c.o.requires
-	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/buffers.c.o.provides.build
-.PHONY : CMakeFiles/ACA_Project2.dir/buffers.c.o.provides
+CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.o.provides: CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.o.requires
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.o.provides.build
+.PHONY : CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.o.provides
 
-CMakeFiles/ACA_Project2.dir/buffers.c.o.provides.build: CMakeFiles/ACA_Project2.dir/buffers.c.o
+CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.o.provides.build: CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.o
 
 
-CMakeFiles/ACA_Project2.dir/BlockTransferer.c.o: CMakeFiles/ACA_Project2.dir/flags.make
-CMakeFiles/ACA_Project2.dir/BlockTransferer.c.o: ../BlockTransferer.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chad/Desktop/ACA_Project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/ACA_Project2.dir/BlockTransferer.c.o"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ACA_Project2.dir/BlockTransferer.c.o   -c /home/chad/Desktop/ACA_Project/BlockTransferer.c
+CMakeFiles/ACA_Project2.dir/BlockTransferer/BlockTransferer.c.o: CMakeFiles/ACA_Project2.dir/flags.make
+CMakeFiles/ACA_Project2.dir/BlockTransferer/BlockTransferer.c.o: ../BlockTransferer/BlockTransferer.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/chad/Desktop/ACA_Project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object CMakeFiles/ACA_Project2.dir/BlockTransferer/BlockTransferer.c.o"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ACA_Project2.dir/BlockTransferer/BlockTransferer.c.o   -c /home/chad/Desktop/ACA_Project/BlockTransferer/BlockTransferer.c
 
-CMakeFiles/ACA_Project2.dir/BlockTransferer.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ACA_Project2.dir/BlockTransferer.c.i"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/chad/Desktop/ACA_Project/BlockTransferer.c > CMakeFiles/ACA_Project2.dir/BlockTransferer.c.i
+CMakeFiles/ACA_Project2.dir/BlockTransferer/BlockTransferer.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ACA_Project2.dir/BlockTransferer/BlockTransferer.c.i"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/chad/Desktop/ACA_Project/BlockTransferer/BlockTransferer.c > CMakeFiles/ACA_Project2.dir/BlockTransferer/BlockTransferer.c.i
 
-CMakeFiles/ACA_Project2.dir/BlockTransferer.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ACA_Project2.dir/BlockTransferer.c.s"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/chad/Desktop/ACA_Project/BlockTransferer.c -o CMakeFiles/ACA_Project2.dir/BlockTransferer.c.s
+CMakeFiles/ACA_Project2.dir/BlockTransferer/BlockTransferer.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ACA_Project2.dir/BlockTransferer/BlockTransferer.c.s"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/chad/Desktop/ACA_Project/BlockTransferer/BlockTransferer.c -o CMakeFiles/ACA_Project2.dir/BlockTransferer/BlockTransferer.c.s
 
-CMakeFiles/ACA_Project2.dir/BlockTransferer.c.o.requires:
+CMakeFiles/ACA_Project2.dir/BlockTransferer/BlockTransferer.c.o.requires:
 
-.PHONY : CMakeFiles/ACA_Project2.dir/BlockTransferer.c.o.requires
+.PHONY : CMakeFiles/ACA_Project2.dir/BlockTransferer/BlockTransferer.c.o.requires
 
-CMakeFiles/ACA_Project2.dir/BlockTransferer.c.o.provides: CMakeFiles/ACA_Project2.dir/BlockTransferer.c.o.requires
-	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/BlockTransferer.c.o.provides.build
-.PHONY : CMakeFiles/ACA_Project2.dir/BlockTransferer.c.o.provides
+CMakeFiles/ACA_Project2.dir/BlockTransferer/BlockTransferer.c.o.provides: CMakeFiles/ACA_Project2.dir/BlockTransferer/BlockTransferer.c.o.requires
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/BlockTransferer/BlockTransferer.c.o.provides.build
+.PHONY : CMakeFiles/ACA_Project2.dir/BlockTransferer/BlockTransferer.c.o.provides
 
-CMakeFiles/ACA_Project2.dir/BlockTransferer.c.o.provides.build: CMakeFiles/ACA_Project2.dir/BlockTransferer.c.o
+CMakeFiles/ACA_Project2.dir/BlockTransferer/BlockTransferer.c.o.provides.build: CMakeFiles/ACA_Project2.dir/BlockTransferer/BlockTransferer.c.o
 
 
 # Object files for target ACA_Project2
 ACA_Project2_OBJECTS = \
 "CMakeFiles/ACA_Project2.dir/main.c.o" \
-"CMakeFiles/ACA_Project2.dir/Block.c.o" \
-"CMakeFiles/ACA_Project2.dir/Set.c.o" \
-"CMakeFiles/ACA_Project2.dir/CacheLine.c.o" \
-"CMakeFiles/ACA_Project2.dir/Cache.c.o" \
-"CMakeFiles/ACA_Project2.dir/Queue.c.o" \
+"CMakeFiles/ACA_Project2.dir/Block/Block.c.o" \
+"CMakeFiles/ACA_Project2.dir/Set/Set.c.o" \
+"CMakeFiles/ACA_Project2.dir/CacheLine/CacheLine.c.o" \
+"CMakeFiles/ACA_Project2.dir/Cache/Cache.c.o" \
+"CMakeFiles/ACA_Project2.dir/Queue/Queue.c.o" \
 "CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Set/Set_and_Block_Examples.c.o" \
 "CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Queue/Queue_the_examples.c.o" \
 "CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Block/Block_CacheLine_HashTable_Examples.c.o" \
-"CMakeFiles/ACA_Project2.dir/Address.c.o" \
-"CMakeFiles/ACA_Project2.dir/DRAM.c.o" \
+"CMakeFiles/ACA_Project2.dir/Address/Address.c.o" \
+"CMakeFiles/ACA_Project2.dir/DRAM/DRAM.c.o" \
 "CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/DRAM/DRAM_Examples.c.o" \
-"CMakeFiles/ACA_Project2.dir/buffers.c.o" \
-"CMakeFiles/ACA_Project2.dir/BlockTransferer.c.o"
+"CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.o" \
+"CMakeFiles/ACA_Project2.dir/BlockTransferer/BlockTransferer.c.o"
 
 # External object files for target ACA_Project2
 ACA_Project2_EXTERNAL_OBJECTS =
 
 ACA_Project2: CMakeFiles/ACA_Project2.dir/main.c.o
-ACA_Project2: CMakeFiles/ACA_Project2.dir/Block.c.o
-ACA_Project2: CMakeFiles/ACA_Project2.dir/Set.c.o
-ACA_Project2: CMakeFiles/ACA_Project2.dir/CacheLine.c.o
-ACA_Project2: CMakeFiles/ACA_Project2.dir/Cache.c.o
-ACA_Project2: CMakeFiles/ACA_Project2.dir/Queue.c.o
+ACA_Project2: CMakeFiles/ACA_Project2.dir/Block/Block.c.o
+ACA_Project2: CMakeFiles/ACA_Project2.dir/Set/Set.c.o
+ACA_Project2: CMakeFiles/ACA_Project2.dir/CacheLine/CacheLine.c.o
+ACA_Project2: CMakeFiles/ACA_Project2.dir/Cache/Cache.c.o
+ACA_Project2: CMakeFiles/ACA_Project2.dir/Queue/Queue.c.o
 ACA_Project2: CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Set/Set_and_Block_Examples.c.o
 ACA_Project2: CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Queue/Queue_the_examples.c.o
 ACA_Project2: CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Block/Block_CacheLine_HashTable_Examples.c.o
-ACA_Project2: CMakeFiles/ACA_Project2.dir/Address.c.o
-ACA_Project2: CMakeFiles/ACA_Project2.dir/DRAM.c.o
+ACA_Project2: CMakeFiles/ACA_Project2.dir/Address/Address.c.o
+ACA_Project2: CMakeFiles/ACA_Project2.dir/DRAM/DRAM.c.o
 ACA_Project2: CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/DRAM/DRAM_Examples.c.o
-ACA_Project2: CMakeFiles/ACA_Project2.dir/buffers.c.o
-ACA_Project2: CMakeFiles/ACA_Project2.dir/BlockTransferer.c.o
+ACA_Project2: CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.o
+ACA_Project2: CMakeFiles/ACA_Project2.dir/BlockTransferer/BlockTransferer.c.o
 ACA_Project2: CMakeFiles/ACA_Project2.dir/build.make
 ACA_Project2: CMakeFiles/ACA_Project2.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/chad/Desktop/ACA_Project/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking C executable ACA_Project2"
@@ -438,19 +438,19 @@ CMakeFiles/ACA_Project2.dir/build: ACA_Project2
 .PHONY : CMakeFiles/ACA_Project2.dir/build
 
 CMakeFiles/ACA_Project2.dir/requires: CMakeFiles/ACA_Project2.dir/main.c.o.requires
-CMakeFiles/ACA_Project2.dir/requires: CMakeFiles/ACA_Project2.dir/Block.c.o.requires
-CMakeFiles/ACA_Project2.dir/requires: CMakeFiles/ACA_Project2.dir/Set.c.o.requires
-CMakeFiles/ACA_Project2.dir/requires: CMakeFiles/ACA_Project2.dir/CacheLine.c.o.requires
-CMakeFiles/ACA_Project2.dir/requires: CMakeFiles/ACA_Project2.dir/Cache.c.o.requires
-CMakeFiles/ACA_Project2.dir/requires: CMakeFiles/ACA_Project2.dir/Queue.c.o.requires
+CMakeFiles/ACA_Project2.dir/requires: CMakeFiles/ACA_Project2.dir/Block/Block.c.o.requires
+CMakeFiles/ACA_Project2.dir/requires: CMakeFiles/ACA_Project2.dir/Set/Set.c.o.requires
+CMakeFiles/ACA_Project2.dir/requires: CMakeFiles/ACA_Project2.dir/CacheLine/CacheLine.c.o.requires
+CMakeFiles/ACA_Project2.dir/requires: CMakeFiles/ACA_Project2.dir/Cache/Cache.c.o.requires
+CMakeFiles/ACA_Project2.dir/requires: CMakeFiles/ACA_Project2.dir/Queue/Queue.c.o.requires
 CMakeFiles/ACA_Project2.dir/requires: CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Set/Set_and_Block_Examples.c.o.requires
 CMakeFiles/ACA_Project2.dir/requires: CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Queue/Queue_the_examples.c.o.requires
 CMakeFiles/ACA_Project2.dir/requires: CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Block/Block_CacheLine_HashTable_Examples.c.o.requires
-CMakeFiles/ACA_Project2.dir/requires: CMakeFiles/ACA_Project2.dir/Address.c.o.requires
-CMakeFiles/ACA_Project2.dir/requires: CMakeFiles/ACA_Project2.dir/DRAM.c.o.requires
+CMakeFiles/ACA_Project2.dir/requires: CMakeFiles/ACA_Project2.dir/Address/Address.c.o.requires
+CMakeFiles/ACA_Project2.dir/requires: CMakeFiles/ACA_Project2.dir/DRAM/DRAM.c.o.requires
 CMakeFiles/ACA_Project2.dir/requires: CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/DRAM/DRAM_Examples.c.o.requires
-CMakeFiles/ACA_Project2.dir/requires: CMakeFiles/ACA_Project2.dir/buffers.c.o.requires
-CMakeFiles/ACA_Project2.dir/requires: CMakeFiles/ACA_Project2.dir/BlockTransferer.c.o.requires
+CMakeFiles/ACA_Project2.dir/requires: CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.o.requires
+CMakeFiles/ACA_Project2.dir/requires: CMakeFiles/ACA_Project2.dir/BlockTransferer/BlockTransferer.c.o.requires
 
 .PHONY : CMakeFiles/ACA_Project2.dir/requires
 

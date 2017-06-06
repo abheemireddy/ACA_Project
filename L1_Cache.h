@@ -4,10 +4,10 @@
 
 #ifndef ACA_PROJECT_L1_CACHE_H
 #define ACA_PROJECT_L1_CACHE_H
-#include "Cache.h"
-#include "Set.h"
-#include "Block.h"
-#include "CacheLine.h"
+#include "Cache/Cache.h"
+#include "Set/Set.h"
+#include "Block/Block.h"
+#include "CacheLine/CacheLine.h"
 
 /*
  * 128 KB memory = 2^17 (total of 17 bits)

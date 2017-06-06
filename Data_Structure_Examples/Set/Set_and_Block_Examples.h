@@ -6,8 +6,8 @@
 #define ACA_PROJECT_SET_AND_BLOCK_EXAMPLES_H
 
 #include <stdio.h>
-#include "Set.h"
-#include "Block.h"
+#include "Set/Set.h"
+#include "Block/Block.h"
 
 void AddTooManyBlocksTest();
 Block GetDummyBlockInstance(char* data);

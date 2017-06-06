@@ -123,167 +123,194 @@ ACA_Project2/fast:
 	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/build
 .PHONY : ACA_Project2/fast
 
-Address.o: Address.c.o
+Address/Address.o: Address/Address.c.o
 
-.PHONY : Address.o
-
-# target to build an object file
-Address.c.o:
-	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/Address.c.o
-.PHONY : Address.c.o
-
-Address.i: Address.c.i
-
-.PHONY : Address.i
-
-# target to preprocess a source file
-Address.c.i:
-	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/Address.c.i
-.PHONY : Address.c.i
-
-Address.s: Address.c.s
-
-.PHONY : Address.s
-
-# target to generate assembly for a file
-Address.c.s:
-	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/Address.c.s
-.PHONY : Address.c.s
-
-Block.o: Block.c.o
-
-.PHONY : Block.o
+.PHONY : Address/Address.o
 
 # target to build an object file
-Block.c.o:
-	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/Block.c.o
-.PHONY : Block.c.o
+Address/Address.c.o:
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/Address/Address.c.o
+.PHONY : Address/Address.c.o
 
-Block.i: Block.c.i
+Address/Address.i: Address/Address.c.i
 
-.PHONY : Block.i
+.PHONY : Address/Address.i
 
 # target to preprocess a source file
-Block.c.i:
-	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/Block.c.i
-.PHONY : Block.c.i
+Address/Address.c.i:
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/Address/Address.c.i
+.PHONY : Address/Address.c.i
 
-Block.s: Block.c.s
+Address/Address.s: Address/Address.c.s
 
-.PHONY : Block.s
+.PHONY : Address/Address.s
 
 # target to generate assembly for a file
-Block.c.s:
-	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/Block.c.s
-.PHONY : Block.c.s
+Address/Address.c.s:
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/Address/Address.c.s
+.PHONY : Address/Address.c.s
 
-BlockTransferer.o: BlockTransferer.c.o
+Block/Block.o: Block/Block.c.o
 
-.PHONY : BlockTransferer.o
+.PHONY : Block/Block.o
 
 # target to build an object file
-BlockTransferer.c.o:
-	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/BlockTransferer.c.o
-.PHONY : BlockTransferer.c.o
+Block/Block.c.o:
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/Block/Block.c.o
+.PHONY : Block/Block.c.o
 
-BlockTransferer.i: BlockTransferer.c.i
+Block/Block.i: Block/Block.c.i
 
-.PHONY : BlockTransferer.i
+.PHONY : Block/Block.i
 
 # target to preprocess a source file
-BlockTransferer.c.i:
-	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/BlockTransferer.c.i
-.PHONY : BlockTransferer.c.i
+Block/Block.c.i:
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/Block/Block.c.i
+.PHONY : Block/Block.c.i
 
-BlockTransferer.s: BlockTransferer.c.s
+Block/Block.s: Block/Block.c.s
 
-.PHONY : BlockTransferer.s
+.PHONY : Block/Block.s
 
 # target to generate assembly for a file
-BlockTransferer.c.s:
-	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/BlockTransferer.c.s
-.PHONY : BlockTransferer.c.s
+Block/Block.c.s:
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/Block/Block.c.s
+.PHONY : Block/Block.c.s
 
-Cache.o: Cache.c.o
+BlockTransferer/BlockTransferer.o: BlockTransferer/BlockTransferer.c.o
 
-.PHONY : Cache.o
+.PHONY : BlockTransferer/BlockTransferer.o
 
 # target to build an object file
-Cache.c.o:
-	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/Cache.c.o
-.PHONY : Cache.c.o
+BlockTransferer/BlockTransferer.c.o:
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/BlockTransferer/BlockTransferer.c.o
+.PHONY : BlockTransferer/BlockTransferer.c.o
 
-Cache.i: Cache.c.i
+BlockTransferer/BlockTransferer.i: BlockTransferer/BlockTransferer.c.i
 
-.PHONY : Cache.i
+.PHONY : BlockTransferer/BlockTransferer.i
 
 # target to preprocess a source file
-Cache.c.i:
-	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/Cache.c.i
-.PHONY : Cache.c.i
+BlockTransferer/BlockTransferer.c.i:
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/BlockTransferer/BlockTransferer.c.i
+.PHONY : BlockTransferer/BlockTransferer.c.i
 
-Cache.s: Cache.c.s
+BlockTransferer/BlockTransferer.s: BlockTransferer/BlockTransferer.c.s
 
-.PHONY : Cache.s
+.PHONY : BlockTransferer/BlockTransferer.s
 
 # target to generate assembly for a file
-Cache.c.s:
-	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/Cache.c.s
-.PHONY : Cache.c.s
+BlockTransferer/BlockTransferer.c.s:
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/BlockTransferer/BlockTransferer.c.s
+.PHONY : BlockTransferer/BlockTransferer.c.s
 
-CacheLine.o: CacheLine.c.o
+Buffers/buffers.o: Buffers/buffers.c.o
 
-.PHONY : CacheLine.o
+.PHONY : Buffers/buffers.o
 
 # target to build an object file
-CacheLine.c.o:
-	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/CacheLine.c.o
-.PHONY : CacheLine.c.o
+Buffers/buffers.c.o:
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.o
+.PHONY : Buffers/buffers.c.o
 
-CacheLine.i: CacheLine.c.i
+Buffers/buffers.i: Buffers/buffers.c.i
 
-.PHONY : CacheLine.i
+.PHONY : Buffers/buffers.i
 
 # target to preprocess a source file
-CacheLine.c.i:
-	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/CacheLine.c.i
-.PHONY : CacheLine.c.i
+Buffers/buffers.c.i:
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.i
+.PHONY : Buffers/buffers.c.i
 
-CacheLine.s: CacheLine.c.s
+Buffers/buffers.s: Buffers/buffers.c.s
 
-.PHONY : CacheLine.s
+.PHONY : Buffers/buffers.s
 
 # target to generate assembly for a file
-CacheLine.c.s:
-	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/CacheLine.c.s
-.PHONY : CacheLine.c.s
+Buffers/buffers.c.s:
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.s
+.PHONY : Buffers/buffers.c.s
 
-DRAM.o: DRAM.c.o
+Cache/Cache.o: Cache/Cache.c.o
 
-.PHONY : DRAM.o
+.PHONY : Cache/Cache.o
 
 # target to build an object file
-DRAM.c.o:
-	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/DRAM.c.o
-.PHONY : DRAM.c.o
+Cache/Cache.c.o:
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/Cache/Cache.c.o
+.PHONY : Cache/Cache.c.o
 
-DRAM.i: DRAM.c.i
+Cache/Cache.i: Cache/Cache.c.i
 
-.PHONY : DRAM.i
+.PHONY : Cache/Cache.i
 
 # target to preprocess a source file
-DRAM.c.i:
-	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/DRAM.c.i
-.PHONY : DRAM.c.i
+Cache/Cache.c.i:
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/Cache/Cache.c.i
+.PHONY : Cache/Cache.c.i
 
-DRAM.s: DRAM.c.s
+Cache/Cache.s: Cache/Cache.c.s
 
-.PHONY : DRAM.s
+.PHONY : Cache/Cache.s
 
 # target to generate assembly for a file
-DRAM.c.s:
-	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/DRAM.c.s
-.PHONY : DRAM.c.s
+Cache/Cache.c.s:
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/Cache/Cache.c.s
+.PHONY : Cache/Cache.c.s
+
+CacheLine/CacheLine.o: CacheLine/CacheLine.c.o
+
+.PHONY : CacheLine/CacheLine.o
+
+# target to build an object file
+CacheLine/CacheLine.c.o:
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/CacheLine/CacheLine.c.o
+.PHONY : CacheLine/CacheLine.c.o
+
+CacheLine/CacheLine.i: CacheLine/CacheLine.c.i
+
+.PHONY : CacheLine/CacheLine.i
+
+# target to preprocess a source file
+CacheLine/CacheLine.c.i:
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/CacheLine/CacheLine.c.i
+.PHONY : CacheLine/CacheLine.c.i
+
+CacheLine/CacheLine.s: CacheLine/CacheLine.c.s
+
+.PHONY : CacheLine/CacheLine.s
+
+# target to generate assembly for a file
+CacheLine/CacheLine.c.s:
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/CacheLine/CacheLine.c.s
+.PHONY : CacheLine/CacheLine.c.s
+
+DRAM/DRAM.o: DRAM/DRAM.c.o
+
+.PHONY : DRAM/DRAM.o
+
+# target to build an object file
+DRAM/DRAM.c.o:
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/DRAM/DRAM.c.o
+.PHONY : DRAM/DRAM.c.o
+
+DRAM/DRAM.i: DRAM/DRAM.c.i
+
+.PHONY : DRAM/DRAM.i
+
+# target to preprocess a source file
+DRAM/DRAM.c.i:
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/DRAM/DRAM.c.i
+.PHONY : DRAM/DRAM.c.i
+
+DRAM/DRAM.s: DRAM/DRAM.c.s
+
+.PHONY : DRAM/DRAM.s
+
+# target to generate assembly for a file
+DRAM/DRAM.c.s:
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/DRAM/DRAM.c.s
+.PHONY : DRAM/DRAM.c.s
 
 Data_Structure_Examples/Block/Block_CacheLine_HashTable_Examples.o: Data_Structure_Examples/Block/Block_CacheLine_HashTable_Examples.c.o
 
@@ -393,86 +420,59 @@ Data_Structure_Examples/Set/Set_and_Block_Examples.c.s:
 	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Set/Set_and_Block_Examples.c.s
 .PHONY : Data_Structure_Examples/Set/Set_and_Block_Examples.c.s
 
-Queue.o: Queue.c.o
+Queue/Queue.o: Queue/Queue.c.o
 
-.PHONY : Queue.o
-
-# target to build an object file
-Queue.c.o:
-	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/Queue.c.o
-.PHONY : Queue.c.o
-
-Queue.i: Queue.c.i
-
-.PHONY : Queue.i
-
-# target to preprocess a source file
-Queue.c.i:
-	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/Queue.c.i
-.PHONY : Queue.c.i
-
-Queue.s: Queue.c.s
-
-.PHONY : Queue.s
-
-# target to generate assembly for a file
-Queue.c.s:
-	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/Queue.c.s
-.PHONY : Queue.c.s
-
-Set.o: Set.c.o
-
-.PHONY : Set.o
+.PHONY : Queue/Queue.o
 
 # target to build an object file
-Set.c.o:
-	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/Set.c.o
-.PHONY : Set.c.o
+Queue/Queue.c.o:
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/Queue/Queue.c.o
+.PHONY : Queue/Queue.c.o
 
-Set.i: Set.c.i
+Queue/Queue.i: Queue/Queue.c.i
 
-.PHONY : Set.i
+.PHONY : Queue/Queue.i
 
 # target to preprocess a source file
-Set.c.i:
-	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/Set.c.i
-.PHONY : Set.c.i
+Queue/Queue.c.i:
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/Queue/Queue.c.i
+.PHONY : Queue/Queue.c.i
 
-Set.s: Set.c.s
+Queue/Queue.s: Queue/Queue.c.s
 
-.PHONY : Set.s
+.PHONY : Queue/Queue.s
 
 # target to generate assembly for a file
-Set.c.s:
-	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/Set.c.s
-.PHONY : Set.c.s
+Queue/Queue.c.s:
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/Queue/Queue.c.s
+.PHONY : Queue/Queue.c.s
 
-buffers.o: buffers.c.o
+Set/Set.o: Set/Set.c.o
 
-.PHONY : buffers.o
+.PHONY : Set/Set.o
 
 # target to build an object file
-buffers.c.o:
-	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/buffers.c.o
-.PHONY : buffers.c.o
+Set/Set.c.o:
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/Set/Set.c.o
+.PHONY : Set/Set.c.o
 
-buffers.i: buffers.c.i
+Set/Set.i: Set/Set.c.i
 
-.PHONY : buffers.i
+.PHONY : Set/Set.i
 
 # target to preprocess a source file
-buffers.c.i:
-	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/buffers.c.i
-.PHONY : buffers.c.i
+Set/Set.c.i:
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/Set/Set.c.i
+.PHONY : Set/Set.c.i
 
-buffers.s: buffers.c.s
+Set/Set.s: Set/Set.c.s
 
-.PHONY : buffers.s
+.PHONY : Set/Set.s
 
 # target to generate assembly for a file
-buffers.c.s:
-	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/buffers.c.s
-.PHONY : buffers.c.s
+Set/Set.c.s:
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/Set/Set.c.s
+.PHONY : Set/Set.c.s
 
 main.o: main.c.o
 
@@ -510,24 +510,27 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... ACA_Project2"
-	@echo "... Address.o"
-	@echo "... Address.i"
-	@echo "... Address.s"
-	@echo "... Block.o"
-	@echo "... Block.i"
-	@echo "... Block.s"
-	@echo "... BlockTransferer.o"
-	@echo "... BlockTransferer.i"
-	@echo "... BlockTransferer.s"
-	@echo "... Cache.o"
-	@echo "... Cache.i"
-	@echo "... Cache.s"
-	@echo "... CacheLine.o"
-	@echo "... CacheLine.i"
-	@echo "... CacheLine.s"
-	@echo "... DRAM.o"
-	@echo "... DRAM.i"
-	@echo "... DRAM.s"
+	@echo "... Address/Address.o"
+	@echo "... Address/Address.i"
+	@echo "... Address/Address.s"
+	@echo "... Block/Block.o"
+	@echo "... Block/Block.i"
+	@echo "... Block/Block.s"
+	@echo "... BlockTransferer/BlockTransferer.o"
+	@echo "... BlockTransferer/BlockTransferer.i"
+	@echo "... BlockTransferer/BlockTransferer.s"
+	@echo "... Buffers/buffers.o"
+	@echo "... Buffers/buffers.i"
+	@echo "... Buffers/buffers.s"
+	@echo "... Cache/Cache.o"
+	@echo "... Cache/Cache.i"
+	@echo "... Cache/Cache.s"
+	@echo "... CacheLine/CacheLine.o"
+	@echo "... CacheLine/CacheLine.i"
+	@echo "... CacheLine/CacheLine.s"
+	@echo "... DRAM/DRAM.o"
+	@echo "... DRAM/DRAM.i"
+	@echo "... DRAM/DRAM.s"
 	@echo "... Data_Structure_Examples/Block/Block_CacheLine_HashTable_Examples.o"
 	@echo "... Data_Structure_Examples/Block/Block_CacheLine_HashTable_Examples.i"
 	@echo "... Data_Structure_Examples/Block/Block_CacheLine_HashTable_Examples.s"
@@ -540,15 +543,12 @@ help:
 	@echo "... Data_Structure_Examples/Set/Set_and_Block_Examples.o"
 	@echo "... Data_Structure_Examples/Set/Set_and_Block_Examples.i"
 	@echo "... Data_Structure_Examples/Set/Set_and_Block_Examples.s"
-	@echo "... Queue.o"
-	@echo "... Queue.i"
-	@echo "... Queue.s"
-	@echo "... Set.o"
-	@echo "... Set.i"
-	@echo "... Set.s"
-	@echo "... buffers.o"
-	@echo "... buffers.i"
-	@echo "... buffers.s"
+	@echo "... Queue/Queue.o"
+	@echo "... Queue/Queue.i"
+	@echo "... Queue/Queue.s"
+	@echo "... Set/Set.o"
+	@echo "... Set/Set.i"
+	@echo "... Set/Set.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

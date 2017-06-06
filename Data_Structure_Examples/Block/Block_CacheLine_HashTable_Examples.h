@@ -5,7 +5,7 @@
 #ifndef ACA_PROJECT_BLOCK_CACHELINE_HASHTABLE_EXAMPLES_H
 #define ACA_PROJECT_BLOCK_CACHELINE_HASHTABLE_EXAMPLES_H
 
-#include "Block.h"
-#include "CacheLine.h"
+#include "Block/Block.h"
+#include "CacheLine/CacheLine.h"
 int AddCacheLinesToBlock();
 #endif //ACA_PROJECT_BLOCK_CACHELINE_HASHTABLE_EXAMPLES_H

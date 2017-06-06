@@ -5,8 +5,8 @@
 #ifndef ACA_PROJECT_BLOCK_H
 #define ACA_PROJECT_BLOCK_H
 #include <stdbool.h>
-#include "CacheLine.h"
-#include "Address.h"
+#include "CacheLine/CacheLine.h"
+#include "Address/Address.h"
 #include <stdlib.h>
 #include <stdio.h>
 #include <printf.h>

@@ -5,7 +5,7 @@
 #ifndef ACA_PROJECT_DRAM_EXAMPLES_H
 #define ACA_PROJECT_DRAM_EXAMPLES_H
 
-#include "DRAM.h"
+#include "DRAM/DRAM.h"
 
 void Add_to_DRAM();
 

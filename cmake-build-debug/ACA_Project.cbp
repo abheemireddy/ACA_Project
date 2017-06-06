@@ -88,40 +88,46 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/chad/Desktop/ACA_Project/Address.c">
+		<Unit filename="/home/chad/Desktop/ACA_Project/Address/Address.c">
 			<Option target="ACA_Project2"/>
 		</Unit>
-		<Unit filename="/home/chad/Desktop/ACA_Project/Address.h">
+		<Unit filename="/home/chad/Desktop/ACA_Project/Address/Address.h">
 			<Option target="ACA_Project2"/>
 		</Unit>
-		<Unit filename="/home/chad/Desktop/ACA_Project/Block.c">
+		<Unit filename="/home/chad/Desktop/ACA_Project/Block/Block.c">
 			<Option target="ACA_Project2"/>
 		</Unit>
-		<Unit filename="/home/chad/Desktop/ACA_Project/Block.h">
+		<Unit filename="/home/chad/Desktop/ACA_Project/Block/Block.h">
 			<Option target="ACA_Project2"/>
 		</Unit>
-		<Unit filename="/home/chad/Desktop/ACA_Project/BlockTransferer.c">
+		<Unit filename="/home/chad/Desktop/ACA_Project/BlockTransferer/BlockTransferer.c">
 			<Option target="ACA_Project2"/>
 		</Unit>
-		<Unit filename="/home/chad/Desktop/ACA_Project/BlockTransferer.h">
+		<Unit filename="/home/chad/Desktop/ACA_Project/BlockTransferer/BlockTransferer.h">
 			<Option target="ACA_Project2"/>
 		</Unit>
-		<Unit filename="/home/chad/Desktop/ACA_Project/Cache.c">
+		<Unit filename="/home/chad/Desktop/ACA_Project/Buffers/buffers.c">
 			<Option target="ACA_Project2"/>
 		</Unit>
-		<Unit filename="/home/chad/Desktop/ACA_Project/Cache.h">
+		<Unit filename="/home/chad/Desktop/ACA_Project/Buffers/buffers.h">
 			<Option target="ACA_Project2"/>
 		</Unit>
-		<Unit filename="/home/chad/Desktop/ACA_Project/CacheLine.c">
+		<Unit filename="/home/chad/Desktop/ACA_Project/Cache/Cache.c">
 			<Option target="ACA_Project2"/>
 		</Unit>
-		<Unit filename="/home/chad/Desktop/ACA_Project/CacheLine.h">
+		<Unit filename="/home/chad/Desktop/ACA_Project/Cache/Cache.h">
 			<Option target="ACA_Project2"/>
 		</Unit>
-		<Unit filename="/home/chad/Desktop/ACA_Project/DRAM.c">
+		<Unit filename="/home/chad/Desktop/ACA_Project/CacheLine/CacheLine.c">
 			<Option target="ACA_Project2"/>
 		</Unit>
-		<Unit filename="/home/chad/Desktop/ACA_Project/DRAM.h">
+		<Unit filename="/home/chad/Desktop/ACA_Project/CacheLine/CacheLine.h">
+			<Option target="ACA_Project2"/>
+		</Unit>
+		<Unit filename="/home/chad/Desktop/ACA_Project/DRAM/DRAM.c">
+			<Option target="ACA_Project2"/>
+		</Unit>
+		<Unit filename="/home/chad/Desktop/ACA_Project/DRAM/DRAM.h">
 			<Option target="ACA_Project2"/>
 		</Unit>
 		<Unit filename="/home/chad/Desktop/ACA_Project/Data_Structure_Examples/Block/Block_CacheLine_HashTable_Examples.c">
@@ -151,22 +157,16 @@
 		<Unit filename="/home/chad/Desktop/ACA_Project/L1_Cache.h">
 			<Option target="ACA_Project2"/>
 		</Unit>
-		<Unit filename="/home/chad/Desktop/ACA_Project/Queue.c">
+		<Unit filename="/home/chad/Desktop/ACA_Project/Queue/Queue.c">
 			<Option target="ACA_Project2"/>
 		</Unit>
-		<Unit filename="/home/chad/Desktop/ACA_Project/Queue.h">
+		<Unit filename="/home/chad/Desktop/ACA_Project/Queue/Queue.h">
 			<Option target="ACA_Project2"/>
 		</Unit>
-		<Unit filename="/home/chad/Desktop/ACA_Project/Set.c">
+		<Unit filename="/home/chad/Desktop/ACA_Project/Set/Set.c">
 			<Option target="ACA_Project2"/>
 		</Unit>
-		<Unit filename="/home/chad/Desktop/ACA_Project/Set.h">
-			<Option target="ACA_Project2"/>
-		</Unit>
-		<Unit filename="/home/chad/Desktop/ACA_Project/buffers.c">
-			<Option target="ACA_Project2"/>
-		</Unit>
-		<Unit filename="/home/chad/Desktop/ACA_Project/buffers.h">
+		<Unit filename="/home/chad/Desktop/ACA_Project/Set/Set.h">
 			<Option target="ACA_Project2"/>
 		</Unit>
 		<Unit filename="/home/chad/Desktop/ACA_Project/main.c">
