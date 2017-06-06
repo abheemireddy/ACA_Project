@@ -8,7 +8,13 @@
 
 DataStore Constructor_DataStore(){
     DataStore data = {};
+    data.StoreData = &StoreData;
+    data.GetData = &GetData;
     return data;
+}
+
+char* GetData(DataStore* dataStore,int lineNumber){
+    return dataStore->Data[lineNumber];
 }
 
 int StoreData(DataStore* dataStore,char* dataToStore){

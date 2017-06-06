@@ -148,6 +148,12 @@
 		<Unit filename="/home/chad/Desktop/ACA_Project/Data_Structure_Examples/DRAM/DRAM_Examples.h">
 			<Option target="ACA_Project2"/>
 		</Unit>
+		<Unit filename="/home/chad/Desktop/ACA_Project/Data_Structure_Examples/DataStore/DataStore_Examples.c">
+			<Option target="ACA_Project2"/>
+		</Unit>
+		<Unit filename="/home/chad/Desktop/ACA_Project/Data_Structure_Examples/DataStore/DataStore_Examples.h">
+			<Option target="ACA_Project2"/>
+		</Unit>
 		<Unit filename="/home/chad/Desktop/ACA_Project/Data_Structure_Examples/Queue/Queue_the_examples.c">
 			<Option target="ACA_Project2"/>
 		</Unit>

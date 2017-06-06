@@ -393,6 +393,33 @@ Data_Structure_Examples/DRAM/DRAM_Examples.c.s:
 	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/DRAM/DRAM_Examples.c.s
 .PHONY : Data_Structure_Examples/DRAM/DRAM_Examples.c.s
 
+Data_Structure_Examples/DataStore/DataStore_Examples.o: Data_Structure_Examples/DataStore/DataStore_Examples.c.o
+
+.PHONY : Data_Structure_Examples/DataStore/DataStore_Examples.o
+
+# target to build an object file
+Data_Structure_Examples/DataStore/DataStore_Examples.c.o:
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/DataStore/DataStore_Examples.c.o
+.PHONY : Data_Structure_Examples/DataStore/DataStore_Examples.c.o
+
+Data_Structure_Examples/DataStore/DataStore_Examples.i: Data_Structure_Examples/DataStore/DataStore_Examples.c.i
+
+.PHONY : Data_Structure_Examples/DataStore/DataStore_Examples.i
+
+# target to preprocess a source file
+Data_Structure_Examples/DataStore/DataStore_Examples.c.i:
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/DataStore/DataStore_Examples.c.i
+.PHONY : Data_Structure_Examples/DataStore/DataStore_Examples.c.i
+
+Data_Structure_Examples/DataStore/DataStore_Examples.s: Data_Structure_Examples/DataStore/DataStore_Examples.c.s
+
+.PHONY : Data_Structure_Examples/DataStore/DataStore_Examples.s
+
+# target to generate assembly for a file
+Data_Structure_Examples/DataStore/DataStore_Examples.c.s:
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/DataStore/DataStore_Examples.c.s
+.PHONY : Data_Structure_Examples/DataStore/DataStore_Examples.c.s
+
 Data_Structure_Examples/Queue/Queue_the_examples.o: Data_Structure_Examples/Queue/Queue_the_examples.c.o
 
 .PHONY : Data_Structure_Examples/Queue/Queue_the_examples.o
@@ -567,6 +594,9 @@ help:
 	@echo "... Data_Structure_Examples/DRAM/DRAM_Examples.o"
 	@echo "... Data_Structure_Examples/DRAM/DRAM_Examples.i"
 	@echo "... Data_Structure_Examples/DRAM/DRAM_Examples.s"
+	@echo "... Data_Structure_Examples/DataStore/DataStore_Examples.o"
+	@echo "... Data_Structure_Examples/DataStore/DataStore_Examples.i"
+	@echo "... Data_Structure_Examples/DataStore/DataStore_Examples.s"
 	@echo "... Data_Structure_Examples/Queue/Queue_the_examples.o"
 	@echo "... Data_Structure_Examples/Queue/Queue_the_examples.i"
 	@echo "... Data_Structure_Examples/Queue/Queue_the_examples.s"

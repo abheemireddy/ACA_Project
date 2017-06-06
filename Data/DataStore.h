@@ -9,11 +9,13 @@ typedef struct DataStoreTag{
     int currentLine;
     char Data[64][64];
     int (*StoreData)(char* dataToStore);
+    char* (*GetData)(struct DataStoreTag* dataStore,int lineNumber);
 } DataStore;
 
 
 DataStore Constructor_DataStore();
 
+char* GetData(DataStore* dataStore,int lineNumber);
 int StoreData(DataStore* dataStore,char* dataToStore);
 
 #endif //ACA_PROJECT_DATASTORE_H
