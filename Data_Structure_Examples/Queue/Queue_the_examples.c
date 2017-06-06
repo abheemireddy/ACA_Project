@@ -14,12 +14,12 @@ void Work_with_queue(){
     Node* pnode2 = &node2;
     queue->Enqueue(&queue,&pnode2);
 
-    Instruction data3 = {instruction:"Store 0001"};
+    Instruction data3 = {instruction:"Store 0011"};
     Node node3 = {data:data3};
     Node* pnode3 = &node3;
     queue->Enqueue(&queue,&pnode3);
 
-    Instruction data4 = {instruction:"Store 0001"};
+    Instruction data4 = {instruction:"Store 1101"};
     Node node4 = {data:data4};
     Node* pnode4 = &node4;
     queue->Enqueue(&queue,&pnode4);

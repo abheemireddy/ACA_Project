@@ -29,7 +29,7 @@ void Queue_Destructor(Queue *queue) {
 void print_queue(Queue* queue){
     Node* current = queue->head;
     while (current->prev != NULL) {
-        printf("Node Value:%s\n",current->data);
+        printf("Node Value:%s\n",current->data.instruction);
         current = current->prev;
     }
 }
@@ -64,7 +64,7 @@ Instruction Dequeue(Queue *queue) {
         return emptyInstruction;
     }
     node = queue->head;
-    free(node);
+    //free(node);
     queue->head = (queue->head)->prev;
     queue->size -= 1;
     return node->data;
