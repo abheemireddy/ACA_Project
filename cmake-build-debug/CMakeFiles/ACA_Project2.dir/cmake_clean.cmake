@@ -13,6 +13,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/DRAM/DRAM_Examples.c.o"
   "CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.o"
   "CMakeFiles/ACA_Project2.dir/BlockTransferer/BlockTransferer.c.o"
+  "CMakeFiles/ACA_Project2.dir/Data/DataStore.c.o"
   "ACA_Project2.pdb"
   "ACA_Project2"
 )

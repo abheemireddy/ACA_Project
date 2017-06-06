@@ -130,6 +130,12 @@
 		<Unit filename="/home/chad/Desktop/ACA_Project/DRAM/DRAM.h">
 			<Option target="ACA_Project2"/>
 		</Unit>
+		<Unit filename="/home/chad/Desktop/ACA_Project/Data/DataStore.c">
+			<Option target="ACA_Project2"/>
+		</Unit>
+		<Unit filename="/home/chad/Desktop/ACA_Project/Data/DataStore.h">
+			<Option target="ACA_Project2"/>
+		</Unit>
 		<Unit filename="/home/chad/Desktop/ACA_Project/Data_Structure_Examples/Block/Block_CacheLine_HashTable_Examples.c">
 			<Option target="ACA_Project2"/>
 		</Unit>

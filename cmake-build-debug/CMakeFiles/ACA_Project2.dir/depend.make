@@ -54,6 +54,9 @@ CMakeFiles/ACA_Project2.dir/DRAM/DRAM.c.o: ../uthash/include/uthash.h
 CMakeFiles/ACA_Project2.dir/DRAM/DRAM.c.o: ../DRAM/DRAM.c
 CMakeFiles/ACA_Project2.dir/DRAM/DRAM.c.o: ../DRAM/DRAM.h
 
+CMakeFiles/ACA_Project2.dir/Data/DataStore.c.o: ../Data/DataStore.c
+CMakeFiles/ACA_Project2.dir/Data/DataStore.c.o: ../Data/DataStore.h
+
 CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Block/Block_CacheLine_HashTable_Examples.c.o: .././Address/Address.h
 CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Block/Block_CacheLine_HashTable_Examples.c.o: .././Block/Block.h
 CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Block/Block_CacheLine_HashTable_Examples.c.o: .././CacheLine/CacheLine.h

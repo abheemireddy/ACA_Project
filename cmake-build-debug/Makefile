@@ -312,6 +312,33 @@ DRAM/DRAM.c.s:
 	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/DRAM/DRAM.c.s
 .PHONY : DRAM/DRAM.c.s
 
+Data/DataStore.o: Data/DataStore.c.o
+
+.PHONY : Data/DataStore.o
+
+# target to build an object file
+Data/DataStore.c.o:
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/Data/DataStore.c.o
+.PHONY : Data/DataStore.c.o
+
+Data/DataStore.i: Data/DataStore.c.i
+
+.PHONY : Data/DataStore.i
+
+# target to preprocess a source file
+Data/DataStore.c.i:
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/Data/DataStore.c.i
+.PHONY : Data/DataStore.c.i
+
+Data/DataStore.s: Data/DataStore.c.s
+
+.PHONY : Data/DataStore.s
+
+# target to generate assembly for a file
+Data/DataStore.c.s:
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/Data/DataStore.c.s
+.PHONY : Data/DataStore.c.s
+
 Data_Structure_Examples/Block/Block_CacheLine_HashTable_Examples.o: Data_Structure_Examples/Block/Block_CacheLine_HashTable_Examples.c.o
 
 .PHONY : Data_Structure_Examples/Block/Block_CacheLine_HashTable_Examples.o
@@ -531,6 +558,9 @@ help:
 	@echo "... DRAM/DRAM.o"
 	@echo "... DRAM/DRAM.i"
 	@echo "... DRAM/DRAM.s"
+	@echo "... Data/DataStore.o"
+	@echo "... Data/DataStore.i"
+	@echo "... Data/DataStore.s"
 	@echo "... Data_Structure_Examples/Block/Block_CacheLine_HashTable_Examples.o"
 	@echo "... Data_Structure_Examples/Block/Block_CacheLine_HashTable_Examples.i"
 	@echo "... Data_Structure_Examples/Block/Block_CacheLine_HashTable_Examples.s"
