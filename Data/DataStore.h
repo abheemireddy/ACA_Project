@@ -8,7 +8,7 @@
 typedef struct DataStoreTag{
     int currentLine;
     char Data[64][64];
-    int (*StoreData)(char* dataToStore);
+    int (*StoreData)(struct DataStoreTag* dataStore,char* dataToStore);
     char* (*GetData)(struct DataStoreTag* dataStore,int lineNumber);
 } DataStore;
 

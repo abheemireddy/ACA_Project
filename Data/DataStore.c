@@ -7,7 +7,7 @@
 #include "DataStore.h"
 
 DataStore Constructor_DataStore(){
-    DataStore data = {};
+    DataStore data = {currentLine:0};
     data.StoreData = &StoreData;
     data.GetData = &GetData;
     return data;
