@@ -6,10 +6,12 @@
 #define ACA_PROJECT_DRAM_H
 
 #include <uthash.h>
+#include <BlockTransferer/BlockTransferer.h>
 
 struct BlockTag;//forward declaration
 
 typedef struct DRAMTag {
+    Transferer transferer;
     UT_hash_handle hh; /* make this structure hashable*/
     struct BlockTag *HashTable; //This is my hashTable for blocks
 

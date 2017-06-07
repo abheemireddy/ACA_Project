@@ -14,6 +14,7 @@ DRAM Constructor_DRAM(){
     dram.CountBlocks = &CountBlocks;
     dram.print_all_blocks = &print_all_blocks;
     dram.removeBlockFromDRAM = &removeBlockFromDRAM;
+    dram.transferer = Constructor_Transferer();
     return dram;
 }
 
