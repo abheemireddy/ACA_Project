@@ -1,4 +1,5 @@
 #include <Data_Structure_Examples/DataStore/DataStore_Examples.h>
+#include <Data_Structure_Examples/BlockTransferer/BlockTransferer_Examples.h>
 #include "Data_Structure_Examples/Set/Set_and_Block_Examples.h"
 #include "Data_Structure_Examples/Queue/Queue_the_examples.h"
 #include "Data_Structure_Examples/Block/Block_CacheLine_HashTable_Examples.h"
@@ -8,6 +9,7 @@
 
 int main(){
     //run_processor();  //This does not work yet. It throws bugs at me as is.  Add it once it works.
+    run_examples();
 }
 
 
@@ -26,5 +28,7 @@ int run_examples() {
     Add_to_DRAM();
 
     DataStore_Example();
+
+    StoreAndGetFromBlockTransferer();
 }
 

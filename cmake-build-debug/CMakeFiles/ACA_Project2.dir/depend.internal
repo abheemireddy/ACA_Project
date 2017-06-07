@@ -154,6 +154,7 @@ CMakeFiles/ACA_Project2.dir/main.c.o
  .././BlockTransferer/BlockTransferer.h
  .././CacheLine/CacheLine.h
  .././DRAM/DRAM.h
+ .././Data_Structure_Examples/BlockTransferer/BlockTransferer_Examples.h
  .././Data_Structure_Examples/DataStore/DataStore_Examples.h
  .././L1Controller/L1Controller.h
  .././L2Controller/L2Controller.h

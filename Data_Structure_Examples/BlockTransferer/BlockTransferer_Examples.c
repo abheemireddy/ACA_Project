@@ -10,4 +10,12 @@ void StoreAndGetFromBlockTransferer(){
     Node node = Constructor_Node(instruction);
     Node* pnode = &node;
     ptransferer->TransferQueue->Enqueue(&ptransferer->TransferQueue,&pnode);
+
+    instruction = Constructor_Instruction(1,"different data");
+    node = Constructor_Node(instruction);
+    pnode = &node;
+    ptransferer->TransferQueue->Enqueue(&ptransferer->TransferQueue,&pnode);
+
+    ptransferer->GetNextInstruction(ptransferer);
+
 }

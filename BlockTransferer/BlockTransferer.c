@@ -6,6 +6,7 @@
 
 Transferer Constructor_Transferer(){
     Transferer transferer = {};
+    transferer.GetNextInstruction = &GetNextInstruction;
     transferer.TransferQueue = Queue_Constructor();
 }
 
