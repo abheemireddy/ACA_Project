@@ -3,8 +3,9 @@
 #include <stdio.h>
 #include "aca/L1Data.h"
 #include "L2Controller/L2Controller.h"
+#include "Address/Address.h"
 
-void L1_write(int address, int value);
-int L1_read(int address);
+void L1_write(Address address, int value);
+int L1_read(Address address);
 
 #endif

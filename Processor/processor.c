@@ -44,11 +44,11 @@ void run_processor()
 
 		if (operation == 1)
 		{
-			L1_write(address, value);
+			L1_write(addressStruct, value);
 		}
 		else if (operation == 2)
 		{
-			int value = L1_read(address);
+			int value = L1_read(addressStruct);
 			printf("Result: %d\n", value);
 		}
 		else
