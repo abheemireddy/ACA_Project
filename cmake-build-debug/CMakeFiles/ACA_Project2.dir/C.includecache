@@ -91,6 +91,8 @@ uthash.h
 .././Set/uthash.h
 Address/Address.h
 .././Set/Address/Address.h
+stdbool.h
+-
 
 .././aca/L1Data.h
 
@@ -385,6 +387,8 @@ uthash.h
 /home/chad/Desktop/ACA_Project/Set/uthash.h
 Address/Address.h
 /home/chad/Desktop/ACA_Project/Set/Address/Address.h
+stdbool.h
+-
 
 /home/chad/Desktop/ACA_Project/aca/L1Data.c
 L1Data.h

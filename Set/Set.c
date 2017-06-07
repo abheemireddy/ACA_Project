@@ -20,7 +20,17 @@ Set Constructor_Set(int numberOfBlocks,Address address){
     set.Count = &Count;
     set.replaceByUseFrequency = &replaceByUseFrequency;
     set.print_blocks_in_set = &print_blocks_in_set;
+    set.IsBlockInSet = &IsBlockInSet;
     return set;
+}
+
+bool IsBlockInSet(Set set,Block newBlock){
+    Block* alreadyInHashTable = set.get(&set.HashTable,newBlock.address.bitString);
+    if(alreadyInHashTable != NULL){
+        return true;
+    }else{
+        return false;
+    }
 }
 
 void put(Block** HashTable,Block *value) {  //key is useFrequency of the block.  Seems magical

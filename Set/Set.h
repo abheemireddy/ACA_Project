@@ -6,6 +6,7 @@
 #define ACA_PROJECT_SET_H
 #include "uthash.h"
 #include "Address/Address.h"
+#include <stdbool.h>
 
 struct BlockTag;//forward declaration
 
@@ -16,6 +17,7 @@ typedef struct SetTag {
 
     void (*AddBlock)(struct SetTag set,struct BlockTag** HashTable,struct BlockTag** blockToAdd);
 
+    bool (*IsBlockInSet)(struct SetTag set,struct BlockTag newBlock);
     void (*put)(struct BlockTag** HashTable,struct BlockTag *value);
     void (*replaceByUseFrequency)(struct BlockTag** HashTable,int key);
     struct BlockTag* (*getByUseFrequency)(struct BlockTag** HashTable,int key);
@@ -42,6 +44,7 @@ Set Constructor_Set(int numberOfBlocks,Address address);
 void AddBlock(Set set,struct BlockTag** HashTable,struct BlockTag** blockToAdd);
 
 //HashTable functions
+bool IsBlockInSet(struct SetTag set,struct BlockTag newBlock);
 void put(struct BlockTag** HashTable,struct BlockTag *value);
 void replaceByUseFrequency(struct BlockTag** HashTable,int key);
 struct BlockTag* getByUseFrequency(struct BlockTag** HashTable,int key);
