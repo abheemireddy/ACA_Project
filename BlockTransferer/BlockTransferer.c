@@ -7,9 +7,13 @@
 Transferer Constructor_Transferer(){
     Transferer transferer = {};
     transferer.GetNextInstruction = &GetNextInstruction;
-    transferer.TransferQueue = Queue_Constructor();
+    Queue queue = Queue_Constructor();
+    transferer.TransferQueue = queue;
+    return transferer;
 }
 
 Instruction GetNextInstruction(Transferer* transferer){
-    Instruction nextInstruction = transferer->TransferQueue->Dequeue(transferer->TransferQueue);
+    Queue queue = transferer->TransferQueue;
+    Instruction nextInstruction = queue.Dequeue(&queue);
+    return nextInstruction;
 }

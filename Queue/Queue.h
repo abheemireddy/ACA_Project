@@ -31,16 +31,16 @@ typedef struct QueueTag {
     int limit;
 
     void (*Queue_Destructor)(struct QueueTag *queue);
-    bool (*Enqueue)(struct QueueTag **queue, Node **node);
+    bool (*Enqueue)(struct QueueTag *queue, Node* node);
     Instruction (*Dequeue)(struct QueueTag *pQueue);
     bool (*isEmpty)(struct QueueTag* pQueue);
     void (*print_queue)(struct QueueTag* queue);
 
 } Queue;
 
-Queue *Queue_Constructor();
+Queue Queue_Constructor();
 void Queue_Destructor(Queue *queue);
-bool Enqueue(Queue **queue, Node **node);
+bool Enqueue(Queue *queue, Node *node);
 Instruction Dequeue(Queue *queue);
 bool isEmpty(Queue* pQueue);
 void print_queue(Queue* queue);

@@ -15,17 +15,17 @@ Node Constructor_Node(Instruction instruction){
     return node;
 }
 
-Queue *Queue_Constructor() {
-    Queue *queue = (Queue*) malloc(sizeof (Queue));
-    queue->limit = 10000;
-    queue->size = 0;
-    queue->head = NULL;
-    queue->tail = NULL;
-    queue->Dequeue = &Dequeue;
-    queue->Enqueue = &Enqueue;
-    queue->isEmpty = &isEmpty;
-    queue->Queue_Destructor = &Queue_Destructor;
-    queue->print_queue = &print_queue;
+Queue Queue_Constructor() {
+    Queue queue = {};
+    queue.limit = 10000;
+    queue.size = 0;
+    queue.head = NULL;
+    queue.tail = NULL;
+    queue.Dequeue = &Dequeue;
+    queue.Enqueue = &Enqueue;
+    queue.isEmpty = &isEmpty;
+    queue.Queue_Destructor = &Queue_Destructor;
+    queue.print_queue = &print_queue;
     return queue;
 }
 
@@ -39,31 +39,31 @@ void Queue_Destructor(Queue *queue) {
 void print_queue(Queue* queue){
     Node* current = queue->head;
     while (current->prev != NULL) {
-        printf("Node Instruction:%d\n",current->data.instruction);
+        printf("Node Instruction:%s\n",current->data.data);
         current = current->prev;
     }
 }
 
-bool Enqueue(Queue **queue, Node **node) {
-    if (((*queue) == NULL) || (node == NULL)) {
+bool Enqueue(Queue *queue, Node *node) {
+    if ((queue == NULL) || (node == NULL)) {
         return false;
     }
 
     //good size check!
-    if ((*queue)->size >= (*queue)->limit) {
+    if (queue->size >= queue->limit) {
         return false;
     }
 
-    (*node)->prev = NULL;
-    if ((*queue)->size == 0) {
-        (*queue)->tail = *node;
-        (*queue)->head = *node;
+    node->prev = NULL;
+    if (queue->size == 0) {
+        queue->tail = node;
+        queue->head = node;
 
     } else {
-        (*queue)->tail->prev = *node;
-        (*queue)->tail = *node;
+        queue->tail->prev = node;
+        queue->tail = node;
     }
-    (*queue)->size++;
+    queue->size++;
     return true;
 }
 
