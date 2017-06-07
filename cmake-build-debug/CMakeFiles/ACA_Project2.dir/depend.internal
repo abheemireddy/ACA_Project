@@ -51,7 +51,9 @@ CMakeFiles/ACA_Project2.dir/CacheLine/CacheLine.c.o
 CMakeFiles/ACA_Project2.dir/DRAM/DRAM.c.o
  .././Address/Address.h
  .././Block/Block.h
+ .././BlockTransferer/BlockTransferer.h
  .././CacheLine/CacheLine.h
+ .././Queue/Queue.h
  .././uthash/include/uthash.h
  ../uthash/include/uthash.h
  /home/chad/Desktop/ACA_Project/DRAM/DRAM.c
@@ -80,8 +82,10 @@ CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/BlockTransferer/BlockTransfe
 CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/DRAM/DRAM_Examples.c.o
  .././Address/Address.h
  .././Block/Block.h
+ .././BlockTransferer/BlockTransferer.h
  .././CacheLine/CacheLine.h
  .././DRAM/DRAM.h
+ .././Queue/Queue.h
  .././uthash/include/uthash.h
  ../uthash/include/uthash.h
  /home/chad/Desktop/ACA_Project/Data_Structure_Examples/DRAM/DRAM_Examples.c

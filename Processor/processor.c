@@ -1,11 +1,21 @@
 #include "processor.h"
 
+#include <unistd.h>
+#include <stdio.h>
+#include <errno.h>
+
 
 void run_processor()
 {
 	initL1Data();  // init cache data
 	initL2Data();  // init cache data
     initL2Controller(); // init L2 controller
+
+	char cwd[1024];
+	if(getcwd(cwd,sizeof(cwd)) != NULL){
+		fprintf(stdout,"current working dir: %s\n",cwd);
+	}
+
 
 	FILE * f = fopen("input.txt", "r");
 	while (!feof(f))

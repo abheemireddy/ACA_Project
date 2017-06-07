@@ -8,7 +8,7 @@
 #include "Processor/processor.h"
 
 int main(){
-    //run_processor();  //This does not work yet. It throws bugs at me as is.  Add it once it works.
+    run_processor();  //This does not work yet. It throws bugs at me as is.  Add it once it works.
     run_examples();
 }
 
