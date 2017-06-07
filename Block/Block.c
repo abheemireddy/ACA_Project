@@ -4,10 +4,9 @@
 #include "Block.h"
 
 Block Constructor_Block(Address address){
-    Block block = {dirtyBit:false,validBit:false,useFrequency:0,address:address};
+    Block block = {dirtyBit:false,validBit:true,useFrequency:0,address:address,isIdle:false};
     //*block.cacheLines = (struct CacheLineTag*)malloc(numberOfCacheLines*sizeof(struct CacheLineTag));
     block.IsInBlock = &IsInBlock;
-
     //HashTable Functions
     block.putCacheLine = &putCacheLine;
     block.replaceCacheLine = &replaceCacheLine;

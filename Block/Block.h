@@ -14,6 +14,8 @@
 typedef struct BlockTag{
     int size;
 
+    bool isIdle;
+
     bool validBit;
     bool dirtyBit;
 
