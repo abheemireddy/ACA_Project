@@ -9,7 +9,7 @@ void initL2Controller()
 // write value to l2 cache
 void l2Write(Address address, int value)
 {
-	printf("P to L1C: CPUWrite (%d)\n", address);
+	printf("P to L1C: CPUWrite (%d)\n", address.bitStringValue);
 	// check if address is valid
 	if (!L2Data[address.Index].valid) // block not valid
 	{
@@ -54,12 +54,12 @@ void l2Read(Address address, unsigned char * block)
 {
 	// TODO:pop the address from queue, for now assuming the address is 100
 	//address = 100; // We have to assign the value popped from queue to address variable
-	printf("L2C to L1C: CPURead (%d)\n", address);
+	printf("L2C to L1C: CPURead (%d)\n", address.bitStringValue);
 	// check if address is valid
 
 	if (!L2Data[address.Index].valid) // load from main mem
 	{
-		printf("L2C to Main Memory: CPURead (%d)\n", address);
+		printf("L2C to Main Memory: CPURead (%d)\n", address.bitStringValue);
 		printf("Main Memory to L2C: Data\n");
 		printf("L2C to L2D: Data\n");
 		memcpy(L2Data[address.Index].data, mem + address.bitStringValue, 64);
@@ -81,7 +81,7 @@ void l2Read(Address address, unsigned char * block)
 				int wbAddress = (L2Data[address.Index].tag << 15) | address.Index << 6;
 				writeBack(address.Index, wbAddress);
 			}
-			printf("L2C to Main Memory: CPURead (%d)\n", address);
+			printf("L2C to Main Memory: CPURead (%d)\n", address.bitStringValue);
 			printf("Main Memory to L2C: Data\n");
 			printf("L2C to L2D: Data\n");
 			memcpy(L2Data[address.Index].data, mem + address.bitStringValue, 64);
@@ -106,7 +106,7 @@ void l2WriteBack(Address address, unsigned char * data)
 		// we need to load the block
 		if (L2Data[address.Index].valid == 0) // not a valid block, get it from memory
 		{
-			printf("L2C to Main Memory: CPURead (%d)\n", address);
+			printf("L2C to Main Memory: CPURead (%d)\n", address.bitStringValue);
 			printf("Main Memory to L2C: Data\n");
 			printf("L2C to L2D: Data\n");
 			memcpy(L2Data[address.Index].data, data, 64);
@@ -118,7 +118,7 @@ void l2WriteBack(Address address, unsigned char * data)
 		{
 			int wbAddress = (L2Data[address.Index].tag << 15) | address.Index << 6;
 			if (L2Data[address.Index].dirty) writeBack(address.Index, wbAddress); // dirty block... write back
-			printf("L2C to Main Memory: CPURead (%d)\n", address);
+			printf("L2C to Main Memory: CPURead (%d)\n", address.bitStringValue);
 			printf("Main Memory to L2C: Data\n");
 			printf("L2C to L2D: Data\n");
 			memcpy(L2Data[address.Index].data, data, 64);
