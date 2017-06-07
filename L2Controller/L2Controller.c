@@ -5,6 +5,7 @@ L2Controller Constructor_L2Controller(){
     l2Controller.l2Read = &l2Read;
     l2Controller.l2Write = &l2Write;
     l2Controller.l2WriteBack = &l2WriteBack;
+	l2Controller.transferer = Constructor_Transferer();
     // TODO: create a queue of read instructions and initialize it.
     return l2Controller;
 }

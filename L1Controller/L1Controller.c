@@ -1,10 +1,10 @@
-
 #include "L1Controller.h"
 
 L1Controller Constructor_L1Controller(){
     L1Controller l1Controller = {};
     l1Controller.L1_read = &L1_read;
     l1Controller.L1_write = &L1_write;
+	l1Controller.transferer = Constructor_Transferer();
     return l1Controller;
 }
 

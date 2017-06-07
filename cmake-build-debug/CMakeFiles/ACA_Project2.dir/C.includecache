@@ -63,6 +63,8 @@ L2Controller/L2Controller.h
 .././L1Controller/L2Controller/L2Controller.h
 Address/Address.h
 .././L1Controller/Address/Address.h
+BlockTransferer/BlockTransferer.h
+-
 
 .././L2Controller/L2Controller.h
 aca/L2Data.h
@@ -74,6 +76,8 @@ stdio.h
 string.h
 -
 Address/Address.h
+-
+BlockTransferer/BlockTransferer.h
 -
 
 .././Queue/Queue.h
@@ -301,6 +305,8 @@ L2Controller/L2Controller.h
 /home/chad/Desktop/ACA_Project/L1Controller/L2Controller/L2Controller.h
 Address/Address.h
 /home/chad/Desktop/ACA_Project/L1Controller/Address/Address.h
+BlockTransferer/BlockTransferer.h
+-
 
 /home/chad/Desktop/ACA_Project/L1_Cache.h
 Cache/Cache.h
@@ -326,6 +332,8 @@ stdio.h
 string.h
 -
 Address/Address.h
+-
+BlockTransferer/BlockTransferer.h
 -
 
 /home/chad/Desktop/ACA_Project/Processor/processor.c

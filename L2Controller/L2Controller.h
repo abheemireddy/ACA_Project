@@ -5,8 +5,10 @@
 #include <stdio.h>
 #include <string.h>
 #include <Address/Address.h>
+#include <BlockTransferer/BlockTransferer.h>
 
 typedef struct L2ControllerTag{
+    Transferer transferer;
     void (*l2Read)(Address address, unsigned char * block);
     void (*l2Write)(Address address, int value);
     void (*l2WriteBack)(Address address, unsigned char * data);

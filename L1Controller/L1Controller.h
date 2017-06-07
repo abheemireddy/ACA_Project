@@ -4,8 +4,10 @@
 #include "aca/L1Data.h"
 #include "L2Controller/L2Controller.h"
 #include "Address/Address.h"
+#include <BlockTransferer/BlockTransferer.h>
 
 typedef struct L1ControllerTag{
+    Transferer transferer;
     void (*L1_write)(Address address, int value);
     int (*L1_read)(Address address);
 } L1Controller;

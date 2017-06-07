@@ -15,7 +15,6 @@ Cache Constructor_Cache(int numberOfSets){
     cache.CountSets = &CountSets;
     cache.replaceSet = &replaceSet;
     cache.print_sets = &print_sets;
-    cache.transferer = Constructor_Transferer();
     return cache;
 }
 

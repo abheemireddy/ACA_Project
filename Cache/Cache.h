@@ -10,7 +10,6 @@
 #include <BlockTransferer/BlockTransferer.h>
 
 typedef struct CacheTag{
-    Transferer transferer;
     Set *HashTable;
     int NumberOfSets;
 
