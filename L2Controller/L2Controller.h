@@ -6,7 +6,12 @@
 #include <string.h>
 #include <Address/Address.h>
 
-void initL2Controller();
+typedef struct L2ControllerTag{
+    void (*l2Read)(Address address, unsigned char * block);
+    void (*l2Write)(Address address, int value);
+    void (*l2WriteBack)(Address address, unsigned char * data);
+} L2Controller;
+
 void l2Read(Address address, unsigned char * block);
 void l2Write(Address address, int value);
 void l2WriteBack(Address address, unsigned char * data);

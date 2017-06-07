@@ -1,5 +1,6 @@
 #include "processor.h"
-
+#include "L1Controller/L1Controller.h"
+#include "L2Controller/L2Controller.h"
 #include <unistd.h>
 #include <stdio.h>
 #include <errno.h>
@@ -20,10 +21,6 @@ void print_current_directory(){
 
 void run_processor()
 {
-	initL1Data();  // init cache data
-	initL2Data();  // init cache data
-    initL2Controller(); // init L2 controller
-
     print_current_directory();
 
 	FILE * f = fopen("input.txt", "r");

@@ -329,6 +329,10 @@ Address/Address.h
 /home/chad/Desktop/ACA_Project/Processor/processor.c
 processor.h
 /home/chad/Desktop/ACA_Project/Processor/processor.h
+L1Controller/L1Controller.h
+/home/chad/Desktop/ACA_Project/Processor/L1Controller/L1Controller.h
+L2Controller/L2Controller.h
+/home/chad/Desktop/ACA_Project/Processor/L2Controller/L2Controller.h
 unistd.h
 -
 stdio.h

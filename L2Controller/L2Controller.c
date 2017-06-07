@@ -1,9 +1,12 @@
 #include "L2Controller.h"
 
-
-void initL2Controller()
-{
-	// TODO: create a queue of read instructions and initialize it.
+L2Controller Constructor_L2Controller(){
+    L2Controller l2Controller = {};
+    l2Controller.l2Read = &l2Read;
+    l2Controller.l2Write = &l2Write;
+    l2Controller.l2WriteBack = &l2WriteBack;
+    // TODO: create a queue of read instructions and initialize it.
+    return l2Controller;
 }
 
 // write value to l2 cache
