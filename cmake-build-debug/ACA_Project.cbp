@@ -175,6 +175,9 @@
 		<Unit filename="/home/chad/Desktop/ACA_Project/L1_Cache.h">
 			<Option target="ACA_Project2"/>
 		</Unit>
+		<Unit filename="/home/chad/Desktop/ACA_Project/Processor/processor.h">
+			<Option target="ACA_Project2"/>
+		</Unit>
 		<Unit filename="/home/chad/Desktop/ACA_Project/Queue/Queue.c">
 			<Option target="ACA_Project2"/>
 		</Unit>

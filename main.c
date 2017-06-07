@@ -4,6 +4,11 @@
 #include "Data_Structure_Examples/Block/Block_CacheLine_HashTable_Examples.h"
 #include "Data_Structure_Examples/DRAM/DRAM_Examples.h"
 #include "L1_Cache.h"
+#include "Processor/processor.h"
+
+int main(){
+    //run_processor();
+}
 
 
 int run_examples() {

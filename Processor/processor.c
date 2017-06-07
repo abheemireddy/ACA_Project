@@ -4,8 +4,9 @@
 #include "L2Controller/L2Controller.h"
 #include "aca/L1Data.h"
 #include "aca/L2Data.h"
+#include "processor.h"
 
-int main()
+void run_processor()
 {
 	initL1Data();  // init cache data
 	initL2Data();  // init cache data
