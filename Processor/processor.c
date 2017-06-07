@@ -36,6 +36,7 @@ void run_processor()
 		{
 			fscanf(f, "%d", &address);
 			operation = 2;
+
 		}
 
 		if (operation == 1)
