@@ -1,5 +1,9 @@
 #ifndef __L2CONTROLLER_H__
 #define __L2CONTROLLER_H__
+#include "aca/L2Data.h"
+#include "aca/MainMemory.h"
+#include <stdio.h>
+#include <string.h>
 
 void initL2Controller();
 void l2Read(int address, unsigned char * block);

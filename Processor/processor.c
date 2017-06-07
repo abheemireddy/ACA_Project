@@ -1,20 +1,16 @@
-#include <stdio.h>
-#include <string.h>
-#include "L1Controller/L1Controller.h"
-#include "L2Controller/L2Controller.h"
-#include "aca/L1Data.h"
-#include "aca/L2Data.h"
 #include "processor.h"
+
 
 void run_processor()
 {
-	initL1Data();  // init cache data
-	initL2Data();  // init cache data
-	initL2Controller(); // init L2 controller
+	//initL1Data();  // init cache data
+	//initL2Data();  // init cache data
+    initL2Controller(); // init L2 controller
 
 	FILE * f = fopen("input.txt", "r");
 	while (!feof(f))
 	{
+        Address addressStruct;
 		char instruction[100];
 		int  address;
 		int  value;
@@ -23,6 +19,7 @@ void run_processor()
 		if (!strcmp(instruction, "CPUWrite")) // write instruction
 		{
 			fscanf(f, "%d %d", &address, &value);
+
 			operation = 1;
 		}
 		else if (!strcmp(instruction, "CPURead")) // read instruction

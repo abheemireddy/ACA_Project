@@ -40,6 +40,8 @@ CMakeFiles/ACA_Project2.dir/Cache/Cache.c.o: ../uthash/include/uthash.h
 CMakeFiles/ACA_Project2.dir/Cache/Cache.c.o: ../Cache/Cache.c
 CMakeFiles/ACA_Project2.dir/Cache/Cache.c.o: ../Cache/Cache.h
 
+CMakeFiles/ACA_Project2.dir/CacheController/CacheController.c.o: ../CacheController/CacheController.c
+
 CMakeFiles/ACA_Project2.dir/CacheLine/CacheLine.c.o: .././Address/Address.h
 CMakeFiles/ACA_Project2.dir/CacheLine/CacheLine.c.o: .././uthash/include/uthash.h
 CMakeFiles/ACA_Project2.dir/CacheLine/CacheLine.c.o: ../uthash/include/uthash.h
@@ -92,6 +94,28 @@ CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Set/Set_and_Block_Examples.c
 CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Set/Set_and_Block_Examples.c.o: ../Data_Structure_Examples/Set/Set_and_Block_Examples.c
 CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Set/Set_and_Block_Examples.c.o: ../Data_Structure_Examples/Set/Set_and_Block_Examples.h
 
+CMakeFiles/ACA_Project2.dir/L1Controller/L1Controller.c.o: .././L2Controller/L2Controller.h
+CMakeFiles/ACA_Project2.dir/L1Controller/L1Controller.c.o: .././aca/L1Data.h
+CMakeFiles/ACA_Project2.dir/L1Controller/L1Controller.c.o: .././aca/L2Data.h
+CMakeFiles/ACA_Project2.dir/L1Controller/L1Controller.c.o: .././aca/MainMemory.h
+CMakeFiles/ACA_Project2.dir/L1Controller/L1Controller.c.o: ../L1Controller/L1Controller.c
+CMakeFiles/ACA_Project2.dir/L1Controller/L1Controller.c.o: ../L1Controller/L1Controller.h
+
+CMakeFiles/ACA_Project2.dir/L2Controller/L2Controller.c.o: .././aca/L2Data.h
+CMakeFiles/ACA_Project2.dir/L2Controller/L2Controller.c.o: .././aca/MainMemory.h
+CMakeFiles/ACA_Project2.dir/L2Controller/L2Controller.c.o: ../L2Controller/L2Controller.c
+CMakeFiles/ACA_Project2.dir/L2Controller/L2Controller.c.o: ../L2Controller/L2Controller.h
+
+CMakeFiles/ACA_Project2.dir/Processor/processor.c.o: .././Address/Address.h
+CMakeFiles/ACA_Project2.dir/Processor/processor.c.o: .././L1Controller/L1Controller.h
+CMakeFiles/ACA_Project2.dir/Processor/processor.c.o: .././L2Controller/L2Controller.h
+CMakeFiles/ACA_Project2.dir/Processor/processor.c.o: .././aca/L1Data.h
+CMakeFiles/ACA_Project2.dir/Processor/processor.c.o: .././aca/L2Data.h
+CMakeFiles/ACA_Project2.dir/Processor/processor.c.o: .././aca/MainMemory.h
+CMakeFiles/ACA_Project2.dir/Processor/processor.c.o: .././uthash/include/uthash.h
+CMakeFiles/ACA_Project2.dir/Processor/processor.c.o: ../Processor/processor.c
+CMakeFiles/ACA_Project2.dir/Processor/processor.c.o: ../Processor/processor.h
+
 CMakeFiles/ACA_Project2.dir/Queue/Queue.c.o: .././Address/Address.h
 CMakeFiles/ACA_Project2.dir/Queue/Queue.c.o: .././uthash/include/uthash.h
 CMakeFiles/ACA_Project2.dir/Queue/Queue.c.o: ../Queue/Queue.c
@@ -105,14 +129,28 @@ CMakeFiles/ACA_Project2.dir/Set/Set.c.o: ../uthash/include/uthash.h
 CMakeFiles/ACA_Project2.dir/Set/Set.c.o: ../Set/Set.c
 CMakeFiles/ACA_Project2.dir/Set/Set.c.o: ../Set/Set.h
 
+CMakeFiles/ACA_Project2.dir/aca/L1Data.c.o: ../aca/L1Data.c
+CMakeFiles/ACA_Project2.dir/aca/L1Data.c.o: ../aca/L1Data.h
+
+CMakeFiles/ACA_Project2.dir/aca/L2Data.c.o: ../aca/L2Data.c
+CMakeFiles/ACA_Project2.dir/aca/L2Data.c.o: ../aca/L2Data.h
+
+CMakeFiles/ACA_Project2.dir/aca/MainMemory.c.o: ../aca/MainMemory.c
+CMakeFiles/ACA_Project2.dir/aca/MainMemory.c.o: ../aca/MainMemory.h
+
 CMakeFiles/ACA_Project2.dir/main.c.o: .././Address/Address.h
 CMakeFiles/ACA_Project2.dir/main.c.o: .././Block/Block.h
 CMakeFiles/ACA_Project2.dir/main.c.o: .././BlockTransferer/BlockTransferer.h
 CMakeFiles/ACA_Project2.dir/main.c.o: .././CacheLine/CacheLine.h
 CMakeFiles/ACA_Project2.dir/main.c.o: .././DRAM/DRAM.h
 CMakeFiles/ACA_Project2.dir/main.c.o: .././Data_Structure_Examples/DataStore/DataStore_Examples.h
+CMakeFiles/ACA_Project2.dir/main.c.o: .././L1Controller/L1Controller.h
+CMakeFiles/ACA_Project2.dir/main.c.o: .././L2Controller/L2Controller.h
 CMakeFiles/ACA_Project2.dir/main.c.o: .././Queue/Queue.h
 CMakeFiles/ACA_Project2.dir/main.c.o: .././Set/Set.h
+CMakeFiles/ACA_Project2.dir/main.c.o: .././aca/L1Data.h
+CMakeFiles/ACA_Project2.dir/main.c.o: .././aca/L2Data.h
+CMakeFiles/ACA_Project2.dir/main.c.o: .././aca/MainMemory.h
 CMakeFiles/ACA_Project2.dir/main.c.o: .././uthash/include/uthash.h
 CMakeFiles/ACA_Project2.dir/main.c.o: ../uthash/include/uthash.h
 CMakeFiles/ACA_Project2.dir/main.c.o: ../Cache/Cache.h
@@ -123,6 +161,4 @@ CMakeFiles/ACA_Project2.dir/main.c.o: ../Data_Structure_Examples/Set/Set_and_Blo
 CMakeFiles/ACA_Project2.dir/main.c.o: ../L1_Cache.h
 CMakeFiles/ACA_Project2.dir/main.c.o: ../Processor/processor.h
 CMakeFiles/ACA_Project2.dir/main.c.o: ../main.c
-
-CMakeFiles/ACA_Project2.dir/CacheController/CacheController.cpp.o: ../CacheController/CacheController.cpp
 

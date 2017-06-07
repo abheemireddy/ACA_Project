@@ -7,7 +7,7 @@
 #include "Processor/processor.h"
 
 int main(){
-    //run_processor();
+    run_processor();
 }
 
 

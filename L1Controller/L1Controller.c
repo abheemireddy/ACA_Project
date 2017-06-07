@@ -1,7 +1,6 @@
-#include <stdio.h>
+
 #include "L1Controller.h"
-#include "aca/L1Data.h"
-#include "L2Controller/L2Controller.h"
+
 
 void L1_write(int address, int value)
 {

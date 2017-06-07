@@ -1,7 +1,6 @@
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
   "C"
-  "CXX"
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
@@ -10,6 +9,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/home/chad/Desktop/ACA_Project/BlockTransferer/BlockTransferer.c" "/home/chad/Desktop/ACA_Project/cmake-build-debug/CMakeFiles/ACA_Project2.dir/BlockTransferer/BlockTransferer.c.o"
   "/home/chad/Desktop/ACA_Project/Buffers/buffers.c" "/home/chad/Desktop/ACA_Project/cmake-build-debug/CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.o"
   "/home/chad/Desktop/ACA_Project/Cache/Cache.c" "/home/chad/Desktop/ACA_Project/cmake-build-debug/CMakeFiles/ACA_Project2.dir/Cache/Cache.c.o"
+  "/home/chad/Desktop/ACA_Project/CacheController/CacheController.c" "/home/chad/Desktop/ACA_Project/cmake-build-debug/CMakeFiles/ACA_Project2.dir/CacheController/CacheController.c.o"
   "/home/chad/Desktop/ACA_Project/CacheLine/CacheLine.c" "/home/chad/Desktop/ACA_Project/cmake-build-debug/CMakeFiles/ACA_Project2.dir/CacheLine/CacheLine.c.o"
   "/home/chad/Desktop/ACA_Project/DRAM/DRAM.c" "/home/chad/Desktop/ACA_Project/cmake-build-debug/CMakeFiles/ACA_Project2.dir/DRAM/DRAM.c.o"
   "/home/chad/Desktop/ACA_Project/Data/DataStore.c" "/home/chad/Desktop/ACA_Project/cmake-build-debug/CMakeFiles/ACA_Project2.dir/Data/DataStore.c.o"
@@ -18,24 +18,20 @@ set(CMAKE_DEPENDS_CHECK_C
   "/home/chad/Desktop/ACA_Project/Data_Structure_Examples/DataStore/DataStore_Examples.c" "/home/chad/Desktop/ACA_Project/cmake-build-debug/CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/DataStore/DataStore_Examples.c.o"
   "/home/chad/Desktop/ACA_Project/Data_Structure_Examples/Queue/Queue_the_examples.c" "/home/chad/Desktop/ACA_Project/cmake-build-debug/CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Queue/Queue_the_examples.c.o"
   "/home/chad/Desktop/ACA_Project/Data_Structure_Examples/Set/Set_and_Block_Examples.c" "/home/chad/Desktop/ACA_Project/cmake-build-debug/CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Set/Set_and_Block_Examples.c.o"
+  "/home/chad/Desktop/ACA_Project/L1Controller/L1Controller.c" "/home/chad/Desktop/ACA_Project/cmake-build-debug/CMakeFiles/ACA_Project2.dir/L1Controller/L1Controller.c.o"
+  "/home/chad/Desktop/ACA_Project/L2Controller/L2Controller.c" "/home/chad/Desktop/ACA_Project/cmake-build-debug/CMakeFiles/ACA_Project2.dir/L2Controller/L2Controller.c.o"
+  "/home/chad/Desktop/ACA_Project/Processor/processor.c" "/home/chad/Desktop/ACA_Project/cmake-build-debug/CMakeFiles/ACA_Project2.dir/Processor/processor.c.o"
   "/home/chad/Desktop/ACA_Project/Queue/Queue.c" "/home/chad/Desktop/ACA_Project/cmake-build-debug/CMakeFiles/ACA_Project2.dir/Queue/Queue.c.o"
   "/home/chad/Desktop/ACA_Project/Set/Set.c" "/home/chad/Desktop/ACA_Project/cmake-build-debug/CMakeFiles/ACA_Project2.dir/Set/Set.c.o"
+  "/home/chad/Desktop/ACA_Project/aca/L1Data.c" "/home/chad/Desktop/ACA_Project/cmake-build-debug/CMakeFiles/ACA_Project2.dir/aca/L1Data.c.o"
+  "/home/chad/Desktop/ACA_Project/aca/L2Data.c" "/home/chad/Desktop/ACA_Project/cmake-build-debug/CMakeFiles/ACA_Project2.dir/aca/L2Data.c.o"
+  "/home/chad/Desktop/ACA_Project/aca/MainMemory.c" "/home/chad/Desktop/ACA_Project/cmake-build-debug/CMakeFiles/ACA_Project2.dir/aca/MainMemory.c.o"
   "/home/chad/Desktop/ACA_Project/main.c" "/home/chad/Desktop/ACA_Project/cmake-build-debug/CMakeFiles/ACA_Project2.dir/main.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
 # The include file search paths:
 set(CMAKE_C_TARGET_INCLUDE_PATH
-  "../."
-  "../uthash/include"
-  )
-set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/chad/Desktop/ACA_Project/CacheController/CacheController.cpp" "/home/chad/Desktop/ACA_Project/cmake-build-debug/CMakeFiles/ACA_Project2.dir/CacheController/CacheController.cpp.o"
-  )
-set(CMAKE_CXX_COMPILER_ID "GNU")
-
-# The include file search paths:
-set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../."
   "../uthash/include"
   )

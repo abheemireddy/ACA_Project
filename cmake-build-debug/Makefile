@@ -258,32 +258,32 @@ Cache/Cache.c.s:
 	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/Cache/Cache.c.s
 .PHONY : Cache/Cache.c.s
 
-CacheController/CacheController.o: CacheController/CacheController.cpp.o
+CacheController/CacheController.o: CacheController/CacheController.c.o
 
 .PHONY : CacheController/CacheController.o
 
 # target to build an object file
-CacheController/CacheController.cpp.o:
-	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/CacheController/CacheController.cpp.o
-.PHONY : CacheController/CacheController.cpp.o
+CacheController/CacheController.c.o:
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/CacheController/CacheController.c.o
+.PHONY : CacheController/CacheController.c.o
 
-CacheController/CacheController.i: CacheController/CacheController.cpp.i
+CacheController/CacheController.i: CacheController/CacheController.c.i
 
 .PHONY : CacheController/CacheController.i
 
 # target to preprocess a source file
-CacheController/CacheController.cpp.i:
-	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/CacheController/CacheController.cpp.i
-.PHONY : CacheController/CacheController.cpp.i
+CacheController/CacheController.c.i:
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/CacheController/CacheController.c.i
+.PHONY : CacheController/CacheController.c.i
 
-CacheController/CacheController.s: CacheController/CacheController.cpp.s
+CacheController/CacheController.s: CacheController/CacheController.c.s
 
 .PHONY : CacheController/CacheController.s
 
 # target to generate assembly for a file
-CacheController/CacheController.cpp.s:
-	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/CacheController/CacheController.cpp.s
-.PHONY : CacheController/CacheController.cpp.s
+CacheController/CacheController.c.s:
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/CacheController/CacheController.c.s
+.PHONY : CacheController/CacheController.c.s
 
 CacheLine/CacheLine.o: CacheLine/CacheLine.c.o
 
@@ -501,6 +501,87 @@ Data_Structure_Examples/Set/Set_and_Block_Examples.c.s:
 	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Set/Set_and_Block_Examples.c.s
 .PHONY : Data_Structure_Examples/Set/Set_and_Block_Examples.c.s
 
+L1Controller/L1Controller.o: L1Controller/L1Controller.c.o
+
+.PHONY : L1Controller/L1Controller.o
+
+# target to build an object file
+L1Controller/L1Controller.c.o:
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/L1Controller/L1Controller.c.o
+.PHONY : L1Controller/L1Controller.c.o
+
+L1Controller/L1Controller.i: L1Controller/L1Controller.c.i
+
+.PHONY : L1Controller/L1Controller.i
+
+# target to preprocess a source file
+L1Controller/L1Controller.c.i:
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/L1Controller/L1Controller.c.i
+.PHONY : L1Controller/L1Controller.c.i
+
+L1Controller/L1Controller.s: L1Controller/L1Controller.c.s
+
+.PHONY : L1Controller/L1Controller.s
+
+# target to generate assembly for a file
+L1Controller/L1Controller.c.s:
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/L1Controller/L1Controller.c.s
+.PHONY : L1Controller/L1Controller.c.s
+
+L2Controller/L2Controller.o: L2Controller/L2Controller.c.o
+
+.PHONY : L2Controller/L2Controller.o
+
+# target to build an object file
+L2Controller/L2Controller.c.o:
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/L2Controller/L2Controller.c.o
+.PHONY : L2Controller/L2Controller.c.o
+
+L2Controller/L2Controller.i: L2Controller/L2Controller.c.i
+
+.PHONY : L2Controller/L2Controller.i
+
+# target to preprocess a source file
+L2Controller/L2Controller.c.i:
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/L2Controller/L2Controller.c.i
+.PHONY : L2Controller/L2Controller.c.i
+
+L2Controller/L2Controller.s: L2Controller/L2Controller.c.s
+
+.PHONY : L2Controller/L2Controller.s
+
+# target to generate assembly for a file
+L2Controller/L2Controller.c.s:
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/L2Controller/L2Controller.c.s
+.PHONY : L2Controller/L2Controller.c.s
+
+Processor/processor.o: Processor/processor.c.o
+
+.PHONY : Processor/processor.o
+
+# target to build an object file
+Processor/processor.c.o:
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/Processor/processor.c.o
+.PHONY : Processor/processor.c.o
+
+Processor/processor.i: Processor/processor.c.i
+
+.PHONY : Processor/processor.i
+
+# target to preprocess a source file
+Processor/processor.c.i:
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/Processor/processor.c.i
+.PHONY : Processor/processor.c.i
+
+Processor/processor.s: Processor/processor.c.s
+
+.PHONY : Processor/processor.s
+
+# target to generate assembly for a file
+Processor/processor.c.s:
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/Processor/processor.c.s
+.PHONY : Processor/processor.c.s
+
 Queue/Queue.o: Queue/Queue.c.o
 
 .PHONY : Queue/Queue.o
@@ -554,6 +635,87 @@ Set/Set.s: Set/Set.c.s
 Set/Set.c.s:
 	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/Set/Set.c.s
 .PHONY : Set/Set.c.s
+
+aca/L1Data.o: aca/L1Data.c.o
+
+.PHONY : aca/L1Data.o
+
+# target to build an object file
+aca/L1Data.c.o:
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/aca/L1Data.c.o
+.PHONY : aca/L1Data.c.o
+
+aca/L1Data.i: aca/L1Data.c.i
+
+.PHONY : aca/L1Data.i
+
+# target to preprocess a source file
+aca/L1Data.c.i:
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/aca/L1Data.c.i
+.PHONY : aca/L1Data.c.i
+
+aca/L1Data.s: aca/L1Data.c.s
+
+.PHONY : aca/L1Data.s
+
+# target to generate assembly for a file
+aca/L1Data.c.s:
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/aca/L1Data.c.s
+.PHONY : aca/L1Data.c.s
+
+aca/L2Data.o: aca/L2Data.c.o
+
+.PHONY : aca/L2Data.o
+
+# target to build an object file
+aca/L2Data.c.o:
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/aca/L2Data.c.o
+.PHONY : aca/L2Data.c.o
+
+aca/L2Data.i: aca/L2Data.c.i
+
+.PHONY : aca/L2Data.i
+
+# target to preprocess a source file
+aca/L2Data.c.i:
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/aca/L2Data.c.i
+.PHONY : aca/L2Data.c.i
+
+aca/L2Data.s: aca/L2Data.c.s
+
+.PHONY : aca/L2Data.s
+
+# target to generate assembly for a file
+aca/L2Data.c.s:
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/aca/L2Data.c.s
+.PHONY : aca/L2Data.c.s
+
+aca/MainMemory.o: aca/MainMemory.c.o
+
+.PHONY : aca/MainMemory.o
+
+# target to build an object file
+aca/MainMemory.c.o:
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/aca/MainMemory.c.o
+.PHONY : aca/MainMemory.c.o
+
+aca/MainMemory.i: aca/MainMemory.c.i
+
+.PHONY : aca/MainMemory.i
+
+# target to preprocess a source file
+aca/MainMemory.c.i:
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/aca/MainMemory.c.i
+.PHONY : aca/MainMemory.c.i
+
+aca/MainMemory.s: aca/MainMemory.c.s
+
+.PHONY : aca/MainMemory.s
+
+# target to generate assembly for a file
+aca/MainMemory.c.s:
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/aca/MainMemory.c.s
+.PHONY : aca/MainMemory.c.s
 
 main.o: main.c.o
 
@@ -633,12 +795,30 @@ help:
 	@echo "... Data_Structure_Examples/Set/Set_and_Block_Examples.o"
 	@echo "... Data_Structure_Examples/Set/Set_and_Block_Examples.i"
 	@echo "... Data_Structure_Examples/Set/Set_and_Block_Examples.s"
+	@echo "... L1Controller/L1Controller.o"
+	@echo "... L1Controller/L1Controller.i"
+	@echo "... L1Controller/L1Controller.s"
+	@echo "... L2Controller/L2Controller.o"
+	@echo "... L2Controller/L2Controller.i"
+	@echo "... L2Controller/L2Controller.s"
+	@echo "... Processor/processor.o"
+	@echo "... Processor/processor.i"
+	@echo "... Processor/processor.s"
 	@echo "... Queue/Queue.o"
 	@echo "... Queue/Queue.i"
 	@echo "... Queue/Queue.s"
 	@echo "... Set/Set.o"
 	@echo "... Set/Set.i"
 	@echo "... Set/Set.s"
+	@echo "... aca/L1Data.o"
+	@echo "... aca/L1Data.i"
+	@echo "... aca/L1Data.s"
+	@echo "... aca/L2Data.o"
+	@echo "... aca/L2Data.i"
+	@echo "... aca/L2Data.s"
+	@echo "... aca/MainMemory.o"
+	@echo "... aca/MainMemory.i"
+	@echo "... aca/MainMemory.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

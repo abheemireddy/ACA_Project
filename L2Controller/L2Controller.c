@@ -1,8 +1,5 @@
-#include <stdio.h>
-#include <string.h>
 #include "L2Controller.h"
-#include "aca/L2Data.h"
-#include "aca/MainMemory.h"
+
 
 void initL2Controller()
 {
