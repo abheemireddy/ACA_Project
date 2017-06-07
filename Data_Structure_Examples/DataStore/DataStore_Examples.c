@@ -3,7 +3,7 @@
 //
 
 #include <Data/DataStore.h>
-
+#include "stdio.h"
 void DataStore_Example(){
     DataStore dataStore = Constructor_DataStore();
     int location1 = dataStore.StoreData(&dataStore,"hello");

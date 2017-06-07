@@ -258,6 +258,33 @@ Cache/Cache.c.s:
 	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/Cache/Cache.c.s
 .PHONY : Cache/Cache.c.s
 
+CacheController/CacheController.o: CacheController/CacheController.cpp.o
+
+.PHONY : CacheController/CacheController.o
+
+# target to build an object file
+CacheController/CacheController.cpp.o:
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/CacheController/CacheController.cpp.o
+.PHONY : CacheController/CacheController.cpp.o
+
+CacheController/CacheController.i: CacheController/CacheController.cpp.i
+
+.PHONY : CacheController/CacheController.i
+
+# target to preprocess a source file
+CacheController/CacheController.cpp.i:
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/CacheController/CacheController.cpp.i
+.PHONY : CacheController/CacheController.cpp.i
+
+CacheController/CacheController.s: CacheController/CacheController.cpp.s
+
+.PHONY : CacheController/CacheController.s
+
+# target to generate assembly for a file
+CacheController/CacheController.cpp.s:
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/CacheController/CacheController.cpp.s
+.PHONY : CacheController/CacheController.cpp.s
+
 CacheLine/CacheLine.o: CacheLine/CacheLine.c.o
 
 .PHONY : CacheLine/CacheLine.o
@@ -579,6 +606,9 @@ help:
 	@echo "... Cache/Cache.o"
 	@echo "... Cache/Cache.i"
 	@echo "... Cache/Cache.s"
+	@echo "... CacheController/CacheController.o"
+	@echo "... CacheController/CacheController.i"
+	@echo "... CacheController/CacheController.s"
 	@echo "... CacheLine/CacheLine.o"
 	@echo "... CacheLine/CacheLine.i"
 	@echo "... CacheLine/CacheLine.s"

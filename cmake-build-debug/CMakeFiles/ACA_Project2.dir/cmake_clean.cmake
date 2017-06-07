@@ -15,11 +15,12 @@ file(REMOVE_RECURSE
   "CMakeFiles/ACA_Project2.dir/BlockTransferer/BlockTransferer.c.o"
   "CMakeFiles/ACA_Project2.dir/Data/DataStore.c.o"
   "CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/DataStore/DataStore_Examples.c.o"
+  "CMakeFiles/ACA_Project2.dir/CacheController/CacheController.cpp.o"
   "ACA_Project2.pdb"
   "ACA_Project2"
 )
 
 # Per-language clean rules from dependency scanning.
-foreach(lang C)
+foreach(lang C CXX)
   include(CMakeFiles/ACA_Project2.dir/cmake_clean_${lang}.cmake OPTIONAL)
 endforeach()

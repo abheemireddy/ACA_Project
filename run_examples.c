@@ -6,7 +6,7 @@
 #include "L1_Cache.h"
 
 
-int main() {
+int run_examples() {
     AddCacheLinesToBlock();
     ExampleUsingSetHash();
     AddTooManyBlocksTest();
@@ -22,3 +22,4 @@ int main() {
 
     DataStore_Example();
 }
+
