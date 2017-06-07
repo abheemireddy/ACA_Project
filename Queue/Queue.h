@@ -11,14 +11,18 @@
 #include "Address/Address.h"
 
 typedef struct InstructionTag{
-    char* RawData;
-    char* instruction;
+    int instruction;
+    char* data; //data stored as char* in char[64][64]
 } Instruction;
+
+Instruction Constructor_Instruction(int instructionNumber,char* data);
 
 typedef struct NodeTag {
     Instruction data;
     struct NodeTag *prev;
 } Node;
+
+Node Constructor_Node(Instruction instruction);
 
 typedef struct QueueTag {
     Node *head;

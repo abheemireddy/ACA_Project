@@ -15,4 +15,6 @@ typedef struct TransfererTag{
 
 Transferer Constructor_Transferer();
 
+Instruction GetNextInstruction(Transferer* transferer);
+
 #endif //ACA_PROJECT_BLOCKTRANSFERER_H

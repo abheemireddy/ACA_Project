@@ -8,3 +8,7 @@ Transferer Constructor_Transferer(){
     Transferer transferer = {};
     transferer.TransferQueue = Queue_Constructor();
 }
+
+Instruction GetNextInstruction(Transferer* transferer){
+    Instruction nextInstruction = transferer->TransferQueue->Dequeue(transferer->TransferQueue);
+}

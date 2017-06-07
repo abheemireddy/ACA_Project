@@ -5,6 +5,16 @@
 
 //used queue implementation from https://gist.github.com/ArnonEilat/4471278
 
+Instruction Constructor_Instruction(int instructionNumber,char* data){
+    Instruction instruction = {instruction:instructionNumber,data:data};
+    return instruction;
+}
+
+Node Constructor_Node(Instruction instruction){
+    Node node = {data:instruction};
+    return node;
+}
+
 Queue *Queue_Constructor() {
     Queue *queue = (Queue*) malloc(sizeof (Queue));
     queue->limit = 10000;
@@ -29,7 +39,7 @@ void Queue_Destructor(Queue *queue) {
 void print_queue(Queue* queue){
     Node* current = queue->head;
     while (current->prev != NULL) {
-        printf("Node Value:%s\n",current->data.instruction);
+        printf("Node Instruction:%d\n",current->data.instruction);
         current = current->prev;
     }
 }
@@ -60,7 +70,7 @@ bool Enqueue(Queue **queue, Node **node) {
 Instruction Dequeue(Queue *queue) {
     Node *node;
     if (isEmpty(queue)){
-        Instruction emptyInstruction = {instruction:NULL};
+        Instruction emptyInstruction = {data:NULL};
         return emptyInstruction;
     }
     node = queue->head;
