@@ -3,8 +3,8 @@
 
 void run_processor()
 {
-	//initL1Data();  // init cache data
-	//initL2Data();  // init cache data
+	initL1Data();  // init cache data
+	initL2Data();  // init cache data
     initL2Controller(); // init L2 controller
 
 	FILE * f = fopen("input.txt", "r");
