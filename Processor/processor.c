@@ -3,8 +3,20 @@
 #include <unistd.h>
 #include <stdio.h>
 #include <errno.h>
+#include <stdbool.h>
 
+Processor Constructor_Processor(){
+    Processor processor = {};
+    processor.run_processor = &run_processor;
+    return processor;
+}
 
+void print_current_directory(){
+    char cwd[1024];
+    if(getcwd(cwd,sizeof(cwd)) != NULL){
+        fprintf(stdout,"current working dir: %s\n",cwd);
+    }
+}
 
 void run_processor()
 {
@@ -12,11 +24,7 @@ void run_processor()
 	initL2Data();  // init cache data
     initL2Controller(); // init L2 controller
 
-	char cwd[1024];
-	if(getcwd(cwd,sizeof(cwd)) != NULL){
-		fprintf(stdout,"current working dir: %s\n",cwd);
-	}
-
+    print_current_directory();
 
 	FILE * f = fopen("input.txt", "r");
 	while (!feof(f))
@@ -41,21 +49,19 @@ void run_processor()
             char* bitString = int2bin(address);
             addressStruct = Constructor_Address(bitString);
 		}
-
-		if (operation == 1)
-		{
-			L1_write(addressStruct, value);
-		}
-		else if (operation == 2)
-		{
-			int value = L1_read(addressStruct);
-			printf("Result: %d\n", value);
-		}
-		else
-		{
-			printf("Invalid operation: %s. Aborting\n", instruction);
-			break;
-		}
+        if(operation != 1 && operation != 2){
+            printf("Invalid operation: %s. Aborting\n", instruction);
+            break;
+        }
+        if (operation == 1)
+        {
+            L1_write(addressStruct, value);
+        }
+        else if (operation == 2)
+        {
+            int value = L1_read(addressStruct);
+            printf("Result: %d\n", value);
+        }
 	}
 	fclose(f);
 }

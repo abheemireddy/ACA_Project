@@ -12,6 +12,14 @@
 #include "aca/L2Data.h"
 #include "Address/Address.h"
 
+typedef struct ProcessorTag{
+    void (*run_processor)();
+} Processor;
+
+Processor Constructor_Processor();
+
 void run_processor();
+
+void print_current_directory();
 
 #endif //ACA_PROJECT_PROCESSOR_H

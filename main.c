@@ -1,3 +1,4 @@
+#include "Processor/processor.h"
 #include <Data_Structure_Examples/DataStore/DataStore_Examples.h>
 #include <Data_Structure_Examples/BlockTransferer/BlockTransferer_Examples.h>
 #include "Data_Structure_Examples/Set/Set_and_Block_Examples.h"
@@ -5,11 +6,14 @@
 #include "Data_Structure_Examples/Block/Block_CacheLine_HashTable_Examples.h"
 #include "Data_Structure_Examples/DRAM/DRAM_Examples.h"
 #include "L1_Cache.h"
-#include "Processor/processor.h"
+
+int run_examples();
 
 int main(){
-    run_processor();  //This does not work yet. It throws bugs at me as is.  Add it once it works.
-    run_examples();
+    Processor processor = Constructor_Processor();
+    processor.run_processor();
+
+    run_examples();//Anu, these should help you with using the pre-created data structures
 }
 
 
