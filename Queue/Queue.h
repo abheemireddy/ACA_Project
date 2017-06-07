@@ -11,6 +11,7 @@
 #include "Address/Address.h"
 
 typedef struct InstructionTag{
+    int clockCycleWhenThisCanBeRead;
     int instruction;
     char* data; //data stored as char* in char[64][64]
 } Instruction;
