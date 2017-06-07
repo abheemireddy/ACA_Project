@@ -22,21 +22,20 @@ void run_processor()
 	{
         Address addressStruct;
 		char instruction[100];
-		char  address[17];
-		char  value[64];
+		int  address;
+		int  value;
 		int  operation = -1;  // -1: invalid
 		fscanf(f, "%s", instruction);
 		if (!strcmp(instruction, "CPUWrite")) // write instruction
 		{
-			fscanf(f, "%s %[^\n]", &address, &value);
+			fscanf(f, "%d %d", &address, &value);
 
 			operation = 1;
 		}
 		else if (!strcmp(instruction, "CPURead")) // read instruction
 		{
-			fscanf(f, "%s", &address);
+			fscanf(f, "%d", &address);
 			operation = 2;
-
 		}
 
 		if (operation == 1)
