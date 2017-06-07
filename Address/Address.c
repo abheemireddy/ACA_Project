@@ -22,7 +22,7 @@ char* GetChar(char* originalString,int start,int length,char* substring){
 
 char *int2bin(int n) { //function from quora
     // determine the number of bits needed ("sizeof" returns bytes)
-    int nbits = sizeof(n) * 8;
+    int nbits = 17;//sizeof(n) * 8;
     char *s = malloc(nbits+1);  // +1 for '\0' terminator
     s[nbits] = '\0';
     // forcing evaluation as an unsigned value prevents complications

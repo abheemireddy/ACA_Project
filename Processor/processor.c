@@ -5,6 +5,7 @@
 #include <errno.h>
 
 
+
 void run_processor()
 {
 	initL1Data();  // init cache data
@@ -29,13 +30,16 @@ void run_processor()
 		if (!strcmp(instruction, "CPUWrite")) // write instruction
 		{
 			fscanf(f, "%d %d", &address, &value);
-
 			operation = 1;
+            char* bitString = int2bin(address);
+            addressStruct = Constructor_Address(bitString);
 		}
 		else if (!strcmp(instruction, "CPURead")) // read instruction
 		{
 			fscanf(f, "%d", &address);
 			operation = 2;
+            char* bitString = int2bin(address);
+            addressStruct = Constructor_Address(bitString);
 		}
 
 		if (operation == 1)
