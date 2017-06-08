@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="ACA_Project"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/abheemireddy/ACA_Project"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/abheemireddy/ACA_Project/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/abheemireddy/ACA_Project/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/abheemireddy/ACA_Project/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/abheemireddy/ACA_Project/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/abheemireddy/ACA_Project"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/abheemireddy/ACA_Project/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/abheemireddy/ACA_Project/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/abheemireddy/ACA_Project/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/abheemireddy/ACA_Project/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/abheemireddy/ACA_Project"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/abheemireddy/ACA_Project/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/abheemireddy/ACA_Project/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/abheemireddy/ACA_Project/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/abheemireddy/ACA_Project/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ACA_Project2">
+				<Option output="/home/abheemireddy/ACA_Project/ACA_Project2" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/abheemireddy/ACA_Project"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/abheemireddy/ACA_Project/."/>
+					<Add directory="/home/abheemireddy/ACA_Project/uthash/include"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/abheemireddy/ACA_Project/Makefile&quot;  VERBOSE=1 ACA_Project2"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/abheemireddy/ACA_Project/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/abheemireddy/ACA_Project/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/abheemireddy/ACA_Project/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="ACA_Project2/fast">
+				<Option output="/home/abheemireddy/ACA_Project/ACA_Project2" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/abheemireddy/ACA_Project"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/abheemireddy/ACA_Project/."/>
+					<Add directory="/home/abheemireddy/ACA_Project/uthash/include"/>
+					<Add directory="/usr/include/c++/6"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
+					<Add directory="/usr/include/c++/6/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/6/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -f &quot;/home/abheemireddy/ACA_Project/Makefile&quot;  VERBOSE=1 ACA_Project2/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/abheemireddy/ACA_Project/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/abheemireddy/ACA_Project/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/abheemireddy/ACA_Project/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/abheemireddy/ACA_Project/Address/Address.c">
+			<Option target="ACA_Project2"/>
+		</Unit>
+		<Unit filename="/home/abheemireddy/ACA_Project/Address/Address.h">
+			<Option target="ACA_Project2"/>
+		</Unit>
+		<Unit filename="/home/abheemireddy/ACA_Project/Block/Block.c">
+			<Option target="ACA_Project2"/>
+		</Unit>
+		<Unit filename="/home/abheemireddy/ACA_Project/Block/Block.h">
+			<Option target="ACA_Project2"/>
+		</Unit>
+		<Unit filename="/home/abheemireddy/ACA_Project/BlockTransferer/BlockTransferer.c">
+			<Option target="ACA_Project2"/>
+		</Unit>
+		<Unit filename="/home/abheemireddy/ACA_Project/BlockTransferer/BlockTransferer.h">
+			<Option target="ACA_Project2"/>
+		</Unit>
+		<Unit filename="/home/abheemireddy/ACA_Project/Buffers/buffers.c">
+			<Option target="ACA_Project2"/>
+		</Unit>
+		<Unit filename="/home/abheemireddy/ACA_Project/Buffers/buffers.h">
+			<Option target="ACA_Project2"/>
+		</Unit>
+		<Unit filename="/home/abheemireddy/ACA_Project/Cache/Cache.c">
+			<Option target="ACA_Project2"/>
+		</Unit>
+		<Unit filename="/home/abheemireddy/ACA_Project/Cache/Cache.h">
+			<Option target="ACA_Project2"/>
+		</Unit>
+		<Unit filename="/home/abheemireddy/ACA_Project/CacheController/CacheController.c">
+			<Option target="ACA_Project2"/>
+		</Unit>
+		<Unit filename="/home/abheemireddy/ACA_Project/CacheController/CacheController.h">
+			<Option target="ACA_Project2"/>
+		</Unit>
+		<Unit filename="/home/abheemireddy/ACA_Project/CacheLine/CacheLine.c">
+			<Option target="ACA_Project2"/>
+		</Unit>
+		<Unit filename="/home/abheemireddy/ACA_Project/CacheLine/CacheLine.h">
+			<Option target="ACA_Project2"/>
+		</Unit>
+		<Unit filename="/home/abheemireddy/ACA_Project/DRAM/DRAM.c">
+			<Option target="ACA_Project2"/>
+		</Unit>
+		<Unit filename="/home/abheemireddy/ACA_Project/DRAM/DRAM.h">
+			<Option target="ACA_Project2"/>
+		</Unit>
+		<Unit filename="/home/abheemireddy/ACA_Project/Data/DataStore.c">
+			<Option target="ACA_Project2"/>
+		</Unit>
+		<Unit filename="/home/abheemireddy/ACA_Project/Data/DataStore.h">
+			<Option target="ACA_Project2"/>
+		</Unit>
+		<Unit filename="/home/abheemireddy/ACA_Project/Data_Structure_Examples/Block/Block_CacheLine_HashTable_Examples.c">
+			<Option target="ACA_Project2"/>
+		</Unit>
+		<Unit filename="/home/abheemireddy/ACA_Project/Data_Structure_Examples/Block/Block_CacheLine_HashTable_Examples.h">
+			<Option target="ACA_Project2"/>
+		</Unit>
+		<Unit filename="/home/abheemireddy/ACA_Project/Data_Structure_Examples/BlockTransferer/BlockTransferer_Examples.c">
+			<Option target="ACA_Project2"/>
+		</Unit>
+		<Unit filename="/home/abheemireddy/ACA_Project/Data_Structure_Examples/BlockTransferer/BlockTransferer_Examples.h">
+			<Option target="ACA_Project2"/>
+		</Unit>
+		<Unit filename="/home/abheemireddy/ACA_Project/Data_Structure_Examples/DRAM/DRAM_Examples.c">
+			<Option target="ACA_Project2"/>
+		</Unit>
+		<Unit filename="/home/abheemireddy/ACA_Project/Data_Structure_Examples/DRAM/DRAM_Examples.h">
+			<Option target="ACA_Project2"/>
+		</Unit>
+		<Unit filename="/home/abheemireddy/ACA_Project/Data_Structure_Examples/DataStore/DataStore_Examples.c">
+			<Option target="ACA_Project2"/>
+		</Unit>
+		<Unit filename="/home/abheemireddy/ACA_Project/Data_Structure_Examples/DataStore/DataStore_Examples.h">
+			<Option target="ACA_Project2"/>
+		</Unit>
+		<Unit filename="/home/abheemireddy/ACA_Project/Data_Structure_Examples/Queue/Queue_the_examples.c">
+			<Option target="ACA_Project2"/>
+		</Unit>
+		<Unit filename="/home/abheemireddy/ACA_Project/Data_Structure_Examples/Queue/Queue_the_examples.h">
+			<Option target="ACA_Project2"/>
+		</Unit>
+		<Unit filename="/home/abheemireddy/ACA_Project/Data_Structure_Examples/Set/Set_and_Block_Examples.c">
+			<Option target="ACA_Project2"/>
+		</Unit>
+		<Unit filename="/home/abheemireddy/ACA_Project/Data_Structure_Examples/Set/Set_and_Block_Examples.h">
+			<Option target="ACA_Project2"/>
+		</Unit>
+		<Unit filename="/home/abheemireddy/ACA_Project/L1Controller/L1Controller.c">
+			<Option target="ACA_Project2"/>
+		</Unit>
+		<Unit filename="/home/abheemireddy/ACA_Project/L1Controller/L1Controller.h">
+			<Option target="ACA_Project2"/>
+		</Unit>
+		<Unit filename="/home/abheemireddy/ACA_Project/L1_Cache.h">
+			<Option target="ACA_Project2"/>
+		</Unit>
+		<Unit filename="/home/abheemireddy/ACA_Project/L2Controller/L2Controller.c">
+			<Option target="ACA_Project2"/>
+		</Unit>
+		<Unit filename="/home/abheemireddy/ACA_Project/L2Controller/L2Controller.h">
+			<Option target="ACA_Project2"/>
+		</Unit>
+		<Unit filename="/home/abheemireddy/ACA_Project/Processor/processor.c">
+			<Option target="ACA_Project2"/>
+		</Unit>
+		<Unit filename="/home/abheemireddy/ACA_Project/Processor/processor.h">
+			<Option target="ACA_Project2"/>
+		</Unit>
+		<Unit filename="/home/abheemireddy/ACA_Project/Queue/Queue.c">
+			<Option target="ACA_Project2"/>
+		</Unit>
+		<Unit filename="/home/abheemireddy/ACA_Project/Queue/Queue.h">
+			<Option target="ACA_Project2"/>
+		</Unit>
+		<Unit filename="/home/abheemireddy/ACA_Project/Set/Set.c">
+			<Option target="ACA_Project2"/>
+		</Unit>
+		<Unit filename="/home/abheemireddy/ACA_Project/Set/Set.h">
+			<Option target="ACA_Project2"/>
+		</Unit>
+		<Unit filename="/home/abheemireddy/ACA_Project/aca/L1Data.c">
+			<Option target="ACA_Project2"/>
+		</Unit>
+		<Unit filename="/home/abheemireddy/ACA_Project/aca/L1Data.h">
+			<Option target="ACA_Project2"/>
+		</Unit>
+		<Unit filename="/home/abheemireddy/ACA_Project/aca/L2Data.c">
+			<Option target="ACA_Project2"/>
+		</Unit>
+		<Unit filename="/home/abheemireddy/ACA_Project/aca/L2Data.h">
+			<Option target="ACA_Project2"/>
+		</Unit>
+		<Unit filename="/home/abheemireddy/ACA_Project/aca/MainMemory.c">
+			<Option target="ACA_Project2"/>
+		</Unit>
+		<Unit filename="/home/abheemireddy/ACA_Project/aca/MainMemory.h">
+			<Option target="ACA_Project2"/>
+		</Unit>
+		<Unit filename="/home/abheemireddy/ACA_Project/main.c">
+			<Option target="ACA_Project2"/>
+		</Unit>
+		<Unit filename="/home/abheemireddy/ACA_Project/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
