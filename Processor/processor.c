@@ -32,12 +32,12 @@ void run_processor()
         Address addressStruct;
 		char instruction[100];
 		int  address;
-		int  value;
+		char  value;
 		int  operation = -1;  // -1: invalid
 		fscanf(f, "%s", instruction);
 		if (!strcmp(instruction, "CPUWrite")) // write instruction
 		{
-			fscanf(f, "%d %d", &address, &value);
+			fscanf(f, "%d %[^\n]", &address, &value);
 			operation = 1;
             char* bitString = int2bin(address);
             addressStruct = Constructor_Address(bitString);
@@ -56,9 +56,9 @@ void run_processor()
 
         if (operation == 1)
         {
-            Instruction instruction = Constructor_Instruction(1,value);
+            Instruction instruction = Constructor_Instruction(1,&value,addressStruct);
             Node node = Constructor_Node(instruction);
-            l2Controller.transferer.TransferQueue.Enqueue(&l2Controller.transferer,&node);
+            l2Controller.transferer.TransferQueue.Enqueue(&l2Controller.transferer.TransferQueue,&node);
         }
         else if (operation == 2)
         {
