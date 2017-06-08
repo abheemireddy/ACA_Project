@@ -6,7 +6,9 @@
 //used queue implementation from https://gist.github.com/ArnonEilat/4471278
 
 Instruction Constructor_Instruction(int instructionNumber,char* data,Address address){
-    Instruction instruction = {instruction:instructionNumber,data:data,address:address};
+    Instruction instruction
+    instruction = {instruction:instructionNumber,address:address, data:data};
+
     return instruction;
 }
 
