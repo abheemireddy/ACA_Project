@@ -57,13 +57,13 @@ void run_processor(Processor* processor)
         {
             Instruction instruction = Constructor_Instruction(1,&value,addressStruct);
             Node node = Constructor_Node(instruction);
-            processor->l2Controller.transferer.TransferQueue.Enqueue(&processor->l2Controller.transferer.TransferQueue,&node);
+            (*processor).l2Controller.transferer.TransferQueue.Enqueue(&(*processor).l2Controller.transferer.TransferQueue,&node);
         }
         else if (operation == 2)
         {
             Instruction instruction = Constructor_Instruction(2,NULL,addressStruct);
             Node node = Constructor_Node(instruction);
-            processor->l2Controller.transferer.TransferQueue.Enqueue(&processor->l2Controller.transferer.TransferQueue,&node);
+            (*processor).l2Controller.transferer.TransferQueue.Enqueue(&(*processor).l2Controller.transferer.TransferQueue,&node);
             //int value = L1_read(addressStruct);
             printf("Result: %d\n", value);
         }
