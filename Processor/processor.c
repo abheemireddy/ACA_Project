@@ -56,7 +56,9 @@ void run_processor()
 
         if (operation == 1)
         {
-            L1_write(addressStruct, value);
+            Instruction instruction = Constructor_Instruction(1,value);
+            Node node = Constructor_Node(instruction);
+            l2Controller.transferer.TransferQueue.Enqueue(&l2Controller.transferer,&node);
         }
         else if (operation == 2)
         {
