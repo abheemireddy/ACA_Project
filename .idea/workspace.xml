@@ -12,7 +12,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="874cd3ee-283a-48e2-bbb0-bde542e13d07" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ACA_Project2" afterPath="$PROJECT_DIR$/ACA_Project2" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/BlockTransferer/BlockTransferer.c.o" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/BlockTransferer/BlockTransferer.c.o" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/DRAM/DRAM.c.o" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/DRAM/DRAM.c.o" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/BlockTransferer/BlockTransferer_Examples.c.o" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/BlockTransferer/BlockTransferer_Examples.c.o" />
@@ -24,12 +23,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Queue/Queue.c.o" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Queue/Queue.c.o" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/C.includecache" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/C.includecache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data_Structure_Examples/BlockTransferer/BlockTransferer_Examples.c" afterPath="$PROJECT_DIR$/Data_Structure_Examples/BlockTransferer/BlockTransferer_Examples.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data_Structure_Examples/Queue/Queue_the_examples.c" afterPath="$PROJECT_DIR$/Data_Structure_Examples/Queue/Queue_the_examples.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data_Structure_Examples/Queue/Queue_the_examples.h" afterPath="$PROJECT_DIR$/Data_Structure_Examples/Queue/Queue_the_examples.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Processor/processor.c" afterPath="$PROJECT_DIR$/Processor/processor.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Queue/Queue.c" afterPath="$PROJECT_DIR$/Queue/Queue.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Queue/Queue.h" afterPath="$PROJECT_DIR$/Queue/Queue.h" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <ignored path="$PROJECT_DIR$/CMakeFiles/" />
@@ -664,14 +657,7 @@
       <workItem from="1496713422788" duration="671000" />
       <workItem from="1496754373526" duration="32944000" />
       <workItem from="1496890028780" duration="2917000" />
-      <workItem from="1496947808980" duration="1709000" />
-    </task>
-    <task id="LOCAL-00089" summary="Added DRAM function declarations to header.">
-      <created>1496679602935</created>
-      <option name="number" value="00089" />
-      <option name="presentableId" value="LOCAL-00089" />
-      <option name="project" value="LOCAL" />
-      <updated>1496679602935</updated>
+      <workItem from="1496947808980" duration="1795000" />
     </task>
     <task id="LOCAL-00090" summary="Added an int to represent the bitString's value to Address.  We will use this as our Key for DRAM.">
       <created>1496681000351</created>
@@ -1009,11 +995,18 @@
       <option name="project" value="LOCAL" />
       <updated>1496949552625</updated>
     </task>
-    <option name="localTasksCounter" value="138" />
+    <task id="LOCAL-00138" summary="Added an address to the instruction.  I also changed the input.txt reader to read a char* for our data.  I did not limit the size of this char* (yet).">
+      <created>1496950068058</created>
+      <option name="number" value="00138" />
+      <option name="presentableId" value="LOCAL-00138" />
+      <option name="project" value="LOCAL" />
+      <updated>1496950068068</updated>
+    </task>
+    <option name="localTasksCounter" value="139" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="146436000" />
+    <option name="totallyTimeSpent" value="146522000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1855" height="936" extended-state="0" />
@@ -1047,7 +1040,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Changed file structure" />
     <MESSAGE value="Changed file structure." />
     <MESSAGE value="Added Anu's file to CMake.  Now the whole project builds.  Next is to incorporate the already created data structures within Anu's code." />
     <MESSAGE value="Added Anu's file and started editing.  I cannot get her files to run,though they compile." />
@@ -1072,7 +1064,8 @@
     <MESSAGE value="try with 2.8.7" />
     <MESSAGE value="Added constructor to l2 controller.  I also added l1 and l2 controller objects within processor.c's run_processor." />
     <MESSAGE value="Processor now adds to controller queues instead of directory writing.  We will need dependecy inversion to add to the actual l1 controller." />
-    <option name="LAST_COMMIT_MESSAGE" value="Processor now adds to controller queues instead of directory writing.  We will need dependecy inversion to add to the actual l1 controller." />
+    <MESSAGE value="Added an address to the instruction.  I also changed the input.txt reader to read a char* for our data.  I did not limit the size of this char* (yet)." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added an address to the instruction.  I also changed the input.txt reader to read a char* for our data.  I did not limit the size of this char* (yet)." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
