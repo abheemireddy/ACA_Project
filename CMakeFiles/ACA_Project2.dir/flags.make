@@ -6,5 +6,5 @@ C_FLAGS = -g   -std=gnu99
 
 C_DEFINES = 
 
-C_INCLUDES = -I/home/abheemireddy/ACA_Project/. -I/home/abheemireddy/ACA_Project/uthash/include 
+C_INCLUDES = -I/home/abheemireddy/ACA_Project/. -I/home/abheemireddy/ACA_Project/uthash_files/include 
 
