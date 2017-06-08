@@ -26,11 +26,13 @@
 void BuildL1Cache(Cache** cache){
     //create 2^8 sets
     //Cache cache = Constructor_Cache(2^8);
-    for(int i =0; i<1;i++){
+    int i;
+    int j;
+    for(i =0; i<1;i++){
         Address address1 = Constructor_Address("00000000000000000");
         Set set = Constructor_Set(4,address1);
         Set* pset = &set;
-        for(int j = 0;j< 1;j++){
+        for(j = 0;j< 1;j++){
             Block block = Constructor_Block(set.address);
             Block* pblock = &block;
 
