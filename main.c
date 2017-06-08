@@ -10,7 +10,9 @@
 int run_examples();
 
 int main(){
-    Processor processor = Constructor_Processor();
+    L1Controller l1Controller = Constructor_L1Controller();
+    L2Controller l2Controller = Constructor_L2Controller();
+    Processor processor = Constructor_Processor(&l1Controller,&l2Controller);
     processor.run_processor();
 
     run_examples();//Anu, these should help you with using the pre-created data structures

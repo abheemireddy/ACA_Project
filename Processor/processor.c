@@ -6,8 +6,10 @@
 #include <errno.h>
 #include <stdbool.h>
 
-Processor Constructor_Processor(){
+Processor Constructor_Processor(L1Controller* l1Controller,L2Controller* l2Controller){
     Processor processor = {};
+    processor.l1Controller = *l1Controller;
+    processor.l2Controller = *l2Controller;
     processor.run_processor = &run_processor;
     return processor;
 }
@@ -19,12 +21,9 @@ void print_current_directory(){
     }
 }
 
-void run_processor()
+void run_processor(Processor* processor)
 {
     print_current_directory();
-
-    L1Controller l1Controller = Constructor_L1Controller();
-    L2Controller l2Controller = Constructor_L2Controller();
 
 	FILE * f = fopen("input.txt", "r");
 	while (!feof(f))
@@ -58,7 +57,7 @@ void run_processor()
         {
             Instruction instruction = Constructor_Instruction(1,&value,addressStruct);
             Node node = Constructor_Node(instruction);
-            l2Controller.transferer.TransferQueue.Enqueue(&l2Controller.transferer.TransferQueue,&node);
+            processor->l2Controller.transferer.TransferQueue.Enqueue(&processor->l2Controller.transferer.TransferQueue,&node);
         }
         else if (operation == 2)
         {

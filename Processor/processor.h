@@ -14,11 +14,14 @@
 
 typedef struct ProcessorTag{
     void (*run_processor)();
+
+    L1Controller l1Controller;
+    L2Controller l2Controller;
 } Processor;
 
-Processor Constructor_Processor();
+Processor Constructor_Processor(L1Controller* l1Controller,L2Controller* l2Controller);
 
-void run_processor();
+void run_processor(Processor* processor);
 
 void print_current_directory();
 
