@@ -23,6 +23,9 @@ void run_processor()
 {
     print_current_directory();
 
+    L1Controller l1Controller = Constructor_L1Controller();
+    L2Controller l2Controller = Constructor_L2Controller();
+
 	FILE * f = fopen("input.txt", "r");
 	while (!feof(f))
 	{
@@ -50,6 +53,7 @@ void run_processor()
             printf("Invalid operation: %s. Aborting\n", instruction);
             break;
         }
+
         if (operation == 1)
         {
             L1_write(addressStruct, value);
