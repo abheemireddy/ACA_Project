@@ -16,6 +16,15 @@ Cache* Constructor_Cache(int numberOfSets){
     cache->CountSets = &CountSets;
     cache->replaceSet = &replaceSet;
     cache->print_sets = &print_sets;
+    int i;
+    int setAddress = 0;
+    for(i = 0;i<cache->NumberOfSets;i++){
+        char* bitString = int2bin(setAddress);
+        Address* address = Constructor_Address(bitString);
+        Set* set = Constructor_Set(4,address);
+        cache->putSet(&cache->HashTable,set);
+        setAddress += 8;
+    }
     return cache;
 }
 
