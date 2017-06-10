@@ -4,8 +4,8 @@
 
 #ifndef ACA_PROJECT_BUFFERS_H
 #define ACA_PROJECT_BUFFERS_H
-#include <uthash.h>
 #include <stdbool.h>
+#include <uthash_files/include/uthash.h>
 
 struct BlockTag;//forward declaration
 
@@ -22,7 +22,7 @@ typedef struct BufferTag {
 
 } Buffer;
 
-Buffer Constructor_Buffer();
+Buffer* Constructor_Buffer();
 
 void removeBlockFromBuffer(struct BlockTag** HashTable,struct BlockTag* blockToRemove);
 void putBlockInBuffer(struct BlockTag** HashTable,struct BlockTag *value);
