@@ -40,7 +40,7 @@ int run_examples() {
     AddTooManyBlocksTest();
     Work_with_queue();
 
-    Cache* cache = Constructor_Cache(256);
+    Cache* cache = Constructor_Cache(8);
     BuildL1Cache(cache);
 
     Sample_Add_Overlapping_Key_to_set();

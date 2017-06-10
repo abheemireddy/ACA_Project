@@ -6,7 +6,7 @@
 Block* Constructor_Block(Address* address){
     Block* block = malloc(sizeof(Block));//{dirtyBit:false,validBit:true,useFrequency:0,address:address,isIdle:false};
     block->dirtyBit = false;
-    block->validBit = true;
+    block->validBit = false;
     block->useFrequency = 0;
     block->address = address;
     block->isIdle = false;

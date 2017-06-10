@@ -26,9 +26,11 @@ Set* Constructor_Set(int numberOfBlocks,Address* address){
 
     int i;
     int setAddress = address->bitStringValue;
+    printf("\nstart of set\n");
     for(i = 0;i<set->numberOfBlocks;i++){
         char* bitString = int2bin(setAddress);
         Address* address = Constructor_Address(bitString);
+        printf("block bitString:%s\n",address->bitString);
         Block* block = Constructor_Block(address);
         block->validBit = false;
         set->put(&set->HashTable,block);
