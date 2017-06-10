@@ -17,16 +17,16 @@ int main(){
     L2Controller* l2Controller = Constructor_L2Controller();
     Processor* processor = Constructor_Processor(l1Controller,l2Controller);
 
-    processor->StoreFileInstructionsIntoProcessorQueue(processor);
+    StoreFileInstructionsIntoProcessorQueue(processor);
 
     int ClockCycleCount = 0;
-    while(!processor->InstructionHolder->TransferQueue->isEmpty(processor->InstructionHolder->TransferQueue)){
-        if(!processor->InstructionHolder->TransferQueue->isEmpty(processor->InstructionHolder->TransferQueue)){
-            Instruction nextInstructionFromProcessor = processor->InstructionHolder->GetNextInstruction(processor->InstructionHolder);
+    while(!isEmpty(processor->InstructionHolder->TransferQueue)){
+        if(!isEmpty(processor->InstructionHolder->TransferQueue)){
+            Instruction nextInstructionFromProcessor = GetNextInstruction(processor->InstructionHolder);
             printf("%d\n",nextInstructionFromProcessor.instruction);
-            l1Controller->transferer->TransferQueue->Enqueue(l1Controller->transferer->TransferQueue,nextInstructionFromProcessor);
+            Enqueue(l1Controller->transferer->TransferQueue,nextInstructionFromProcessor);
 
-            Instruction nextInstructionForL1ControllerToProcess = l1Controller->transferer->GetNextInstruction(l1Controller->transferer);
+            Instruction nextInstructionForL1ControllerToProcess = GetNextInstruction(l1Controller->transferer);
 
         }
         ClockCycleCount += 1;
