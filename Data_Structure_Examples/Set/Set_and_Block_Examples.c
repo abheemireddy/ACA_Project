@@ -9,9 +9,9 @@ void ExampleUsingSetHash(){
     Set* set = Constructor_Set(4,*address1);
     Block* case1 = Constructor_Block(*address1);
     Block* case2 = Constructor_Block(*address2);
-    set->put(&set->HashTable,case1);
-    set->put(&set->HashTable,case2);
-    Block* returned = set->get(&set->HashTable,case2->address.bitString);
+    put(&set->HashTable,case1);
+    put(&set->HashTable,case2);
+    Block* returned = get(&set->HashTable,case2->address.bitString);
     printf("use Frequency: %d\n",returned->useFrequency);
 }
 Block* GetDummyBlockInstance(char* data){
@@ -65,15 +65,15 @@ void AddTooManyBlocksTest(){
     IncrementBlockFrequency(&block7);
     IncrementBlockFrequency(&block7);
     IncrementBlockFrequency(&block7);
-    set->put(&set->HashTable,block1);
-    set->put(&set->HashTable,block2);
-    set->put(&set->HashTable,block3);
-    set->put(&set->HashTable,block4);
-    set->put(&set->HashTable,block5);
-    set->put(&set->HashTable,block6);
-    set->put(&set->HashTable,block7);
+    put(&set->HashTable,block1);
+    put(&set->HashTable,block2);
+    put(&set->HashTable,block3);
+    put(&set->HashTable,block4);
+    put(&set->HashTable,block5);
+    put(&set->HashTable,block6);
+    put(&set->HashTable,block7);
 
-    printf("\nCount:%d\n",set->Count(&set->HashTable));
+    printf("\nCount:%d\n",Count(&set->HashTable));
 
     set->SortHash(&set->HashTable);
     print_blocks_in_set(&set->HashTable);

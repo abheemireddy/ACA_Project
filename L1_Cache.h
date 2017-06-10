@@ -40,9 +40,9 @@ void BuildL1Cache(Cache* cache){
             int cache_count = block->CountCacheLines(&block->HashTable);
             printf("\ncache:%d\n",cache_count);
 
-            set->put(&set->HashTable,block);
+            put(&set->HashTable,block);
         }
-        int count = set->Count(&set->HashTable);
+        int count = Count(&set->HashTable);
         printf("\nset:%d\n",count);
         cache->putSet(&cache->HashTable,set);
     }
@@ -55,20 +55,20 @@ void Sample_Add_Overlapping_Key_to_set(){
 
     Block* block = Constructor_Block(set->address);
 
-    set->put(&set->HashTable,block);
+    put(&set->HashTable,block);
 
     Block* newBlock = Constructor_Block(set->address);
 
-    Block* alreadyInHashTable = set->get(&set->HashTable,newBlock->address.bitString);
+    Block* alreadyInHashTable = get(&set->HashTable,newBlock->address.bitString);
     if(alreadyInHashTable != NULL){
-        set->removeFromTable(&set->HashTable,alreadyInHashTable);
+        removeFromTable(&set->HashTable,alreadyInHashTable);
         //write alreadyInHashTable to write-buffer or victim cache
-        int numberOfBlocksInSet = set->Count(&set->HashTable);
+        int numberOfBlocksInSet = Count(&set->HashTable);
         printf("Number of blocks in current set:%d\n",numberOfBlocksInSet);
 
         //put new block into set's HashTable
-        set->put(&set->HashTable,newBlock);
-        numberOfBlocksInSet = set->Count(&set->HashTable);
+        put(&set->HashTable,newBlock);
+        numberOfBlocksInSet = Count(&set->HashTable);
         printf("Number of blocks in current set:%d\n",numberOfBlocksInSet);
     }
 

@@ -12,17 +12,6 @@ Set* Constructor_Set(int numberOfBlocks,Address address){
     set->address = address;
     set->numberOfBlocks = numberOfBlocks;
     set->HashTable = NULL;
-    set->put = &put;
-    set->get = &get;
-    set->SortHash = &SortHash;
-    //set.AddBlock = &AddBlock;
-    set->getByUseFrequency = &getByUseFrequency;
-    set->removeFromTable = &removeFromTable;
-    set->delete_all = &delete_all;
-    set->Count = &Count;
-    set->replaceByUseFrequency = &replaceByUseFrequency;
-    set->print_blocks_in_set = &print_blocks_in_set;
-    set->IsBlockInSet = &IsBlockInSet;
 
     int i;
     int setAddress = address.bitStringValue;
@@ -31,16 +20,14 @@ Set* Constructor_Set(int numberOfBlocks,Address address){
         Address* address = Constructor_Address(bitString);
         Block* block = Constructor_Block(*address);
         block->validBit = false;
-        set->put(&set->HashTable,block);
+        put(&set->HashTable,block);
         setAddress += 1;
     }
-    int count = set->Count(&set->HashTable);
-    printf("\nNumber of blocks in set:%d\n",count);
     return set;
 }
 
 bool IsBlockInSet(Set set,Block newBlock){
-    Block* alreadyInHashTable = set.get(&set.HashTable,newBlock.address.bitString);
+    Block* alreadyInHashTable = get(&set.HashTable,newBlock.address.bitString);
     if(alreadyInHashTable != NULL){
         return true;
     }else{
