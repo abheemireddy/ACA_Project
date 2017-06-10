@@ -15,6 +15,7 @@
 typedef struct ProcessorTag{
     void (*run_processor)();
 
+    Transferer* InstructionHolder;
     L1Controller l1Controller;
     L2Controller l2Controller;
 } Processor;

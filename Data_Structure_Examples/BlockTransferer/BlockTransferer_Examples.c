@@ -8,12 +8,10 @@ void StoreAndGetFromBlockTransferer(){
     Transferer* transferer = Constructor_Transferer();
     Instruction* instruction = Constructor_Instruction(0,"this is the stored data",address1);
 
-    Node* node = Constructor_Node(instruction);
-    transferer->TransferQueue->Enqueue(transferer->TransferQueue,node);
+    transferer->TransferQueue->Enqueue(transferer->TransferQueue,instruction);
 
     instruction = Constructor_Instruction(1,"different data",address1);
-    Node* node2 = Constructor_Node(instruction);
-    transferer->TransferQueue->Enqueue(transferer->TransferQueue,node);
+    transferer->TransferQueue->Enqueue(transferer->TransferQueue,instruction);
 
     Instruction* nextToBeExecuted =  transferer->GetNextInstruction(transferer);
     printf("\nNext Instruction's data:%s",nextToBeExecuted->data);

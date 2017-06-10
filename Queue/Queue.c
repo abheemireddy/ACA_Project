@@ -48,7 +48,8 @@ void print_queue(Queue* queue){
     }
 }
 
-bool Enqueue(Queue *queue, Node *node) {
+bool Enqueue(Queue *queue, Instruction* instruction) {
+    Node* node = Constructor_Node(instruction);
     if ((queue == NULL) || (node == NULL)) {
         return false;
     }
