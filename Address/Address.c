@@ -36,7 +36,7 @@ char *int2bin(int n) { //function from quora
 }
 
 Address* Constructor_Address(char* bitString){
-    char* output = malloc(9);
+    char output[9];
     GetChar(bitString,0,8,output);
     char* TagString = output;
     //output = malloc(7);

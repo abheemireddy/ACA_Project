@@ -36,7 +36,6 @@ int main(){
     //run_examples();//Examples of using the data structures
 }
 
-
 int run_examples() {
     AddCacheLinesToBlock();
     ExampleUsingSetHash();

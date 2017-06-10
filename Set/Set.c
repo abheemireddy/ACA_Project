@@ -26,16 +26,16 @@ Set* Constructor_Set(int numberOfBlocks,Address address){
 
     int i;
     int setAddress = address.bitStringValue;
-    printf("\nstart of set:%s\n",set->address.bitString);
     for(i = 0;i<set->numberOfBlocks;i++){
         char* bitString = int2bin(setAddress);
         Address* address = Constructor_Address(bitString);
-        printf("block bitString:%s\n",address->bitString);
         Block* block = Constructor_Block(*address);
         block->validBit = false;
         set->put(&set->HashTable,block);
         setAddress += 1;
     }
+    int count = set->Count(&set->HashTable);
+    printf("\nNumber of blocks in set:%d\n",count);
     return set;
 }
 

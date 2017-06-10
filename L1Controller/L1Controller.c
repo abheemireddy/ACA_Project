@@ -2,12 +2,14 @@
 
 L1Controller* Constructor_L1Controller(){
     L1Controller* l1Controller = malloc(sizeof(l1Controller));
-    l1Controller->L1_read = &L1_read;
-    l1Controller->L1_write = &L1_write;
-	l1Controller->transferer = Constructor_Transferer();
-    l1Controller->ProcessInstruction = &ProcessInstruction;
-    l1Controller->cache = Constructor_Cache(50);
+    l1Controller->cache = Constructor_Cache(64);
     l1Controller->transferer = Constructor_Transferer();
+
+    /*l1Controller->L1_read = &L1_read;
+    l1Controller->L1_write = &L1_write;
+    l1Controller->ProcessInstruction = &ProcessInstruction;*/
+    int count = l1Controller->cache->CountSets(&l1Controller->cache->HashTable);
+    printf("\nNumber of sets in cache Hashtable:%d\n",count);
     return l1Controller;
 }
 

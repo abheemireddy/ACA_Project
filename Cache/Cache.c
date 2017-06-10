@@ -24,7 +24,7 @@ Cache* Constructor_Cache(int numberOfSets){
         strcpy(bitString,int2bin(setAddress));
         Address* address = Constructor_Address(bitString);
         Set* set = Constructor_Set(4,*address);
-        //cache->putSet(&cache->HashTable,set);
+        cache->putSet(&cache->HashTable,set);
         setAddress += 4;
     }
     return cache;
