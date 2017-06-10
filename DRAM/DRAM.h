@@ -11,7 +11,7 @@
 struct BlockTag;//forward declaration
 
 typedef struct DRAMTag {
-    Transferer transferer;
+    Transferer* transferer;
     UT_hash_handle hh; /* make this structure hashable*/
     struct BlockTag *HashTable; //This is my hashTable for blocks
 

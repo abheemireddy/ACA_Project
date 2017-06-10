@@ -5,28 +5,31 @@
 
 //used queue implementation from https://gist.github.com/ArnonEilat/4471278
 
-Instruction Constructor_Instruction(int instructionNumber,char* data,Address address){
-    Instruction instruction = {instruction:instructionNumber,address:address, data:data};
-
+Instruction* Constructor_Instruction(int instructionNumber,char* data,Address address){
+    Instruction* instruction = malloc(sizeof(Instruction));
+    instruction->instruction = instructionNumber;
+    instruction->address = address;
+    instruction->data = data;
     return instruction;
 }
 
-Node Constructor_Node(Instruction instruction){
-    Node node = {data:instruction};
+Node* Constructor_Node(Instruction* instruction){
+    Node* node = malloc(sizeof(Node));
+    node->data = instruction;
     return node;
 }
 
-Queue Queue_Constructor() {
-    Queue queue = {};
-    queue.limit = 10000;
-    queue.size = 0;
-    queue.head = NULL;
-    queue.tail = NULL;
-    queue.Dequeue = &Dequeue;
-    queue.Enqueue = &Enqueue;
-    queue.isEmpty = &isEmpty;
-    queue.Queue_Destructor = &Queue_Destructor;
-    queue.print_queue = &print_queue;
+Queue* Queue_Constructor() {
+    Queue* queue = malloc(sizeof(Queue));
+    queue->limit = 10000;
+    queue->size = 0;
+    queue->head = NULL;
+    queue->tail = NULL;
+    queue->Dequeue = &Dequeue;
+    queue->Enqueue = &Enqueue;
+    queue->isEmpty = &isEmpty;
+    queue->Queue_Destructor = &Queue_Destructor;
+    queue->print_queue = &print_queue;
     return queue;
 }
 
@@ -40,7 +43,7 @@ void Queue_Destructor(Queue *queue) {
 void print_queue(Queue* queue){
     Node* current = queue->head;
     while (current->prev != NULL) {
-        printf("Node Instruction:%s\n",current->data.data);
+        printf("Node Instruction:%s\n",current->data->data);
         current = current->prev;
     }
 }
@@ -68,11 +71,10 @@ bool Enqueue(Queue *queue, Node *node) {
     return true;
 }
 
-Instruction Dequeue(Queue *queue) {
+Instruction* Dequeue(Queue *queue) {
     Node *node;
     if (isEmpty(queue)){
-        Instruction emptyInstruction = {data:NULL};
-        return emptyInstruction;
+        return NULL;
     }
     node = queue->head;
     //free(node);

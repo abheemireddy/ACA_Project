@@ -19,7 +19,7 @@ typedef struct ProcessorTag{
     L2Controller l2Controller;
 } Processor;
 
-Processor Constructor_Processor(L1Controller* l1Controller,L2Controller* l2Controller);
+Processor* Constructor_Processor(L1Controller* l1Controller,L2Controller* l2Controller);
 
 void run_processor(Processor* processor);
 

@@ -7,12 +7,12 @@
 #include <BlockTransferer/BlockTransferer.h>
 
 typedef struct L1ControllerTag{
-    Transferer transferer;
+    Transferer* transferer;
     void (*L1_write)(Address address, int value);
     int (*L1_read)(Address address);
 } L1Controller;
 
-L1Controller Constructor_L1Controller();
+L1Controller* Constructor_L1Controller();
 
 void L1_write(Address address, int value);
 int L1_read(Address address);

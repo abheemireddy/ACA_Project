@@ -4,16 +4,15 @@
 
 #include "BlockTransferer.h"
 
-Transferer Constructor_Transferer(){
-    Transferer transferer = {};
-    transferer.GetNextInstruction = &GetNextInstruction;
-    Queue queue = Queue_Constructor();
-    transferer.TransferQueue = queue;
+Transferer* Constructor_Transferer(){
+    Transferer* transferer = malloc(sizeof(Transferer));
+    transferer->GetNextInstruction = &GetNextInstruction;
+    transferer->TransferQueue = Queue_Constructor();
     return transferer;
 }
 
-Instruction GetNextInstruction(Transferer* transferer){
-    Queue queue = transferer->TransferQueue;
-    Instruction nextInstruction = queue.Dequeue(&queue);
+Instruction* GetNextInstruction(Transferer* transferer){
+    Queue* queue = transferer->TransferQueue;
+    Instruction* nextInstruction = queue->Dequeue(queue);
     return nextInstruction;
 }

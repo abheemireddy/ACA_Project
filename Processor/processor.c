@@ -6,11 +6,11 @@
 #include <errno.h>
 #include <stdbool.h>
 
-Processor Constructor_Processor(L1Controller* l1Controller,L2Controller* l2Controller){
-    Processor processor = {};
-    processor.l1Controller = *l1Controller;
-    processor.l2Controller = *l2Controller;
-    processor.run_processor = &run_processor;
+Processor* Constructor_Processor(L1Controller* l1Controller,L2Controller* l2Controller){
+    Processor* processor = malloc(sizeof(Processor));
+    processor->l1Controller = *l1Controller;
+    processor->l2Controller = *l2Controller;
+    processor->run_processor = &run_processor;
     return processor;
 }
 
@@ -23,6 +23,16 @@ void print_current_directory(){
 
 void run_processor(Processor* processor)
 {
+
+
+    Address addressStruct = Constructor_Address("00000000000011011");
+    char* value = "this is the data";
+    Instruction* instruction = Constructor_Instruction(1,value,addressStruct);
+    Node* node = Constructor_Node(instruction);
+    Queue* transferer = processor->l2Controller.transferer->TransferQueue;
+    Queue* ptransferer = transferer;
+    processor->l2Controller.transferer->TransferQueue->Enqueue(ptransferer,node);
+
     print_current_directory();
 
 	FILE * f = fopen("input.txt", "r");
@@ -55,15 +65,15 @@ void run_processor(Processor* processor)
 
         if (operation == 1)
         {
-            Instruction instruction = Constructor_Instruction(1,&value,addressStruct);
-            Node node = Constructor_Node(instruction);
-            (*processor).l2Controller.transferer.TransferQueue.Enqueue(&(*processor).l2Controller.transferer.TransferQueue,&node);
+            Instruction* instruction = Constructor_Instruction(1,&value,addressStruct);
+            Node* node = Constructor_Node(instruction);
+            processor->l2Controller.transferer->TransferQueue->Enqueue(processor->l2Controller.transferer->TransferQueue,node);
         }
         else if (operation == 2)
         {
-            Instruction instruction = Constructor_Instruction(2,NULL,addressStruct);
-            Node node = Constructor_Node(instruction);
-            (*processor).l2Controller.transferer.TransferQueue.Enqueue(&(*processor).l2Controller.transferer.TransferQueue,&node);
+            Instruction* instruction = Constructor_Instruction(2,NULL,addressStruct);
+            Node* node = Constructor_Node(instruction);
+            processor->l2Controller.transferer->TransferQueue->Enqueue(processor->l2Controller.transferer->TransferQueue,node);
             //int value = L1_read(addressStruct);
             printf("Result: %d\n", value);
         }

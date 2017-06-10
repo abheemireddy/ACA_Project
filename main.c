@@ -10,10 +10,21 @@
 int run_examples();
 
 int main(){
-    L1Controller l1Controller = Constructor_L1Controller();
-    L2Controller l2Controller = Constructor_L2Controller();
-    Processor processor = Constructor_Processor(&l1Controller,&l2Controller);
-    processor.run_processor();
+    L1Controller* l1Controller = Constructor_L1Controller();
+    Transferer* transferer1 = Constructor_Transferer();
+    Queue* queue1 = Queue_Constructor();
+    transferer1->TransferQueue = queue1;
+    l1Controller->transferer = transferer1;
+
+    L2Controller* l2Controller = Constructor_L2Controller();
+    Transferer* transferer2 = Constructor_Transferer();
+    Queue* queue2 = Queue_Constructor();
+    transferer2->TransferQueue = queue2;
+    l2Controller->transferer = transferer2;
+    Processor* processor = Constructor_Processor(l1Controller,l2Controller);
+
+    processor->run_processor(processor);
+
 
     run_examples();//Anu, these should help you with using the pre-created data structures
 }
