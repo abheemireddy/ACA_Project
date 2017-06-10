@@ -4,8 +4,8 @@
 #include "Block_CacheLine_HashTable_Examples.h"
 
 int AddCacheLinesToBlock(){
-    Address* address1 = Constructor_Address("00000000000000000");
-    Address* address2 = Constructor_Address("00000000000000001");
+    Address* address1 = Constructor_Address("0000000000000000");
+    Address* address2 = Constructor_Address("0000000000000001");
     Block* block = Constructor_Block(address1);
     CacheLine* case1 = Constructor_CacheLine(address1,"some data");
     CacheLine* case2 = Constructor_CacheLine(address2,"some other data");

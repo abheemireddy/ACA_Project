@@ -26,7 +26,7 @@ Set* Constructor_Set(int numberOfBlocks,Address* address){
 
     int i;
     int setAddress = address->bitStringValue;
-    printf("\nstart of set\n");
+    printf("\nstart of set:%s\n",set->address->bitString);
     for(i = 0;i<set->numberOfBlocks;i++){
         char* bitString = int2bin(setAddress);
         Address* address = Constructor_Address(bitString);

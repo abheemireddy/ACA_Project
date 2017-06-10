@@ -43,8 +43,8 @@ Address* Constructor_Address(char* bitString){
     output = malloc(7);
     GetChar(bitString,8,6,output);
     char* IndexString = output;
-    output = malloc(4);
-    GetChar(bitString,14,3,output);
+    output = malloc(3);
+    GetChar(bitString,14,2,output);
     char* OffsetString = output;
     int Tag = fromBinary(TagString);
     int Index = fromBinary(IndexString);
