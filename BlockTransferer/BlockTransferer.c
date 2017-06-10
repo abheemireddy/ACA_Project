@@ -6,7 +6,6 @@
 
 Transferer* Constructor_Transferer(){
     Transferer* transferer = malloc(sizeof(Transferer));
-    transferer->GetNextInstruction = &GetNextInstruction;
     transferer->TransferQueue = Queue_Constructor();
     return transferer;
 }

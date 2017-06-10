@@ -2,9 +2,6 @@
 
 L2Controller* Constructor_L2Controller(){
     L2Controller* l2Controller = malloc(sizeof(L2Controller));
-    l2Controller->l2Read = &l2Read;
-    l2Controller->l2Write = &l2Write;
-    l2Controller->l2WriteBack = &l2WriteBack;
 	Transferer* transferer = Constructor_Transferer();
 	l2Controller->transferer = transferer;
     // TODO: create a queue of read instructions and initialize it.

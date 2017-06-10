@@ -11,7 +11,6 @@ Processor* Constructor_Processor(L1Controller* l1Controller,L2Controller* l2Cont
     processor->InstructionHolder = Constructor_Transferer();
     processor->l1Controller = *l1Controller;
     processor->l2Controller = *l2Controller;
-    processor->StoreFileInstructionsIntoProcessorQueue = &StoreFileInstructionsIntoProcessorQueue;
     return processor;
 }
 

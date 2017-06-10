@@ -9,12 +9,6 @@ Buffer* Constructor_Buffer(){
     Buffer* buffer = malloc(sizeof(Buffer));
     //Transferer transferer = Con
     buffer->HashTable = NULL;
-    buffer->putBlock = &putBlockInBuffer;
-    buffer->getBlock = &getBlockFromBuffer;
-    buffer->removeBlockFromBuffer = &removeBlockFromBuffer;
-    buffer->CountBlocks = &CountBlocksInBuffer;
-    buffer->print_all_blocks = &print_all_blocks_in_buffer;
-    buffer->removeBlockFromBuffer = &removeBlockFromBuffer;
     return buffer;
 }
 

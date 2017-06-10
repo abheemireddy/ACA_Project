@@ -11,15 +11,6 @@ Block* Constructor_Block(Address address){
     //block->address = malloc(sizeof(Address));
     block->address = address;
     block->isIdle = false;
-    block->IsInBlock = &IsInBlock;
-    //HashTable Functions
-    block->putCacheLine = &putCacheLine;
-    block->replaceCacheLine = &replaceCacheLine;
-    block->getCacheLineByOffset = &getCacheLineByOffset;
-    block->removeCacheLineFromTable = &removeCacheLineFromTable;
-    block->deleteAllCacheLine = &deleteAllCacheLine;
-    block->CountCacheLines = &CountCacheLines;
-    block->print_cache_lines_in_set = &print_cache_lines_in_set;
     block->HashTable = NULL;
     return block;
 }

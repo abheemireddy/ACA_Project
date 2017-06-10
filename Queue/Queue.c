@@ -29,11 +29,6 @@ Queue* Queue_Constructor() {
     queue->size = 0;
     queue->head = NULL;
     queue->tail = NULL;
-    queue->Dequeue = &Dequeue;
-    queue->Enqueue = &Enqueue;
-    queue->isEmpty = &isEmpty;
-    queue->Queue_Destructor = &Queue_Destructor;
-    queue->print_queue = &print_queue;
     return queue;
 }
 

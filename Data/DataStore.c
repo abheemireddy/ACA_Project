@@ -8,8 +8,6 @@
 
 DataStore Constructor_DataStore(){
     DataStore data = {currentLine:0};
-    data.StoreData = &StoreData;
-    data.GetData = &GetData;
     return data;
 }
 
