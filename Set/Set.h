@@ -37,7 +37,6 @@ void AddBlock(Set set,struct BlockTag** HashTable,struct BlockTag** blockToAdd);
 //HashTable functions
 bool IsBlockInSet(struct SetTag set,struct BlockTag newBlock);
 void put(struct BlockTag** HashTable,struct BlockTag *value);
-void replaceByUseFrequency(struct BlockTag** HashTable,int key);
 struct BlockTag* getByUseFrequency(struct BlockTag** HashTable,int key);
 void removeFromTable(struct BlockTag** HashTable,struct BlockTag *blockToRemove);
 void delete_all(struct BlockTag** HashTable);

@@ -20,14 +20,15 @@ Set* Constructor_Set(int numberOfBlocks,Address address){
         Address* address = Constructor_Address(bitString);
         Block* block = Constructor_Block(*address);
         block->validBit = false;
+        block->dirtyBit = false;
         put(&set->HashTable,block);
-        setAddress += 512;
+        setAddress += 256;
     }
     return set;
 }
 
 bool IsBlockInSet(Set set,Block newBlock){
-    Block* alreadyInHashTable = get(&set.HashTable,newBlock.address.bitString);
+    Block* alreadyInHashTable = get(&set.HashTable,newBlock.address.Tag);
     if(alreadyInHashTable != NULL){
         return true;
     }else{
@@ -63,17 +64,10 @@ void replace(UT_hash_handle hh,CacheLine** HashTable,CacheLine *value) {
     }
 }
 
-//look up item in hashmap
-Block* getByUseFrequency(Block** HashTable,int key) {
-    Block *hashTableStoresInThisBlock;
-
-    HASH_FIND_INT( *HashTable, &key, hashTableStoresInThisBlock );//find block_id and put into s
-    return hashTableStoresInThisBlock;
-}
 Block* get(Block** HashTable,int key) {
     Block *hashTableStoresInThisBlock;
 
-    HASH_FIND_INT( *HashTable, key, hashTableStoresInThisBlock );//find block_id and put into hashTableStoresInThisBlock
+    HASH_FIND_INT( *HashTable, &key, hashTableStoresInThisBlock );//find block_id and put into hashTableStoresInThisBlock
     return hashTableStoresInThisBlock;
 }
 
