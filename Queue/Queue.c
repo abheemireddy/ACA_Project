@@ -5,11 +5,15 @@
 
 //used queue implementation from https://gist.github.com/ArnonEilat/4471278
 
-Instruction* Constructor_Instruction(int instructionNumber,char data[64],Address* address){
+Instruction* Constructor_Instruction(int instructionNumber,char data[64],Address address){
     Instruction* instruction = malloc(sizeof(Instruction));
     instruction->instruction = instructionNumber;
     instruction->address = address;
-    strcpy(instruction->data,data);
+    if(data != NULL){
+        strcpy(instruction->data,data);
+    }else{
+        data = NULL;
+    }
     return instruction;
 }
 
@@ -73,14 +77,12 @@ bool Enqueue(Queue *queue, Instruction instruction) {
 }
 
 Instruction Dequeue(Queue *queue) {
-    Node *node;
     if (isEmpty(queue)){
         Instruction emptyInstruction = {};
         printf("Trying to dequeue from empty queue");
         return emptyInstruction;
     }
-    node = queue->head;
-    free(node);
+    Node* node = queue->head;
     queue->head = (queue->head)->prev;
     queue->size -= 1;
     return node->data;

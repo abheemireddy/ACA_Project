@@ -11,9 +11,10 @@
 struct BlockTag;//forward declaration
 
 typedef struct SetTag {
-
     int numberOfBlocks;
-
+    Address address;
+    UT_hash_handle hh;
+    struct BlockTag *HashTable;
 
     void (*AddBlock)(struct SetTag set,struct BlockTag** HashTable,struct BlockTag** blockToAdd);
 
@@ -28,16 +29,6 @@ typedef struct SetTag {
     struct BlockTag* (*get)(struct BlockTag** HashTable,char* key);
     void (*SortHash)(struct BlockTag** HashTable);
     void (*print_blocks_in_set)(struct BlockTag** HashTable);
-
-    Address address;
-
-    //---------Used in Cache HashMap to find set
-    UT_hash_handle hh; /* make this structure hashable*/
-    //---------Used in HashMap
-
-    struct BlockTag *HashTable; //This is my hashTable for blocks
-    //contain blocks
-    //maybe store how many blocks
 } Set;
 
 Set* Constructor_Set(int numberOfBlocks,Address address);

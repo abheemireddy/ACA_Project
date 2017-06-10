@@ -11,7 +11,6 @@ Block* Constructor_Block(Address address){
     //block->address = malloc(sizeof(Address));
     block->address = address;
     block->isIdle = false;
-    //*block.cacheLines = (struct CacheLineTag*)malloc(numberOfCacheLines*sizeof(struct CacheLineTag));
     block->IsInBlock = &IsInBlock;
     //HashTable Functions
     block->putCacheLine = &putCacheLine;
@@ -22,16 +21,11 @@ Block* Constructor_Block(Address address){
     block->CountCacheLines = &CountCacheLines;
     block->print_cache_lines_in_set = &print_cache_lines_in_set;
     block->HashTable = NULL;
-    //block->cacheLines = malloc(8*sizeof(CacheLine));
     return block;
 }
 
 void Set_Data(Block* block,Address address){
     block->address = address;
-}
-
-void SetCacheLines(Block* block,CacheLine* cacheLines[]){
-    block->cacheLines = cacheLines;
 }
 
 void IncrementBlockFrequency(Block** block){

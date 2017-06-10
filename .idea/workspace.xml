@@ -12,26 +12,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="874cd3ee-283a-48e2-bbb0-bde542e13d07" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/BlockTransferer/BlockTransferer.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/DRAM/DRAM.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/BlockTransferer/BlockTransferer_Examples.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/DRAM/DRAM_Examples.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Queue/Queue_the_examples.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/L1Controller/L1Controller.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/L2Controller/L2Controller.c.o" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Processor/processor.c.o" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ACA_Project2" afterPath="$PROJECT_DIR$/ACA_Project2" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/BlockTransferer/BlockTransferer.c.o" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/BlockTransferer/BlockTransferer.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/DRAM/DRAM.c.o" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/DRAM/DRAM.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/BlockTransferer/BlockTransferer_Examples.c.o" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/BlockTransferer/BlockTransferer_Examples.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/DRAM/DRAM_Examples.c.o" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/DRAM/DRAM_Examples.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Queue/Queue_the_examples.c.o" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Queue/Queue_the_examples.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/L1Controller/L1Controller.c.o" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/L1Controller/L1Controller.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/L2Controller/L2Controller.c.o" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/L2Controller/L2Controller.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Processor/processor.c.o" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Processor/processor.c.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Address/Address.c.o" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Address/Address.c.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Block/Block.c.o" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Block/Block.c.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.o" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Cache/Cache.c.o" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Cache/Cache.c.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/CacheLine/CacheLine.c.o" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/CacheLine/CacheLine.c.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Block/Block_CacheLine_HashTable_Examples.c.o" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Block/Block_CacheLine_HashTable_Examples.c.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Set/Set_and_Block_Examples.c.o" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Set/Set_and_Block_Examples.c.o" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Queue/Queue.c.o" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Queue/Queue.c.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Set/Set.c.o" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Set/Set.c.o" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/main.c.o" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/main.c.o" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BlockTransferer/BlockTransferer.c" afterPath="$PROJECT_DIR$/BlockTransferer/BlockTransferer.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BlockTransferer/BlockTransferer.h" afterPath="$PROJECT_DIR$/BlockTransferer/BlockTransferer.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Address/Address.h" afterPath="$PROJECT_DIR$/Address/Address.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Block/Block.c" afterPath="$PROJECT_DIR$/Block/Block.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Block/Block.h" afterPath="$PROJECT_DIR$/Block/Block.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cache/Cache.c" afterPath="$PROJECT_DIR$/Cache/Cache.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CacheLine/CacheLine.h" afterPath="$PROJECT_DIR$/CacheLine/CacheLine.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data_Structure_Examples/BlockTransferer/BlockTransferer_Examples.c" afterPath="$PROJECT_DIR$/Data_Structure_Examples/BlockTransferer/BlockTransferer_Examples.c" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data_Structure_Examples/Queue/Queue_the_examples.c" afterPath="$PROJECT_DIR$/Data_Structure_Examples/Queue/Queue_the_examples.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/L1Controller/L1Controller.c" afterPath="$PROJECT_DIR$/L1Controller/L1Controller.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/L1Controller/L1Controller.h" afterPath="$PROJECT_DIR$/L1Controller/L1Controller.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Processor/processor.c" afterPath="$PROJECT_DIR$/Processor/processor.c" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Queue/Queue.c" afterPath="$PROJECT_DIR$/Queue/Queue.c" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Queue/Queue.h" afterPath="$PROJECT_DIR$/Queue/Queue.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.c" afterPath="$PROJECT_DIR$/main.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Set/Set.h" afterPath="$PROJECT_DIR$/Set/Set.h" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <ignored path="$PROJECT_DIR$/CMakeFiles/" />
@@ -45,63 +58,73 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Block.c" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Block/Block.c">
+      <file leaf-file-name="Cache.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Cache/Cache.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+            <state relative-caret-position="127">
+              <caret line="19" column="31" lean-forward="true" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.c" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main.c">
+      <file leaf-file-name="CacheController.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CacheController/CacheController.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
-              <caret line="26" column="101" lean-forward="false" selection-start-line="26" selection-start-column="101" selection-end-line="26" selection-end-column="101" />
+            <state relative-caret-position="198">
+              <caret line="11" column="18" lean-forward="true" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CacheLine.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CacheLine/CacheLine.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="8" column="28" lean-forward="true" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
               <folding>
-                <element signature="e#0#32#0" expanded="true" />
+                <element signature="e#101#119#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="processor.c" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Processor/processor.c">
+      <file leaf-file-name="Block_CacheLine_HashTable_Examples.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Data_Structure_Examples/Block/Block_CacheLine_HashTable_Examples.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="41" column="47" lean-forward="true" selection-start-line="41" selection-start-column="47" selection-end-line="41" selection-end-column="47" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BlockTransferer_Examples.c" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Data_Structure_Examples/BlockTransferer/BlockTransferer_Examples.c">
+      <file leaf-file-name="DataStore.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Data/DataStore.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
+            <state relative-caret-position="180">
+              <caret line="10" column="37" lean-forward="false" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Set.h" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Set/Set.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="73">
               <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Queue.c" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Queue/Queue.c">
+      <file leaf-file-name="Block.c" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Block/Block.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1440">
-              <caret line="80" column="5" lean-forward="true" selection-start-line="80" selection-start-column="5" selection-end-line="80" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Queue_the_examples.c" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Data_Structure_Examples/Queue/Queue_the_examples.c">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="4" column="23" lean-forward="true" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+            <state relative-caret-position="-972">
+              <caret line="9" column="28" lean-forward="true" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -110,8 +133,8 @@
       <file leaf-file-name="BlockTransferer.c" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BlockTransferer/BlockTransferer.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="13" column="27" lean-forward="true" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
+            <state relative-caret-position="180">
+              <caret line="10" column="22" lean-forward="true" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -120,8 +143,8 @@
       <file leaf-file-name="BlockTransferer.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BlockTransferer/BlockTransferer.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="13" column="15" lean-forward="true" selection-start-line="13" selection-start-column="15" selection-end-line="13" selection-end-column="15" />
+            <state relative-caret-position="180">
+              <caret line="10" column="77" lean-forward="true" selection-start-line="10" selection-start-column="77" selection-end-line="10" selection-end-column="77" />
               <folding>
                 <element signature="e#114#138#0" expanded="true" />
               </folding>
@@ -129,11 +152,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Queue.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Queue/Queue.h">
+      <file leaf-file-name="buffers.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Buffers/buffers.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="24" column="7" lean-forward="true" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
+            <state relative-caret-position="234">
+              <caret line="14" column="40" lean-forward="false" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -143,15 +166,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>count</find>
-      <find>getCacheLine</find>
-      <find>HashTable</find>
-      <find>Block</find>
-      <find>struct Block</find>
-      <find>putSet</find>
-      <find>get</find>
-      <find>Set</find>
-      <find>BlockTag</find>
       <find>struct</find>
       <find>Count</find>
       <find>Cache</find>
@@ -173,6 +187,15 @@
       <find>node</find>
       <find>address</find>
       <find>char*</find>
+      <find>cacheLines</find>
+      <find>16</find>
+      <find>a</find>
+      <find>Addres</find>
+      <find>A</find>
+      <find>Address</find>
+      <find>[16]</find>
+      <find>bitString</find>
+      <find>Address*</find>
     </findStrings>
     <replaceStrings>
       <replace>SetTag</replace>
@@ -233,34 +256,34 @@
         <option value="$PROJECT_DIR$/L2Controller/L2Controller.h" />
         <option value="$PROJECT_DIR$/Buffers/buffers.h" />
         <option value="$PROJECT_DIR$/input.txt" />
-        <option value="$PROJECT_DIR$/L1Controller/L1Controller.h" />
         <option value="$PROJECT_DIR$/Cache/Cache.h" />
         <option value="$PROJECT_DIR$/Data_Structure_Examples/Set/Set_and_Block_Examples.h" />
-        <option value="$PROJECT_DIR$/L1Controller/L1Controller.c" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/Address/Address.h" />
-        <option value="$PROJECT_DIR$/Address/Address.c" />
-        <option value="$PROJECT_DIR$/Block/Block.h" />
-        <option value="$PROJECT_DIR$/Set/Set.h" />
-        <option value="$PROJECT_DIR$/CacheLine/CacheLine.h" />
         <option value="$PROJECT_DIR$/L1_Cache.h" />
         <option value="$PROJECT_DIR$/Set/Set.c" />
         <option value="$PROJECT_DIR$/CacheLine/CacheLine.c" />
-        <option value="$PROJECT_DIR$/Cache/Cache.c" />
         <option value="$PROJECT_DIR$/Data_Structure_Examples/Set/Set_and_Block_Examples.c" />
         <option value="$PROJECT_DIR$/Data_Structure_Examples/Block/Block_CacheLine_HashTable_Examples.c" />
         <option value="$PROJECT_DIR$/DRAM/DRAM.c" />
         <option value="$PROJECT_DIR$/Data_Structure_Examples/DRAM/DRAM_Examples.c" />
         <option value="$PROJECT_DIR$/Buffers/buffers.c" />
-        <option value="$PROJECT_DIR$/Block/Block.c" />
         <option value="$PROJECT_DIR$/BlockTransferer/BlockTransferer.c" />
         <option value="$PROJECT_DIR$/BlockTransferer/BlockTransferer.h" />
         <option value="$PROJECT_DIR$/main.c" />
+        <option value="$PROJECT_DIR$/Block/Block.c" />
+        <option value="$PROJECT_DIR$/Block/Block.h" />
+        <option value="$PROJECT_DIR$/L1Controller/L1Controller.h" />
+        <option value="$PROJECT_DIR$/Address/Address.h" />
+        <option value="$PROJECT_DIR$/CacheLine/CacheLine.h" />
         <option value="$PROJECT_DIR$/Queue/Queue.h" />
-        <option value="$PROJECT_DIR$/Queue/Queue.c" />
         <option value="$PROJECT_DIR$/Data_Structure_Examples/Queue/Queue_the_examples.c" />
         <option value="$PROJECT_DIR$/Processor/processor.c" />
         <option value="$PROJECT_DIR$/Data_Structure_Examples/BlockTransferer/BlockTransferer_Examples.c" />
+        <option value="$PROJECT_DIR$/Cache/Cache.c" />
+        <option value="$PROJECT_DIR$/Queue/Queue.c" />
+        <option value="$PROJECT_DIR$/L1Controller/L1Controller.c" />
+        <option value="$PROJECT_DIR$/Address/Address.c" />
+        <option value="$PROJECT_DIR$/Set/Set.h" />
       </list>
     </option>
   </component>
@@ -508,7 +531,35 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="Data" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ACA_Project" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ACA_Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="CacheLine" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ACA_Project" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ACA_Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CacheController" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -836,14 +887,7 @@
       <workItem from="1496713422788" duration="671000" />
       <workItem from="1496754373526" duration="32944000" />
       <workItem from="1496890028780" duration="2917000" />
-      <workItem from="1496947808980" duration="27558000" />
-    </task>
-    <task id="LOCAL-00109" summary="Added Transfer Queue to the Cache data structure.">
-      <created>1496784322335</created>
-      <option name="number" value="00109" />
-      <option name="presentableId" value="LOCAL-00109" />
-      <option name="project" value="LOCAL" />
-      <updated>1496784322336</updated>
+      <workItem from="1496947808980" duration="29629000" />
     </task>
     <task id="LOCAL-00110" summary="Adding DataStore for cache">
       <created>1496786984718</created>
@@ -1181,27 +1225,34 @@
       <option name="project" value="LOCAL" />
       <updated>1497122810964</updated>
     </task>
-    <option name="localTasksCounter" value="158" />
+    <task id="LOCAL-00158" summary="Changed Instruction Pointers">
+      <created>1497123565901</created>
+      <option name="number" value="00158" />
+      <option name="presentableId" value="LOCAL-00158" />
+      <option name="project" value="LOCAL" />
+      <updated>1497123565901</updated>
+    </task>
+    <option name="localTasksCounter" value="159" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="172285000" />
+    <option name="totallyTimeSpent" value="174356000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="954" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34900117" sideWeight="0.5601078" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34900117" sideWeight="0.5169811" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32902467" sideWeight="0.49811321" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32902467" sideWeight="0.612938" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34900117" sideWeight="0.48301888" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32079905" sideWeight="0.4156334" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32520324" sideWeight="0.49380055" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32902467" sideWeight="0.49595687" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32902467" sideWeight="0.38706198" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32902467" sideWeight="0.35633424" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1219,7 +1270,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added IsInSet function.  You can check if the block is already in the set." />
     <MESSAGE value="Added Transferer to L1 and L2 Controllers." />
     <MESSAGE value="added idle variable to block." />
     <MESSAGE value="working on getting it to build on loki" />
@@ -1244,7 +1294,8 @@
     <MESSAGE value="Working on constructing entire cache/sets as empty.  There is a problem when trying to add the 50th set.  I think it has to do with the bitString.  I am fixing this now." />
     <MESSAGE value="Changed address size to 16 bits instead of 17.  8 for tag, 6 for index, 2 for offset for the L1 Cache.  L2 Cache is larger with 1 offset bit." />
     <MESSAGE value="Fixing segmentation fault with allocating memory for the many structs." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixing segmentation fault with allocating memory for the many structs." />
+    <MESSAGE value="Changed Instruction Pointers" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed Instruction Pointers" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1257,20 +1308,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/aca/L1Data.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="14" lean-forward="false" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aca/L1Data.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="11" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/aca/L2Data.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
@@ -1282,14 +1319,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Data_Structure_Examples/BlockTransferer/BlockTransferer_Examples.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="5" lean-forward="false" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1333,70 +1362,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CacheController/CacheController.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CacheController/CacheController.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Data_Structure_Examples/DataStore/DataStore_Examples.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/L2Controller/L2Controller.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1782">
-          <caret line="99" column="0" lean-forward="true" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Data_Structure_Examples/Set/Set_and_Block_Examples.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="6" lean-forward="false" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Data_Structure_Examples/DRAM/DRAM_Examples.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Data_Structure_Examples/Block/Block_CacheLine_HashTable_Examples.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/L1Controller/L1Controller.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="46" lean-forward="false" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -1413,7 +1378,129 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/L2Controller/L2Controller.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="10" column="27" lean-forward="false" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/L1_Cache.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="57" column="36" lean-forward="true" selection-start-line="57" selection-start-column="36" selection-end-line="57" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Processor/processor.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="7" column="16" lean-forward="false" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="26" column="101" lean-forward="false" selection-start-line="26" selection-start-column="101" selection-end-line="26" selection-end-column="101" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/L1Controller/L1Controller.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/L2Controller/L2Controller.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1782">
+          <caret line="99" column="0" lean-forward="true" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Block/Block.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="32" lean-forward="true" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Buffers/buffers.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="43" column="25" lean-forward="true" selection-start-line="43" selection-start-column="25" selection-end-line="43" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CacheController/CacheController.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CacheLine/CacheLine.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data/DataStore.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="10" column="32" lean-forward="true" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data_Structure_Examples/Block/Block_CacheLine_HashTable_Examples.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="34" lean-forward="true" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data_Structure_Examples/BlockTransferer/BlockTransferer_Examples.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="5" lean-forward="false" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Data_Structure_Examples/DataStore/DataStore_Examples.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data_Structure_Examples/DataStore/DataStore_Examples.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data_Structure_Examples/DRAM/DRAM_Examples.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1429,246 +1516,208 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DRAM/DRAM.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="47">
-          <caret line="13" column="15" lean-forward="false" selection-start-line="13" selection-start-column="15" selection-end-line="13" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/L1Controller/L1Controller.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="10" column="17" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/L2Controller/L2Controller.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="10" column="27" lean-forward="false" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Address/Address.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="14" lean-forward="true" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Cache/Cache.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="20" column="32" lean-forward="false" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Buffers/buffers.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="18" lean-forward="false" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Block/Block.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="44" column="42" lean-forward="false" selection-start-line="44" selection-start-column="42" selection-end-line="44" selection-end-column="42" />
-          <folding>
-            <element signature="e#94#114#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Address/Address.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="10" column="14" lean-forward="true" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Set/Set.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="31" column="12" lean-forward="false" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CacheLine/CacheLine.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" column="40" lean-forward="true" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
-          <folding>
-            <element signature="e#101#119#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/L1_Cache.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="57" column="36" lean-forward="true" selection-start-line="57" selection-start-column="36" selection-end-line="57" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Set/Set.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="38" column="15" lean-forward="true" selection-start-line="38" selection-start-column="15" selection-end-line="38" selection-end-column="15" />
-          <folding>
-            <element signature="e#38#62#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CacheLine/CacheLine.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="22" lean-forward="true" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Cache/Cache.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="68" column="31" lean-forward="false" selection-start-line="68" selection-start-column="31" selection-end-line="68" selection-end-column="31" />
-          <folding>
-            <element signature="e#38#57#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Data_Structure_Examples/Set/Set_and_Block_Examples.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="61" column="34" lean-forward="true" selection-start-line="61" selection-start-column="34" selection-end-line="61" selection-end-column="34" />
+        <state relative-caret-position="235">
+          <caret line="68" column="26" lean-forward="false" selection-start-line="68" selection-start-column="26" selection-end-line="68" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Data_Structure_Examples/Block/Block_CacheLine_HashTable_Examples.c">
+    <entry file="file://$PROJECT_DIR$/Data_Structure_Examples/Set/Set_and_Block_Examples.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="68" lean-forward="true" selection-start-line="9" selection-start-column="68" selection-end-line="9" selection-end-column="68" />
+        <state relative-caret-position="216">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/DRAM/DRAM.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="49" column="13" lean-forward="true" selection-start-line="49" selection-start-column="13" selection-end-line="49" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Data_Structure_Examples/DRAM/DRAM_Examples.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Buffers/buffers.c">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="199">
-          <caret line="42" column="43" lean-forward="true" selection-start-line="42" selection-start-column="43" selection-end-line="42" selection-end-column="43" />
+          <caret line="42" column="35" lean-forward="false" selection-start-line="42" selection-start-column="35" selection-end-line="42" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Processor/processor.h">
+    <entry file="file://$PROJECT_DIR$/DRAM/DRAM.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="7" column="16" lean-forward="false" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+        <state relative-caret-position="217">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BlockTransferer/BlockTransferer.c">
+    <entry file="file://$PROJECT_DIR$/Set/Set.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="27" lean-forward="true" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BlockTransferer/BlockTransferer.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="15" lean-forward="true" selection-start-line="13" selection-start-column="15" selection-end-line="13" selection-end-column="15" />
-          <folding>
-            <element signature="e#114#138#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="26" column="101" lean-forward="false" selection-start-line="26" selection-start-column="101" selection-end-line="26" selection-end-column="101" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Queue/Queue.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="24" column="7" lean-forward="true" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Queue/Queue.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1440">
-          <caret line="80" column="5" lean-forward="true" selection-start-line="80" selection-start-column="5" selection-end-line="80" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Data_Structure_Examples/Queue/Queue_the_examples.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="23" lean-forward="true" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+        <state relative-caret-position="151">
+          <caret line="20" column="28" lean-forward="false" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Processor/processor.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="41" column="47" lean-forward="true" selection-start-line="41" selection-start-column="47" selection-end-line="41" selection-end-column="47" />
+        <state relative-caret-position="146">
+          <caret line="62" column="38" lean-forward="false" selection-start-line="62" selection-start-column="38" selection-end-line="62" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Data_Structure_Examples/BlockTransferer/BlockTransferer_Examples.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        <state relative-caret-position="216">
+          <caret line="12" column="62" lean-forward="false" selection-start-line="12" selection-start-column="62" selection-end-line="12" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Queue/Queue.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Cache/Cache.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="21" column="45" lean-forward="false" selection-start-line="21" selection-start-column="45" selection-end-line="21" selection-end-column="45" />
+          <folding>
+            <element signature="e#38#57#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data_Structure_Examples/Queue/Queue_the_examples.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="2" lean-forward="true" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Queue/Queue.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="92" column="21" lean-forward="true" selection-start-line="92" selection-start-column="21" selection-end-line="92" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/L1Controller/L1Controller.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="46" lean-forward="false" selection-start-line="8" selection-start-column="46" selection-end-line="8" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data_Structure_Examples/DRAM/DRAM_Examples.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="8" column="35" lean-forward="false" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Address/Address.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="56" column="7" lean-forward="true" selection-start-line="56" selection-start-column="7" selection-end-line="56" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Address/Address.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="12" column="15" lean-forward="true" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="15" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Block/Block.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        <state relative-caret-position="-972">
+          <caret line="9" column="28" lean-forward="true" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BlockTransferer/BlockTransferer.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="22" lean-forward="true" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BlockTransferer/BlockTransferer.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="77" lean-forward="true" selection-start-line="10" selection-start-column="77" selection-end-line="10" selection-end-column="77" />
+          <folding>
+            <element signature="e#114#138#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Buffers/buffers.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="14" column="40" lean-forward="false" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Cache/Cache.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="19" column="31" lean-forward="true" selection-start-line="19" selection-start-column="31" selection-end-line="19" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CacheController/CacheController.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="18" lean-forward="true" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CacheLine/CacheLine.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="28" lean-forward="true" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
+          <folding>
+            <element signature="e#101#119#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data_Structure_Examples/Block/Block_CacheLine_HashTable_Examples.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Data/DataStore.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="37" lean-forward="false" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Set/Set.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="73">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding />
         </state>
       </provider>

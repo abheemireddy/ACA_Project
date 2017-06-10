@@ -6,7 +6,7 @@ L1Controller* Constructor_L1Controller(){
     l1Controller->L1_write = &L1_write;
 	l1Controller->transferer = Constructor_Transferer();
     l1Controller->ProcessInstruction = &ProcessInstruction;
-    l1Controller->cache = Constructor_Cache(64);
+    l1Controller->cache = Constructor_Cache(50);
     l1Controller->transferer = Constructor_Transferer();
     return l1Controller;
 }
@@ -20,7 +20,7 @@ void ProcessInstruction(L1Controller* l1Controller,Instruction* instruction){
     }
 }
 
-void L1_write(Address address, char* value)
+void L1_write(Address address, char value[64])
 {
 	/*printf("P to L1C: CPUWrite (%d)\n", address.bitStringValue);
 	// check if address is valid

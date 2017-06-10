@@ -10,7 +10,8 @@
 typedef struct L1ControllerTag{
     Cache* cache;
     Transferer* transferer;
-    void (*L1_write)(Address address, char* value);
+
+    void (*L1_write)(Address address, char value[64]);
     int (*L1_read)(Address address);
     void (*ProcessInstruction)(struct L1ControllerTag* l1Controller,Instruction* instruction);
 } L1Controller;

@@ -20,10 +20,8 @@ Cache* Constructor_Cache(int numberOfSets){
     int setAddress = 0;
     for(i = 0;i<cache->NumberOfSets;i++){
         printf("cache on set number:%d\n",i);
-        if(i == 49){
-            int p = 5;
-        }
-        char* bitString = int2bin(setAddress);
+        char bitString[17];
+        strcpy(bitString,int2bin(setAddress));
         Address* address = Constructor_Address(bitString);
         Set* set = Constructor_Set(4,*address);
         //cache->putSet(&cache->HashTable,set);
