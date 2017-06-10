@@ -5,16 +5,17 @@
 #include <printf.h>
 #include "Cache.h"
 
-Cache Constructor_Cache(int numberOfSets){
-    Cache cache = {NumberOfSets:numberOfSets};
-    cache.HashTable = NULL;
-    cache.getSetByIndex = &getSetByIndex;
-    cache.putSet = &putSet;
-    cache.removeSetFromTable = &removeSetFromTable;
-    cache.deleteAllSet = &deleteAllSet;
-    cache.CountSets = &CountSets;
-    cache.replaceSet = &replaceSet;
-    cache.print_sets = &print_sets;
+Cache* Constructor_Cache(int numberOfSets){
+    Cache* cache = malloc(sizeof(Cache));
+    cache->NumberOfSets = numberOfSets;
+    cache->HashTable = NULL;
+    cache->getSetByIndex = &getSetByIndex;
+    cache->putSet = &putSet;
+    cache->removeSetFromTable = &removeSetFromTable;
+    cache->deleteAllSet = &deleteAllSet;
+    cache->CountSets = &CountSets;
+    cache->replaceSet = &replaceSet;
+    cache->print_sets = &print_sets;
     return cache;
 }
 

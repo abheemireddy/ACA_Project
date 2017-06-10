@@ -21,6 +21,10 @@ int main(){
         Instruction* nextInstructionFromProcessor = processor->InstructionHolder->GetNextInstruction(processor->InstructionHolder);
         if(nextInstructionFromProcessor != NULL){
             printf("%d\n",nextInstructionFromProcessor->instruction);
+            l1Controller->transferer->TransferQueue->Enqueue(l1Controller->transferer->TransferQueue,nextInstructionFromProcessor);
+
+            Instruction* nextInstructionForL1ControllerToProcess = l1Controller->transferer->GetNextInstruction(l1Controller->transferer);
+
         }
         ClockCycleCount += 1;
     }
@@ -36,9 +40,8 @@ int run_examples() {
     AddTooManyBlocksTest();
     Work_with_queue();
 
-    Cache cache = Constructor_Cache(256);
-    Cache* pcache = &cache;
-    BuildL1Cache(&pcache);
+    Cache* cache = Constructor_Cache(256);
+    BuildL1Cache(&cache);
 
     Sample_Add_Overlapping_Key_to_set();
 

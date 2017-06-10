@@ -5,13 +5,23 @@ L1Controller* Constructor_L1Controller(){
     l1Controller->L1_read = &L1_read;
     l1Controller->L1_write = &L1_write;
 	l1Controller->transferer = Constructor_Transferer();
+    l1Controller->ProcessInstruction = &ProcessInstruction;
+    l1Controller->cache = Constructor_Cache(64);
     return l1Controller;
 }
 
 
-void L1_write(Address address, int value)
+void ProcessInstruction(L1Controller* l1Controller,Instruction* instruction){
+    if(instruction->instruction == 1){
+        //l1Controller->L1_write(instruction->address,instruction->data);
+    }else if(instruction->instruction == 2){
+        //l1Controller->L1_read(instruction->address);
+    }
+}
+
+void L1_write(Address address, char* value)
 {
-	printf("P to L1C: CPUWrite (%d)\n", address.bitStringValue);
+	/*printf("P to L1C: CPUWrite (%d)\n", address.bitStringValue);
 	// check if address is valid
 	if (!L1Data[address.Index].valid) // block not valid
 	{
@@ -44,11 +54,12 @@ void L1_write(Address address, int value)
 		l2Read(address, L1Data[address.Index].data);  // get data from L2
 		printf("L2C to L1C: Data\n");
 
-	}
+	}*/
 }
 
 int L1_read(Address address)
 {
+    /*
 	printf("P to L1C: CPURead (%d)\n", address.bitStringValue);
 	// check if address is valid
 
@@ -109,7 +120,7 @@ int L1_read(Address address)
 		}
 		return L1Data[address.Index].data[address.Offset];
 
-	}
+	}*/
 
 	return -1;
 }

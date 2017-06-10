@@ -23,7 +23,7 @@ typedef struct CacheTag{
     void (*print_sets)(Set** HashTable);
 } Cache;
 
-Cache Constructor_Cache(int numberOfSets);
+Cache* Constructor_Cache(int numberOfSets);
 
 void putSet( Set** HashTable,  Set* value);
  Set* getSetByIndex( Set** HashTable,int key);
