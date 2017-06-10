@@ -23,58 +23,52 @@
 //Tag = 8 bits
 //Index = 6 bits
 //Offset = 3 bits
-void BuildL1Cache(Cache** cache){
+void BuildL1Cache(Cache* cache){
     //create 2^8 sets
     //Cache cache = Constructor_Cache(2^8);
     int i;
     int j;
     for(i =0; i<1;i++){
-        Address address1 = Constructor_Address("00000000000000000");
-        Set set = Constructor_Set(4,address1);
-        Set* pset = &set;
+        Address* address1 = Constructor_Address("00000000000000000");
+        Set* set = Constructor_Set(4,address1);
         for(j = 0;j< 1;j++){
-            Block block = Constructor_Block(set.address);
-            Block* pblock = &block;
+            Block* block = Constructor_Block(set->address);
 
-            CacheLine cacheLine = Constructor_CacheLine(block.address,"cacheLine data");
-            CacheLine* pcacheLine = &cacheLine;
-            block.putCacheLine(&block.HashTable,pcacheLine);
+            CacheLine* cacheLine = Constructor_CacheLine(block->address,"cacheLine data");
+            block->putCacheLine(&block->HashTable,cacheLine);
 
-            int cache_count = block.CountCacheLines(&block.HashTable);
+            int cache_count = block->CountCacheLines(&block->HashTable);
             printf("\ncache:%d\n",cache_count);
 
-            set.put(&set.HashTable,pblock);
+            set->put(&set->HashTable,block);
         }
-        int count = set.Count(&pset->HashTable);
+        int count = set->Count(&set->HashTable);
         printf("\nset:%d\n",count);
-        (*cache)->putSet(&(*cache)->HashTable,pset);
+        cache->putSet(&cache->HashTable,set);
     }
-    printf("\nCache:%d\n",(*cache)->CountSets(&(*cache)->HashTable));
+    printf("\nCache:%d\n",cache->CountSets(&cache->HashTable));
 }
 
 void Sample_Add_Overlapping_Key_to_set(){
-    Address address1 = Constructor_Address("00000000000000000");
-    Set set = Constructor_Set(4,address1);
-    Set* pset = &set;
+    Address* address1 = Constructor_Address("00000000000000000");
+    Set* set = Constructor_Set(4,address1);
 
-    Block block = Constructor_Block(set.address);
-    Block* pblock = &block;
+    Block* block = Constructor_Block(set->address);
 
-    set.put(&set.HashTable,&block);
+    set->put(&set->HashTable,block);
 
-    Block newBlock = Constructor_Block(set.address);
-    Block* pnewBlock = &newBlock;
+    Block* newBlock = Constructor_Block(set->address);
 
-    Block* alreadyInHashTable = set.get(&set.HashTable,newBlock.address.bitString);
+    Block* alreadyInHashTable = set->get(&set->HashTable,newBlock->address->bitString);
     if(alreadyInHashTable != NULL){
-        set.removeFromTable(&set.HashTable,alreadyInHashTable);
+        set->removeFromTable(&set->HashTable,alreadyInHashTable);
         //write alreadyInHashTable to write-buffer or victim cache
-        int numberOfBlocksInSet = set.Count(&set.HashTable);
+        int numberOfBlocksInSet = set->Count(&set->HashTable);
         printf("Number of blocks in current set:%d\n",numberOfBlocksInSet);
 
         //put new block into set's HashTable
-        set.put(&set.HashTable,&newBlock);
-        numberOfBlocksInSet = set.Count(&set.HashTable);
+        set->put(&set->HashTable,newBlock);
+        numberOfBlocksInSet = set->Count(&set->HashTable);
         printf("Number of blocks in current set:%d\n",numberOfBlocksInSet);
     }
 

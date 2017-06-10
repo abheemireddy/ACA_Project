@@ -35,7 +35,8 @@ char *int2bin(int n) { //function from quora
     return s;
 }
 
-Address Constructor_Address(char* bitString){
+Address* Constructor_Address(char* bitString){
+    Address* address = malloc(sizeof(Address));
     char* output = malloc(9);
     GetChar(bitString,0,8,output);
     char* TagString = output;
@@ -49,6 +50,11 @@ Address Constructor_Address(char* bitString){
     int Index = fromBinary(IndexString);
     int Offset = fromBinary(OffsetString);
     int bitStringValue = fromBinary(bitString);
-    Address address = {Tag:Tag,Index:Index,Offset:Offset,bitString:bitString,bitStringValue:bitStringValue};
+    address->Tag = Tag;
+    address->Index = Index;
+    address->Offset = Offset;
+    address->bitString = bitString;
+    address->bitStringValue = bitStringValue;
+    address->StartOfBlockBitStringValue = address->bitStringValue - address->Offset;
     return address;
 }

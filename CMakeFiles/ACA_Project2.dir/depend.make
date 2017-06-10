@@ -103,9 +103,11 @@ CMakeFiles/ACA_Project2.dir/L1Controller/L1Controller.c.o: L1Controller/L1Contro
 CMakeFiles/ACA_Project2.dir/L1Controller/L1Controller.c.o: Address/Address.h
 CMakeFiles/ACA_Project2.dir/L1Controller/L1Controller.c.o: Block/Block.h
 CMakeFiles/ACA_Project2.dir/L1Controller/L1Controller.c.o: BlockTransferer/BlockTransferer.h
+CMakeFiles/ACA_Project2.dir/L1Controller/L1Controller.c.o: Cache/Cache.h
 CMakeFiles/ACA_Project2.dir/L1Controller/L1Controller.c.o: CacheLine/CacheLine.h
 CMakeFiles/ACA_Project2.dir/L1Controller/L1Controller.c.o: L2Controller/L2Controller.h
 CMakeFiles/ACA_Project2.dir/L1Controller/L1Controller.c.o: Queue/Queue.h
+CMakeFiles/ACA_Project2.dir/L1Controller/L1Controller.c.o: Set/Set.h
 CMakeFiles/ACA_Project2.dir/L1Controller/L1Controller.c.o: aca/L1Data.h
 CMakeFiles/ACA_Project2.dir/L1Controller/L1Controller.c.o: aca/L2Data.h
 CMakeFiles/ACA_Project2.dir/L1Controller/L1Controller.c.o: aca/MainMemory.h
@@ -127,10 +129,12 @@ CMakeFiles/ACA_Project2.dir/Processor/processor.c.o: Processor/processor.h
 CMakeFiles/ACA_Project2.dir/Processor/processor.c.o: Address/Address.h
 CMakeFiles/ACA_Project2.dir/Processor/processor.c.o: Block/Block.h
 CMakeFiles/ACA_Project2.dir/Processor/processor.c.o: BlockTransferer/BlockTransferer.h
+CMakeFiles/ACA_Project2.dir/Processor/processor.c.o: Cache/Cache.h
 CMakeFiles/ACA_Project2.dir/Processor/processor.c.o: CacheLine/CacheLine.h
 CMakeFiles/ACA_Project2.dir/Processor/processor.c.o: L1Controller/L1Controller.h
 CMakeFiles/ACA_Project2.dir/Processor/processor.c.o: L2Controller/L2Controller.h
 CMakeFiles/ACA_Project2.dir/Processor/processor.c.o: Queue/Queue.h
+CMakeFiles/ACA_Project2.dir/Processor/processor.c.o: Set/Set.h
 CMakeFiles/ACA_Project2.dir/Processor/processor.c.o: aca/L1Data.h
 CMakeFiles/ACA_Project2.dir/Processor/processor.c.o: aca/L2Data.h
 CMakeFiles/ACA_Project2.dir/Processor/processor.c.o: aca/MainMemory.h

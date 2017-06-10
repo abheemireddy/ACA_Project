@@ -5,7 +5,9 @@
 //Add your cache_line functionality here
 #include "CacheLine.h"
 
-CacheLine Constructor_CacheLine(Address address,char* data){
-    CacheLine cacheLine = {address:address,data:data};
+CacheLine* Constructor_CacheLine(Address* address,char* data){
+    CacheLine* cacheLine = malloc(sizeof(CacheLine));
+    cacheLine->address = address;
+    cacheLine->data = data;
     return cacheLine;
 }

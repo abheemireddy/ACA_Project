@@ -3,7 +3,7 @@
 //
 #include "Queue_the_examples.h"
 void Work_with_queue(){
-    Address address1 = Constructor_Address("00000000000000000");
+    Address* address1 = Constructor_Address("00000000000000000");
 
     Queue* queue = Queue_Constructor();
     Instruction* data = Constructor_Instruction(1,"Store 001",address1);

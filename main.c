@@ -41,7 +41,7 @@ int run_examples() {
     Work_with_queue();
 
     Cache* cache = Constructor_Cache(256);
-    BuildL1Cache(&cache);
+    BuildL1Cache(cache);
 
     Sample_Add_Overlapping_Key_to_set();
 

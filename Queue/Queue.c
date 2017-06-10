@@ -5,7 +5,7 @@
 
 //used queue implementation from https://gist.github.com/ArnonEilat/4471278
 
-Instruction* Constructor_Instruction(int instructionNumber,char* data,Address address){
+Instruction* Constructor_Instruction(int instructionNumber,char* data,Address* address){
     Instruction* instruction = malloc(sizeof(Instruction));
     instruction->instruction = instructionNumber;
     instruction->address = address;

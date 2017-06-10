@@ -29,7 +29,7 @@ void StoreFileInstructionsIntoProcessorQueue(Processor* processor)
 	FILE * f = fopen("input.txt", "r");
 	while (!feof(f))
 	{
-        Address addressStruct;
+        Address* addressStruct;
 		char instruction[100];
 		int  address;
 		char  value;

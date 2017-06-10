@@ -7,6 +7,7 @@ L1Controller* Constructor_L1Controller(){
 	l1Controller->transferer = Constructor_Transferer();
     l1Controller->ProcessInstruction = &ProcessInstruction;
     l1Controller->cache = Constructor_Cache(64);
+    l1Controller->transferer = Constructor_Transferer();
     return l1Controller;
 }
 

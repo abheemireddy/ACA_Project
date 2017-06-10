@@ -85,7 +85,7 @@ CacheLine.h
 /home/abheemireddy/ACA_Project/CacheLine/CacheLine.h
 stdio.h
 -
-uthash.h
+uthash_files/include/uthash.h
 -
 Address/Address.h
 /home/abheemireddy/ACA_Project/CacheLine/Address/Address.h
@@ -182,6 +182,8 @@ L2Controller/L2Controller.h
 Address/Address.h
 /home/abheemireddy/ACA_Project/L1Controller/Address/Address.h
 BlockTransferer/BlockTransferer.h
+-
+Cache/Cache.h
 -
 
 /home/abheemireddy/ACA_Project/L1_Cache.h
@@ -334,10 +336,20 @@ BlockTransferer/Block/Block.h
 Queue/Queue.h
 BlockTransferer/Queue/Queue.h
 
+Cache/Cache.h
+Set/Set.h
+Cache/Set/Set.h
+stdlib.h
+-
+stdio.h
+-
+BlockTransferer/BlockTransferer.h
+-
+
 CacheLine/CacheLine.h
 stdio.h
 -
-uthash.h
+uthash_files/include/uthash.h
 -
 Address/Address.h
 CacheLine/Address/Address.h
@@ -368,6 +380,8 @@ L1Controller/L2Controller/L2Controller.h
 Address/Address.h
 L1Controller/Address/Address.h
 BlockTransferer/BlockTransferer.h
+-
+Cache/Cache.h
 -
 
 L2Controller/L2Controller.h

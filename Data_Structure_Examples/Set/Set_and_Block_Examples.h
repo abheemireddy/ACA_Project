@@ -10,7 +10,7 @@
 #include "Block/Block.h"
 
 void AddTooManyBlocksTest();
-Block GetDummyBlockInstance(char* data);
+Block* GetDummyBlockInstance(char* data);
 void ExampleUsingSetHash();
 
 #endif //ACA_PROJECT_SET_AND_BLOCK_EXAMPLES_H

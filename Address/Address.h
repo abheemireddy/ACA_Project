@@ -12,12 +12,15 @@ typedef struct AddressTag{
     int Index;
     int Offset;
     int bitStringValue;
+    int StartOfBlockBitStringValue;
     char* bitString;
     UT_hash_handle hh;
+
 } Address;
+
+Address* Constructor_Address(char* bitString);
 
 char* GetChar(char* originalString,int start,int length,char* substring);
 int fromBinary(char *s);
-Address Constructor_Address(char* bitString);
 char *int2bin(int n);
 #endif //ACA_PROJECT_ADDRESS_H

@@ -4,88 +4,77 @@
 #include "Set_and_Block_Examples.h"
 
 void ExampleUsingSetHash(){
-    Address address1 = Constructor_Address("00000000000000000");
-    Address address2 = Constructor_Address("00000000000000001");
-    Set set = Constructor_Set(4,address1);
-    Block case1 = {useFrequency:1,address:set.address};
-    Block case2 = {useFrequency:2,address:address2};
-    Block* block1 = malloc(sizeof(Block));
-    block1 = &case1;
-    set.put(&set.HashTable,block1);
-    Block* block2 = &case2;
-    set.put(&set.HashTable,block2);
-    Block* returned = set.get(&set.HashTable,block2->address.bitString);
+    Address* address1 = Constructor_Address("00000000000000000");
+    Address* address2 = Constructor_Address("00000000000000001");
+    Set* set = Constructor_Set(4,address1);
+    Block* case1 = Constructor_Block(address1);
+    Block* case2 = Constructor_Block(address2);
+    set->put(&set->HashTable,case1);
+    set->put(&set->HashTable,case2);
+    Block* returned = set->get(&set->HashTable,case2->address->bitString);
     printf("use Frequency: %d\n",returned->useFrequency);
 }
-Block GetDummyBlockInstance(char* data){
-    Address address1 = Constructor_Address("00000000000000000");
-    Block toAdd = Constructor_Block(address1);
+Block* GetDummyBlockInstance(char* data){
+    Address* address1 = Constructor_Address("00000000000000000");
+    Block* toAdd = Constructor_Block(address1);
     return toAdd;
 }
 void AddTooManyBlocksTest(){
-    Address address1 = Constructor_Address("00000000000000000");
-    Set set = Constructor_Set(4,address1);
+    Address* address1 = Constructor_Address("00000000000000000");
+    Set* set = Constructor_Set(4,address1);
 
-    Block block1 = GetDummyBlockInstance("Some memory location 1");
-    Block* pblock1 = &block1;
-    Block block2 = GetDummyBlockInstance("Some memory location 2");
-    Block* pblock2 = &block2;
-    Block block3 = GetDummyBlockInstance("Some memory location 3");
-    Block* pblock3 = &block3;
-    Block block4 = GetDummyBlockInstance("Some memory location 4");
-    Block* pblock4 = &block4;
-    Block block5 = GetDummyBlockInstance("Some memory location 5");
-    Block* pblock5 = &block5;
-    Block block6 = GetDummyBlockInstance("Some memory location 6");
-    Block* pblock6 = &block6;
-    Block block7 = GetDummyBlockInstance("Some memory location 7");
-    Block* pblock7 = &block7;
+    Block* block1 = GetDummyBlockInstance("Some memory location 1");
+    Block* block2 = GetDummyBlockInstance("Some memory location 2");
+    Block* block3 = GetDummyBlockInstance("Some memory location 3");
+    Block* block4 = GetDummyBlockInstance("Some memory location 4");
+    Block* block5 = GetDummyBlockInstance("Some memory location 5");
+    Block* block6 = GetDummyBlockInstance("Some memory location 6");
+    Block* block7 = GetDummyBlockInstance("Some memory location 7");
 
-    IncrementBlockFrequency(&pblock1);//1 time, this will be least frequently used of the blocks
+    IncrementBlockFrequency(&block1);//1 time, this will be least frequently used of the blocks
 
-    IncrementBlockFrequency(&pblock2);//twice
-    IncrementBlockFrequency(&pblock2);
+    IncrementBlockFrequency(&block2);//twice
+    IncrementBlockFrequency(&block2);
 
-    IncrementBlockFrequency(&pblock3);//three times
-    IncrementBlockFrequency(&pblock3);
-    IncrementBlockFrequency(&pblock3);
+    IncrementBlockFrequency(&block3);//three times
+    IncrementBlockFrequency(&block3);
+    IncrementBlockFrequency(&block3);
 
-    IncrementBlockFrequency(&pblock4);//four uses
-    IncrementBlockFrequency(&pblock4);
-    IncrementBlockFrequency(&pblock4);
-    IncrementBlockFrequency(&pblock4);
+    IncrementBlockFrequency(&block4);//four uses
+    IncrementBlockFrequency(&block4);
+    IncrementBlockFrequency(&block4);
+    IncrementBlockFrequency(&block4);
 
-    IncrementBlockFrequency(&pblock5);
-    IncrementBlockFrequency(&pblock5);
-    IncrementBlockFrequency(&pblock5);
-    IncrementBlockFrequency(&pblock5);
-    IncrementBlockFrequency(&pblock5);
+    IncrementBlockFrequency(&block5);
+    IncrementBlockFrequency(&block5);
+    IncrementBlockFrequency(&block5);
+    IncrementBlockFrequency(&block5);
+    IncrementBlockFrequency(&block5);
 
-    IncrementBlockFrequency(&pblock6);
-    IncrementBlockFrequency(&pblock6);
-    IncrementBlockFrequency(&pblock6);
-    IncrementBlockFrequency(&pblock6);
-    IncrementBlockFrequency(&pblock6);
-    IncrementBlockFrequency(&pblock6);
+    IncrementBlockFrequency(&block6);
+    IncrementBlockFrequency(&block6);
+    IncrementBlockFrequency(&block6);
+    IncrementBlockFrequency(&block6);
+    IncrementBlockFrequency(&block6);
+    IncrementBlockFrequency(&block6);
 
-    IncrementBlockFrequency(&pblock7);
-    IncrementBlockFrequency(&pblock7);
-    IncrementBlockFrequency(&pblock7);
-    IncrementBlockFrequency(&pblock7);
-    IncrementBlockFrequency(&pblock7);
-    IncrementBlockFrequency(&pblock7);
-    IncrementBlockFrequency(&pblock7);
+    IncrementBlockFrequency(&block7);
+    IncrementBlockFrequency(&block7);
+    IncrementBlockFrequency(&block7);
+    IncrementBlockFrequency(&block7);
+    IncrementBlockFrequency(&block7);
+    IncrementBlockFrequency(&block7);
+    IncrementBlockFrequency(&block7);
+    set->put(&set->HashTable,block1);
+    set->put(&set->HashTable,block2);
+    set->put(&set->HashTable,block3);
+    set->put(&set->HashTable,block4);
+    set->put(&set->HashTable,block5);
+    set->put(&set->HashTable,block6);
+    set->put(&set->HashTable,block7);
 
-    set.put(&set.HashTable,pblock1);
-    set.put(&set.HashTable,pblock2);
-    set.put(&set.HashTable,pblock3);
-    set.put(&set.HashTable,pblock4);
-    set.put(&set.HashTable,pblock5);
-    set.put(&set.HashTable,pblock6);
-    set.put(&set.HashTable,pblock7);
+    printf("\nCount:%d\n",set->Count(&set->HashTable));
 
-    printf("\nCount:%d\n",set.Count(&set.HashTable));
-
-    set.SortHash(&set.HashTable);
-    print_blocks_in_set(&set.HashTable);
+    set->SortHash(&set->HashTable);
+    print_blocks_in_set(&set->HashTable);
 }

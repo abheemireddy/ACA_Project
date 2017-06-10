@@ -104,9 +104,11 @@ CMakeFiles/ACA_Project2.dir/L1Controller/L1Controller.c.o
  Address/Address.h
  Block/Block.h
  BlockTransferer/BlockTransferer.h
+ Cache/Cache.h
  CacheLine/CacheLine.h
  L2Controller/L2Controller.h
  Queue/Queue.h
+ Set/Set.h
  aca/L1Data.h
  aca/L2Data.h
  aca/MainMemory.h
@@ -128,10 +130,12 @@ CMakeFiles/ACA_Project2.dir/Processor/processor.c.o
  Address/Address.h
  Block/Block.h
  BlockTransferer/BlockTransferer.h
+ Cache/Cache.h
  CacheLine/CacheLine.h
  L1Controller/L1Controller.h
  L2Controller/L2Controller.h
  Queue/Queue.h
+ Set/Set.h
  aca/L1Data.h
  aca/L2Data.h
  aca/MainMemory.h
