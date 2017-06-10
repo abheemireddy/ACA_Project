@@ -5,7 +5,7 @@ L2Controller* Constructor_L2Controller(){
     L2Controller* l2Controller = malloc(sizeof(L2Controller));
 	Transferer* transferer = Constructor_Transferer();
 	l2Controller->transferer = transferer;
-    // TODO: create a queue of read instructions and initialize it.
+	l2Controller->waiting = false;
     return l2Controller;
 }
 

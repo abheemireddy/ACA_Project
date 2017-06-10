@@ -9,6 +9,7 @@
 
 typedef struct L2ControllerTag{
     Transferer* transferer;
+    bool waiting;
 
     void (*l2Read)(Address address, unsigned char * block);
     void (*l2Write)(Address address, int value);
