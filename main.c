@@ -27,6 +27,7 @@ int main(){
             Enqueue(l1Controller->transferer->TransferQueue,nextInstructionFromProcessor);
 
             Instruction nextInstructionForL1ControllerToProcess = GetNextInstruction(l1Controller->transferer);
+            L1ProcessInstruction(l1Controller,l2Controller,nextInstructionForL1ControllerToProcess);
 
         }
         ClockCycleCount += 1;

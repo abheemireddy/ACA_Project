@@ -8,14 +8,15 @@
 #include <Cache/Cache.h>
 
 typedef struct L1ControllerTag{
+    bool waiting;
     Cache* cache;
     Transferer* transferer;
 } L1Controller;
 
 L1Controller* Constructor_L1Controller();
 
-void ProcessInstruction(L1Controller* l1Controller,Instruction instruction);
-void L1_write(Address address, char value[64]);
-int L1_read(Address address);
+void L1ProcessInstruction(L1Controller* l1Controller,L2Controller* l2Controller,Instruction instruction);
+void L1_write(L1Controller* l1Controller,Instruction instruction, char value[64]);
+CacheLine* L1_read(L1Controller* l1Controller,L2Controller* l2Controller,Instruction instruction);
 
 #endif
