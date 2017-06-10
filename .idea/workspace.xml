@@ -18,8 +18,11 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Processor/processor.c.o" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Processor/processor.c.o" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/main.c.o" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/main.c.o" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/L1Controller/L1Controller.c" afterPath="$PROJECT_DIR$/L1Controller/L1Controller.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/L1Controller/L1Controller.h" afterPath="$PROJECT_DIR$/L1Controller/L1Controller.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/L2Controller/L2Controller.c" afterPath="$PROJECT_DIR$/L2Controller/L2Controller.c" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/L2Controller/L2Controller.h" afterPath="$PROJECT_DIR$/L2Controller/L2Controller.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.c" afterPath="$PROJECT_DIR$/main.c" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <ignored path="$PROJECT_DIR$/CMakeFiles/" />
@@ -45,11 +48,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="L2Controller.c" pinned="false" current-in-tab="true">
+      <file leaf-file-name="L1Controller.c" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/L1Controller/L1Controller.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="14" column="26" lean-forward="false" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
+              <folding>
+                <element signature="e#0#25#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="L2Controller.c" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/L2Controller/L2Controller.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="7" column="34" lean-forward="false" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
+            <state relative-caret-position="162">
+              <caret line="9" column="24" lean-forward="true" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
               </folding>
@@ -60,8 +75,8 @@
       <file leaf-file-name="L1Controller.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/L1Controller/L1Controller.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="17" />
+            <state relative-caret-position="216">
+              <caret line="12" column="10" lean-forward="false" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
               <folding>
                 <element signature="e#54#72#0" expanded="true" />
               </folding>
@@ -73,21 +88,9 @@
         <entry file="file://$PROJECT_DIR$/L2Controller/L2Controller.h">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="216">
-              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+              <caret line="12" column="10" lean-forward="false" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
               <folding>
                 <element signature="e#54#77#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="processor.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Processor/processor.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="21" column="28" lean-forward="false" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
-              <folding>
-                <element signature="e#101#119#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -106,8 +109,8 @@
       <file leaf-file-name="main.c" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-522">
-              <caret line="19" column="40" lean-forward="true" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
+            <state relative-caret-position="235">
+              <caret line="31" column="29" lean-forward="true" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -259,14 +262,14 @@
         <option value="$PROJECT_DIR$/Address/Address.c" />
         <option value="$PROJECT_DIR$/Block/Block.c" />
         <option value="$PROJECT_DIR$/Global_Variables.h" />
-        <option value="$PROJECT_DIR$/L1Controller/L1Controller.h" />
-        <option value="$PROJECT_DIR$/L1Controller/L1Controller.c" />
         <option value="$PROJECT_DIR$/Processor/processor.c" />
         <option value="$PROJECT_DIR$/Processor/processor.h" />
-        <option value="$PROJECT_DIR$/main.c" />
         <option value="$PROJECT_DIR$/Data_Structure_Examples/Set/Set_and_Block_Examples.c" />
-        <option value="$PROJECT_DIR$/L2Controller/L2Controller.h" />
+        <option value="$PROJECT_DIR$/main.c" />
+        <option value="$PROJECT_DIR$/L1Controller/L1Controller.c" />
         <option value="$PROJECT_DIR$/L2Controller/L2Controller.c" />
+        <option value="$PROJECT_DIR$/L2Controller/L2Controller.h" />
+        <option value="$PROJECT_DIR$/L1Controller/L1Controller.h" />
       </list>
     </option>
   </component>
@@ -748,14 +751,7 @@
       <workItem from="1496713422788" duration="671000" />
       <workItem from="1496754373526" duration="32944000" />
       <workItem from="1496890028780" duration="2917000" />
-      <workItem from="1496947808980" duration="40387000" />
-    </task>
-    <task id="LOCAL-00120" summary="Added block transferer to Cache and DRAM.  We will Add (instruction, e.g. read/write  and data (as a char*)).  On each clock cycle the cache/dram will pull its next order from this transferer.">
-      <created>1496848672246</created>
-      <option name="number" value="00120" />
-      <option name="presentableId" value="LOCAL-00120" />
-      <option name="project" value="LOCAL" />
-      <updated>1496848672246</updated>
+      <workItem from="1496947808980" duration="40911000" />
     </task>
     <task id="LOCAL-00121" summary="Got Anu's files working.  Next step is to merge her work so that they use the struct Address.">
       <created>1496849243268</created>
@@ -1093,27 +1089,34 @@
       <option name="project" value="LOCAL" />
       <updated>1497137240125</updated>
     </task>
-    <option name="localTasksCounter" value="169" />
+    <task id="LOCAL-00169" summary="Added waiting as a lock to L1 and L2 Controllers">
+      <created>1497137406936</created>
+      <option name="number" value="00169" />
+      <option name="presentableId" value="LOCAL-00169" />
+      <option name="project" value="LOCAL" />
+      <updated>1497137406936</updated>
+    </task>
+    <option name="localTasksCounter" value="170" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="185114000" />
+    <option name="totallyTimeSpent" value="185638000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="954" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34900117" sideWeight="0.39137468" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34900117" sideWeight="0.38975742" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32902467" sideWeight="0.49811321" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32902467" sideWeight="0.73638815" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34900117" sideWeight="0.6102426" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32079905" sideWeight="0.4140162" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32520324" sideWeight="0.49380055" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2684636" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32902467" sideWeight="0.49595687" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32902467" sideWeight="0.26361185" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32902467" sideWeight="0.26361185" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1131,7 +1134,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Changed file location for reading.  Main directory should be ACA_Project" />
     <MESSAGE value="Working on processor.  Looks like something is going out of scope and becoming null before we can process the data." />
     <MESSAGE value="All the code is building and working.  The trick was to allocate onto the heap, not the stack on those constructors." />
     <MESSAGE value="Changed processor.c.  No longer do we immediately evaluate everything.  We put everything from the processor on a queue we can read from." />
@@ -1156,7 +1158,8 @@
     <MESSAGE value="All of the defaults are correct." />
     <MESSAGE value="Working on L1Controller.  Added statement to read from L2 cache and wait for the result." />
     <MESSAGE value="Created header containing global variables.  Include in .c files to use these variables.  They are the major components, e.g. l1CacheController, Processor, ect." />
-    <option name="LAST_COMMIT_MESSAGE" value="Created header containing global variables.  Include in .c files to use these variables.  They are the major components, e.g. l1CacheController, Processor, ect." />
+    <MESSAGE value="Added waiting as a lock to L1 and L2 Controllers" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added waiting as a lock to L1 and L2 Controllers" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1487,16 +1490,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/L1Controller/L1Controller.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="29" lean-forward="false" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Processor/processor.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1559,20 +1552,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-522">
-          <caret line="19" column="40" lean-forward="true" selection-start-line="19" selection-start-column="40" selection-end-line="19" selection-end-column="40" />
+        <state relative-caret-position="235">
+          <caret line="31" column="29" lean-forward="true" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/L1Controller/L1Controller.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="17" />
-          <folding>
-            <element signature="e#54#72#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1580,7 +1563,7 @@
     <entry file="file://$PROJECT_DIR$/L2Controller/L2Controller.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <caret line="12" column="10" lean-forward="false" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
           <folding>
             <element signature="e#54#77#0" expanded="true" />
           </folding>
@@ -1589,8 +1572,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/L2Controller/L2Controller.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="34" lean-forward="false" selection-start-line="7" selection-start-column="34" selection-end-line="7" selection-end-column="34" />
+        <state relative-caret-position="162">
+          <caret line="9" column="24" lean-forward="true" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/L1Controller/L1Controller.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="10" lean-forward="false" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
+          <folding>
+            <element signature="e#54#72#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/L1Controller/L1Controller.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="26" lean-forward="false" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
           </folding>

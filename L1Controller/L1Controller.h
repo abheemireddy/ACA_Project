@@ -10,6 +10,7 @@ typedef struct L1ControllerTag{
     bool waiting;
     Cache* cache;
     Transferer* transferer;
+    Block* dataFromL2;
 } L1Controller;
 
 L1Controller* Constructor_L1Controller();

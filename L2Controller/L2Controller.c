@@ -6,6 +6,7 @@ L2Controller* Constructor_L2Controller(){
 	Transferer* transferer = Constructor_Transferer();
 	l2Controller->transferer = transferer;
 	l2Controller->waiting = false;
+	l2Controller->dataFromDRAM = NULL;
     return l2Controller;
 }
 
