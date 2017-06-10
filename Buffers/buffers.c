@@ -19,14 +19,14 @@ Buffer* Constructor_Buffer(){
 }
 
 void putBlockInBuffer(Block** HashTable,Block *value) {  //key is useFrequency of the block.  Seems magical
-    if(value->address->bitString == NULL){
+    if(value->address.bitString == NULL){
         printf("The passed block needs to have attribute address set");
     }
     /*Block* alreadyInHashTable = getBlock(HashTable,value->address.bitStringValue);//overwrite duplicate keys
     if(alreadyInHashTable != NULL){
         removeBlockFromBuffer(HashTable,alreadyInHashTable);
     }*/
-    HASH_ADD_INT(*HashTable, address->bitStringValue,value );
+    HASH_ADD_INT(*HashTable, address.bitStringValue,value );
 }
 
 void removeBlockFromBuffer(Block** HashTable,Block* blockToRemove) {
@@ -50,6 +50,6 @@ void print_all_blocks_in_buffer(Block** HashTable) {
     Block* s;
     Block* tmp;
     HASH_ITER(hh,*HashTable,s,tmp){
-        printf("address: %d\n",s->address->bitStringValue);
+        printf("address: %d\n",s->address.bitStringValue);
     }
 }

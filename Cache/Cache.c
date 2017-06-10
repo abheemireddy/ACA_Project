@@ -20,28 +20,31 @@ Cache* Constructor_Cache(int numberOfSets){
     int setAddress = 0;
     for(i = 0;i<cache->NumberOfSets;i++){
         printf("cache on set number:%d\n",i);
+        if(i == 49){
+            int p = 5;
+        }
         char* bitString = int2bin(setAddress);
         Address* address = Constructor_Address(bitString);
-        Set* set = Constructor_Set(4,address);
-        cache->putSet(&cache->HashTable,set);
+        Set* set = Constructor_Set(4,*address);
+        //cache->putSet(&cache->HashTable,set);
         setAddress += 4;
     }
     return cache;
 }
 
 void putSet(Set** HashTable,Set* value) {  //key is useFrequency of the block.  Seems magical
-    HASH_ADD_INT(*HashTable, address->Index, value );
+    HASH_ADD_INT(*HashTable, address.Index, value );
     //The last parameter is a pointer to the structure being added
 }
 
 void replaceSet(UT_hash_handle hh,Set** HashTable,Set *value) {
     Set *hashTableStoresInThis;//to store getter
 
-    HASH_FIND_INT( *HashTable, &value->address->Index, hashTableStoresInThis );
+    HASH_FIND_INT( *HashTable, &value->address.Index, hashTableStoresInThis );
     if (hashTableStoresInThis==NULL) {
         hashTableStoresInThis = (Set*)malloc(sizeof(Set));
-        hashTableStoresInThis->address->Index = value->address->Index;
-        HASH_ADD_INT(*HashTable, address->Index, value );
+        hashTableStoresInThis->address.Index = value->address.Index;
+        HASH_ADD_INT(*HashTable, address.Index, value );
     }
 }
 
@@ -79,7 +82,7 @@ void print_sets(Set** HashTable) {
     Set* s;
     Set* tmp;
     HASH_ITER(hh,*HashTable,s,tmp){
-        printf("address.Index: %d",s->address->Index);
+        printf("address.Index: %d",s->address.Index);
     }
 }
 

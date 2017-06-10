@@ -30,7 +30,7 @@ void BuildL1Cache(Cache* cache){
     int j;
     for(i =0; i<1;i++){
         Address* address1 = Constructor_Address("00000000000000000");
-        Set* set = Constructor_Set(4,address1);
+        Set* set = Constructor_Set(4,*address1);
         for(j = 0;j< 1;j++){
             Block* block = Constructor_Block(set->address);
 
@@ -51,7 +51,7 @@ void BuildL1Cache(Cache* cache){
 
 void Sample_Add_Overlapping_Key_to_set(){
     Address* address1 = Constructor_Address("00000000000000000");
-    Set* set = Constructor_Set(4,address1);
+    Set* set = Constructor_Set(4,*address1);
 
     Block* block = Constructor_Block(set->address);
 
@@ -59,7 +59,7 @@ void Sample_Add_Overlapping_Key_to_set(){
 
     Block* newBlock = Constructor_Block(set->address);
 
-    Block* alreadyInHashTable = set->get(&set->HashTable,newBlock->address->bitString);
+    Block* alreadyInHashTable = set->get(&set->HashTable,newBlock->address.bitString);
     if(alreadyInHashTable != NULL){
         set->removeFromTable(&set->HashTable,alreadyInHashTable);
         //write alreadyInHashTable to write-buffer or victim cache

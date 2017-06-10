@@ -9,11 +9,11 @@
 #include "Address/Address.h"
 
 typedef struct CacheLineTag{
-    Address* address;
-    char* data;
+    Address address;
+    char data[16];
     UT_hash_handle hh;
 } CacheLine;
 
-CacheLine* Constructor_CacheLine(Address* address,char* data);
+CacheLine* Constructor_CacheLine(Address address,char* data);
 
 #endif //ACA_PROJECT_CACHELINE_H

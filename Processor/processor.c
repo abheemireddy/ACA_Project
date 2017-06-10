@@ -32,12 +32,12 @@ void StoreFileInstructionsIntoProcessorQueue(Processor* processor)
         Address* addressStruct;
 		char instruction[100];
 		int  address;
-		char  value;
+		char value;
 		int  operation = -1;  // -1: invalid
 		fscanf(f, "%s", instruction);
 		if (!strcmp(instruction, "CPUWrite")) // write instruction
 		{
-			fscanf(f, "%d %[^\n]", &address, &value);
+			fscanf(f, "%d %s64", &address, &value);
 			operation = 1;
             char* bitString = int2bin(address);
             addressStruct = Constructor_Address(bitString);

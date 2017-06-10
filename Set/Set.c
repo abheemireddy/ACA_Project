@@ -7,7 +7,7 @@
 #include <stdio.h>
 
 
-Set* Constructor_Set(int numberOfBlocks,Address* address){
+Set* Constructor_Set(int numberOfBlocks,Address address){
     Set* set = malloc(sizeof(Set));
     set->address = address;
     set->numberOfBlocks = numberOfBlocks;
@@ -25,13 +25,13 @@ Set* Constructor_Set(int numberOfBlocks,Address* address){
     set->IsBlockInSet = &IsBlockInSet;
 
     int i;
-    int setAddress = address->bitStringValue;
-    printf("\nstart of set:%s\n",set->address->bitString);
+    int setAddress = address.bitStringValue;
+    printf("\nstart of set:%s\n",set->address.bitString);
     for(i = 0;i<set->numberOfBlocks;i++){
         char* bitString = int2bin(setAddress);
         Address* address = Constructor_Address(bitString);
         printf("block bitString:%s\n",address->bitString);
-        Block* block = Constructor_Block(address);
+        Block* block = Constructor_Block(*address);
         block->validBit = false;
         set->put(&set->HashTable,block);
         setAddress += 1;
@@ -40,7 +40,7 @@ Set* Constructor_Set(int numberOfBlocks,Address* address){
 }
 
 bool IsBlockInSet(Set set,Block newBlock){
-    Block* alreadyInHashTable = set.get(&set.HashTable,newBlock.address->bitString);
+    Block* alreadyInHashTable = set.get(&set.HashTable,newBlock.address.bitString);
     if(alreadyInHashTable != NULL){
         return true;
     }else{
@@ -49,11 +49,10 @@ bool IsBlockInSet(Set set,Block newBlock){
 }
 
 void put(Block** HashTable,Block *value) {  //key is useFrequency of the block.  Seems magical
-    if(value->address->bitString == NULL){
+    if(value->address.bitString == NULL){
         printf("The passed block needs to have attribute address set");
     }
-    HASH_ADD_KEYPTR(hh,*HashTable, value->address->bitString, strlen(value->address->bitString),value );
-    //The last parameter is a pointer to the structure being added
+    HASH_ADD_STR(*HashTable, address.bitString,value );
 }
 
 //HASH_REPLACE  is equivalent to HASH_ADD but it finds and deletes that item first
@@ -70,11 +69,11 @@ void replaceByUseFrequency(Block** HashTable,int key) {
 void replace(UT_hash_handle hh,Block** HashTable,Block *value) {
     struct BlockTag *hashTableStoresInThisBlock;//to store getter
 
-    HASH_FIND_STR( *HashTable, value->address->bitString, hashTableStoresInThisBlock );
+    HASH_FIND_STR( *HashTable, value->address.bitString, hashTableStoresInThisBlock );
     if (hashTableStoresInThisBlock==NULL) {
         hashTableStoresInThisBlock = (struct BlockTag*)malloc(sizeof(struct BlockTag));
-        hashTableStoresInThisBlock->address->bitString = value->address->bitString;
-        HASH_ADD_KEYPTR(hh,*HashTable, value->address->bitString, strlen(value->address->bitString),value );
+        strcpy(hashTableStoresInThisBlock->address.bitString,value->address.bitString);
+        HASH_ADD_STR(*HashTable, address.bitString,value);
     }
 }
 
@@ -119,7 +118,7 @@ void print_blocks_in_set(Block** HashTable) {
     Block* s;
     Block* tmp;
     HASH_ITER(hh,*HashTable,s,tmp){
-        printf("address: %s, LFU:%d\n",s->address->bitString,s->useFrequency);
+        printf("address: %s, LFU:%d\n",s->address.bitString,s->useFrequency);
     }
 }
 

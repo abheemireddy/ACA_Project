@@ -29,7 +29,7 @@ typedef struct SetTag {
     void (*SortHash)(struct BlockTag** HashTable);
     void (*print_blocks_in_set)(struct BlockTag** HashTable);
 
-    Address* address;
+    Address address;
 
     //---------Used in Cache HashMap to find set
     UT_hash_handle hh; /* make this structure hashable*/
@@ -40,7 +40,7 @@ typedef struct SetTag {
     //maybe store how many blocks
 } Set;
 
-Set* Constructor_Set(int numberOfBlocks,Address* address);
+Set* Constructor_Set(int numberOfBlocks,Address address);
 void AddBlock(Set set,struct BlockTag** HashTable,struct BlockTag** blockToAdd);
 
 //HashTable functions

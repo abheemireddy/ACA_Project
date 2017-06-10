@@ -13,7 +13,7 @@
 typedef struct InstructionTag{
     int clockCycleWhenThisCanBeRead;
     int instruction;
-    char* data; //data stored as char* in char[64][64]
+    char data[64]; //data stored as char* in char[64][64]
     Address* address;
 } Instruction;
 

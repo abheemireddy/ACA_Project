@@ -13,7 +13,7 @@ typedef struct AddressTag{
     int Offset;
     int bitStringValue;
     int StartOfBlockBitStringValue;
-    char* bitString;
+    char bitString[16];
     UT_hash_handle hh;
 
 } Address;

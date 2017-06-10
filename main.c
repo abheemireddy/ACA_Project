@@ -6,10 +6,13 @@
 #include "Data_Structure_Examples/Block/Block_CacheLine_HashTable_Examples.h"
 #include "Data_Structure_Examples/DRAM/DRAM_Examples.h"
 #include "L1_Cache.h"
+#include <sys/resource.h>
 
+void changeStackSize();
 int run_examples();
 
 int main(){
+    changeStackSize();
     L1Controller* l1Controller = Constructor_L1Controller();
     L2Controller* l2Controller = Constructor_L2Controller();
     Processor* processor = Constructor_Processor(l1Controller,l2Controller);
@@ -30,7 +33,7 @@ int main(){
     }
     printf("Clock Cycles taken:%d\n",ClockCycleCount);
 
-    run_examples();//Examples of using the data structures
+    //run_examples();//Examples of using the data structures
 }
 
 
@@ -52,3 +55,24 @@ int run_examples() {
     StoreAndGetFromBlockTransferer();
 }
 
+//Not an issue.  I thought maybe the stack size was an issue, but it was not.
+void changeStackSize()
+{
+    const rlim_t kStackSize = 128 * 1024 * 1024;   // min stack size = 16 MB
+    struct rlimit rl;
+    int result;
+
+    result = getrlimit(RLIMIT_STACK, &rl);
+    if (result == 0)
+    {
+        if (rl.rlim_cur < kStackSize)
+        {
+            rl.rlim_cur = kStackSize;
+            result = setrlimit(RLIMIT_STACK, &rl);
+            if (result != 0)
+            {
+                fprintf(stderr, "setrlimit returned result = %d\n", result);
+            }
+        }
+    }
+}

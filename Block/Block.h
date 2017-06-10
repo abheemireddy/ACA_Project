@@ -23,7 +23,7 @@ typedef struct BlockTag{
     CacheLine** cacheLines;//number in array is the number of cache lines in the block
     CacheLine *HashTable;
 
-    Address* address;
+    Address address;
 
     void (*SetCacheLines)(struct BlockTag* block,CacheLine* cacheLines[]);
     void (*Set_Offset)(struct CacheLineTag* block,char* offset);
@@ -42,7 +42,7 @@ typedef struct BlockTag{
     UT_hash_handle hh; /* make this structure hashable*/
 } Block;//Block is synonymous for struct BlockTag (they mean the same thing).
 
-Block* Constructor_Block(Address* address);
+Block* Constructor_Block(Address address);
 
 void Set_Offset(struct CacheLineTag* block,char* offset);
 void SetCacheLines(struct BlockTag* block,CacheLine* cacheLines[]);
