@@ -59,7 +59,7 @@ void Sample_Add_Overlapping_Key_to_set(){
 
     Block* newBlock = Constructor_Block(set->address);
 
-    Block* alreadyInHashTable = get(&set->HashTable,newBlock->address.bitString);
+    Block* alreadyInHashTable = get(&set->HashTable,newBlock->address.Tag);
     if(alreadyInHashTable != NULL){
         removeFromTable(&set->HashTable,alreadyInHashTable);
         //write alreadyInHashTable to write-buffer or victim cache

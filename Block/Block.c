@@ -8,10 +8,20 @@ Block* Constructor_Block(Address address){
     block->dirtyBit = false;
     block->validBit = false;
     block->useFrequency = 0;
-    //block->address = malloc(sizeof(Address));
     block->address = address;
     block->isIdle = false;
     block->HashTable = NULL;
+
+    int i;
+    int cacheAddress = address.bitStringValue;
+    for(i = 0;i<8;i++){
+        char* bitString = int2bin(cacheAddress);
+        Address* cacheAddress = Constructor_Address(bitString);
+        CacheLine* cacheLine = Constructor_CacheLine(*cacheAddress,"No Data Yet");
+        block->validBit = false;
+        putCacheLine(&block->HashTable,cacheLine);
+        cacheAddress += 1;
+    }
     return block;
 }
 

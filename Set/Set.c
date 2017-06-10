@@ -21,7 +21,7 @@ Set* Constructor_Set(int numberOfBlocks,Address address){
         Block* block = Constructor_Block(*address);
         block->validBit = false;
         put(&set->HashTable,block);
-        setAddress += 1;
+        setAddress += 512;
     }
     return set;
 }
@@ -39,10 +39,9 @@ void put(Block** HashTable,Block *value) {  //key is useFrequency of the block. 
     if(value->address.bitString == NULL){
         printf("The passed block needs to have attribute address set");
     }
-    HASH_ADD_STR(*HashTable, address.bitString,value );
+    HASH_ADD_INT(*HashTable, address.Tag,value );
 }
 
-//HASH_REPLACE  is equivalent to HASH_ADD but it finds and deletes that item first
 void replaceByUseFrequency(Block** HashTable,int key) {
     struct BlockTag *hashTableStoresInThisBlock;//to store getter
 
@@ -50,17 +49,17 @@ void replaceByUseFrequency(Block** HashTable,int key) {
     if (hashTableStoresInThisBlock==NULL) {
         hashTableStoresInThisBlock = (struct BlockTag*)malloc(sizeof(struct BlockTag));
         hashTableStoresInThisBlock->useFrequency = key;
-        HASH_ADD_INT( *HashTable, useFrequency, hashTableStoresInThisBlock );  /* id: name of key field */
+        HASH_ADD_INT( *HashTable, address.Tag, hashTableStoresInThisBlock );  /* id: name of key field */
     }
 }
-void replace(UT_hash_handle hh,Block** HashTable,Block *value) {
-    struct BlockTag *hashTableStoresInThisBlock;//to store getter
+void replace(UT_hash_handle hh,CacheLine** HashTable,CacheLine *value) {
+    CacheLine *hashTableStoresInThis;//to store getter
 
-    HASH_FIND_STR( *HashTable, value->address.bitString, hashTableStoresInThisBlock );
-    if (hashTableStoresInThisBlock==NULL) {
-        hashTableStoresInThisBlock = (struct BlockTag*)malloc(sizeof(struct BlockTag));
-        strcpy(hashTableStoresInThisBlock->address.bitString,value->address.bitString);
-        HASH_ADD_STR(*HashTable, address.bitString,value);
+    HASH_FIND_INT( *HashTable, &value->address.Tag, hashTableStoresInThis );
+    if (hashTableStoresInThis==NULL) {
+        hashTableStoresInThis = (CacheLine*)malloc(sizeof(CacheLine));
+        strcpy(hashTableStoresInThis->address.bitString,value->address.bitString);
+        HASH_ADD_INT(*HashTable, address.Tag, value );
     }
 }
 
@@ -71,10 +70,10 @@ Block* getByUseFrequency(Block** HashTable,int key) {
     HASH_FIND_INT( *HashTable, &key, hashTableStoresInThisBlock );//find block_id and put into s
     return hashTableStoresInThisBlock;
 }
-Block* get(Block** HashTable,char* key) {
+Block* get(Block** HashTable,int key) {
     Block *hashTableStoresInThisBlock;
 
-    HASH_FIND_STR( *HashTable, key, hashTableStoresInThisBlock );//find block_id and put into hashTableStoresInThisBlock
+    HASH_FIND_INT( *HashTable, key, hashTableStoresInThisBlock );//find block_id and put into hashTableStoresInThisBlock
     return hashTableStoresInThisBlock;
 }
 

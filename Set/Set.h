@@ -26,7 +26,7 @@ typedef struct SetTag {
     void (*delete_all)(struct BlockTag** HashTable);
     int (*Count)(struct BlockTag** HashTable);
 
-    struct BlockTag* (*get)(struct BlockTag** HashTable,char* key);
+    struct BlockTag* (*get)(struct BlockTag** HashTable,int key);
     void (*SortHash)(struct BlockTag** HashTable);
     void (*print_blocks_in_set)(struct BlockTag** HashTable);
 } Set;
@@ -43,7 +43,7 @@ void removeFromTable(struct BlockTag** HashTable,struct BlockTag *blockToRemove)
 void delete_all(struct BlockTag** HashTable);
 int Count(struct BlockTag** HashTable);
 
-struct BlockTag* get(struct BlockTag** HashTable,char* key);
+struct BlockTag* get(struct BlockTag** HashTable,int key);
 void SortHash(struct BlockTag** HashTable);
 void print_blocks_in_set(struct BlockTag** HashTable);
 
