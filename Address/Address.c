@@ -22,7 +22,7 @@ char* GetChar(char* originalString,int start,int length,char* substring){
 
 char *int2bin(int n) { //function from quora
     // determine the number of bits needed ("sizeof" returns bytes)
-    int nbits = 16;//sizeof(n) * 8;
+    int nbits = 17;//sizeof(n) * 8;
     char *s = malloc(nbits+1);  // +1 for '\0' terminator
     s[nbits] = '\0';
     // forcing evaluation as an unsigned value prevents complications
@@ -36,14 +36,14 @@ char *int2bin(int n) { //function from quora
 }
 
 Address* Constructor_Address(char* bitString){
-    char output[9];
-    GetChar(bitString,0,8,output);
+    char* output = malloc(7);
+    GetChar(bitString,0,6,output);
     char* TagString = output;
-    //output = malloc(7);
-    GetChar(bitString,8,6,output);
+    output = malloc(9);
+    GetChar(bitString,6,8,output);
     char* IndexString = output;
-    //output = malloc(3);
-    GetChar(bitString,14,2,output);
+    output = malloc(4);
+    GetChar(bitString,14,3,output);
     char* OffsetString = output;
     int Tag = fromBinary(TagString);
     int Index = fromBinary(IndexString);

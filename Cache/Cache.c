@@ -25,6 +25,7 @@ Cache* Constructor_Cache(int numberOfSets){
         Address* address = Constructor_Address(bitString);
         Set* set = Constructor_Set(4,*address);
         cache->putSet(&cache->HashTable,set);
+        printf("set address:%s\n",set->address.bitString);
         setAddress += 8;
     }
     return cache;

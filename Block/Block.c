@@ -13,14 +13,15 @@ Block* Constructor_Block(Address address){
     block->HashTable = NULL;
 
     int i;
-    int cacheAddress = address.bitStringValue;
+    int cacheAddressValue = address.bitStringValue;
     for(i = 0;i<8;i++){
-        char* bitString = int2bin(cacheAddress);
+        char* bitString = int2bin(cacheAddressValue);
         Address* cacheAddress = Constructor_Address(bitString);
         CacheLine* cacheLine = Constructor_CacheLine(*cacheAddress,"No Data Yet");
         block->validBit = false;
         putCacheLine(&block->HashTable,cacheLine);
-        cacheAddress += 1;
+        printf("cache address:%s",block->address.bitString);
+        cacheAddressValue += 1;
     }
     return block;
 }
