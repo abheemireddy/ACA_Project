@@ -42,7 +42,7 @@ void StoreFileInstructionsIntoProcessorQueue(Processor* processor)
             char* bitString = int2bin(address);
             addressStruct = Constructor_Address(bitString);
             Instruction* instruction = Constructor_Instruction(1,&value,addressStruct);
-            processor->InstructionHolder->TransferQueue->Enqueue(processor->InstructionHolder->TransferQueue,instruction);
+            processor->InstructionHolder->TransferQueue->Enqueue(processor->InstructionHolder->TransferQueue,*instruction);
 		}
 		else if (!strcmp(instruction, "CPURead")) // read instruction
 		{
@@ -51,7 +51,7 @@ void StoreFileInstructionsIntoProcessorQueue(Processor* processor)
             char* bitString = int2bin(address);
             addressStruct = Constructor_Address(bitString);
             Instruction* instruction = Constructor_Instruction(2,NULL,addressStruct);
-            processor->InstructionHolder->TransferQueue->Enqueue(processor->InstructionHolder->TransferQueue,instruction);
+            processor->InstructionHolder->TransferQueue->Enqueue(processor->InstructionHolder->TransferQueue,*instruction);
 		}
         /*if(operation != 1 && operation != 2){
             printf("Invalid operation: %s. Aborting\n", instruction);

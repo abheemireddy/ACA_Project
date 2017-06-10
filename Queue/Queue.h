@@ -20,11 +20,11 @@ typedef struct InstructionTag{
 Instruction* Constructor_Instruction(int instructionNumber,char* data,Address* address);
 
 typedef struct NodeTag {
-    Instruction* data;
+    Instruction data;
     struct NodeTag* prev;
 } Node;
 
-Node* Constructor_Node(Instruction* instruction);
+Node* Constructor_Node(Instruction instruction);
 
 typedef struct QueueTag {
     Node *head;
@@ -33,8 +33,8 @@ typedef struct QueueTag {
     int limit;
 
     void (*Queue_Destructor)(struct QueueTag *queue);
-    bool (*Enqueue)(struct QueueTag *queue, Instruction* instruction);
-    Instruction* (*Dequeue)(struct QueueTag *pQueue);
+    bool (*Enqueue)(struct QueueTag *queue, Instruction instruction);
+    Instruction (*Dequeue)(struct QueueTag *pQueue);
     bool (*isEmpty)(struct QueueTag* pQueue);
     void (*print_queue)(struct QueueTag* queue);
 
@@ -42,8 +42,8 @@ typedef struct QueueTag {
 
 Queue* Queue_Constructor();
 void Queue_Destructor(Queue *queue);
-bool Enqueue(Queue *queue, Instruction* instruction);
-Instruction* Dequeue(Queue *queue);
+bool Enqueue(Queue *queue, Instruction instruction);
+Instruction Dequeue(Queue *queue);
 bool isEmpty(Queue* pQueue);
 void print_queue(Queue* queue);
 

@@ -13,7 +13,7 @@ Instruction* Constructor_Instruction(int instructionNumber,char data[64],Address
     return instruction;
 }
 
-Node* Constructor_Node(Instruction* instruction){
+Node* Constructor_Node(Instruction instruction){
     Node* node = malloc(sizeof(Node));
     node->data = instruction;
     return node;
@@ -43,12 +43,12 @@ void Queue_Destructor(Queue *queue) {
 void print_queue(Queue* queue){
     Node* current = queue->head;
     while (current->prev != NULL) {
-        printf("Node Instruction:%s\n",current->data->data);
+        printf("Node Instruction:%s\n",current->data.data);
         current = current->prev;
     }
 }
 
-bool Enqueue(Queue *queue, Instruction* instruction) {
+bool Enqueue(Queue *queue, Instruction instruction) {
     Node* node = Constructor_Node(instruction);
     if ((queue == NULL) || (node == NULL)) {
         return false;
@@ -72,13 +72,15 @@ bool Enqueue(Queue *queue, Instruction* instruction) {
     return true;
 }
 
-Instruction* Dequeue(Queue *queue) {
+Instruction Dequeue(Queue *queue) {
     Node *node;
     if (isEmpty(queue)){
-        return NULL;
+        Instruction emptyInstruction = {};
+        printf("Trying to dequeue from empty queue");
+        return emptyInstruction;
     }
     node = queue->head;
-    //free(node);
+    free(node);
     queue->head = (queue->head)->prev;
     queue->size -= 1;
     return node->data;
