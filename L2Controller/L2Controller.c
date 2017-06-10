@@ -1,4 +1,5 @@
 #include "L2Controller.h"
+#include "Global_Variables.h"
 
 L2Controller* Constructor_L2Controller(){
     L2Controller* l2Controller = malloc(sizeof(L2Controller));

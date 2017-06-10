@@ -104,9 +104,13 @@ CMakeFiles/ACA_Project2.dir/L1Controller/L1Controller.c.o
  Address/Address.h
  Block/Block.h
  BlockTransferer/BlockTransferer.h
+ Buffers/buffers.h
  Cache/Cache.h
  CacheLine/CacheLine.h
+ Global_Variables.h
+ L1Controller/L1Controller.h
  L2Controller/L2Controller.h
+ Processor/processor.h
  Queue/Queue.h
  Set/Set.h
  aca/L1Data.h
@@ -119,8 +123,16 @@ CMakeFiles/ACA_Project2.dir/L2Controller/L2Controller.c.o
  Address/Address.h
  Block/Block.h
  BlockTransferer/BlockTransferer.h
+ Buffers/buffers.h
+ Cache/Cache.h
  CacheLine/CacheLine.h
+ Global_Variables.h
+ L1Controller/L1Controller.h
+ L2Controller/L2Controller.h
+ Processor/processor.h
  Queue/Queue.h
+ Set/Set.h
+ aca/L1Data.h
  aca/L2Data.h
  aca/MainMemory.h
  uthash_files/include/uthash.h
@@ -130,10 +142,13 @@ CMakeFiles/ACA_Project2.dir/Processor/processor.c.o
  Address/Address.h
  Block/Block.h
  BlockTransferer/BlockTransferer.h
+ Buffers/buffers.h
  Cache/Cache.h
  CacheLine/CacheLine.h
+ Global_Variables.h
  L1Controller/L1Controller.h
  L2Controller/L2Controller.h
+ Processor/processor.h
  Queue/Queue.h
  Set/Set.h
  aca/L1Data.h
@@ -162,11 +177,13 @@ CMakeFiles/ACA_Project2.dir/aca/MainMemory.c.o
  /home/abheemireddy/ACA_Project/aca/MainMemory.c
  /home/abheemireddy/ACA_Project/aca/MainMemory.h
 CMakeFiles/ACA_Project2.dir/main.c.o
+ /home/abheemireddy/ACA_Project/Buffers/buffers.h
  /home/abheemireddy/ACA_Project/Cache/Cache.h
  /home/abheemireddy/ACA_Project/Data_Structure_Examples/Block/Block_CacheLine_HashTable_Examples.h
  /home/abheemireddy/ACA_Project/Data_Structure_Examples/DRAM/DRAM_Examples.h
  /home/abheemireddy/ACA_Project/Data_Structure_Examples/Queue/Queue_the_examples.h
  /home/abheemireddy/ACA_Project/Data_Structure_Examples/Set/Set_and_Block_Examples.h
+ /home/abheemireddy/ACA_Project/Global_Variables.h
  /home/abheemireddy/ACA_Project/L1_Cache.h
  /home/abheemireddy/ACA_Project/Processor/processor.h
  /home/abheemireddy/ACA_Project/main.c

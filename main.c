@@ -7,15 +7,19 @@
 #include "Data_Structure_Examples/DRAM/DRAM_Examples.h"
 #include "L1_Cache.h"
 #include <sys/resource.h>
+#include "Buffers/buffers.h"
+#include "Global_Variables.h"
 
 void changeStackSize();
 int run_examples();
 
 int main(){
+    l1WriteBuffer = Constructor_Buffer();
+    l1VictimCache = Constructor_Buffer();
 
-    L1Controller* l1Controller = Constructor_L1Controller();
-    L2Controller* l2Controller = Constructor_L2Controller();
-    Processor* processor = Constructor_Processor(l1Controller,l2Controller);
+    l1Controller = Constructor_L1Controller();
+    l2Controller = Constructor_L2Controller();
+    processor = Constructor_Processor(l1Controller,l2Controller);
 
     StoreFileInstructionsIntoProcessorQueue(processor);
 
@@ -27,7 +31,7 @@ int main(){
             Enqueue(l1Controller->transferer->TransferQueue,nextInstructionFromProcessor);
 
             Instruction nextInstructionForL1ControllerToProcess = GetNextInstruction(l1Controller->transferer);
-            L1ProcessInstruction(l1Controller,l2Controller,nextInstructionForL1ControllerToProcess);
+            L1ProcessInstruction(nextInstructionForL1ControllerToProcess);
 
         }
         ClockCycleCount += 1;

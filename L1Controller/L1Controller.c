@@ -1,4 +1,5 @@
 #include "L1Controller.h"
+#include "Global_Variables.h"
 
 L1Controller* Constructor_L1Controller(){
     L1Controller* l1Controller = malloc(sizeof(l1Controller));
@@ -9,15 +10,15 @@ L1Controller* Constructor_L1Controller(){
 }
 
 
-void L1ProcessInstruction(L1Controller* l1Controller,L2Controller* l2Controller,Instruction instruction){
+void L1ProcessInstruction(Instruction instruction){
     if(instruction.instruction == 1){
-        L1_write(l1Controller,instruction,instruction.data);
+        L1_write(instruction,instruction.data);
     }else if(instruction.instruction == 2){
-        L1_read(l1Controller,l2Controller,instruction);
+        L1_read(instruction);
     }
 }
 
-void L1_write(L1Controller* l1Controller,Instruction instruction, char value[64])
+void L1_write(Instruction instruction, char value[64])
 {
 	/*printf("P to L1C: CPUWrite (%d)\n", address.bitStringValue);
 	// check if address is valid
@@ -55,7 +56,7 @@ void L1_write(L1Controller* l1Controller,Instruction instruction, char value[64]
 	}*/
 }
 
-CacheLine* L1_read(L1Controller* l1Controller,L2Controller* l2Controller,Instruction instruction)
+CacheLine* L1_read(Instruction instruction)
 {
     Set* set = getSetByIndex(&l1Controller->cache->HashTable,instruction.address.Index);
     Block* block = get(&set->HashTable,instruction.address.Tag);
@@ -69,11 +70,13 @@ CacheLine* L1_read(L1Controller* l1Controller,L2Controller* l2Controller,Instruc
     }
 	if (block == NULL)
 	{
-        l2Controller->transferer->TransferQueue->Enqueue(l2Controller->transferer->TransferQueue,instruction);
+        //check victim and write buffer
+        Enqueue(l2Controller->transferer->TransferQueue,instruction);
 		//l2Read(instruction.address, L1Data[instruction.address.Index].data);  // get data from L2
 		l1Controller->waiting = true;
 		return NULL;
-	}/*
+	}
+    /*
 	else if (L1Data[address.Index].valid && L1Data[address.Index].tag != address.Tag) // reading from a different tag
 	{
 		// first we need to send the block to the victim cache

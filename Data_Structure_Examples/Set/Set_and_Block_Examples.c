@@ -11,7 +11,7 @@ void ExampleUsingSetHash(){
     Block* case2 = Constructor_Block(*address2);
     put(&set->HashTable,case1);
     put(&set->HashTable,case2);
-    Block* returned = get(&set->HashTable,case2->address.bitString);
+    Block* returned = get(&set->HashTable,case2->address.Tag);
     printf("use Frequency: %d\n",returned->useFrequency);
 }
 Block* GetDummyBlockInstance(char* data){

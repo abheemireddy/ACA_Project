@@ -1,10 +1,5 @@
 #include "processor.h"
-#include "L1Controller/L1Controller.h"
-#include "L2Controller/L2Controller.h"
-#include <unistd.h>
-#include <stdio.h>
-#include <errno.h>
-#include <stdbool.h>
+#include "Global_Variables.h"
 
 Processor* Constructor_Processor(L1Controller* l1Controller,L2Controller* l2Controller){
     Processor* processor = malloc(sizeof(Processor));
