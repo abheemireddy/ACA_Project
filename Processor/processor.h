@@ -13,7 +13,7 @@
 #include "Address/Address.h"
 
 typedef struct ProcessorTag{
-    void (*run_processor)();
+    void (*StoreFileInstructionsIntoProcessorQueue)(struct ProcessorTag* processor);
 
     Transferer* InstructionHolder;
     L1Controller l1Controller;
@@ -22,7 +22,7 @@ typedef struct ProcessorTag{
 
 Processor* Constructor_Processor(L1Controller* l1Controller,L2Controller* l2Controller);
 
-void run_processor(Processor* processor);
+void StoreFileInstructionsIntoProcessorQueue(Processor* processor);
 
 void print_current_directory();
 

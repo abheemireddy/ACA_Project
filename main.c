@@ -23,7 +23,7 @@ int main(){
     l2Controller->transferer = transferer2;
     Processor* processor = Constructor_Processor(l1Controller,l2Controller);
 
-    processor->run_processor(processor);
+    processor->StoreFileInstructionsIntoProcessorQueue(processor);
 
 
     run_examples();//Anu, these should help you with using the pre-created data structures

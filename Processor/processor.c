@@ -11,7 +11,7 @@ Processor* Constructor_Processor(L1Controller* l1Controller,L2Controller* l2Cont
     processor->InstructionHolder = Constructor_Transferer();
     processor->l1Controller = *l1Controller;
     processor->l2Controller = *l2Controller;
-    processor->run_processor = &run_processor;
+    processor->StoreFileInstructionsIntoProcessorQueue = &StoreFileInstructionsIntoProcessorQueue;
     return processor;
 }
 
@@ -22,7 +22,7 @@ void print_current_directory(){
     }
 }
 
-void run_processor(Processor* processor)
+void StoreFileInstructionsIntoProcessorQueue(Processor* processor)
 {
     print_current_directory();
 
