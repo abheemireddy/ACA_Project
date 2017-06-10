@@ -23,6 +23,17 @@ Set* Constructor_Set(int numberOfBlocks,Address* address){
     set->replaceByUseFrequency = &replaceByUseFrequency;
     set->print_blocks_in_set = &print_blocks_in_set;
     set->IsBlockInSet = &IsBlockInSet;
+
+    int i;
+    int setAddress = address->bitStringValue;
+    for(i = 0;i<set->numberOfBlocks;i++){
+        char* bitString = int2bin(setAddress);
+        Address* address = Constructor_Address(bitString);
+        Block* block = Constructor_Block(address);
+        block->validBit = false;
+        set->put(&set->HashTable,block);
+        setAddress += 1;
+    }
     return set;
 }
 

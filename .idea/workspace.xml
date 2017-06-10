@@ -11,10 +11,12 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="874cd3ee-283a-48e2-bbb0-bde542e13d07" name="Default" comment="Changed constructors.  Needed to malloc onto the heap.">
+    <list default="true" id="874cd3ee-283a-48e2-bbb0-bde542e13d07" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ACA_Project2" afterPath="$PROJECT_DIR$/ACA_Project2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Cache/Cache.c.o" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Cache/Cache.c.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Set/Set.c.o" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Set/Set.c.o" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cache/Cache.c" afterPath="$PROJECT_DIR$/Cache/Cache.c" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Set/Set.c" afterPath="$PROJECT_DIR$/Set/Set.c" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <ignored path="$PROJECT_DIR$/CMakeFiles/" />
@@ -31,11 +33,21 @@
       <file leaf-file-name="Cache.c" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Cache/Cache.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="344">
-              <caret line="24" column="30" lean-forward="false" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
+            <state relative-caret-position="326">
+              <caret line="23" column="46" lean-forward="false" selection-start-line="23" selection-start-column="46" selection-end-line="23" selection-end-column="46" />
               <folding>
                 <element signature="e#38#57#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Set.c" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Set/Set.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="31" column="32" lean-forward="false" selection-start-line="31" selection-start-column="32" selection-end-line="31" selection-end-column="32" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -77,16 +89,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="198">
               <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="L2Controller.c" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/L2Controller/L2Controller.c">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="99" column="0" lean-forward="true" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -240,7 +242,6 @@
         <option value="$PROJECT_DIR$/main.c" />
         <option value="$PROJECT_DIR$/L1_Cache.h" />
         <option value="$PROJECT_DIR$/Block/Block.c" />
-        <option value="$PROJECT_DIR$/Set/Set.c" />
         <option value="$PROJECT_DIR$/Data_Structure_Examples/Set/Set_and_Block_Examples.h" />
         <option value="$PROJECT_DIR$/Data_Structure_Examples/Set/Set_and_Block_Examples.c" />
         <option value="$PROJECT_DIR$/Data_Structure_Examples/Queue/Queue_the_examples.c" />
@@ -255,6 +256,7 @@
         <option value="$PROJECT_DIR$/Address/Address.h" />
         <option value="$PROJECT_DIR$/Data_Structure_Examples/Block/Block_CacheLine_HashTable_Examples.c" />
         <option value="$PROJECT_DIR$/L1Controller/L1Controller.c" />
+        <option value="$PROJECT_DIR$/Set/Set.c" />
         <option value="$PROJECT_DIR$/Cache/Cache.c" />
       </list>
     </option>
@@ -723,14 +725,7 @@
       <workItem from="1496713422788" duration="671000" />
       <workItem from="1496754373526" duration="32944000" />
       <workItem from="1496890028780" duration="2917000" />
-      <workItem from="1496947808980" duration="17332000" />
-    </task>
-    <task id="LOCAL-00104" summary="Added separate include folder to put inside uthash">
-      <created>1496713901288</created>
-      <option name="number" value="00104" />
-      <option name="presentableId" value="LOCAL-00104" />
-      <option name="project" value="LOCAL" />
-      <updated>1496713901288</updated>
+      <workItem from="1496947808980" duration="17610000" />
     </task>
     <task id="LOCAL-00105" summary="Added separate include folder to put inside uthash">
       <created>1496713982109</created>
@@ -1068,11 +1063,18 @@
       <option name="project" value="LOCAL" />
       <updated>1497111659007</updated>
     </task>
-    <option name="localTasksCounter" value="153" />
+    <task id="LOCAL-00153" summary="Added to cache constructor.  We are filling the cache up with sets.">
+      <created>1497113356155</created>
+      <option name="number" value="00153" />
+      <option name="presentableId" value="LOCAL-00153" />
+      <option name="project" value="LOCAL" />
+      <updated>1497113356155</updated>
+    </task>
+    <option name="localTasksCounter" value="154" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="162059000" />
+    <option name="totallyTimeSpent" value="162337000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="954" extended-state="6" />
@@ -1080,7 +1082,7 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34900117" sideWeight="0.40539083" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34900117" sideWeight="0.40539083" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32902467" sideWeight="0.49811321" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34900117" sideWeight="0.59460914" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32079905" sideWeight="0.42371967" order="2" side_tool="false" content_ui="tabs" />
@@ -1106,7 +1108,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Attempt to change Anu's code to use the struct Address instead of the bits." />
     <MESSAGE value="I added a clock cycle attribute to the transferer.  The transferred data from the queue will not be read until this clock cycle is met.  This will simulate transferring the data across the bus." />
     <MESSAGE value="Included declaration header for run_examples.  Also turned Processor into a struct with functions." />
     <MESSAGE value="For some reason the address.bitStringValue was only showing as address.  I changed this for the sake of the printf statements." />
@@ -1131,7 +1132,8 @@
     <MESSAGE value="Reading instructions from processor and incrementing clock cycles." />
     <MESSAGE value="Adding Cache to L1Controller" />
     <MESSAGE value="Changed constructors.  Needed to malloc onto the heap." />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed constructors.  Needed to malloc onto the heap." />
+    <MESSAGE value="Added to cache constructor.  We are filling the cache up with sets." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added to cache constructor.  We are filling the cache up with sets." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1320,14 +1322,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="182">
           <caret line="68" column="33" lean-forward="false" selection-start-line="68" selection-start-column="33" selection-end-line="68" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Set/Set.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="118" column="5" lean-forward="true" selection-start-line="118" selection-start-column="5" selection-end-line="118" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -1548,10 +1542,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Set/Set.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="31" column="32" lean-forward="false" selection-start-line="31" selection-start-column="32" selection-end-line="31" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Cache/Cache.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
-          <caret line="24" column="30" lean-forward="false" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="30" />
+        <state relative-caret-position="326">
+          <caret line="23" column="46" lean-forward="false" selection-start-line="23" selection-start-column="46" selection-end-line="23" selection-end-column="46" />
           <folding>
             <element signature="e#38#57#0" expanded="true" />
           </folding>
