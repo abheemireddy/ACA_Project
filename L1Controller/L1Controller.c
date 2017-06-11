@@ -3,6 +3,8 @@
 #include "Global_Variables.h"
 #include "Cache/Cache.h"
 
+void CheckBufferSize();
+
 L1Controller* Constructor_L1Controller(){
     L1Controller* l1Controller = malloc(sizeof(l1Controller));
     l1Controller->cache = Constructor_Cache(64);
@@ -23,6 +25,17 @@ void CheckSetSize(Set* set){
         }else{
             putBlockInBuffer(&l1VictimCache->HashTable,leastUsed);
         }
+    }
+    CheckBufferSize();
+}
+void CheckBufferSize(){
+    int victimCacheCount = CountBlocksInBuffer(&l1VictimCache->HashTable);
+    int writeBufferCount = CountBlocksInBuffer(&l1WriteBuffer->HashTable);
+    if(victimCacheCount >= 2){
+        WriteBackToL2(&l1VictimCache->HashTable);
+    }
+    if(writeBufferCount >= 5){
+        WriteBackToL2(&l1WriteBuffer->HashTable);
     }
 }
 
@@ -129,6 +142,8 @@ void L1_write(Instruction instruction, char value[64])
             TEMP_putInL1Set(&instruction.address,set,value);
         }
     }
+    CheckSetSize(set);
+    CheckBufferSize();
 	/*printf("P to L1C: CPUWrite (%d)\n", address.bitStringValue);
 	// check if address is valid
 	if (!L1Data[address.Index].valid) // block not valid
@@ -193,7 +208,7 @@ CacheLine* L1_read(Instruction instruction)
                 }
                 return victimCacheLine;
             } else if (writeBlock != NULL) {
-                CacheLine *writeBufferCacheLine = getCacheLineByOffset(&victimBlock->HashTable,
+                CacheLine *writeBufferCacheLine = getCacheLineByOffset(&writeBlock->HashTable,
                                                                        instruction.address.Offset);
                 if (CountBlocksInBuffer(&l1WriteBuffer->HashTable) >= 5) {
                     WriteBackToL2(&l1WriteBuffer->HashTable);

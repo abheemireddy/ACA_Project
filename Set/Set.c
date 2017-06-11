@@ -36,7 +36,7 @@ bool IsBlockInSet(Set set,Block newBlock){
     }
 }
 
-void put(Block** HashTable,Block *value) {  //key is useFrequency of the block.  Seems magical
+void put(Block** HashTable,Block *value) {
     if(value->address.bitString == NULL){
         printf("The passed block needs to have attribute address set");
     }
@@ -68,6 +68,9 @@ Block* get(Block** HashTable,int key) {
     Block *hashTableStoresInThisBlock;
 
     HASH_FIND_INT( *HashTable, &key, hashTableStoresInThisBlock );//find block_id and put into hashTableStoresInThisBlock
+    if(hashTableStoresInThisBlock != NULL){
+        hashTableStoresInThisBlock->useFrequency += 1;
+    }
     return hashTableStoresInThisBlock;
 }
 
