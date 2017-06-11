@@ -6,8 +6,9 @@
 #define ACA_PROJECT_DRAM_H
 
 #include <uthash.h>
-#include "BlockTransferer/BlockTransferer.h"
-#include "Block_Queue/Block_Queue.h"
+
+typedef struct TransfererTag Transferer;
+typedef struct BlockQueueTag BlockQueue;
 
 struct BlockTag;//forward declaration
 

@@ -339,6 +339,33 @@ CacheLine/CacheLine.c.s:
 	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/CacheLine/CacheLine.c.s
 .PHONY : CacheLine/CacheLine.c.s
 
+Controller/Controller.o: Controller/Controller.c.o
+
+.PHONY : Controller/Controller.o
+
+# target to build an object file
+Controller/Controller.c.o:
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/Controller/Controller.c.o
+.PHONY : Controller/Controller.c.o
+
+Controller/Controller.i: Controller/Controller.c.i
+
+.PHONY : Controller/Controller.i
+
+# target to preprocess a source file
+Controller/Controller.c.i:
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/Controller/Controller.c.i
+.PHONY : Controller/Controller.c.i
+
+Controller/Controller.s: Controller/Controller.c.s
+
+.PHONY : Controller/Controller.s
+
+# target to generate assembly for a file
+Controller/Controller.c.s:
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/Controller/Controller.c.s
+.PHONY : Controller/Controller.c.s
+
 DRAM/DRAM.o: DRAM/DRAM.c.o
 
 .PHONY : DRAM/DRAM.o
@@ -582,60 +609,6 @@ Instruction/Instruction.c.s:
 	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/Instruction/Instruction.c.s
 .PHONY : Instruction/Instruction.c.s
 
-L1Controller/L1Controller.o: L1Controller/L1Controller.c.o
-
-.PHONY : L1Controller/L1Controller.o
-
-# target to build an object file
-L1Controller/L1Controller.c.o:
-	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/L1Controller/L1Controller.c.o
-.PHONY : L1Controller/L1Controller.c.o
-
-L1Controller/L1Controller.i: L1Controller/L1Controller.c.i
-
-.PHONY : L1Controller/L1Controller.i
-
-# target to preprocess a source file
-L1Controller/L1Controller.c.i:
-	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/L1Controller/L1Controller.c.i
-.PHONY : L1Controller/L1Controller.c.i
-
-L1Controller/L1Controller.s: L1Controller/L1Controller.c.s
-
-.PHONY : L1Controller/L1Controller.s
-
-# target to generate assembly for a file
-L1Controller/L1Controller.c.s:
-	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/L1Controller/L1Controller.c.s
-.PHONY : L1Controller/L1Controller.c.s
-
-L2Controller/L2Controller.o: L2Controller/L2Controller.c.o
-
-.PHONY : L2Controller/L2Controller.o
-
-# target to build an object file
-L2Controller/L2Controller.c.o:
-	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/L2Controller/L2Controller.c.o
-.PHONY : L2Controller/L2Controller.c.o
-
-L2Controller/L2Controller.i: L2Controller/L2Controller.c.i
-
-.PHONY : L2Controller/L2Controller.i
-
-# target to preprocess a source file
-L2Controller/L2Controller.c.i:
-	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/L2Controller/L2Controller.c.i
-.PHONY : L2Controller/L2Controller.c.i
-
-L2Controller/L2Controller.s: L2Controller/L2Controller.c.s
-
-.PHONY : L2Controller/L2Controller.s
-
-# target to generate assembly for a file
-L2Controller/L2Controller.c.s:
-	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/L2Controller/L2Controller.c.s
-.PHONY : L2Controller/L2Controller.c.s
-
 Processor/processor.o: Processor/processor.c.o
 
 .PHONY : Processor/processor.o
@@ -858,6 +831,9 @@ help:
 	@echo "... CacheLine/CacheLine.o"
 	@echo "... CacheLine/CacheLine.i"
 	@echo "... CacheLine/CacheLine.s"
+	@echo "... Controller/Controller.o"
+	@echo "... Controller/Controller.i"
+	@echo "... Controller/Controller.s"
 	@echo "... DRAM/DRAM.o"
 	@echo "... DRAM/DRAM.i"
 	@echo "... DRAM/DRAM.s"
@@ -885,12 +861,6 @@ help:
 	@echo "... Instruction/Instruction.o"
 	@echo "... Instruction/Instruction.i"
 	@echo "... Instruction/Instruction.s"
-	@echo "... L1Controller/L1Controller.o"
-	@echo "... L1Controller/L1Controller.i"
-	@echo "... L1Controller/L1Controller.s"
-	@echo "... L2Controller/L2Controller.o"
-	@echo "... L2Controller/L2Controller.i"
-	@echo "... L2Controller/L2Controller.s"
 	@echo "... Processor/processor.o"
 	@echo "... Processor/processor.i"
 	@echo "... Processor/processor.s"

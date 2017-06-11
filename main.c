@@ -18,6 +18,7 @@ int run_examples();
 int main(){
     l1Data = Constructor_DataStore();
     l1WriteBuffer = Constructor_Buffer();
+    l2WriteBuffer = Constructor_Buffer();
     l1VictimCache = Constructor_Buffer();
 
     l1Controller = Constructor_L1Controller();
@@ -49,6 +50,10 @@ int main(){
                         Dequeue(l1Controller->transferer->TransferQueue);
                     }
                 }
+            }
+            if(!isBlockQueueEmpty(l2Controller->blockQueue)){
+                Block* flushedFromBufers = PeekBlock(&l2Controller->blockQueue);
+                //l2WriteBlock(flushedFromBufers);
             }
             if(l2Controller->waiting == false){
 

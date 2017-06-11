@@ -5,7 +5,7 @@
 
 
 
-Processor* Constructor_Processor(L1Controller* l1Controller,L2Controller* l2Controller){
+Processor* Constructor_Processor(Controller* l1Controller,Controller* l2Controller){
     Processor* processor = malloc(sizeof(Processor));
     processor->InstructionHolder = Constructor_Transferer();
     processor->l1Controller = *l1Controller;
