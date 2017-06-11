@@ -13,35 +13,9 @@
   <component name="ChangeListManager">
     <list default="true" id="874cd3ee-283a-48e2-bbb0-bde542e13d07" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ACA_Project2" afterPath="$PROJECT_DIR$/ACA_Project2" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/BlockTransferer/BlockTransferer.c.o" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/BlockTransferer/BlockTransferer.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.o" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/DRAM/DRAM.c.o" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/DRAM/DRAM.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/BlockTransferer/BlockTransferer_Examples.c.o" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/BlockTransferer/BlockTransferer_Examples.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/DRAM/DRAM_Examples.c.o" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/DRAM/DRAM_Examples.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Queue/Queue_the_examples.c.o" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Queue/Queue_the_examples.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/L1Controller/L1Controller.c.o" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/L1Controller/L1Controller.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/L2Controller/L2Controller.c.o" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/L2Controller/L2Controller.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Processor/processor.c.o" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Processor/processor.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Queue/Queue.c.o" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Queue/Queue.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/main.c.o" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/main.c.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Address/Address.c.o" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Address/Address.c.o" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Address/Address.c" afterPath="$PROJECT_DIR$/Address/Address.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Address/Address.h" afterPath="$PROJECT_DIR$/Address/Address.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Block_Queue/Block_Queue.h" afterPath="$PROJECT_DIR$/Block_Queue/Block_Queue.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Buffers/buffers.c" afterPath="$PROJECT_DIR$/Buffers/buffers.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Buffers/buffers.h" afterPath="$PROJECT_DIR$/Buffers/buffers.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/C.includecache" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/C.includecache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/depend.internal" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/depend.internal" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/depend.make" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/depend.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cache/Cache.h" afterPath="$PROJECT_DIR$/Cache/Cache.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DRAM/DRAM.h" afterPath="$PROJECT_DIR$/DRAM/DRAM.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/L1Controller/L1Controller.c" afterPath="$PROJECT_DIR$/L1Controller/L1Controller.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/L1Controller/L1Controller.h" afterPath="$PROJECT_DIR$/L1Controller/L1Controller.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/L2Controller/L2Controller.c" afterPath="$PROJECT_DIR$/L2Controller/L2Controller.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/L2Controller/L2Controller.h" afterPath="$PROJECT_DIR$/L2Controller/L2Controller.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Processor/processor.c" afterPath="$PROJECT_DIR$/Processor/processor.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Processor/processor.h" afterPath="$PROJECT_DIR$/Processor/processor.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Queue/Queue.h" afterPath="$PROJECT_DIR$/Queue/Queue.h" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <ignored path="$PROJECT_DIR$/CMakeFiles/" />
@@ -55,12 +29,14 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="L1Controller.c" pinned="false" current-in-tab="false">
+      <file leaf-file-name="L1Controller.c" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/L1Controller/L1Controller.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="10" lean-forward="false" selection-start-line="0" selection-start-column="10" selection-end-line="0" selection-end-column="10" />
-              <folding />
+            <state relative-caret-position="416">
+              <caret line="66" column="13" lean-forward="true" selection-start-line="66" selection-start-column="13" selection-end-line="66" selection-end-column="13" />
+              <folding>
+                <element signature="e#0#24#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -143,10 +119,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Set.h" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Set.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Set/Set.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
+            <state relative-caret-position="-340">
               <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
               <folding />
             </state>
@@ -284,9 +260,9 @@
         <option value="$PROJECT_DIR$/Address/Address.c" />
         <option value="$PROJECT_DIR$/Cache/Cache.h" />
         <option value="$PROJECT_DIR$/DRAM/DRAM.h" />
-        <option value="$PROJECT_DIR$/L1Controller/L1Controller.c" />
         <option value="$PROJECT_DIR$/L2Controller/L2Controller.c" />
         <option value="$PROJECT_DIR$/Processor/processor.c" />
+        <option value="$PROJECT_DIR$/L1Controller/L1Controller.c" />
       </list>
     </option>
   </component>
@@ -796,14 +772,7 @@
       <workItem from="1496713422788" duration="671000" />
       <workItem from="1496754373526" duration="32944000" />
       <workItem from="1496890028780" duration="2917000" />
-      <workItem from="1496947808980" duration="50864000" />
-    </task>
-    <task id="LOCAL-00128" summary="Included declaration header for run_examples.  Also turned Processor into a struct with functions.">
-      <created>1496856996407</created>
-      <option name="number" value="00128" />
-      <option name="presentableId" value="LOCAL-00128" />
-      <option name="project" value="LOCAL" />
-      <updated>1496856996407</updated>
+      <workItem from="1496947808980" duration="51683000" />
     </task>
     <task id="LOCAL-00129" summary="For some reason the address.bitStringValue was only showing as address.  I changed this for the sake of the printf statements.">
       <created>1496857164556</created>
@@ -1141,11 +1110,18 @@
       <option name="project" value="LOCAL" />
       <updated>1497146460153</updated>
     </task>
-    <option name="localTasksCounter" value="177" />
+    <task id="LOCAL-00177" summary="Changed header includes to quotes.  Sometimes CLion does the system &lt;&gt; includes. That causes issues.">
+      <created>1497148401508</created>
+      <option name="number" value="00177" />
+      <option name="presentableId" value="LOCAL-00177" />
+      <option name="project" value="LOCAL" />
+      <updated>1497148401508</updated>
+    </task>
+    <option name="localTasksCounter" value="178" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="195591000" />
+    <option name="totallyTimeSpent" value="196410000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="954" extended-state="6" />
@@ -1179,7 +1155,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Changed constructors.  Needed to malloc onto the heap." />
     <MESSAGE value="Added to cache constructor.  We are filling the cache up with sets." />
     <MESSAGE value="Added to set constructor.  We are filling the set up with blocks." />
     <MESSAGE value="Working on constructing entire cache/sets as empty.  There is a problem when trying to add the 50th set.  I think it has to do with the bitString.  I am fixing this now." />
@@ -1204,7 +1179,8 @@
     <MESSAGE value="Added in functionality to search write buffer and victim cache for block." />
     <MESSAGE value="Updated ReadMe" />
     <MESSAGE value="L1, write to cacheLine if it is already in cache." />
-    <option name="LAST_COMMIT_MESSAGE" value="L1, write to cacheLine if it is already in cache." />
+    <MESSAGE value="Changed header includes to quotes.  Sometimes CLion does the system &lt;&gt; includes. That causes issues." />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed header includes to quotes.  Sometimes CLion does the system &lt;&gt; includes. That causes issues." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1574,14 +1550,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/L1Controller/L1Controller.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="10" lean-forward="false" selection-start-line="0" selection-start-column="10" selection-end-line="0" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/L1Controller/L1Controller.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
@@ -1658,9 +1626,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Set/Set.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
+        <state relative-caret-position="-340">
           <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/L1Controller/L1Controller.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="66" column="13" lean-forward="true" selection-start-line="66" selection-start-column="13" selection-end-line="66" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
