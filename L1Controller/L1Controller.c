@@ -29,7 +29,6 @@ void SetL1ControllerData(){
         }
     }
     put(&set->HashTable,toStore);
-    //L1ProcessInstruction(nextInstructionForL1ControllerToProcess);
 }
 
 void L1ProcessInstruction(Instruction instruction){
@@ -93,10 +92,21 @@ CacheLine* L1_read(Instruction instruction)
 	if (block == NULL)
 	{
         //check victim and write buffer
-        Enqueue(l2Controller->transferer->TransferQueue,instruction);
-		//l2Read(instruction.address, L1Data[instruction.address.Index].data);  // get data from L2
-		l1Controller->waiting = true;
-		return NULL;
+        Block* victimBlock = getBlockFromBuffer(&l1VictimCache->HashTable,instruction.address.bitStringValue);
+        Block* writeBlock = getBlockFromBuffer(&l1WriteBuffer->HashTable,instruction.address.bitStringValue);
+        if(victimBlock == NULL && writeBlock == NULL){
+            Enqueue(l2Controller->transferer->TransferQueue,instruction);
+            l1Controller->waiting = true;
+            return NULL;
+        }else{
+            if(victimBlock != NULL){
+                CacheLine* victimCacheLine = getCacheLineByOffset(&victimBlock->HashTable,instruction.address.Offset);
+                return victimCacheLine;
+            }else if(writeBlock != NULL){
+                CacheLine* writeBufferCacheLine = getCacheLineByOffset(&victimBlock->HashTable,instruction.address.Offset);
+                return writeBufferCacheLine;
+            }
+        }
 	}
     /*
 	else if (L1Data[address.Index].valid && L1Data[address.Index].tag != address.Tag) // reading from a different tag

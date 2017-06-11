@@ -20,7 +20,6 @@ Block* Constructor_Block(Address address){
         CacheLine* cacheLine = Constructor_CacheLine(*cacheAddress,"No Data Yet");
         block->validBit = false;
         putCacheLine(&block->HashTable,cacheLine);
-        printf("cache address:%s",block->address.bitString);
         cacheAddressValue += 1;
     }
     return block;

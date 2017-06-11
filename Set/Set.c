@@ -22,7 +22,6 @@ Set* Constructor_Set(int numberOfBlocks,Address address){
         block->validBit = false;
         block->dirtyBit = false;
         put(&set->HashTable,block);
-        printf("block address:%s\n",set->address.bitString);
         setAddress += 256;
     }
     return set;

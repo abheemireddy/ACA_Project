@@ -17,7 +17,7 @@ typedef struct BufferTag {
     void (*removeBlockFromBuffer)(struct BlockTag** HashTable,struct BlockTag* blockToRemove);
     void (*putBlock)(struct BlockTag** HashTable,struct BlockTag *value);
     int (*CountBlocks)(struct BlockTag** HashTable);
-    struct BlockTag* (*getBlock)(struct BlockTag** HashTable,int key);
+    struct BlockTag* (*getBlockFromBuffer)(struct BlockTag** HashTable,int key);
     void (*print_all_blocks)(struct BlockTag** HashTable);
 
 } Buffer;
