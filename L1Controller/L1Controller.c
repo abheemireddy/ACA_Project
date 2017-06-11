@@ -67,6 +67,8 @@ void WriteToBlock(Block* existing,Instruction instruction,char value[64]){
     CacheLine* toWriteTo = getCacheLineByOffset(&existing->HashTable,instruction.address.Offset);
     strcpy(toWriteTo->data,value);
     existing->dirtyBit = true;
+    printf("Wrote to set:%d",existing->address.bitStringValue);
+    Dequeue(l1Controller->transferer->TransferQueue);
 }
 void CheckVictimCacheAndWriteBuffer(Block* existing,Instruction instruction,char value[64]){
     Block* victimBlock = getBlockFromBuffer(&l1VictimCache->HashTable,instruction.address.bitStringValue);
@@ -90,9 +92,8 @@ void CheckVictimCacheAndWriteBuffer(Block* existing,Instruction instruction,char
 }
 void L1_write(Instruction instruction, char value[64])
 {
-    Block* toStore = l1Controller->dataFromL2;
-    Set* set = getSetByIndex(&l1Controller->cache->HashTable,toStore->address.Index);
-    Block* existing = get(&set->HashTable,toStore->address.Tag);
+    Set* set = getSetByIndex(&l1Controller->cache->HashTable,instruction.address.Index);
+    Block* existing = get(&set->HashTable,instruction.address.Tag);
     if(existing != NULL){
         WriteToBlock(existing,instruction,value);
     }else{
