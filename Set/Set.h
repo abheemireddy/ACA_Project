@@ -29,8 +29,10 @@ typedef struct SetTag {
     struct BlockTag* (*get)(struct BlockTag** HashTable,int key);
     void (*SortHash)(struct BlockTag** HashTable);
     void (*print_blocks_in_set)(struct BlockTag** HashTable);
+    struct BlockTag* (*GetLeastUsed)(struct BlockTag** HashTable);
 } Set;
 
+struct BlockTag* GetLeastUsed(struct BlockTag** HashTable);
 Set* Constructor_Set(int numberOfBlocks,Address address);
 void AddBlock(Set set,struct BlockTag** HashTable,struct BlockTag** blockToAdd);
 

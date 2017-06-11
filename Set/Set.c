@@ -94,6 +94,14 @@ int Count(Block** HashTable){
     return num_in_hashtable;
 }
 
+Block* GetLeastUsed(Block** HashTable){
+    Block* s;
+    Block* tmp;
+    HASH_ITER(hh,*HashTable,s,tmp){
+        return s;
+    }
+}
+
 void print_blocks_in_set(Block** HashTable) {
     Block* s;
     Block* tmp;

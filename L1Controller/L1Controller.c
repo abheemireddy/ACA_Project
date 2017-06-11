@@ -31,6 +31,17 @@ void SetL1ControllerData(){
             putBlockInBuffer(&l1VictimCache->HashTable,existing);
         }
     }
+    int countInSet = Count(&set->HashTable);
+    if(countInSet >= 4){
+        SortHash(&set->HashTable);
+        Block* leastUsed = GetLeastUsed(&set->HashTable);
+        removeFromTable(&set->HashTable,leastUsed);
+        if(leastUsed->dirtyBit == true){
+            putBlockInBuffer(&l1WriteBuffer->HashTable,leastUsed);
+        }else{
+            putBlockInBuffer(&l1VictimCache->HashTable,leastUsed);
+        }
+    }
     put(&set->HashTable,toStore);
 }
 
@@ -50,6 +61,7 @@ void L1_write(Instruction instruction, char value[64])
     if(existing != NULL){
         CacheLine* toWriteTo = getCacheLineByOffset(&existing->HashTable,instruction.address.Offset);
         strcpy(toWriteTo->data,value);
+        existing->dirtyBit = true;
     }else{
         //look in victim cache and write buffer
         Block* victimBlock = getBlockFromBuffer(&l1VictimCache->HashTable,instruction.address.bitStringValue);
@@ -61,9 +73,13 @@ void L1_write(Instruction instruction, char value[64])
             if(victimBlock != NULL){
                 CacheLine* victimCacheLine = getCacheLineByOffset(&victimBlock->HashTable,instruction.address.Offset);
                 strcpy(victimCacheLine->data,value);
+                existing->dirtyBit = true;
+                existing->isIdle = false;
             }else if(writeBlock != NULL){
                 CacheLine* writeBufferCacheLine = getCacheLineByOffset(&victimBlock->HashTable,instruction.address.Offset);
                 strcpy(writeBufferCacheLine->data,value);
+                existing->dirtyBit = true;
+                existing->isIdle = false;
             }
         }
     }
@@ -115,25 +131,31 @@ CacheLine* L1_read(Instruction instruction)
             block = NULL;
         }
     }
-	if (block == NULL)
-	{
+	if (block == NULL) {
         //check victim and write buffer
-        Block* victimBlock = getBlockFromBuffer(&l1VictimCache->HashTable,instruction.address.bitStringValue);
-        Block* writeBlock = getBlockFromBuffer(&l1WriteBuffer->HashTable,instruction.address.bitStringValue);
-        if(victimBlock == NULL && writeBlock == NULL){
-            Enqueue(l2Controller->transferer->TransferQueue,instruction);
+        Block *victimBlock = getBlockFromBuffer(&l1VictimCache->HashTable, instruction.address.bitStringValue);
+        Block *writeBlock = getBlockFromBuffer(&l1WriteBuffer->HashTable, instruction.address.bitStringValue);
+        if (victimBlock == NULL && writeBlock == NULL) {
+            Enqueue(l2Controller->transferer->TransferQueue, instruction);
             l1Controller->waiting = true;
             return NULL;
-        }else{
-            if(victimBlock != NULL){
-                CacheLine* victimCacheLine = getCacheLineByOffset(&victimBlock->HashTable,instruction.address.Offset);
+        } else {
+            if (victimBlock != NULL) {
+                CacheLine *victimCacheLine = getCacheLineByOffset(&victimBlock->HashTable, instruction.address.Offset);
+                if (CountBlocksInBuffer(&l1VictimCache->HashTable) >= 2) {
+                    WriteBackToL2(&l1VictimCache->HashTable);
+                }
                 return victimCacheLine;
-            }else if(writeBlock != NULL){
-                CacheLine* writeBufferCacheLine = getCacheLineByOffset(&victimBlock->HashTable,instruction.address.Offset);
+            } else if (writeBlock != NULL) {
+                CacheLine *writeBufferCacheLine = getCacheLineByOffset(&victimBlock->HashTable,
+                                                                       instruction.address.Offset);
+                if (CountBlocksInBuffer(&l1WriteBuffer->HashTable) >= 5) {
+                    WriteBackToL2(&l1WriteBuffer->HashTable);
+                }
                 return writeBufferCacheLine;
             }
         }
-	}
+    }
     /*
 	else if (L1Data[address.Index].valid && L1Data[address.Index].tag != address.Tag) // reading from a different tag
 	{
