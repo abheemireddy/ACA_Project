@@ -63,35 +63,40 @@ void L1ProcessInstruction(Instruction instruction){
     }
 }
 
+void WriteToBlock(Block* existing,Instruction instruction,char value[64]){
+    CacheLine* toWriteTo = getCacheLineByOffset(&existing->HashTable,instruction.address.Offset);
+    strcpy(toWriteTo->data,value);
+    existing->dirtyBit = true;
+}
+void CheckVictimCacheAndWriteBuffer(Block* existing,Instruction instruction,char value[64]){
+    Block* victimBlock = getBlockFromBuffer(&l1VictimCache->HashTable,instruction.address.bitStringValue);
+    Block* writeBlock = getBlockFromBuffer(&l1WriteBuffer->HashTable,instruction.address.bitStringValue);
+    if(victimBlock == NULL && writeBlock == NULL){
+        Enqueue(l2Controller->transferer->TransferQueue,instruction);
+        l1Controller->waiting = true;
+    }else{
+        if(victimBlock != NULL){
+            CacheLine* victimCacheLine = getCacheLineByOffset(&victimBlock->HashTable,instruction.address.Offset);
+            strcpy(victimCacheLine->data,value);
+            existing->dirtyBit = true;
+            existing->isIdle = false;
+        }else if(writeBlock != NULL){
+            CacheLine* writeBufferCacheLine = getCacheLineByOffset(&victimBlock->HashTable,instruction.address.Offset);
+            strcpy(writeBufferCacheLine->data,value);
+            existing->dirtyBit = true;
+            existing->isIdle = false;
+        }
+    }
+}
 void L1_write(Instruction instruction, char value[64])
 {
     Block* toStore = l1Controller->dataFromL2;
     Set* set = getSetByIndex(&l1Controller->cache->HashTable,toStore->address.Index);
     Block* existing = get(&set->HashTable,toStore->address.Tag);
     if(existing != NULL){
-        CacheLine* toWriteTo = getCacheLineByOffset(&existing->HashTable,instruction.address.Offset);
-        strcpy(toWriteTo->data,value);
-        existing->dirtyBit = true;
+        WriteToBlock(existing,instruction,value);
     }else{
-        //look in victim cache and write buffer
-        Block* victimBlock = getBlockFromBuffer(&l1VictimCache->HashTable,instruction.address.bitStringValue);
-        Block* writeBlock = getBlockFromBuffer(&l1WriteBuffer->HashTable,instruction.address.bitStringValue);
-        if(victimBlock == NULL && writeBlock == NULL){
-            Enqueue(l2Controller->transferer->TransferQueue,instruction);
-            l1Controller->waiting = true;
-        }else{
-            if(victimBlock != NULL){
-                CacheLine* victimCacheLine = getCacheLineByOffset(&victimBlock->HashTable,instruction.address.Offset);
-                strcpy(victimCacheLine->data,value);
-                existing->dirtyBit = true;
-                existing->isIdle = false;
-            }else if(writeBlock != NULL){
-                CacheLine* writeBufferCacheLine = getCacheLineByOffset(&victimBlock->HashTable,instruction.address.Offset);
-                strcpy(writeBufferCacheLine->data,value);
-                existing->dirtyBit = true;
-                existing->isIdle = false;
-            }
-        }
+        CheckVictimCacheAndWriteBuffer(existing,instruction,value);
     }
 	/*printf("P to L1C: CPUWrite (%d)\n", address.bitStringValue);
 	// check if address is valid
