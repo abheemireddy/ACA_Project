@@ -67,10 +67,15 @@ CacheLine* L1ProcessInstruction(Instruction instruction){
 
 void WriteToBlock(Block* existing,Instruction instruction,char value[64]){
     CacheLine* toWriteTo = getCacheLineByOffset(&existing->HashTable,instruction.address.Offset);
+    if(toWriteTo == NULL){
+        CacheLine* cacheLine = Constructor_CacheLine(instruction.address,value);
+        putCacheLine(&existing->HashTable,cacheLine);
+        toWriteTo = getCacheLineByOffset(&existing->HashTable,instruction.address.Offset);
+    }
     toWriteTo->dataLine = StoreData(l1Data,value);
     existing->dirtyBit = true;
     existing->validBit = true;
-    printf("Wrote to set:%s\n",GetData(l1Data,toWriteTo->dataLine));
+    printf("Wrote to set:%d val:%s\n",toWriteTo->address.bitStringValue,GetData(l1Data,toWriteTo->dataLine));
     Dequeue(l1Controller->transferer->TransferQueue);
 }
 
@@ -100,8 +105,6 @@ bool CheckVictimCacheAndWriteBuffer(Instruction instruction,char value[64]){
 
 void TEMP_putInL1Set(Address* address,Set* set,char value[64]){
     Block* block = Constructor_Block(*address);
-    block->validBit = false;
-    block->dirtyBit = false;
     put(&set->HashTable,block);
     CacheLine* cacheLine = Constructor_CacheLine(*address,value);
     putCacheLine(&block->HashTable,cacheLine);
