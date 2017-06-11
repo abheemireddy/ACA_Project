@@ -42,8 +42,12 @@ int main(){
                 Instruction nextInstructionForL1ControllerToProcess = GetNextInstruction(l1Controller->transferer);
                 CacheLine* read = L1ProcessInstruction(nextInstructionForL1ControllerToProcess);
                 if(nextInstructionForL1ControllerToProcess.instruction == 2){
-                    printf("Read from: %d val %s\n",read->address.bitStringValue,GetData(l1Data,read->dataLine));
-                    Dequeue(l1Controller->transferer->TransferQueue);
+                    if(read == NULL){
+                        printf("Did not find in cache, waiting");
+                    }else{
+                        printf("Read from: %d val %s\n",read->address.bitStringValue,GetData(l1Data,read->dataLine));
+                        Dequeue(l1Controller->transferer->TransferQueue);
+                    }
                 }
             }
             if(l2Controller->waiting == false){
