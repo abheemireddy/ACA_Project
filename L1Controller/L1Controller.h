@@ -19,7 +19,7 @@ typedef struct L1ControllerTag{
 
 L1Controller* Constructor_L1Controller();
 
-void L1ProcessInstruction(Instruction instruction);
+CacheLine* L1ProcessInstruction(Instruction instruction);
 void L1_write(Instruction instruction, char value[64]);
 CacheLine* L1_read(Instruction instruction);
 void SetL1ControllerData();

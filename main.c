@@ -39,7 +39,10 @@ int main(){
                     Enqueue(l1Controller->transferer->TransferQueue,nextInstructionFromProcessor);
                 }
                 Instruction nextInstructionForL1ControllerToProcess = GetNextInstruction(l1Controller->transferer);
-                L1ProcessInstruction(nextInstructionForL1ControllerToProcess);
+                CacheLine* read = L1ProcessInstruction(nextInstructionForL1ControllerToProcess);
+                if(nextInstructionForL1ControllerToProcess.instruction == 2){
+                    printf("Read:%s",GetData(l1Data,read->dataLine));
+                }
             }
             if(l2Controller->waiting == false){
 

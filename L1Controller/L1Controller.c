@@ -55,11 +55,13 @@ void SetL1ControllerData(){
     put(&set->HashTable,toStore);
 }
 
-void L1ProcessInstruction(Instruction instruction){
+CacheLine* L1ProcessInstruction(Instruction instruction){
     if(instruction.instruction == 1){
         L1_write(instruction,instruction.data);
+        return NULL;
     }else if(instruction.instruction == 2){
-        L1_read(instruction);
+        CacheLine* cacheLineRead =  L1_read(instruction);
+        return cacheLineRead;
     }
 }
 
