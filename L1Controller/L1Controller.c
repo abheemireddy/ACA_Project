@@ -65,9 +65,9 @@ void L1ProcessInstruction(Instruction instruction){
 
 void WriteToBlock(Block* existing,Instruction instruction,char value[64]){
     CacheLine* toWriteTo = getCacheLineByOffset(&existing->HashTable,instruction.address.Offset);
-    strcpy(toWriteTo->data,value);
+    toWriteTo->dataLine = l1Data->StoreData(l1Data,value);
     existing->dirtyBit = true;
-    printf("Wrote to set:%s\n",toWriteTo->data);
+    printf("Wrote to set:%s\n",GetData(l1Data,toWriteTo->dataLine));
     Dequeue(l1Controller->transferer->TransferQueue);
 }
 void CheckVictimCacheAndWriteBuffer(Block* existing,Instruction instruction,char value[64]){
@@ -79,12 +79,12 @@ void CheckVictimCacheAndWriteBuffer(Block* existing,Instruction instruction,char
     }else{
         if(victimBlock != NULL){
             CacheLine* victimCacheLine = getCacheLineByOffset(&victimBlock->HashTable,instruction.address.Offset);
-            strcpy(victimCacheLine->data,value);
+            victimCacheLine->dataLine = StoreData(l1Data,value);
             existing->dirtyBit = true;
             existing->isIdle = false;
         }else if(writeBlock != NULL){
             CacheLine* writeBufferCacheLine = getCacheLineByOffset(&victimBlock->HashTable,instruction.address.Offset);
-            strcpy(writeBufferCacheLine->data,value);
+            writeBufferCacheLine->dataLine = StoreData(l1Data,value);
             existing->dirtyBit = true;
             existing->isIdle = false;
         }

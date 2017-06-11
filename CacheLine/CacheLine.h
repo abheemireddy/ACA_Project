@@ -10,7 +10,7 @@
 
 typedef struct CacheLineTag{
     Address address;
-    char data[64];
+    int dataLine;
     UT_hash_handle hh;
 } CacheLine;
 

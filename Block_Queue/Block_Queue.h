@@ -39,7 +39,7 @@ typedef struct BlockQueueTag {
 BlockQueue* Constructor_BlockQueue();
 
 Block PeekBlock(struct BlockQueueTag *blockQueue);
-bool EnqueueBlock(struct BlockQueueTag *blockQueue, Block block);
+bool EnqueueBlock(struct BlockQueueTag *queue, Block block);
 Block DequeueBlock(struct BlockQueueTag *blockQueue);
 bool isBlockQueueEmpty(struct BlockQueueTag* blockQueue);
 void print_BlockQueue(struct BlockQueueTag* blockQueue);

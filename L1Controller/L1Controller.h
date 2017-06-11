@@ -5,6 +5,7 @@
 #include "Address/Address.h"
 
 #include "Block/Block.h"
+#include "Queue/Queue.h"
 
 typedef struct CacheTag Cache;
 typedef struct TransfererTag Transferer;

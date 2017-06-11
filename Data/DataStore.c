@@ -6,8 +6,9 @@
 #include <memory.h>
 #include "DataStore.h"
 
-DataStore Constructor_DataStore(){
-    DataStore data = {currentLine:0};
+DataStore* Constructor_DataStore(){
+    DataStore* data = malloc(sizeof(DataStore));
+    data->currentLine = 0;
     return data;
 }
 

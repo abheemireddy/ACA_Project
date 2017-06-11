@@ -13,7 +13,7 @@ typedef struct DataStoreTag{
 } DataStore;
 
 
-DataStore Constructor_DataStore();
+DataStore* Constructor_DataStore();
 
 char* GetData(DataStore* dataStore,int lineNumber);
 int StoreData(DataStore* dataStore,char* dataToStore);

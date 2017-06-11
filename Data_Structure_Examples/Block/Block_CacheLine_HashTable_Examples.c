@@ -1,6 +1,7 @@
 //
 // Created by chad on 6/3/17.
 //
+#include <Global_Variables.h>
 #include "Block_CacheLine_HashTable_Examples.h"
 
 int AddCacheLinesToBlock(){
@@ -15,5 +16,6 @@ int AddCacheLinesToBlock(){
     int count = block->CountCacheLines(&block->HashTable);
     printf("Count: %d",count);
     CacheLine* returned = block->getCacheLineByOffset(&block->HashTable,cacheLine2->address.Offset);
-    printf("data at offset: %s\n",returned->data);
+    char* data = l1Data->GetData(l1Data,returned->dataLine);
+    printf("data at offset: %s\n",data);
 }

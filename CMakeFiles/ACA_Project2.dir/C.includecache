@@ -93,6 +93,8 @@ BlockTransferer/BlockTransferer.h
 /home/abheemireddy/ACA_Project/CacheController/CacheController.c
 
 /home/abheemireddy/ACA_Project/CacheLine/CacheLine.c
+Global_Variables.h
+-
 CacheLine.h
 /home/abheemireddy/ACA_Project/CacheLine/CacheLine.h
 
@@ -129,6 +131,8 @@ DataStore.h
 /home/abheemireddy/ACA_Project/Data/DataStore.h
 
 /home/abheemireddy/ACA_Project/Data_Structure_Examples/Block/Block_CacheLine_HashTable_Examples.c
+Global_Variables.h
+-
 Block_CacheLine_HashTable_Examples.h
 /home/abheemireddy/ACA_Project/Data_Structure_Examples/Block/Block_CacheLine_HashTable_Examples.h
 
@@ -197,6 +201,8 @@ L2Controller/L2Controller.h
 -
 L1Controller/L1Controller.h
 -
+Data/DataStore.h
+-
 
 /home/abheemireddy/ACA_Project/L1Controller/L1Controller.c
 Queue/Queue.h
@@ -217,6 +223,8 @@ Address/Address.h
 /home/abheemireddy/ACA_Project/L1Controller/Address/Address.h
 Block/Block.h
 /home/abheemireddy/ACA_Project/L1Controller/Block/Block.h
+Queue/Queue.h
+/home/abheemireddy/ACA_Project/L1Controller/Queue/Queue.h
 
 /home/abheemireddy/ACA_Project/L1_Cache.h
 Cache/Cache.h
@@ -431,6 +439,8 @@ L2Controller/L2Controller.h
 -
 L1Controller/L1Controller.h
 -
+Data/DataStore.h
+-
 
 L1Controller/L1Controller.h
 stdio.h
@@ -441,6 +451,8 @@ Address/Address.h
 L1Controller/Address/Address.h
 Block/Block.h
 L1Controller/Block/Block.h
+Queue/Queue.h
+L1Controller/Queue/Queue.h
 
 L2Controller/L2Controller.h
 aca/L2Data.h
