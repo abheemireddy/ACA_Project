@@ -12,25 +12,7 @@ L1Controller* Constructor_L1Controller(){
     return l1Controller;
 }
 
-
-
-void SetL1ControllerData(){
-    Block* toStore = l1Controller->dataFromL2;
-    Set* set = l1Controller->cache->getSetByIndex(&l1Controller->cache->HashTable,toStore->address.Index);
-    Block* existing = get(&set->HashTable,toStore->address.Tag);
-    if(existing != NULL){
-        if(existing->dirtyBit == false){
-            if(CountBlocksInBuffer(&l1VictimCache->HashTable) >= 2){
-                WriteBackToL2(&l1VictimCache->HashTable);
-            }
-            putBlockInBuffer(&l1VictimCache->HashTable,existing);
-        }else{
-            if(CountBlocksInBuffer(&l1WriteBuffer->HashTable) >= 5){
-                WriteBackToL2(&l1WriteBuffer->HashTable);
-            }
-            putBlockInBuffer(&l1VictimCache->HashTable,existing);
-        }
-    }
+void CheckSetSize(Set* set){
     int countInSet = Count(&set->HashTable);
     if(countInSet >= 4){
         SortHash(&set->HashTable);
@@ -42,6 +24,34 @@ void SetL1ControllerData(){
             putBlockInBuffer(&l1VictimCache->HashTable,leastUsed);
         }
     }
+}
+
+void PutInWriteBuffer(Block* existing){
+    if(CountBlocksInBuffer(&l1VictimCache->HashTable) >= 2){
+        WriteBackToL2(&l1VictimCache->HashTable);
+    }
+    putBlockInBuffer(&l1VictimCache->HashTable,existing);
+}
+
+void PutInVictimCache(Block* existing){
+    if(CountBlocksInBuffer(&l1WriteBuffer->HashTable) >= 5){
+        WriteBackToL2(&l1WriteBuffer->HashTable);
+    }
+    putBlockInBuffer(&l1VictimCache->HashTable,existing);
+}
+
+void SetL1ControllerData(){
+    Block* toStore = l1Controller->dataFromL2;
+    Set* set = l1Controller->cache->getSetByIndex(&l1Controller->cache->HashTable,toStore->address.Index);
+    Block* existing = get(&set->HashTable,toStore->address.Tag);
+    if(existing != NULL){
+        if(existing->dirtyBit == false){
+            PutInWriteBuffer(existing);
+        }else{
+            PutInVictimCache(existing);
+        }
+    }
+    CheckSetSize(set);
     put(&set->HashTable,toStore);
 }
 

@@ -13,15 +13,9 @@
   <component name="ChangeListManager">
     <list default="true" id="874cd3ee-283a-48e2-bbb0-bde542e13d07" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ACA_Project2" afterPath="$PROJECT_DIR$/ACA_Project2" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Cache/Cache.c.o" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Cache/Cache.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Set/Set_and_Block_Examples.c.o" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Set/Set_and_Block_Examples.c.o" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/L1Controller/L1Controller.c.o" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/L1Controller/L1Controller.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Set/Set.c.o" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Set/Set.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/main.c.o" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/main.c.o" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/L1Controller/L1Controller.c" afterPath="$PROJECT_DIR$/L1Controller/L1Controller.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Set/Set.c" afterPath="$PROJECT_DIR$/Set/Set.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Set/Set.h" afterPath="$PROJECT_DIR$/Set/Set.h" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <ignored path="$PROJECT_DIR$/CMakeFiles/" />
@@ -48,8 +42,8 @@
       <file leaf-file-name="L1Controller.c" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/L1Controller/L1Controller.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
-              <caret line="42" column="9" lean-forward="true" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="9" />
+            <state relative-caret-position="270">
+              <caret line="48" column="39" lean-forward="true" selection-start-line="48" selection-start-column="39" selection-end-line="48" selection-end-column="39" />
               <folding>
                 <element signature="e#0#24#0" expanded="true" />
               </folding>
@@ -780,14 +774,7 @@
       <workItem from="1496713422788" duration="671000" />
       <workItem from="1496754373526" duration="32944000" />
       <workItem from="1496890028780" duration="2917000" />
-      <workItem from="1496947808980" duration="53848000" />
-    </task>
-    <task id="LOCAL-00130" summary="Turned Controllers into structs with functions.  This should make the code look cleaner.  Anu was already using initializer functions, so I turned that into a constructor.">
-      <created>1496857703421</created>
-      <option name="number" value="00130" />
-      <option name="presentableId" value="LOCAL-00130" />
-      <option name="project" value="LOCAL" />
-      <updated>1496857703421</updated>
+      <workItem from="1496947808980" duration="54068000" />
     </task>
     <task id="LOCAL-00131" summary="Added IsInSet function.  You can check if the block is already in the set.">
       <created>1496861502661</created>
@@ -1125,11 +1112,18 @@
       <option name="project" value="LOCAL" />
       <updated>1497149206767</updated>
     </task>
-    <option name="localTasksCounter" value="179" />
+    <task id="LOCAL-00179" summary="Added some victim cache checks to the l1 write command">
+      <created>1497151381495</created>
+      <option name="number" value="00179" />
+      <option name="presentableId" value="LOCAL-00179" />
+      <option name="project" value="LOCAL" />
+      <updated>1497151381495</updated>
+    </task>
+    <option name="localTasksCounter" value="180" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="198575000" />
+    <option name="totallyTimeSpent" value="198795000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="954" extended-state="6" />
@@ -1163,7 +1157,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added to set constructor.  We are filling the set up with blocks." />
     <MESSAGE value="Working on constructing entire cache/sets as empty.  There is a problem when trying to add the 50th set.  I think it has to do with the bitString.  I am fixing this now." />
     <MESSAGE value="Changed address size to 16 bits instead of 17.  8 for tag, 6 for index, 2 for offset for the L1 Cache.  L2 Cache is larger with 1 offset bit." />
     <MESSAGE value="Fixing segmentation fault with allocating memory for the many structs." />
@@ -1188,7 +1181,8 @@
     <MESSAGE value="L1, write to cacheLine if it is already in cache." />
     <MESSAGE value="Changed header includes to quotes.  Sometimes CLion does the system &lt;&gt; includes. That causes issues." />
     <MESSAGE value="Finished l1 cache controller write" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished l1 cache controller write" />
+    <MESSAGE value="Added some victim cache checks to the l1 write command" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added some victim cache checks to the l1 write command" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1463,7 +1457,7 @@
         <state relative-caret-position="144">
           <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding>
-            <element signature="e#97#117#0" expanded="true" />
+            <element signature="e#97#117#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1551,7 +1545,7 @@
         <state relative-caret-position="180">
           <caret line="10" column="28" lean-forward="false" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
           <folding>
-            <element signature="e#95#114#0" expanded="true" />
+            <element signature="e#95#114#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1642,8 +1636,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/L1Controller/L1Controller.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="42" column="9" lean-forward="true" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="9" />
+        <state relative-caret-position="270">
+          <caret line="48" column="39" lean-forward="true" selection-start-line="48" selection-start-column="39" selection-end-line="48" selection-end-column="39" />
           <folding>
             <element signature="e#0#24#0" expanded="true" />
           </folding>
