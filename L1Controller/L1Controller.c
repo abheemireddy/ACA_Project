@@ -41,6 +41,13 @@ void L1ProcessInstruction(Instruction instruction){
 
 void L1_write(Instruction instruction, char value[64])
 {
+    Block* toStore = l1Controller->dataFromL2;
+    Set* set = getSetByIndex(&l1Controller->cache->HashTable,toStore->address.Index);
+    Block* existing = get(&set->HashTable,toStore->address.Tag);
+    if(existing != NULL){
+        CacheLine* toWriteTo = getCacheLineByOffset(&existing->HashTable,instruction.address.Offset);
+        strcpy(toWriteTo->data,value);
+    }
 	/*printf("P to L1C: CPUWrite (%d)\n", address.bitStringValue);
 	// check if address is valid
 	if (!L1Data[address.Index].valid) // block not valid
