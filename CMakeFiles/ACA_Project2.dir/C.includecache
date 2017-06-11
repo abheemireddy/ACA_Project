@@ -48,7 +48,25 @@ Block/Block.h
 Queue/Queue.h
 /home/abheemireddy/ACA_Project/BlockTransferer/Queue/Queue.h
 
+/home/abheemireddy/ACA_Project/Block_Queue/Block_Queue.c
+Block_Queue.h
+/home/abheemireddy/ACA_Project/Block_Queue/Block_Queue.h
+
+/home/abheemireddy/ACA_Project/Block_Queue/Block_Queue.h
+stdlib.h
+-
+stdio.h
+-
+stdbool.h
+-
+Block/Block.h
+-
+Address/Address.h
+/home/abheemireddy/ACA_Project/Block_Queue/Address/Address.h
+
 /home/abheemireddy/ACA_Project/Buffers/buffers.c
+Global_Variables.h
+-
 buffers.h
 /home/abheemireddy/ACA_Project/Buffers/buffers.h
 Block/Block.h

@@ -2,8 +2,18 @@
 // Created by chad on 6/5/17.
 //
 
+#include <Global_Variables.h>
 #include "buffers.h"
 #include "Block/Block.h"
+
+void WriteBackToL2(Block** HashTable){
+    Block* s;
+    Block* tmp;
+    HASH_ITER(hh,*HashTable,s,tmp){
+        //l2Controller->transferer->TransferQueue->Enqueue(l2Controller->transferer->TransferQueue,s->)
+        printf("address: %d\n",s->address.bitStringValue);
+    }
+}
 
 Buffer* Constructor_Buffer(){
     Buffer* buffer = malloc(sizeof(Buffer));

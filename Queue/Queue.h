@@ -40,6 +40,7 @@ typedef struct QueueTag {
 
 } Queue;
 
+Instruction Peek(Queue *queue);
 Queue* Queue_Constructor();
 void Queue_Destructor(Queue *queue);
 bool Enqueue(Queue *queue, Instruction instruction);

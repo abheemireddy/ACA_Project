@@ -12,6 +12,6 @@ Transferer* Constructor_Transferer(){
 
 Instruction GetNextInstruction(Transferer* transferer){
     Queue* queue = transferer->TransferQueue;
-    Instruction nextInstruction = Dequeue(queue);
+    Instruction nextInstruction = Peek(queue);
     return nextInstruction;
 }

@@ -10,6 +10,21 @@ L1Controller* Constructor_L1Controller(){
     return l1Controller;
 }
 
+void SetL1ControllerData(){
+    Block* toStore = l1Controller->dataFromL2;
+    Set* set = l1Controller->cache->getSetByIndex(&l1Controller->cache->HashTable,toStore->address.Index);
+    Block* existing = get(&set->HashTable,toStore->address.Tag);
+    if(existing != NULL){
+        if(existing->dirtyBit == false){
+            if(CountBlocksInBuffer(&l1VictimCache->HashTable) >= 2){
+                //l1VictimCache->
+            }
+            l1VictimCache->putBlock(&l1VictimCache->HashTable,existing);
+        }
+    }
+    put(&set->HashTable,toStore);
+    //L1ProcessInstruction(nextInstructionForL1ControllerToProcess);
+}
 
 void L1ProcessInstruction(Instruction instruction){
     if(instruction.instruction == 1){

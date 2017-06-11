@@ -71,6 +71,16 @@ bool Enqueue(Queue *queue, Instruction instruction) {
     return true;
 }
 
+Instruction Peek(Queue *queue) {
+    if (isEmpty(queue)){
+        Instruction emptyInstruction = {};
+        printf("Empty Queue");
+        return emptyInstruction;
+    }
+    Node* node = queue->head;
+    return node->data;
+}
+
 Instruction Dequeue(Queue *queue) {
     if (isEmpty(queue)){
         Instruction emptyInstruction = {};

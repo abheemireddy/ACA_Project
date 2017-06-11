@@ -204,6 +204,33 @@ BlockTransferer/BlockTransferer.c.s:
 	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/BlockTransferer/BlockTransferer.c.s
 .PHONY : BlockTransferer/BlockTransferer.c.s
 
+Block_Queue/Block_Queue.o: Block_Queue/Block_Queue.c.o
+
+.PHONY : Block_Queue/Block_Queue.o
+
+# target to build an object file
+Block_Queue/Block_Queue.c.o:
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/Block_Queue/Block_Queue.c.o
+.PHONY : Block_Queue/Block_Queue.c.o
+
+Block_Queue/Block_Queue.i: Block_Queue/Block_Queue.c.i
+
+.PHONY : Block_Queue/Block_Queue.i
+
+# target to preprocess a source file
+Block_Queue/Block_Queue.c.i:
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/Block_Queue/Block_Queue.c.i
+.PHONY : Block_Queue/Block_Queue.c.i
+
+Block_Queue/Block_Queue.s: Block_Queue/Block_Queue.c.s
+
+.PHONY : Block_Queue/Block_Queue.s
+
+# target to generate assembly for a file
+Block_Queue/Block_Queue.c.s:
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/Block_Queue/Block_Queue.c.s
+.PHONY : Block_Queue/Block_Queue.c.s
+
 Buffers/buffers.o: Buffers/buffers.c.o
 
 .PHONY : Buffers/buffers.o
@@ -789,6 +816,9 @@ help:
 	@echo "... BlockTransferer/BlockTransferer.o"
 	@echo "... BlockTransferer/BlockTransferer.i"
 	@echo "... BlockTransferer/BlockTransferer.s"
+	@echo "... Block_Queue/Block_Queue.o"
+	@echo "... Block_Queue/Block_Queue.i"
+	@echo "... Block_Queue/Block_Queue.s"
 	@echo "... Buffers/buffers.o"
 	@echo "... Buffers/buffers.i"
 	@echo "... Buffers/buffers.s"

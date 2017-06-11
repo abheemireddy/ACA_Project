@@ -19,12 +19,31 @@ CMakeFiles/ACA_Project2.dir/BlockTransferer/BlockTransferer.c.o
  CacheLine/CacheLine.h
  Queue/Queue.h
  uthash_files/include/uthash.h
+CMakeFiles/ACA_Project2.dir/Block_Queue/Block_Queue.c.o
+ /home/abheemireddy/ACA_Project/Block_Queue/Block_Queue.c
+ /home/abheemireddy/ACA_Project/Block_Queue/Block_Queue.h
+ Address/Address.h
+ Block/Block.h
+ CacheLine/CacheLine.h
+ uthash_files/include/uthash.h
 CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.o
  /home/abheemireddy/ACA_Project/Buffers/buffers.c
  /home/abheemireddy/ACA_Project/Buffers/buffers.h
  Address/Address.h
  Block/Block.h
+ BlockTransferer/BlockTransferer.h
+ Buffers/buffers.h
+ Cache/Cache.h
  CacheLine/CacheLine.h
+ Global_Variables.h
+ L1Controller/L1Controller.h
+ L2Controller/L2Controller.h
+ Processor/processor.h
+ Queue/Queue.h
+ Set/Set.h
+ aca/L1Data.h
+ aca/L2Data.h
+ aca/MainMemory.h
  uthash_files/include/uthash.h
 CMakeFiles/ACA_Project2.dir/Cache/Cache.c.o
  /home/abheemireddy/ACA_Project/Cache/Cache.c

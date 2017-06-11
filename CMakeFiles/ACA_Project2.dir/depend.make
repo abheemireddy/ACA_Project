@@ -19,11 +19,30 @@ CMakeFiles/ACA_Project2.dir/BlockTransferer/BlockTransferer.c.o: CacheLine/Cache
 CMakeFiles/ACA_Project2.dir/BlockTransferer/BlockTransferer.c.o: Queue/Queue.h
 CMakeFiles/ACA_Project2.dir/BlockTransferer/BlockTransferer.c.o: uthash_files/include/uthash.h
 
+CMakeFiles/ACA_Project2.dir/Block_Queue/Block_Queue.c.o: Block_Queue/Block_Queue.c
+CMakeFiles/ACA_Project2.dir/Block_Queue/Block_Queue.c.o: Block_Queue/Block_Queue.h
+CMakeFiles/ACA_Project2.dir/Block_Queue/Block_Queue.c.o: Address/Address.h
+CMakeFiles/ACA_Project2.dir/Block_Queue/Block_Queue.c.o: Block/Block.h
+CMakeFiles/ACA_Project2.dir/Block_Queue/Block_Queue.c.o: CacheLine/CacheLine.h
+CMakeFiles/ACA_Project2.dir/Block_Queue/Block_Queue.c.o: uthash_files/include/uthash.h
+
 CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.o: Buffers/buffers.c
 CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.o: Buffers/buffers.h
 CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.o: Address/Address.h
 CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.o: Block/Block.h
+CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.o: BlockTransferer/BlockTransferer.h
+CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.o: Buffers/buffers.h
+CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.o: Cache/Cache.h
 CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.o: CacheLine/CacheLine.h
+CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.o: Global_Variables.h
+CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.o: L1Controller/L1Controller.h
+CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.o: L2Controller/L2Controller.h
+CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.o: Processor/processor.h
+CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.o: Queue/Queue.h
+CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.o: Set/Set.h
+CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.o: aca/L1Data.h
+CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.o: aca/L2Data.h
+CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.o: aca/MainMemory.h
 CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.o: uthash_files/include/uthash.h
 
 CMakeFiles/ACA_Project2.dir/Cache/Cache.c.o: Cache/Cache.c

@@ -26,10 +26,16 @@ int main(){
     int ClockCycleCount = 0;
     while(!isEmpty(processor->InstructionHolder->TransferQueue)){
         if(!isEmpty(processor->InstructionHolder->TransferQueue)){
+            if(l1Controller->dataFromL2 != NULL){
+                SetL1ControllerData();
+                l1Controller->dataFromL2 = NULL;
+                l1Controller->waiting = false;
+            }
             if(l1Controller->waiting == false){
-                Instruction nextInstructionFromProcessor = GetNextInstruction(processor->InstructionHolder);
-                printf("%d\n",nextInstructionFromProcessor.instruction);
-                Enqueue(l1Controller->transferer->TransferQueue,nextInstructionFromProcessor);
+                if(isEmpty(l1Controller->transferer->TransferQueue)){
+                    Instruction nextInstructionFromProcessor = Dequeue(processor->InstructionHolder->TransferQueue);
+                    Enqueue(l1Controller->transferer->TransferQueue,nextInstructionFromProcessor);
+                }
                 Instruction nextInstructionForL1ControllerToProcess = GetNextInstruction(l1Controller->transferer);
                 L1ProcessInstruction(nextInstructionForL1ControllerToProcess);
             }

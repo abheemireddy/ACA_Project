@@ -106,6 +106,12 @@
 		<Unit filename="/home/abheemireddy/ACA_Project/BlockTransferer/BlockTransferer.h">
 			<Option target="ACA_Project2"/>
 		</Unit>
+		<Unit filename="/home/abheemireddy/ACA_Project/Block_Queue/Block_Queue.c">
+			<Option target="ACA_Project2"/>
+		</Unit>
+		<Unit filename="/home/abheemireddy/ACA_Project/Block_Queue/Block_Queue.h">
+			<Option target="ACA_Project2"/>
+		</Unit>
 		<Unit filename="/home/abheemireddy/ACA_Project/Buffers/buffers.c">
 			<Option target="ACA_Project2"/>
 		</Unit>
