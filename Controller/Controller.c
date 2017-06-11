@@ -9,21 +9,21 @@ void PutInWriteBuffer(Block* existing);
 void PutInVictimCache(Block* existing);
 
 Controller* Constructor_L1Controller(){
-    Controller* l1Controller = malloc(sizeof(l1Controller));
-    l1Controller->cache = Constructor_Cache(64);
-    l1Controller->transferer = Constructor_Transferer();
-    l1Controller->waiting = false;
-    l1Controller->dataFromL2 = NULL;
-    return l1Controller;
+    Controller* l1ControllerCon = malloc(sizeof(l1ControllerCon));
+    l1ControllerCon->dataFromL2 = malloc(sizeof(Block));
+    l1ControllerCon->cache = Constructor_Cache(64);
+    l1ControllerCon->transferer = Constructor_Transferer();
+    l1ControllerCon->waiting = false;
+    return l1ControllerCon;
 }
 
 Controller* Constructor_L2Controller(){
-    Controller* l1Controller = malloc(sizeof(l1Controller));
-    l1Controller->cache = Constructor_Cache(256);
-    l1Controller->transferer = Constructor_Transferer();
-    l1Controller->waiting = false;
-    l1Controller->dataFromL2 = NULL;
-    return l1Controller;
+    Controller* l2ControllerCon = malloc(sizeof(l2ControllerCon));
+    l2ControllerCon->cache = Constructor_Cache(256);
+    l2ControllerCon->transferer = Constructor_Transferer();
+    l2ControllerCon->waiting = false;
+    l2ControllerCon->dataFromL2 = NULL;
+    return l2ControllerCon;
 }
 
 void CheckSetSize(Set* set){
@@ -67,7 +67,7 @@ void PutInVictimCache(Block* existing){
 
 void SetL1ControllerData(){
     Block* toStore = l1Controller->dataFromL2;
-    Set* set = l1Controller->cache->getSetByIndex(&l1Controller->cache->HashTable,toStore->address.Index);
+    Set* set = getSetByIndex(&l1Controller->cache->HashTable,toStore->address.Index);
     Block* existing = get(&set->HashTable,toStore->address.Tag);
     if(existing != NULL){
         if(existing->dirtyBit == false){

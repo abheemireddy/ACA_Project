@@ -441,33 +441,9 @@ CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/DataStore/DataStore_Examples
 CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/DataStore/DataStore_Examples.c.o.provides.build: CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/DataStore/DataStore_Examples.c.o
 
 
-CMakeFiles/ACA_Project2.dir/CacheController/CacheController.c.o: CMakeFiles/ACA_Project2.dir/flags.make
-CMakeFiles/ACA_Project2.dir/CacheController/CacheController.c.o: CacheController/CacheController.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abheemireddy/ACA_Project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/ACA_Project2.dir/CacheController/CacheController.c.o"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ACA_Project2.dir/CacheController/CacheController.c.o   -c /home/abheemireddy/ACA_Project/CacheController/CacheController.c
-
-CMakeFiles/ACA_Project2.dir/CacheController/CacheController.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ACA_Project2.dir/CacheController/CacheController.c.i"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/abheemireddy/ACA_Project/CacheController/CacheController.c > CMakeFiles/ACA_Project2.dir/CacheController/CacheController.c.i
-
-CMakeFiles/ACA_Project2.dir/CacheController/CacheController.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ACA_Project2.dir/CacheController/CacheController.c.s"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/abheemireddy/ACA_Project/CacheController/CacheController.c -o CMakeFiles/ACA_Project2.dir/CacheController/CacheController.c.s
-
-CMakeFiles/ACA_Project2.dir/CacheController/CacheController.c.o.requires:
-
-.PHONY : CMakeFiles/ACA_Project2.dir/CacheController/CacheController.c.o.requires
-
-CMakeFiles/ACA_Project2.dir/CacheController/CacheController.c.o.provides: CMakeFiles/ACA_Project2.dir/CacheController/CacheController.c.o.requires
-	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/CacheController/CacheController.c.o.provides.build
-.PHONY : CMakeFiles/ACA_Project2.dir/CacheController/CacheController.c.o.provides
-
-CMakeFiles/ACA_Project2.dir/CacheController/CacheController.c.o.provides.build: CMakeFiles/ACA_Project2.dir/CacheController/CacheController.c.o
-
-
 CMakeFiles/ACA_Project2.dir/Controller/Controller.c.o: CMakeFiles/ACA_Project2.dir/flags.make
 CMakeFiles/ACA_Project2.dir/Controller/Controller.c.o: Controller/Controller.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abheemireddy/ACA_Project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/ACA_Project2.dir/Controller/Controller.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abheemireddy/ACA_Project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building C object CMakeFiles/ACA_Project2.dir/Controller/Controller.c.o"
 	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ACA_Project2.dir/Controller/Controller.c.o   -c /home/abheemireddy/ACA_Project/Controller/Controller.c
 
 CMakeFiles/ACA_Project2.dir/Controller/Controller.c.i: cmake_force
@@ -491,7 +467,7 @@ CMakeFiles/ACA_Project2.dir/Controller/Controller.c.o.provides.build: CMakeFiles
 
 CMakeFiles/ACA_Project2.dir/Processor/processor.c.o: CMakeFiles/ACA_Project2.dir/flags.make
 CMakeFiles/ACA_Project2.dir/Processor/processor.c.o: Processor/processor.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abheemireddy/ACA_Project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/ACA_Project2.dir/Processor/processor.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abheemireddy/ACA_Project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object CMakeFiles/ACA_Project2.dir/Processor/processor.c.o"
 	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ACA_Project2.dir/Processor/processor.c.o   -c /home/abheemireddy/ACA_Project/Processor/processor.c
 
 CMakeFiles/ACA_Project2.dir/Processor/processor.c.i: cmake_force
@@ -515,7 +491,7 @@ CMakeFiles/ACA_Project2.dir/Processor/processor.c.o.provides.build: CMakeFiles/A
 
 CMakeFiles/ACA_Project2.dir/aca/L1Data.c.o: CMakeFiles/ACA_Project2.dir/flags.make
 CMakeFiles/ACA_Project2.dir/aca/L1Data.c.o: aca/L1Data.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abheemireddy/ACA_Project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object CMakeFiles/ACA_Project2.dir/aca/L1Data.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abheemireddy/ACA_Project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building C object CMakeFiles/ACA_Project2.dir/aca/L1Data.c.o"
 	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ACA_Project2.dir/aca/L1Data.c.o   -c /home/abheemireddy/ACA_Project/aca/L1Data.c
 
 CMakeFiles/ACA_Project2.dir/aca/L1Data.c.i: cmake_force
@@ -539,7 +515,7 @@ CMakeFiles/ACA_Project2.dir/aca/L1Data.c.o.provides.build: CMakeFiles/ACA_Projec
 
 CMakeFiles/ACA_Project2.dir/aca/L2Data.c.o: CMakeFiles/ACA_Project2.dir/flags.make
 CMakeFiles/ACA_Project2.dir/aca/L2Data.c.o: aca/L2Data.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abheemireddy/ACA_Project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object CMakeFiles/ACA_Project2.dir/aca/L2Data.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abheemireddy/ACA_Project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building C object CMakeFiles/ACA_Project2.dir/aca/L2Data.c.o"
 	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ACA_Project2.dir/aca/L2Data.c.o   -c /home/abheemireddy/ACA_Project/aca/L2Data.c
 
 CMakeFiles/ACA_Project2.dir/aca/L2Data.c.i: cmake_force
@@ -563,7 +539,7 @@ CMakeFiles/ACA_Project2.dir/aca/L2Data.c.o.provides.build: CMakeFiles/ACA_Projec
 
 CMakeFiles/ACA_Project2.dir/aca/MainMemory.c.o: CMakeFiles/ACA_Project2.dir/flags.make
 CMakeFiles/ACA_Project2.dir/aca/MainMemory.c.o: aca/MainMemory.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abheemireddy/ACA_Project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object CMakeFiles/ACA_Project2.dir/aca/MainMemory.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abheemireddy/ACA_Project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building C object CMakeFiles/ACA_Project2.dir/aca/MainMemory.c.o"
 	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ACA_Project2.dir/aca/MainMemory.c.o   -c /home/abheemireddy/ACA_Project/aca/MainMemory.c
 
 CMakeFiles/ACA_Project2.dir/aca/MainMemory.c.i: cmake_force
@@ -587,7 +563,7 @@ CMakeFiles/ACA_Project2.dir/aca/MainMemory.c.o.provides.build: CMakeFiles/ACA_Pr
 
 CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/BlockTransferer/BlockTransferer_Examples.c.o: CMakeFiles/ACA_Project2.dir/flags.make
 CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/BlockTransferer/BlockTransferer_Examples.c.o: Data_Structure_Examples/BlockTransferer/BlockTransferer_Examples.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abheemireddy/ACA_Project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/BlockTransferer/BlockTransferer_Examples.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abheemireddy/ACA_Project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building C object CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/BlockTransferer/BlockTransferer_Examples.c.o"
 	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/BlockTransferer/BlockTransferer_Examples.c.o   -c /home/abheemireddy/ACA_Project/Data_Structure_Examples/BlockTransferer/BlockTransferer_Examples.c
 
 CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/BlockTransferer/BlockTransferer_Examples.c.i: cmake_force
@@ -611,7 +587,7 @@ CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/BlockTransferer/BlockTransfe
 
 CMakeFiles/ACA_Project2.dir/Block_Queue/Block_Queue.c.o: CMakeFiles/ACA_Project2.dir/flags.make
 CMakeFiles/ACA_Project2.dir/Block_Queue/Block_Queue.c.o: Block_Queue/Block_Queue.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abheemireddy/ACA_Project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object CMakeFiles/ACA_Project2.dir/Block_Queue/Block_Queue.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abheemireddy/ACA_Project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building C object CMakeFiles/ACA_Project2.dir/Block_Queue/Block_Queue.c.o"
 	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ACA_Project2.dir/Block_Queue/Block_Queue.c.o   -c /home/abheemireddy/ACA_Project/Block_Queue/Block_Queue.c
 
 CMakeFiles/ACA_Project2.dir/Block_Queue/Block_Queue.c.i: cmake_force
@@ -635,7 +611,7 @@ CMakeFiles/ACA_Project2.dir/Block_Queue/Block_Queue.c.o.provides.build: CMakeFil
 
 CMakeFiles/ACA_Project2.dir/Instruction/Instruction.c.o: CMakeFiles/ACA_Project2.dir/flags.make
 CMakeFiles/ACA_Project2.dir/Instruction/Instruction.c.o: Instruction/Instruction.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abheemireddy/ACA_Project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object CMakeFiles/ACA_Project2.dir/Instruction/Instruction.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/abheemireddy/ACA_Project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object CMakeFiles/ACA_Project2.dir/Instruction/Instruction.c.o"
 	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ACA_Project2.dir/Instruction/Instruction.c.o   -c /home/abheemireddy/ACA_Project/Instruction/Instruction.c
 
 CMakeFiles/ACA_Project2.dir/Instruction/Instruction.c.i: cmake_force
@@ -675,7 +651,6 @@ ACA_Project2_OBJECTS = \
 "CMakeFiles/ACA_Project2.dir/BlockTransferer/BlockTransferer.c.o" \
 "CMakeFiles/ACA_Project2.dir/Data/DataStore.c.o" \
 "CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/DataStore/DataStore_Examples.c.o" \
-"CMakeFiles/ACA_Project2.dir/CacheController/CacheController.c.o" \
 "CMakeFiles/ACA_Project2.dir/Controller/Controller.c.o" \
 "CMakeFiles/ACA_Project2.dir/Processor/processor.c.o" \
 "CMakeFiles/ACA_Project2.dir/aca/L1Data.c.o" \
@@ -704,7 +679,6 @@ ACA_Project2: CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.o
 ACA_Project2: CMakeFiles/ACA_Project2.dir/BlockTransferer/BlockTransferer.c.o
 ACA_Project2: CMakeFiles/ACA_Project2.dir/Data/DataStore.c.o
 ACA_Project2: CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/DataStore/DataStore_Examples.c.o
-ACA_Project2: CMakeFiles/ACA_Project2.dir/CacheController/CacheController.c.o
 ACA_Project2: CMakeFiles/ACA_Project2.dir/Controller/Controller.c.o
 ACA_Project2: CMakeFiles/ACA_Project2.dir/Processor/processor.c.o
 ACA_Project2: CMakeFiles/ACA_Project2.dir/aca/L1Data.c.o
@@ -715,7 +689,7 @@ ACA_Project2: CMakeFiles/ACA_Project2.dir/Block_Queue/Block_Queue.c.o
 ACA_Project2: CMakeFiles/ACA_Project2.dir/Instruction/Instruction.c.o
 ACA_Project2: CMakeFiles/ACA_Project2.dir/build.make
 ACA_Project2: CMakeFiles/ACA_Project2.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/abheemireddy/ACA_Project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Linking C executable ACA_Project2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/abheemireddy/ACA_Project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Linking C executable ACA_Project2"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ACA_Project2.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -739,7 +713,6 @@ CMakeFiles/ACA_Project2.dir/requires: CMakeFiles/ACA_Project2.dir/Buffers/buffer
 CMakeFiles/ACA_Project2.dir/requires: CMakeFiles/ACA_Project2.dir/BlockTransferer/BlockTransferer.c.o.requires
 CMakeFiles/ACA_Project2.dir/requires: CMakeFiles/ACA_Project2.dir/Data/DataStore.c.o.requires
 CMakeFiles/ACA_Project2.dir/requires: CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/DataStore/DataStore_Examples.c.o.requires
-CMakeFiles/ACA_Project2.dir/requires: CMakeFiles/ACA_Project2.dir/CacheController/CacheController.c.o.requires
 CMakeFiles/ACA_Project2.dir/requires: CMakeFiles/ACA_Project2.dir/Controller/Controller.c.o.requires
 CMakeFiles/ACA_Project2.dir/requires: CMakeFiles/ACA_Project2.dir/Processor/processor.c.o.requires
 CMakeFiles/ACA_Project2.dir/requires: CMakeFiles/ACA_Project2.dir/aca/L1Data.c.o.requires

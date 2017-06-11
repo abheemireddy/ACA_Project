@@ -44,9 +44,9 @@ void BuildL1Cache(Cache* cache){
         }
         int count = Count(&set->HashTable);
         printf("\nset:%d\n",count);
-        cache->putSet(&cache->HashTable,set);
+        putSet(&cache->HashTable,set);
     }
-    printf("\nCache:%d\n",cache->CountSets(&cache->HashTable));
+    printf("\nCache:%d\n",CountSets(&cache->HashTable));
 }
 
 void Sample_Add_Overlapping_Key_to_set(){

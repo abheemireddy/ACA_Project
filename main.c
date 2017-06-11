@@ -51,13 +51,13 @@ int main(){
                     }
                 }
             }
-            if(!isBlockQueueEmpty(l2Controller->blockQueue)){
+            /*if(!isBlockQueueEmpty(l2Controller->blockQueue)){
                 Block* flushedFromBufers = PeekBlock(&l2Controller->blockQueue);
                 //l2WriteBlock(flushedFromBufers);
             }
             if(l2Controller->waiting == false){
 
-            }
+            }*/
         }
         ClockCycleCount += 1;
     }

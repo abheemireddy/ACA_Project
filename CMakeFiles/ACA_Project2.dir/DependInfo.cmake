@@ -10,7 +10,6 @@ set(CMAKE_DEPENDS_CHECK_C
   "/home/abheemireddy/ACA_Project/Block_Queue/Block_Queue.c" "/home/abheemireddy/ACA_Project/CMakeFiles/ACA_Project2.dir/Block_Queue/Block_Queue.c.o"
   "/home/abheemireddy/ACA_Project/Buffers/buffers.c" "/home/abheemireddy/ACA_Project/CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.o"
   "/home/abheemireddy/ACA_Project/Cache/Cache.c" "/home/abheemireddy/ACA_Project/CMakeFiles/ACA_Project2.dir/Cache/Cache.c.o"
-  "/home/abheemireddy/ACA_Project/CacheController/CacheController.c" "/home/abheemireddy/ACA_Project/CMakeFiles/ACA_Project2.dir/CacheController/CacheController.c.o"
   "/home/abheemireddy/ACA_Project/CacheLine/CacheLine.c" "/home/abheemireddy/ACA_Project/CMakeFiles/ACA_Project2.dir/CacheLine/CacheLine.c.o"
   "/home/abheemireddy/ACA_Project/Controller/Controller.c" "/home/abheemireddy/ACA_Project/CMakeFiles/ACA_Project2.dir/Controller/Controller.c.o"
   "/home/abheemireddy/ACA_Project/DRAM/DRAM.c" "/home/abheemireddy/ACA_Project/CMakeFiles/ACA_Project2.dir/DRAM/DRAM.c.o"

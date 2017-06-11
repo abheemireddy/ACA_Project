@@ -3,19 +3,13 @@
 //
 
 #include <printf.h>
+#include <Global_Variables.h>
 #include "Cache.h"
 
 Cache* Constructor_Cache(int numberOfSets){
     Cache* cache = malloc(sizeof(Cache));
     cache->NumberOfSets = numberOfSets;
     cache->HashTable = NULL;
-    cache->getSetByIndex = &getSetByIndex;
-    cache->putSet = &putSet;
-    cache->removeSetFromTable = &removeSetFromTable;
-    cache->deleteAllSet = &deleteAllSet;
-    cache->CountSets = &CountSets;
-    cache->replaceSet = &replaceSet;
-    cache->print_sets = &print_sets;
     int i;
     int setAddress = 0;
     for(i = 0;i<cache->NumberOfSets;i++){
@@ -23,9 +17,10 @@ Cache* Constructor_Cache(int numberOfSets){
         strcpy(bitString,int2bin(setAddress));
         Address* address = Constructor_Address(bitString);
         Set* set = Constructor_Set(4,*address);
-        cache->putSet(&cache->HashTable,set);
+        putSet(&cache->HashTable,set);
         setAddress += 8;
     }
+    //printf("Number of sets in cache:%d\n",CountSets(&cache->HashTable));
     return cache;
 }
 

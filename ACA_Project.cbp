@@ -124,12 +124,6 @@
 		<Unit filename="/home/abheemireddy/ACA_Project/Cache/Cache.h">
 			<Option target="ACA_Project2"/>
 		</Unit>
-		<Unit filename="/home/abheemireddy/ACA_Project/CacheController/CacheController.c">
-			<Option target="ACA_Project2"/>
-		</Unit>
-		<Unit filename="/home/abheemireddy/ACA_Project/CacheController/CacheController.h">
-			<Option target="ACA_Project2"/>
-		</Unit>
 		<Unit filename="/home/abheemireddy/ACA_Project/CacheLine/CacheLine.c">
 			<Option target="ACA_Project2"/>
 		</Unit>

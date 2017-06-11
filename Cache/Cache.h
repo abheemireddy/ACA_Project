@@ -12,15 +12,6 @@
 typedef struct CacheTag{
     Set *HashTable;
     int NumberOfSets;
-
-    void (*putSet)(Set** HashTable, Set* value);
-    Set* (*getSetByIndex)(Set** HashTable,int key);
-    void (*removeSetFromTable)(Set** HashTable,Set* blockToRemove);
-    void (*deleteAllSet)(Set** HashTable);
-    int (*CountSets)(Set** HashTable);
-    void (*replaceSet)(UT_hash_handle hh,Set** HashTable,Set* value);
-    Set* (*getSet)(Set** HashTable,char* key);
-    void (*print_sets)(Set** HashTable);
 } Cache;
 
 Cache* Constructor_Cache(int numberOfSets);

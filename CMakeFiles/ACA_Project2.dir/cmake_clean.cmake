@@ -15,7 +15,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/ACA_Project2.dir/BlockTransferer/BlockTransferer.c.o"
   "CMakeFiles/ACA_Project2.dir/Data/DataStore.c.o"
   "CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/DataStore/DataStore_Examples.c.o"
-  "CMakeFiles/ACA_Project2.dir/CacheController/CacheController.c.o"
   "CMakeFiles/ACA_Project2.dir/Controller/Controller.c.o"
   "CMakeFiles/ACA_Project2.dir/Processor/processor.c.o"
   "CMakeFiles/ACA_Project2.dir/aca/L1Data.c.o"
