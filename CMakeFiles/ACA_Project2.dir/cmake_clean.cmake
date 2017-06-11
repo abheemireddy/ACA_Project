@@ -24,6 +24,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/ACA_Project2.dir/aca/MainMemory.c.o"
   "CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/BlockTransferer/BlockTransferer_Examples.c.o"
   "CMakeFiles/ACA_Project2.dir/Block_Queue/Block_Queue.c.o"
+  "CMakeFiles/ACA_Project2.dir/Instruction/Instruction.c.o"
   "ACA_Project2.pdb"
   "ACA_Project2"
 )

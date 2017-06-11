@@ -3,9 +3,9 @@
 #include <stdio.h>
 #include "aca/L1Data.h"
 #include "Address/Address.h"
-
 #include "Block/Block.h"
 #include "Queue/Queue.h"
+#include "Instruction/Instruction.h"
 
 typedef struct CacheTag Cache;
 typedef struct TransfererTag Transferer;

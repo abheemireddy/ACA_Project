@@ -24,7 +24,7 @@ BlockQueue* Constructor_BlockQueue() {
 void print_BlockQueue(BlockQueue* blockQueue){
     Node* current = blockQueue->head;
     while (current->prev != NULL) {
-        printf("Node Instruction:%s\n",current->block.address.bitString);
+        printf("Node Instruction:%d\n",current->block.address.bitStringValue);
         current = current->prev;
     }
 }

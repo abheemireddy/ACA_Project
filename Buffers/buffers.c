@@ -1,6 +1,7 @@
 //
 // Created by chad on 6/5/17.
 //
+#include <Block_Queue/Block_Queue.h>
 #include "Block/Block.h"
 #include"Queue/Queue.h"
 #include "buffers.h"
@@ -25,10 +26,12 @@ CacheLine* SearchInBuffers(Instruction instruction){
     }
 }
 
-void WriteBackToL2(Block** HashTable){
+void WriteBackToL2(Buffer* buffer,Block** HashTable){
     Block* s;
     Block* tmp;
     HASH_ITER(hh,*HashTable,s,tmp){
+        printf("Flushing to L2: %d\n",s->address.bitStringValue);
+        removeBlockFromBuffer(&buffer->HashTable,s);
         EnqueueBlock(l2Controller->blockQueue,*s);
     }
 }

@@ -555,6 +555,33 @@ Data_Structure_Examples/Set/Set_and_Block_Examples.c.s:
 	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Set/Set_and_Block_Examples.c.s
 .PHONY : Data_Structure_Examples/Set/Set_and_Block_Examples.c.s
 
+Instruction/Instruction.o: Instruction/Instruction.c.o
+
+.PHONY : Instruction/Instruction.o
+
+# target to build an object file
+Instruction/Instruction.c.o:
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/Instruction/Instruction.c.o
+.PHONY : Instruction/Instruction.c.o
+
+Instruction/Instruction.i: Instruction/Instruction.c.i
+
+.PHONY : Instruction/Instruction.i
+
+# target to preprocess a source file
+Instruction/Instruction.c.i:
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/Instruction/Instruction.c.i
+.PHONY : Instruction/Instruction.c.i
+
+Instruction/Instruction.s: Instruction/Instruction.c.s
+
+.PHONY : Instruction/Instruction.s
+
+# target to generate assembly for a file
+Instruction/Instruction.c.s:
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/Instruction/Instruction.c.s
+.PHONY : Instruction/Instruction.c.s
+
 L1Controller/L1Controller.o: L1Controller/L1Controller.c.o
 
 .PHONY : L1Controller/L1Controller.o
@@ -855,6 +882,9 @@ help:
 	@echo "... Data_Structure_Examples/Set/Set_and_Block_Examples.o"
 	@echo "... Data_Structure_Examples/Set/Set_and_Block_Examples.i"
 	@echo "... Data_Structure_Examples/Set/Set_and_Block_Examples.s"
+	@echo "... Instruction/Instruction.o"
+	@echo "... Instruction/Instruction.i"
+	@echo "... Instruction/Instruction.s"
 	@echo "... L1Controller/L1Controller.o"
 	@echo "... L1Controller/L1Controller.i"
 	@echo "... L1Controller/L1Controller.s"

@@ -187,6 +187,12 @@
 		<Unit filename="/home/abheemireddy/ACA_Project/Global_Variables.h">
 			<Option target="ACA_Project2"/>
 		</Unit>
+		<Unit filename="/home/abheemireddy/ACA_Project/Instruction/Instruction.c">
+			<Option target="ACA_Project2"/>
+		</Unit>
+		<Unit filename="/home/abheemireddy/ACA_Project/Instruction/Instruction.h">
+			<Option target="ACA_Project2"/>
+		</Unit>
 		<Unit filename="/home/abheemireddy/ACA_Project/L1Controller/L1Controller.c">
 			<Option target="ACA_Project2"/>
 		</Unit>

@@ -9,16 +9,9 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include "Address/Address.h"
+#include "Instruction/Instruction.h"
 
 
-typedef struct InstructionTag{
-    int clockCycleWhenThisCanBeRead;
-    int instruction;
-    char data[64];
-    Address address;
-} Instruction;
-
-Instruction* Constructor_Instruction(int instructionNumber,char data[64],Address address);
 
 typedef struct NodeTag {
     Instruction data;

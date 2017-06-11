@@ -8,6 +8,7 @@
 #include "Data_Structure_Examples/DRAM/DRAM_Examples.h"
 #include "L1_Cache.h"
 #include <sys/resource.h>
+#include <Block_Queue/Block_Queue.h>
 #include "Buffers/buffers.h"
 #include "Global_Variables.h"
 
@@ -51,6 +52,7 @@ int main(){
         }
         ClockCycleCount += 1;
     }
+    print_BlockQueue(l2Controller->blockQueue);
     printf("Clock Cycles taken:%d\n",ClockCycleCount);
 
     //run_examples();//Examples of using the data structures

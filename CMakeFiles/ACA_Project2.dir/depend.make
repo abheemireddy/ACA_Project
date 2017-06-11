@@ -16,6 +16,7 @@ CMakeFiles/ACA_Project2.dir/BlockTransferer/BlockTransferer.c.o: BlockTransferer
 CMakeFiles/ACA_Project2.dir/BlockTransferer/BlockTransferer.c.o: Address/Address.h
 CMakeFiles/ACA_Project2.dir/BlockTransferer/BlockTransferer.c.o: Block/Block.h
 CMakeFiles/ACA_Project2.dir/BlockTransferer/BlockTransferer.c.o: CacheLine/CacheLine.h
+CMakeFiles/ACA_Project2.dir/BlockTransferer/BlockTransferer.c.o: Instruction/Instruction.h
 CMakeFiles/ACA_Project2.dir/BlockTransferer/BlockTransferer.c.o: Queue/Queue.h
 CMakeFiles/ACA_Project2.dir/BlockTransferer/BlockTransferer.c.o: uthash_files/include/uthash.h
 
@@ -31,10 +32,12 @@ CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.o: Buffers/buffers.h
 CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.o: Address/Address.h
 CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.o: Block/Block.h
 CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.o: BlockTransferer/BlockTransferer.h
+CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.o: Block_Queue/Block_Queue.h
 CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.o: Buffers/buffers.h
 CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.o: CacheLine/CacheLine.h
 CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.o: Data/DataStore.h
 CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.o: Global_Variables.h
+CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.o: Instruction/Instruction.h
 CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.o: L1Controller/L1Controller.h
 CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.o: L2Controller/L2Controller.h
 CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.o: Processor/processor.h
@@ -61,6 +64,7 @@ CMakeFiles/ACA_Project2.dir/CacheLine/CacheLine.c.o: Buffers/buffers.h
 CMakeFiles/ACA_Project2.dir/CacheLine/CacheLine.c.o: CacheLine/CacheLine.h
 CMakeFiles/ACA_Project2.dir/CacheLine/CacheLine.c.o: Data/DataStore.h
 CMakeFiles/ACA_Project2.dir/CacheLine/CacheLine.c.o: Global_Variables.h
+CMakeFiles/ACA_Project2.dir/CacheLine/CacheLine.c.o: Instruction/Instruction.h
 CMakeFiles/ACA_Project2.dir/CacheLine/CacheLine.c.o: L1Controller/L1Controller.h
 CMakeFiles/ACA_Project2.dir/CacheLine/CacheLine.c.o: L2Controller/L2Controller.h
 CMakeFiles/ACA_Project2.dir/CacheLine/CacheLine.c.o: Processor/processor.h
@@ -90,6 +94,7 @@ CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Block/Block_CacheLine_HashTa
 CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Block/Block_CacheLine_HashTable_Examples.c.o: CacheLine/CacheLine.h
 CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Block/Block_CacheLine_HashTable_Examples.c.o: Data/DataStore.h
 CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Block/Block_CacheLine_HashTable_Examples.c.o: Global_Variables.h
+CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Block/Block_CacheLine_HashTable_Examples.c.o: Instruction/Instruction.h
 CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Block/Block_CacheLine_HashTable_Examples.c.o: L1Controller/L1Controller.h
 CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Block/Block_CacheLine_HashTable_Examples.c.o: L2Controller/L2Controller.h
 CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Block/Block_CacheLine_HashTable_Examples.c.o: Processor/processor.h
@@ -103,6 +108,7 @@ CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/BlockTransferer/BlockTransfe
 CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/BlockTransferer/BlockTransferer_Examples.c.o: Data_Structure_Examples/BlockTransferer/BlockTransferer_Examples.h
 CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/BlockTransferer/BlockTransferer_Examples.c.o: Address/Address.h
 CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/BlockTransferer/BlockTransferer_Examples.c.o: BlockTransferer/BlockTransferer.h
+CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/BlockTransferer/BlockTransferer_Examples.c.o: Instruction/Instruction.h
 CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/BlockTransferer/BlockTransferer_Examples.c.o: Queue/Queue.h
 CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/BlockTransferer/BlockTransferer_Examples.c.o: uthash_files/include/uthash.h
 
@@ -122,6 +128,7 @@ CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/DataStore/DataStore_Examples
 CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Queue/Queue_the_examples.c.o: Data_Structure_Examples/Queue/Queue_the_examples.c
 CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Queue/Queue_the_examples.c.o: Data_Structure_Examples/Queue/Queue_the_examples.h
 CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Queue/Queue_the_examples.c.o: Address/Address.h
+CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Queue/Queue_the_examples.c.o: Instruction/Instruction.h
 CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Queue/Queue_the_examples.c.o: Queue/Queue.h
 CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Queue/Queue_the_examples.c.o: uthash_files/include/uthash.h
 
@@ -133,6 +140,11 @@ CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Set/Set_and_Block_Examples.c
 CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Set/Set_and_Block_Examples.c.o: Set/Set.h
 CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Set/Set_and_Block_Examples.c.o: uthash_files/include/uthash.h
 
+CMakeFiles/ACA_Project2.dir/Instruction/Instruction.c.o: Instruction/Instruction.c
+CMakeFiles/ACA_Project2.dir/Instruction/Instruction.c.o: Instruction/Instruction.h
+CMakeFiles/ACA_Project2.dir/Instruction/Instruction.c.o: Address/Address.h
+CMakeFiles/ACA_Project2.dir/Instruction/Instruction.c.o: uthash_files/include/uthash.h
+
 CMakeFiles/ACA_Project2.dir/L1Controller/L1Controller.c.o: L1Controller/L1Controller.c
 CMakeFiles/ACA_Project2.dir/L1Controller/L1Controller.c.o: L1Controller/L1Controller.h
 CMakeFiles/ACA_Project2.dir/L1Controller/L1Controller.c.o: Address/Address.h
@@ -143,6 +155,7 @@ CMakeFiles/ACA_Project2.dir/L1Controller/L1Controller.c.o: Cache/Cache.h
 CMakeFiles/ACA_Project2.dir/L1Controller/L1Controller.c.o: CacheLine/CacheLine.h
 CMakeFiles/ACA_Project2.dir/L1Controller/L1Controller.c.o: Data/DataStore.h
 CMakeFiles/ACA_Project2.dir/L1Controller/L1Controller.c.o: Global_Variables.h
+CMakeFiles/ACA_Project2.dir/L1Controller/L1Controller.c.o: Instruction/Instruction.h
 CMakeFiles/ACA_Project2.dir/L1Controller/L1Controller.c.o: L1Controller/L1Controller.h
 CMakeFiles/ACA_Project2.dir/L1Controller/L1Controller.c.o: L2Controller/L2Controller.h
 CMakeFiles/ACA_Project2.dir/L1Controller/L1Controller.c.o: Processor/processor.h
@@ -163,6 +176,7 @@ CMakeFiles/ACA_Project2.dir/L2Controller/L2Controller.c.o: Buffers/buffers.h
 CMakeFiles/ACA_Project2.dir/L2Controller/L2Controller.c.o: CacheLine/CacheLine.h
 CMakeFiles/ACA_Project2.dir/L2Controller/L2Controller.c.o: Data/DataStore.h
 CMakeFiles/ACA_Project2.dir/L2Controller/L2Controller.c.o: Global_Variables.h
+CMakeFiles/ACA_Project2.dir/L2Controller/L2Controller.c.o: Instruction/Instruction.h
 CMakeFiles/ACA_Project2.dir/L2Controller/L2Controller.c.o: L1Controller/L1Controller.h
 CMakeFiles/ACA_Project2.dir/L2Controller/L2Controller.c.o: L2Controller/L2Controller.h
 CMakeFiles/ACA_Project2.dir/L2Controller/L2Controller.c.o: Processor/processor.h
@@ -178,6 +192,7 @@ CMakeFiles/ACA_Project2.dir/Processor/processor.c.o: Address/Address.h
 CMakeFiles/ACA_Project2.dir/Processor/processor.c.o: Block/Block.h
 CMakeFiles/ACA_Project2.dir/Processor/processor.c.o: BlockTransferer/BlockTransferer.h
 CMakeFiles/ACA_Project2.dir/Processor/processor.c.o: CacheLine/CacheLine.h
+CMakeFiles/ACA_Project2.dir/Processor/processor.c.o: Instruction/Instruction.h
 CMakeFiles/ACA_Project2.dir/Processor/processor.c.o: L1Controller/L1Controller.h
 CMakeFiles/ACA_Project2.dir/Processor/processor.c.o: L2Controller/L2Controller.h
 CMakeFiles/ACA_Project2.dir/Processor/processor.c.o: Queue/Queue.h
@@ -189,6 +204,7 @@ CMakeFiles/ACA_Project2.dir/Processor/processor.c.o: uthash_files/include/uthash
 CMakeFiles/ACA_Project2.dir/Queue/Queue.c.o: Queue/Queue.c
 CMakeFiles/ACA_Project2.dir/Queue/Queue.c.o: Queue/Queue.h
 CMakeFiles/ACA_Project2.dir/Queue/Queue.c.o: Address/Address.h
+CMakeFiles/ACA_Project2.dir/Queue/Queue.c.o: Instruction/Instruction.h
 CMakeFiles/ACA_Project2.dir/Queue/Queue.c.o: uthash_files/include/uthash.h
 
 CMakeFiles/ACA_Project2.dir/Set/Set.c.o: Set/Set.c
@@ -226,6 +242,7 @@ CMakeFiles/ACA_Project2.dir/main.c.o: DRAM/DRAM.h
 CMakeFiles/ACA_Project2.dir/main.c.o: Data/DataStore.h
 CMakeFiles/ACA_Project2.dir/main.c.o: Data_Structure_Examples/BlockTransferer/BlockTransferer_Examples.h
 CMakeFiles/ACA_Project2.dir/main.c.o: Data_Structure_Examples/DataStore/DataStore_Examples.h
+CMakeFiles/ACA_Project2.dir/main.c.o: Instruction/Instruction.h
 CMakeFiles/ACA_Project2.dir/main.c.o: L1Controller/L1Controller.h
 CMakeFiles/ACA_Project2.dir/main.c.o: L2Controller/L2Controller.h
 CMakeFiles/ACA_Project2.dir/main.c.o: Queue/Queue.h

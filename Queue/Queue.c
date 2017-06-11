@@ -5,17 +5,7 @@
 
 //used queue implementation from https://gist.github.com/ArnonEilat/4471278
 
-Instruction* Constructor_Instruction(int instructionNumber,char data[64],Address address){
-    Instruction* instruction = malloc(sizeof(Instruction));
-    instruction->instruction = instructionNumber;
-    instruction->address = address;
-    if(data != NULL){
-        strcpy(instruction->data,data);
-    }else{
-        data = NULL;
-    }
-    return instruction;
-}
+
 
 Node* Constructor_Node(Instruction instruction){
     Node* node = malloc(sizeof(Node));

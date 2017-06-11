@@ -4,6 +4,8 @@
 #include "Cache/Cache.h"
 
 void CheckBufferSize();
+void PutInWriteBuffer(Block* existing);
+void PutInVictimCache(Block* existing);
 
 L1Controller* Constructor_L1Controller(){
     L1Controller* l1Controller = malloc(sizeof(l1Controller));
@@ -21,9 +23,9 @@ void CheckSetSize(Set* set){
         Block* leastUsed = GetLeastUsed(&set->HashTable);
         removeFromTable(&set->HashTable,leastUsed);
         if(leastUsed->dirtyBit == true){
-            putBlockInBuffer(&l1WriteBuffer->HashTable,leastUsed);
+            PutInWriteBuffer(leastUsed);
         }else{
-            putBlockInBuffer(&l1VictimCache->HashTable,leastUsed);
+            PutInVictimCache(leastUsed);
         }
     }
     CheckBufferSize();
@@ -32,23 +34,23 @@ void CheckBufferSize(){
     int victimCacheCount = CountBlocksInBuffer(&l1VictimCache->HashTable);
     int writeBufferCount = CountBlocksInBuffer(&l1WriteBuffer->HashTable);
     if(victimCacheCount >= 2){
-        WriteBackToL2(&l1VictimCache->HashTable);
+        WriteBackToL2(l1VictimCache,&l1VictimCache->HashTable);
     }
     if(writeBufferCount >= 5){
-        WriteBackToL2(&l1WriteBuffer->HashTable);
+        WriteBackToL2(l1WriteBuffer,&l1WriteBuffer->HashTable);
     }
 }
 
 void PutInWriteBuffer(Block* existing){
     if(CountBlocksInBuffer(&l1VictimCache->HashTable) >= 2){
-        WriteBackToL2(&l1VictimCache->HashTable);
+        WriteBackToL2(l1VictimCache,&l1VictimCache->HashTable);
     }
     putBlockInBuffer(&l1VictimCache->HashTable,existing);
 }
 
 void PutInVictimCache(Block* existing){
     if(CountBlocksInBuffer(&l1WriteBuffer->HashTable) >= 5){
-        WriteBackToL2(&l1WriteBuffer->HashTable);
+        WriteBackToL2(l1WriteBuffer,&l1WriteBuffer->HashTable);
     }
     putBlockInBuffer(&l1VictimCache->HashTable,existing);
 }
@@ -204,14 +206,14 @@ CacheLine* L1_read(Instruction instruction)
             if (victimBlock != NULL) {
                 CacheLine *victimCacheLine = getCacheLineByOffset(&victimBlock->HashTable, instruction.address.Offset);
                 if (CountBlocksInBuffer(&l1VictimCache->HashTable) >= 2) {
-                    WriteBackToL2(&l1VictimCache->HashTable);
+                    WriteBackToL2(l1VictimCache,&l1VictimCache->HashTable);
                 }
                 return victimCacheLine;
             } else if (writeBlock != NULL) {
                 CacheLine *writeBufferCacheLine = getCacheLineByOffset(&writeBlock->HashTable,
                                                                        instruction.address.Offset);
                 if (CountBlocksInBuffer(&l1WriteBuffer->HashTable) >= 5) {
-                    WriteBackToL2(&l1WriteBuffer->HashTable);
+                    WriteBackToL2(l1WriteBuffer,&l1WriteBuffer->HashTable);
                 }
                 return writeBufferCacheLine;
             }
