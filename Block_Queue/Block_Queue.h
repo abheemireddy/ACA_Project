@@ -10,11 +10,10 @@
 
 #ifndef ACA_PROJECT_QUEUE_H
 #define ACA_PROJECT_QUEUE_H
-
+#include <Block/Block.h>
 #include <stdlib.h>
 #include <stdio.h>
 #include <stdbool.h>
-#include <Block/Block.h>
 #include "Address/Address.h"
 
 typedef struct NodeTag {

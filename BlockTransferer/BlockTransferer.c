@@ -1,8 +1,9 @@
 //
 // Created by chad on 6/5/17.
 //
-
+#include "Block/Block.h"
 #include "BlockTransferer.h"
+#include "Queue/Queue.h"
 
 Transferer* Constructor_Transferer(){
     Transferer* transferer = malloc(sizeof(Transferer));

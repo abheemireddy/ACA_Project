@@ -1,10 +1,11 @@
 #include "L2Controller.h"
 #include "Global_Variables.h"
 
+
 L2Controller* Constructor_L2Controller(){
     L2Controller* l2Controller = malloc(sizeof(L2Controller));
-	Transferer* transferer = Constructor_Transferer();
-	l2Controller->transferer = transferer;
+	l2Controller->transferer = Constructor_Transferer();
+    l2Controller->blockQueue = Constructor_BlockQueue();
 	l2Controller->waiting = false;
 	l2Controller->dataFromDRAM = NULL;
     return l2Controller;

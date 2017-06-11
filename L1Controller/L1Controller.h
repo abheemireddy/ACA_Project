@@ -3,8 +3,8 @@
 #include <stdio.h>
 #include "aca/L1Data.h"
 #include "Address/Address.h"
-#include <BlockTransferer/BlockTransferer.h>
 #include <Cache/Cache.h>
+#include "Block/Block.h"
 
 typedef struct L1ControllerTag{
     bool waiting;

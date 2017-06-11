@@ -1,6 +1,8 @@
 //
 // Created by chad on 6/7/17.
 //
+#include <Address/Address.h>
+#include <Queue/Queue.h>
 #include "BlockTransferer_Examples.h"
 
 void StoreAndGetFromBlockTransferer(){

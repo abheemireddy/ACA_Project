@@ -6,11 +6,17 @@
 #include <string.h>
 #include <Address/Address.h>
 #include <BlockTransferer/BlockTransferer.h>
+#include <Block_Queue/Block_Queue.h>
+#include <Block/Block.h>
+#include <Queue/Queue.h>
+
+typedef struct BlockQueueTag BlockQueue;
 
 typedef struct L2ControllerTag{
     Transferer* transferer;
     bool waiting;
     Block* dataFromDRAM;
+    BlockQueue* blockQueue;
 
     void (*l2Read)(Address address, unsigned char * block);
     void (*l2Write)(Address address, int value);
