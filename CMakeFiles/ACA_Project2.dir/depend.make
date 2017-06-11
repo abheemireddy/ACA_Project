@@ -65,6 +65,7 @@ CMakeFiles/ACA_Project2.dir/DRAM/DRAM.c.o: DRAM/DRAM.h
 CMakeFiles/ACA_Project2.dir/DRAM/DRAM.c.o: Address/Address.h
 CMakeFiles/ACA_Project2.dir/DRAM/DRAM.c.o: Block/Block.h
 CMakeFiles/ACA_Project2.dir/DRAM/DRAM.c.o: BlockTransferer/BlockTransferer.h
+CMakeFiles/ACA_Project2.dir/DRAM/DRAM.c.o: Block_Queue/Block_Queue.h
 CMakeFiles/ACA_Project2.dir/DRAM/DRAM.c.o: CacheLine/CacheLine.h
 CMakeFiles/ACA_Project2.dir/DRAM/DRAM.c.o: uthash_files/include/uthash.h
 
@@ -90,6 +91,7 @@ CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/DRAM/DRAM_Examples.c.o: Data
 CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/DRAM/DRAM_Examples.c.o: Address/Address.h
 CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/DRAM/DRAM_Examples.c.o: Block/Block.h
 CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/DRAM/DRAM_Examples.c.o: BlockTransferer/BlockTransferer.h
+CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/DRAM/DRAM_Examples.c.o: Block_Queue/Block_Queue.h
 CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/DRAM/DRAM_Examples.c.o: CacheLine/CacheLine.h
 CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/DRAM/DRAM_Examples.c.o: DRAM/DRAM.h
 CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/DRAM/DRAM_Examples.c.o: uthash_files/include/uthash.h

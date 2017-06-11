@@ -10,6 +10,7 @@ DRAM Constructor_DRAM(){
     DRAM dram = {};
     dram.HashTable = NULL;
     dram.transferer = Constructor_Transferer();
+    dram.blockQueue = Constructor_BlockQueue();
     return dram;
 }
 

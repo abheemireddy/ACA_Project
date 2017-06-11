@@ -7,6 +7,7 @@
 
 #include <uthash.h>
 #include <BlockTransferer/BlockTransferer.h>
+#include <Block_Queue/Block_Queue.h>
 
 struct BlockTag;//forward declaration
 
@@ -14,6 +15,7 @@ typedef struct DRAMTag {
     Transferer* transferer;
     UT_hash_handle hh; /* make this structure hashable*/
     struct BlockTag *HashTable; //This is my hashTable for blocks
+    BlockQueue* blockQueue;
 
     void (*removeBlockFromDRAM)(struct BlockTag** HashTable,struct BlockTag* blockToRemove);
     void (*putBlock)(struct BlockTag** HashTable,struct BlockTag *value);

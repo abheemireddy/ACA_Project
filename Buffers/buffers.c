@@ -11,7 +11,7 @@ void WriteBackToL2(Block** HashTable){
     Block* tmp;
     HASH_ITER(hh,*HashTable,s,tmp){
         //l2Controller->transferer->TransferQueue->Enqueue(l2Controller->transferer->TransferQueue,s->)
-        printf("address: %d\n",s->address.bitStringValue);
+        l2Controller->blockQueue->EnqueueBlock(l2Controller->blockQueue,*s);
     }
 }
 

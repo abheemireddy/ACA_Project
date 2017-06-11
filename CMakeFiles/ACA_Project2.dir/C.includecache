@@ -119,6 +119,8 @@ uthash.h
 -
 BlockTransferer/BlockTransferer.h
 -
+Block_Queue/Block_Queue.h
+-
 
 /home/abheemireddy/ACA_Project/Data/DataStore.c
 stdlib.h
@@ -416,6 +418,8 @@ DRAM/DRAM.h
 uthash.h
 -
 BlockTransferer/BlockTransferer.h
+-
+Block_Queue/Block_Queue.h
 -
 
 Data/DataStore.h

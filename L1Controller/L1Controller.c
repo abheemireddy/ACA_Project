@@ -18,9 +18,14 @@ void SetL1ControllerData(){
     if(existing != NULL){
         if(existing->dirtyBit == false){
             if(CountBlocksInBuffer(&l1VictimCache->HashTable) >= 2){
-                //l1VictimCache->
+                WriteBackToL2(&l1VictimCache->HashTable);
             }
-            l1VictimCache->putBlock(&l1VictimCache->HashTable,existing);
+            putBlockInBuffer(&l1VictimCache->HashTable,existing);
+        }else{
+            if(CountBlocksInBuffer(&l1WriteBuffer->HashTable) >= 5){
+                WriteBackToL2(&l1WriteBuffer->HashTable);
+            }
+            putBlockInBuffer(&l1VictimCache->HashTable,existing);
         }
     }
     put(&set->HashTable,toStore);
