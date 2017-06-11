@@ -1,14 +1,14 @@
-#include <Queue/Queue.h>
+#include "Queue/Queue.h"
+#include "Block_Queue/Block_Queue.h"
 #include "Processor/processor.h"
-#include <Data_Structure_Examples/DataStore/DataStore_Examples.h>
-#include <Data_Structure_Examples/BlockTransferer/BlockTransferer_Examples.h>
+#include "Data_Structure_Examples/DataStore/DataStore_Examples.h"
+#include "Data_Structure_Examples/BlockTransferer/BlockTransferer_Examples.h"
 #include "Data_Structure_Examples/Set/Set_and_Block_Examples.h"
 #include "Data_Structure_Examples/Queue/Queue_the_examples.h"
 #include "Data_Structure_Examples/Block/Block_CacheLine_HashTable_Examples.h"
 #include "Data_Structure_Examples/DRAM/DRAM_Examples.h"
 #include "L1_Cache.h"
 #include <sys/resource.h>
-#include <Block_Queue/Block_Queue.h>
 #include "Buffers/buffers.h"
 #include "Global_Variables.h"
 

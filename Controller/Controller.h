@@ -20,6 +20,7 @@ typedef struct ControllerTag{
 } Controller;
 
 Controller* Constructor_L1Controller();
+Controller* Constructor_L2Controller();
 
 CacheLine* L1ProcessInstruction(Instruction instruction);
 void L1_write(Instruction instruction, char value[64]);
