@@ -1,6 +1,7 @@
-#include <Queue/Queue.h>
+#include "Queue/Queue.h"
 #include "L1Controller.h"
 #include "Global_Variables.h"
+#include "Cache/Cache.h"
 
 L1Controller* Constructor_L1Controller(){
     L1Controller* l1Controller = malloc(sizeof(l1Controller));
@@ -10,6 +11,8 @@ L1Controller* Constructor_L1Controller(){
     l1Controller->dataFromL2 = NULL;
     return l1Controller;
 }
+
+
 
 void SetL1ControllerData(){
     Block* toStore = l1Controller->dataFromL2;
@@ -47,6 +50,8 @@ void L1_write(Instruction instruction, char value[64])
     if(existing != NULL){
         CacheLine* toWriteTo = getCacheLineByOffset(&existing->HashTable,instruction.address.Offset);
         strcpy(toWriteTo->data,value);
+    }else{
+
     }
 	/*printf("P to L1C: CPUWrite (%d)\n", address.bitStringValue);
 	// check if address is valid
@@ -99,21 +104,7 @@ CacheLine* L1_read(Instruction instruction)
 	if (block == NULL)
 	{
         //check victim and write buffer
-        Block* victimBlock = getBlockFromBuffer(&l1VictimCache->HashTable,instruction.address.bitStringValue);
-        Block* writeBlock = getBlockFromBuffer(&l1WriteBuffer->HashTable,instruction.address.bitStringValue);
-        if(victimBlock == NULL && writeBlock == NULL){
-            Enqueue(l2Controller->transferer->TransferQueue,instruction);
-            l1Controller->waiting = true;
-            return NULL;
-        }else{
-            if(victimBlock != NULL){
-                CacheLine* victimCacheLine = getCacheLineByOffset(&victimBlock->HashTable,instruction.address.Offset);
-                return victimCacheLine;
-            }else if(writeBlock != NULL){
-                CacheLine* writeBufferCacheLine = getCacheLineByOffset(&victimBlock->HashTable,instruction.address.Offset);
-                return writeBufferCacheLine;
-            }
-        }
+
 	}
     /*
 	else if (L1Data[address.Index].valid && L1Data[address.Index].tag != address.Tag) // reading from a different tag

@@ -10,6 +10,7 @@
 #include <stdbool.h>
 #include "Address/Address.h"
 
+
 typedef struct InstructionTag{
     int clockCycleWhenThisCanBeRead;
     int instruction;

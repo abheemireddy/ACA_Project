@@ -1,6 +1,8 @@
+#include "Block/Block.h"
+#include "Block_Queue/Block_Queue.h"
 #include "L2Controller.h"
+#include "BlockTransferer/BlockTransferer.h"
 #include "Global_Variables.h"
-
 
 L2Controller* Constructor_L2Controller(){
     L2Controller* l2Controller = malloc(sizeof(L2Controller));

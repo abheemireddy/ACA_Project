@@ -4,12 +4,8 @@
 #include "aca/MainMemory.h"
 #include <stdio.h>
 #include <string.h>
-#include <Address/Address.h>
-#include <BlockTransferer/BlockTransferer.h>
-#include <Block_Queue/Block_Queue.h>
-#include <Block/Block.h>
-#include <Queue/Queue.h>
 
+typedef struct TransfererTag Transferer;
 typedef struct BlockQueueTag BlockQueue;
 
 typedef struct L2ControllerTag{

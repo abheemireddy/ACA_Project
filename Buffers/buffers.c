@@ -1,17 +1,35 @@
 //
 // Created by chad on 6/5/17.
 //
-
-#include <Global_Variables.h>
-#include "buffers.h"
 #include "Block/Block.h"
+#include"Queue/Queue.h"
+#include "buffers.h"
+#include "Global_Variables.h"
+#include "BlockTransferer/BlockTransferer.h"
+
+CacheLine* SearchInBuffers(Instruction instruction){
+    Block* victimBlock = getBlockFromBuffer(&l1VictimCache->HashTable,instruction.address.bitStringValue);
+    Block* writeBlock = getBlockFromBuffer(&l1WriteBuffer->HashTable,instruction.address.bitStringValue);
+    if(victimBlock == NULL && writeBlock == NULL){
+        Enqueue(l2Controller->transferer->TransferQueue,instruction);
+        l1Controller->waiting = true;
+        return NULL;
+    }else{
+        if(victimBlock != NULL){
+            CacheLine* victimCacheLine = getCacheLineByOffset(&victimBlock->HashTable,instruction.address.Offset);
+            return victimCacheLine;
+        }else if(writeBlock != NULL){
+            CacheLine* writeBufferCacheLine = getCacheLineByOffset(&victimBlock->HashTable,instruction.address.Offset);
+            return writeBufferCacheLine;
+        }
+    }
+}
 
 void WriteBackToL2(Block** HashTable){
     Block* s;
     Block* tmp;
     HASH_ITER(hh,*HashTable,s,tmp){
-        //l2Controller->transferer->TransferQueue->Enqueue(l2Controller->transferer->TransferQueue,s->)
-        l2Controller->blockQueue->EnqueueBlock(l2Controller->blockQueue,*s);
+        EnqueueBlock(l2Controller->blockQueue,*s);
     }
 }
 

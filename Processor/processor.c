@@ -1,6 +1,9 @@
-#include <Queue/Queue.h>
+
+#include "Queue/Queue.h"
+#include "BlockTransferer/BlockTransferer.h"
 #include "processor.h"
-#include "Global_Variables.h"
+
+
 
 Processor* Constructor_Processor(L1Controller* l1Controller,L2Controller* l2Controller){
     Processor* processor = malloc(sizeof(Processor));

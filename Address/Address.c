@@ -3,9 +3,6 @@
 //
 
 #include "Address.h"
-#include <stdio.h>
-#include <unistd.h>
-#include <math.h>
 
 int fromBinary(char* bitString){
     char* end;

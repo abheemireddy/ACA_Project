@@ -13,6 +13,7 @@
 #include "Address/Address.h"
 #include <unistd.h>
 
+typedef struct TransfererTag Transferer;
 
 typedef struct ProcessorTag{
     void (*StoreFileInstructionsIntoProcessorQueue)(struct ProcessorTag* processor);
