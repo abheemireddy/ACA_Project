@@ -65,7 +65,7 @@ void L1ProcessInstruction(Instruction instruction){
 
 void WriteToBlock(Block* existing,Instruction instruction,char value[64]){
     CacheLine* toWriteTo = getCacheLineByOffset(&existing->HashTable,instruction.address.Offset);
-    toWriteTo->dataLine = l1Data->StoreData(l1Data,value);
+    toWriteTo->dataLine = StoreData(l1Data,value);
     existing->dirtyBit = true;
     printf("Wrote to set:%s\n",GetData(l1Data,toWriteTo->dataLine));
     Dequeue(l1Controller->transferer->TransferQueue);

@@ -15,6 +15,7 @@ void changeStackSize();
 int run_examples();
 
 int main(){
+    l1Data = Constructor_DataStore();
     l1WriteBuffer = Constructor_Buffer();
     l1VictimCache = Constructor_Buffer();
 

@@ -9,6 +9,6 @@
 CacheLine* Constructor_CacheLine(Address address,char* data){
     CacheLine* cacheLine = malloc(sizeof(CacheLine));
     cacheLine->address = address;
-    cacheLine->dataLine = StoreData(l1Data,data);
+    cacheLine->dataLine = -1;//StoreData(l1Data,data);
     return cacheLine;
 }
