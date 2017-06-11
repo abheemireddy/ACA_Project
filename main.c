@@ -41,7 +41,7 @@ int main(){
                 Instruction nextInstructionForL1ControllerToProcess = GetNextInstruction(l1Controller->transferer);
                 CacheLine* read = L1ProcessInstruction(nextInstructionForL1ControllerToProcess);
                 if(nextInstructionForL1ControllerToProcess.instruction == 2){
-                    printf("Read:%s",GetData(l1Data,read->dataLine));
+                    printf("Read:%s\n",GetData(l1Data,read->dataLine));
                 }
             }
             if(l2Controller->waiting == false){

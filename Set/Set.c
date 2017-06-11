@@ -13,7 +13,7 @@ Set* Constructor_Set(int numberOfBlocks,Address address){
     set->numberOfBlocks = numberOfBlocks;
     set->HashTable = NULL;
 
-    int i;
+    /*int i;
     int setAddress = address.bitStringValue;
     for(i = 0;i<set->numberOfBlocks;i++){
         char* bitString = int2bin(setAddress);
@@ -23,7 +23,7 @@ Set* Constructor_Set(int numberOfBlocks,Address address){
         block->dirtyBit = false;
         put(&set->HashTable,block);
         setAddress += 256;
-    }
+    }*/
     return set;
 }
 

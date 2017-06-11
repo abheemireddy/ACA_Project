@@ -12,7 +12,7 @@ Block* Constructor_Block(Address address){
     block->isIdle = false;
     block->HashTable = NULL;
 
-    int i;
+    /*int i;
     int cacheAddressValue = address.bitStringValue;
     for(i = 0;i<8;i++){
         char* bitString = int2bin(cacheAddressValue);
@@ -21,7 +21,7 @@ Block* Constructor_Block(Address address){
         block->validBit = false;
         putCacheLine(&block->HashTable,cacheLine);
         cacheAddressValue += 1;
-    }
+    }*/
     return block;
 }
 

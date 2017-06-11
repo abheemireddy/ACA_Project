@@ -69,10 +69,12 @@ void WriteToBlock(Block* existing,Instruction instruction,char value[64]){
     CacheLine* toWriteTo = getCacheLineByOffset(&existing->HashTable,instruction.address.Offset);
     toWriteTo->dataLine = StoreData(l1Data,value);
     existing->dirtyBit = true;
+    existing->validBit = true;
     printf("Wrote to set:%s\n",GetData(l1Data,toWriteTo->dataLine));
     Dequeue(l1Controller->transferer->TransferQueue);
 }
-void CheckVictimCacheAndWriteBuffer(Block* existing,Instruction instruction,char value[64]){
+
+bool CheckVictimCacheAndWriteBuffer(Instruction instruction,char value[64]){
     Block* victimBlock = getBlockFromBuffer(&l1VictimCache->HashTable,instruction.address.bitStringValue);
     Block* writeBlock = getBlockFromBuffer(&l1WriteBuffer->HashTable,instruction.address.bitStringValue);
     if(victimBlock == NULL && writeBlock == NULL){
@@ -82,24 +84,47 @@ void CheckVictimCacheAndWriteBuffer(Block* existing,Instruction instruction,char
         if(victimBlock != NULL){
             CacheLine* victimCacheLine = getCacheLineByOffset(&victimBlock->HashTable,instruction.address.Offset);
             victimCacheLine->dataLine = StoreData(l1Data,value);
-            existing->dirtyBit = true;
-            existing->isIdle = false;
+            victimBlock->dirtyBit = true;
+            victimBlock->isIdle = false;
+            return true;
         }else if(writeBlock != NULL){
             CacheLine* writeBufferCacheLine = getCacheLineByOffset(&victimBlock->HashTable,instruction.address.Offset);
             writeBufferCacheLine->dataLine = StoreData(l1Data,value);
-            existing->dirtyBit = true;
-            existing->isIdle = false;
+            writeBlock->dirtyBit = true;
+            writeBlock->isIdle = false;
+            return true;
         }
     }
+    return false;
 }
+
+void TEMP_putInL1Set(Address* address,Set* set,char value[64]){
+    Block* block = Constructor_Block(*address);
+    block->validBit = false;
+    block->dirtyBit = false;
+    put(&set->HashTable,block);
+    CacheLine* cacheLine = Constructor_CacheLine(*address,value);
+    putCacheLine(&block->HashTable,cacheLine);
+    CacheLine* toWriteTo = getCacheLineByOffset(&block->HashTable,address->Offset);
+    toWriteTo->dataLine = StoreData(l1Data,value);
+    l1Controller->waiting = false;
+    block->dirtyBit = true;
+    block->validBit = true;
+    Dequeue(l1Controller->transferer->TransferQueue);
+    printf("Temp write:%s\n",GetData(l1Data,toWriteTo->dataLine));
+}
+
 void L1_write(Instruction instruction, char value[64])
 {
     Set* set = getSetByIndex(&l1Controller->cache->HashTable,instruction.address.Index);
     Block* existing = get(&set->HashTable,instruction.address.Tag);
     if(existing != NULL){
         WriteToBlock(existing,instruction,value);
-    }else{
-        CheckVictimCacheAndWriteBuffer(existing,instruction,value);
+    }else if(existing == NULL){
+        bool found = CheckVictimCacheAndWriteBuffer(instruction,value);
+        if(found == false){
+            TEMP_putInL1Set(&instruction.address,set,value);
+        }
     }
 	/*printf("P to L1C: CPUWrite (%d)\n", address.bitStringValue);
 	// check if address is valid
