@@ -6,34 +6,27 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <stdbool.h>
-#include "Block/Block.h"
+#include <BlockOnBus/BlockOnBus.h>
 
 typedef struct NodeTag {
-    Block block;
+    BlockOnBus block;
     struct NodeTag* prev;
 } Node;
 
-Node* Constructor_BlockNode(Block block);
+Node* Constructor_BlockNode(BlockOnBus block);
 
 typedef struct BlockQueueTag {
     Node *head;
     Node *tail;
     int size;
     int limit;
-
-    Block (*PeekBlock)(struct BlockQueueTag *blockQueue);
-    bool (*EnqueueBlock)(struct BlockQueueTag *blockQueue, Block block);
-    Block (*DequeueBlock)(struct BlockQueueTag *blockQueue);
-    bool (*isBlockQueueEmpty)(struct BlockQueueTag* blockQueue);
-    void (*print_BlockQueue)(struct BlockQueueTag* blockQueue);
-
 } BlockQueue;
 
 BlockQueue* Constructor_BlockQueue();
 
-Block PeekBlock(struct BlockQueueTag *blockQueue);
-bool EnqueueBlock(struct BlockQueueTag *queue, Block block);
-Block DequeueBlock(struct BlockQueueTag *blockQueue);
+BlockOnBus PeekBlock(struct BlockQueueTag *blockQueue);
+bool EnqueueBlock(struct BlockQueueTag *queue, BlockOnBus block);
+BlockOnBus DequeueBlock(struct BlockQueueTag *blockQueue);
 bool isBlockQueueEmpty(struct BlockQueueTag* blockQueue);
 void print_BlockQueue(struct BlockQueueTag* blockQueue);
 

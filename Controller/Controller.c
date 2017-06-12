@@ -68,8 +68,7 @@ void PutInVictimCache(Block* existing){
     putBlockInBuffer(&l1VictimCache->HashTable,existing);
 }
 
-void SetL1ControllerData(){
-    Block toStore = DequeueBlock(l1Controller->blockQueue);
+void WriteBlockToL1Controller(Block toStore){
     Set* set = getSetByIndex(&l1Controller->cache->HashTable,toStore.address.Index);
     Block* existing = get(&set->HashTable,toStore.address.Tag);
     if(existing != NULL){
@@ -166,7 +165,8 @@ void WriteBlockToL2Controller(Block block2Write){
         if(found == false){
             printf("ERROR. Data in L1 that is not in L2");
         }
-        EnqueueBlock(dRAM->blockQueue,block2Write);
+        BlockOnBus* blockOnBus = Constructor_BlockOnBus(block2Write,10,"some value");
+        EnqueueBlock(dRAM->blockQueue,*blockOnBus);
     }
     CheckSetSize(set);
     CheckBufferSize();
@@ -175,7 +175,8 @@ void ProcessL2Instruction(Instruction instruction){
     Set* set = getSetByIndex(&l2Controller->cache->HashTable,instruction.address.Index);
     Block* block = get(&set->HashTable,instruction.address.Tag);
     if(block != NULL){
-        EnqueueBlock(l1Controller->blockQueue,*block);
+        BlockOnBus* blockOnBus = Constructor_BlockOnBus(*block,10,"some value");
+        EnqueueBlock(l1Controller->blockQueue,*blockOnBus);
     }else{
         Enqueue(dRAM->transferer->TransferQueue,instruction);
     }
@@ -185,7 +186,8 @@ void ProcessDRamInstruction(Instruction instruction){
     DRamBlock* dramBlock = getBlock(&dRAM->HashTable,instruction.address.bitStringValue);
     Block* block = Constructor_Block(instruction.address);
     if(block != NULL){
-        EnqueueBlock(l2Controller->blockQueue,*block);
+        BlockOnBus* blockOnBus = Constructor_BlockOnBus(*block,10,"some value");
+        EnqueueBlock(l2Controller->blockQueue,*blockOnBus);
     }else{
         printf("ERROR. Block not found in DRAM");
     }

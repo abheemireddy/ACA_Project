@@ -11,6 +11,12 @@ CMakeFiles/ACA_Project2.dir/Block/Block.c.o: Address/Address.h
 CMakeFiles/ACA_Project2.dir/Block/Block.c.o: CacheLine/CacheLine.h
 CMakeFiles/ACA_Project2.dir/Block/Block.c.o: uthash_files/include/uthash.h
 
+CMakeFiles/ACA_Project2.dir/BlockOnBus/BlockOnBus.c.o: BlockOnBus/BlockOnBus.c
+CMakeFiles/ACA_Project2.dir/BlockOnBus/BlockOnBus.c.o: BlockOnBus/BlockOnBus.h
+CMakeFiles/ACA_Project2.dir/BlockOnBus/BlockOnBus.c.o: Address/Address.h
+CMakeFiles/ACA_Project2.dir/BlockOnBus/BlockOnBus.c.o: Block/Block.h
+CMakeFiles/ACA_Project2.dir/BlockOnBus/BlockOnBus.c.o: uthash_files/include/uthash.h
+
 CMakeFiles/ACA_Project2.dir/BlockTransferer/BlockTransferer.c.o: BlockTransferer/BlockTransferer.c
 CMakeFiles/ACA_Project2.dir/BlockTransferer/BlockTransferer.c.o: BlockTransferer/BlockTransferer.h
 CMakeFiles/ACA_Project2.dir/BlockTransferer/BlockTransferer.c.o: Address/Address.h
@@ -23,12 +29,14 @@ CMakeFiles/ACA_Project2.dir/Block_Queue/Block_Queue.c.o: Block_Queue/Block_Queue
 CMakeFiles/ACA_Project2.dir/Block_Queue/Block_Queue.c.o: Block_Queue/Block_Queue.h
 CMakeFiles/ACA_Project2.dir/Block_Queue/Block_Queue.c.o: Address/Address.h
 CMakeFiles/ACA_Project2.dir/Block_Queue/Block_Queue.c.o: Block/Block.h
+CMakeFiles/ACA_Project2.dir/Block_Queue/Block_Queue.c.o: BlockOnBus/BlockOnBus.h
 CMakeFiles/ACA_Project2.dir/Block_Queue/Block_Queue.c.o: uthash_files/include/uthash.h
 
 CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.o: Buffers/buffers.c
 CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.o: Buffers/buffers.h
 CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.o: Address/Address.h
 CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.o: Block/Block.h
+CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.o: BlockOnBus/BlockOnBus.h
 CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.o: BlockTransferer/BlockTransferer.h
 CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.o: Block_Queue/Block_Queue.h
 CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.o: Buffers/buffers.h
@@ -73,6 +81,7 @@ CMakeFiles/ACA_Project2.dir/Controller/Controller.c.o: Controller/Controller.c
 CMakeFiles/ACA_Project2.dir/Controller/Controller.c.o: Controller/Controller.h
 CMakeFiles/ACA_Project2.dir/Controller/Controller.c.o: Address/Address.h
 CMakeFiles/ACA_Project2.dir/Controller/Controller.c.o: Block/Block.h
+CMakeFiles/ACA_Project2.dir/Controller/Controller.c.o: BlockOnBus/BlockOnBus.h
 CMakeFiles/ACA_Project2.dir/Controller/Controller.c.o: BlockTransferer/BlockTransferer.h
 CMakeFiles/ACA_Project2.dir/Controller/Controller.c.o: Block_Queue/Block_Queue.h
 CMakeFiles/ACA_Project2.dir/Controller/Controller.c.o: Buffers/buffers.h
@@ -92,6 +101,7 @@ CMakeFiles/ACA_Project2.dir/DRAM/DRAM.c.o: DRAM/DRAM.c
 CMakeFiles/ACA_Project2.dir/DRAM/DRAM.c.o: DRAM/DRAM.h
 CMakeFiles/ACA_Project2.dir/DRAM/DRAM.c.o: Address/Address.h
 CMakeFiles/ACA_Project2.dir/DRAM/DRAM.c.o: Block/Block.h
+CMakeFiles/ACA_Project2.dir/DRAM/DRAM.c.o: BlockOnBus/BlockOnBus.h
 CMakeFiles/ACA_Project2.dir/DRAM/DRAM.c.o: BlockTransferer/BlockTransferer.h
 CMakeFiles/ACA_Project2.dir/DRAM/DRAM.c.o: Block_Queue/Block_Queue.h
 CMakeFiles/ACA_Project2.dir/DRAM/DRAM.c.o: Instruction/Instruction.h
@@ -200,6 +210,7 @@ CMakeFiles/ACA_Project2.dir/main.c.o: Queue/Queue.h
 CMakeFiles/ACA_Project2.dir/main.c.o: main.c
 CMakeFiles/ACA_Project2.dir/main.c.o: Address/Address.h
 CMakeFiles/ACA_Project2.dir/main.c.o: Block/Block.h
+CMakeFiles/ACA_Project2.dir/main.c.o: BlockOnBus/BlockOnBus.h
 CMakeFiles/ACA_Project2.dir/main.c.o: BlockTransferer/BlockTransferer.h
 CMakeFiles/ACA_Project2.dir/main.c.o: CacheLine/CacheLine.h
 CMakeFiles/ACA_Project2.dir/main.c.o: DRAM/DRAM.h
