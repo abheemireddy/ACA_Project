@@ -28,5 +28,8 @@ void SetL1ControllerData();
 bool CheckL2WriteBuffer(Block block2Write);
 void WriteBlockToL2Controller(Block block);
 void L2WriteBlock(Block block);
+void ProcessL2Instruction(Instruction instruction);
+void WriteBlockToDRAM(Block block);
 
+void ProcessDRamInstruction(Instruction instruction);
 #endif

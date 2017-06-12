@@ -37,7 +37,7 @@ int main(){
                 l1Controller->waiting = false;
             }
             if(l1Controller->waiting == false){
-                if(isEmpty(l1Controller->transferer->TransferQueue)){
+                if(!isEmpty(l1Controller->transferer->TransferQueue)){
                     Instruction nextInstructionFromProcessor = Dequeue(processor->InstructionHolder->TransferQueue);
                     Enqueue(l1Controller->transferer->TransferQueue,nextInstructionFromProcessor);
                 }
@@ -52,12 +52,27 @@ int main(){
                     }
                 }
             }
-            if(!isBlockQueueEmpty(l2Controller->blockQueue)){ //check for blocks from l1
+
+            //L2 Controller
+            if(!isBlockQueueEmpty(l2Controller->blockQueue)){ //write back blocks from l1
                 Block flushedFromBufers = PeekBlock(l2Controller->blockQueue);
                 WriteBlockToL2Controller(flushedFromBufers);
             }
             if(l2Controller->waiting == false){
+                if(!isEmpty(l2Controller->transferer->TransferQueue)) {//there is something to process
+                    Instruction nextInstructionFromL1 = GetNextInstruction(l2Controller->transferer);
+                    ProcessL2Instruction(nextInstructionFromL1);
+                }
+            }
 
+            //DRAM
+            if(!isBlockQueueEmpty(dRAM->blockQueue)){
+                Block flushedFromBufers = PeekBlock(dRAM->blockQueue);
+                WriteBlockToDRAM(flushedFromBufers);
+            }
+            if(!isEmpty(dRAM->transferer->TransferQueue)){
+                Instruction nextInstructionFromL2 = GetNextInstruction(dRAM->transferer);
+                ProcessDRamInstruction(nextInstructionFromL2);
             }
         }
         ClockCycleCount += 1;

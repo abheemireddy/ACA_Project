@@ -164,12 +164,40 @@ void WriteBlockToL2Controller(Block block2Write){
     }else if(block == NULL){
         bool found = CheckL2WriteBuffer(block2Write);
         if(found == false){
-            //ERROR, eventually
+            printf("ERROR. Data in L1 that is not in L2");
         }
         EnqueueBlock(dRAM->blockQueue,block2Write);
     }
     CheckSetSize(set);
     CheckBufferSize();
+}
+void ProcessL2Instruction(Instruction instruction){
+    Set* set = getSetByIndex(&l2Controller->cache->HashTable,instruction.address.Index);
+    Block* block = get(&set->HashTable,instruction.address.Tag);
+    if(block != NULL){
+        EnqueueBlock(l1Controller->blockQueue,*block);
+    }else{
+        Enqueue(dRAM->transferer->TransferQueue,instruction);
+    }
+}
+
+void ProcessDRamInstruction(Instruction instruction){
+    DRamBlock* dramBlock = getBlock(&dRAM->HashTable,instruction.address.bitStringValue);
+    Block* block = Constructor_Block(instruction.address);
+    if(block != NULL){
+        EnqueueBlock(l2Controller->blockQueue,*block);
+    }else{
+        printf("ERROR. Block not found in DRAM");
+    }
+}
+
+void WriteBlockToDRAM(Block block2Write){
+    DRamBlock* ramBlock = dRAM->getBlock(&dRAM->HashTable,block2Write.address.bitStringValue);
+    DRamBlock* newdRam = Constructor_DRamBlock(block2Write.address,"Some value");
+    if(ramBlock != NULL){
+        removeBlockFromDRAM(&dRAM->HashTable,ramBlock);
+    }
+    putBlock(&dRAM->HashTable,newdRam);
 }
 
 void WriteToController(Instruction instruction, char value[64])
