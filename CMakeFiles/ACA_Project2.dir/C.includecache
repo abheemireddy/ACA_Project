@@ -71,6 +71,8 @@ BlockTransferer/BlockTransferer.h
 /home/abheemireddy/ACA_Project/Buffers/BlockTransferer/BlockTransferer.h
 Global_Variables.h
 /home/abheemireddy/ACA_Project/Buffers/Global_Variables.h
+Queue/Queue.h
+/home/abheemireddy/ACA_Project/Buffers/Queue/Queue.h
 
 /home/abheemireddy/ACA_Project/Buffers/buffers.h
 stdbool.h

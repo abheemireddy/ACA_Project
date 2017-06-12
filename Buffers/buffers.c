@@ -7,6 +7,7 @@
 #include "Block_Queue/Block_Queue.h"
 #include "BlockTransferer/BlockTransferer.h"
 #include "Global_Variables.h"
+#include "Queue/Queue.h"
 
 CacheLine* SearchInBuffers(Instruction instruction){
     Block* victimBlock = getBlockFromBuffer(&l1VictimCache->HashTable,instruction.address.bitStringValue);

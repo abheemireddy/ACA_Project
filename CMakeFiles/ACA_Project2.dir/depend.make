@@ -38,6 +38,7 @@ CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.o: Data/DataStore.h
 CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.o: Global_Variables.h
 CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.o: Instruction/Instruction.h
 CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.o: Processor/processor.h
+CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.o: Queue/Queue.h
 CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.o: uthash_files/include/uthash.h
 
 CMakeFiles/ACA_Project2.dir/Cache/Cache.c.o: Cache/Cache.c

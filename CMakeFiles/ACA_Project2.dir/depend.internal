@@ -39,6 +39,7 @@ CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.o
  Global_Variables.h
  Instruction/Instruction.h
  Processor/processor.h
+ Queue/Queue.h
  uthash_files/include/uthash.h
 CMakeFiles/ACA_Project2.dir/Cache/Cache.c.o
  /home/abheemireddy/ACA_Project/Cache/Cache.c
