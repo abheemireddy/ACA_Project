@@ -1,5 +1,6 @@
 #include "Queue/Queue.h"
 #include "Block_Queue/Block_Queue.h"
+#include "Controller/Controller.h"
 #include "Processor/processor.h"
 #include "Data_Structure_Examples/DataStore/DataStore_Examples.h"
 #include "Data_Structure_Examples/BlockTransferer/BlockTransferer_Examples.h"
@@ -11,6 +12,7 @@
 #include <sys/resource.h>
 #include "Buffers/buffers.h"
 #include "Global_Variables.h"
+
 
 void changeStackSize();
 int run_examples();
@@ -30,7 +32,7 @@ int main(){
     int ClockCycleCount = 0;
     while(!isEmpty(processor->InstructionHolder->TransferQueue)){
         if(!isEmpty(processor->InstructionHolder->TransferQueue)){
-            if(!isBlockQueueEmpty(l1Controller->blockQueue)){
+            if(!isBlockQueueEmpty(l1Controller->blockQueue)){//check for blocks from l2
                 SetL1ControllerData();
                 l1Controller->waiting = false;
             }
@@ -40,7 +42,7 @@ int main(){
                     Enqueue(l1Controller->transferer->TransferQueue,nextInstructionFromProcessor);
                 }
                 Instruction nextInstructionForL1ControllerToProcess = GetNextInstruction(l1Controller->transferer);
-                CacheLine* read = L1ProcessInstruction(nextInstructionForL1ControllerToProcess);
+                CacheLine* read = ProcessL1Instruction(nextInstructionForL1ControllerToProcess);
                 if(nextInstructionForL1ControllerToProcess.instruction == 2){
                     if(read == NULL){
                         printf("Did not find in cache, waiting");
@@ -50,13 +52,13 @@ int main(){
                     }
                 }
             }
-            /*if(!isBlockQueueEmpty(l2Controller->blockQueue)){
-                Block* flushedFromBufers = PeekBlock(&l2Controller->blockQueue);
-                //l2WriteBlock(flushedFromBufers);
+            if(!isBlockQueueEmpty(l2Controller->blockQueue)){ //check for blocks from l1
+                Block flushedFromBufers = PeekBlock(l2Controller->blockQueue);
+                WriteBlockToL2Controller(flushedFromBufers);
             }
             if(l2Controller->waiting == false){
 
-            }*/
+            }
         }
         ClockCycleCount += 1;
     }

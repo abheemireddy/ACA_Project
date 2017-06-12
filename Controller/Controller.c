@@ -2,7 +2,6 @@
 #include "BlockTransferer/BlockTransferer.h"
 #include "Controller.h"
 #include "CacheLine/CacheLine.h"
-#include "Block/Block.h"
 #include "Block_Queue/Block_Queue.h"
 #include "Queue/Queue.h"
 #include "Global_Variables.h"
@@ -84,9 +83,9 @@ void SetL1ControllerData(){
     put(&set->HashTable,&toStore);
 }
 
-CacheLine* L1ProcessInstruction(Instruction instruction){
+CacheLine* ProcessL1Instruction(Instruction instruction){
     if(instruction.instruction == 1){
-        L1_write(instruction,instruction.data);
+        WriteToController(instruction,instruction.data);
         return NULL;
     }else if(instruction.instruction == 2){
         CacheLine* cacheLineRead =  L1_read(instruction);
@@ -132,6 +131,16 @@ bool CheckVictimCacheAndWriteBuffer(Instruction instruction,char value[64]){
     return false;
 }
 
+bool CheckL2WriteBuffer(Block block2Write){
+    Block* writeBlock = getBlockFromBuffer(&l2WriteBuffer->HashTable,block2Write.address.bitStringValue);
+    if(writeBlock != NULL){
+        removeBlockFromBuffer(&l2WriteBuffer->HashTable,&block2Write);
+        putBlockInBuffer(&l2WriteBuffer->HashTable,&block2Write);
+        return true;
+    }
+    return false;
+}
+
 void TEMP_putInL1Set(Address* address,Set* set,char value[64]){
     Block* block = Constructor_Block(*address);
     put(&set->HashTable,block);
@@ -146,7 +155,24 @@ void TEMP_putInL1Set(Address* address,Set* set,char value[64]){
     printf("Temp write:%s\n",GetData(l1Data,toWriteTo->dataLine));
 }
 
-void L1_write(Instruction instruction, char value[64])
+void WriteBlockToL2Controller(Block block2Write){
+    Set* set = getSetByIndex(&l2Controller->cache->HashTable,block2Write.address.Index);
+    Block* block = get(&set->HashTable,block2Write.address.Tag);
+    if(block != NULL){
+        removeFromTable(&set->HashTable,block);
+        put(&set->HashTable,&block2Write);
+    }else if(block == NULL){
+        bool found = CheckL2WriteBuffer(block2Write);
+        if(found == false){
+            //ERROR, eventually
+        }
+        EnqueueBlock(dRAM->blockQueue,block2Write);
+    }
+    CheckSetSize(set);
+    CheckBufferSize();
+}
+
+void WriteToController(Instruction instruction, char value[64])
 {
     Set* set = getSetByIndex(&l1Controller->cache->HashTable,instruction.address.Index);
     Block* existing = get(&set->HashTable,instruction.address.Tag);
@@ -279,3 +305,11 @@ CacheLine* L1_read(Instruction instruction)
 
 	return NULL;
 }
+
+/*void L2WriteBlock(Block block){
+    Set* set = getSetByIndex(&l2Controller->cache->HashTable,block.address.Index);
+    Block* existing = get(&set->HashTable,&block);
+    if(existing == NULL){
+
+    }
+}*/
