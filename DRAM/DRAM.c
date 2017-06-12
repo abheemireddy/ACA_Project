@@ -7,7 +7,6 @@
 #include "Block/Block.h"
 #include "BlockTransferer/BlockTransferer.h"
 #include "Block_Queue/Block_Queue.h"
-
 DRAM Constructor_DRAM(){
     DRAM dram = {};
     dram.HashTable = NULL;

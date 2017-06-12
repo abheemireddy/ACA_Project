@@ -7,8 +7,8 @@
 
 
 
-Node* Constructor_Node(Instruction instruction){
-    Node* node = malloc(sizeof(Node));
+QNode* Constructor_QNode(Instruction instruction){
+    QNode* node = malloc(sizeof(QNode));
     node->data = instruction;
     return node;
 }
@@ -30,15 +30,15 @@ void Queue_Destructor(Queue *queue) {
 }
 
 void print_queue(Queue* queue){
-    Node* current = queue->head;
+    QNode* current = queue->head;
     while (current->prev != NULL) {
-        printf("Node Instruction:%s\n",current->data.data);
+        printf("QNode Instruction:%s\n",current->data.data);
         current = current->prev;
     }
 }
 
 bool Enqueue(Queue *queue, Instruction instruction) {
-    Node* node = Constructor_Node(instruction);
+    QNode* node = Constructor_QNode(instruction);
     if ((queue == NULL) || (node == NULL)) {
         return false;
     }
@@ -67,7 +67,7 @@ Instruction Peek(Queue *queue) {
         printf("Empty Queue");
         return emptyInstruction;
     }
-    Node* node = queue->head;
+    QNode* node = queue->head;
     return node->data;
 }
 
@@ -77,7 +77,7 @@ Instruction Dequeue(Queue *queue) {
         printf("Trying to dequeue from empty queue");
         return emptyInstruction;
     }
-    Node* node = queue->head;
+    QNode* node = queue->head;
     queue->head = (queue->head)->prev;
     queue->size -= 1;
     return node->data;

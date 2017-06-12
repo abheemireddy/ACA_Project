@@ -8,21 +8,20 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <stdbool.h>
-#include "Address/Address.h"
 #include "Instruction/Instruction.h"
 
 
 
-typedef struct NodeTag {
+typedef struct QNodeTag {
     Instruction data;
-    struct NodeTag* prev;
-} Node;
+    struct QNodeTag* prev;
+} QNode;
 
-Node* Constructor_Node(Instruction instruction);
+QNode* Constructor_Node(Instruction instruction);
 
 typedef struct QueueTag {
-    Node *head;
-    Node *tail;
+    QNode *head;
+    QNode *tail;
     int size;
     int limit;
 

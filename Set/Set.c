@@ -2,10 +2,9 @@
 // Created by chad on 5/24/17.
 //
 
+#include <stdio.h>
 #include "Block/Block.h"
 #include "Set.h"
-#include <stdio.h>
-
 
 Set* Constructor_Set(int numberOfBlocks,Address address){
     Set* set = malloc(sizeof(Set));
@@ -51,16 +50,6 @@ void replaceByUseFrequency(Block** HashTable,int key) {
         hashTableStoresInThisBlock = (struct BlockTag*)malloc(sizeof(struct BlockTag));
         hashTableStoresInThisBlock->useFrequency = key;
         HASH_ADD_INT( *HashTable, address.Tag, hashTableStoresInThisBlock );  /* id: name of key field */
-    }
-}
-void replace(UT_hash_handle hh,CacheLine** HashTable,CacheLine *value) {
-    CacheLine *hashTableStoresInThis;//to store getter
-
-    HASH_FIND_INT( *HashTable, &value->address.Tag, hashTableStoresInThis );
-    if (hashTableStoresInThis==NULL) {
-        hashTableStoresInThis = (CacheLine*)malloc(sizeof(CacheLine));
-        strcpy(hashTableStoresInThis->address.bitString,value->address.bitString);
-        HASH_ADD_INT(*HashTable, address.Tag, value );
     }
 }
 

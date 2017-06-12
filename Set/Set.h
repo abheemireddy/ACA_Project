@@ -4,11 +4,10 @@
 
 #ifndef ACA_PROJECT_SET_H
 #define ACA_PROJECT_SET_H
+#include <stdbool.h>
+#include <printf.h>
 #include "uthash_files/include/uthash.h"
 #include "Address/Address.h"
-#include <stdbool.h>
-
-struct BlockTag;//forward declaration
 
 typedef struct SetTag {
     int numberOfBlocks;

@@ -6,12 +6,8 @@
 #define ACA_PROJECT_PROCESSOR_H
 #include <stdio.h>
 #include <string.h>
-#include "Controller/Controller.h"
-#include "Controller/Controller.h"
-#include "aca/L1Data.h"
-#include "aca/L2Data.h"
-#include "Address/Address.h"
 #include <unistd.h>
+#include "Controller/Controller.h"
 
 typedef struct TransfererTag Transferer;
 

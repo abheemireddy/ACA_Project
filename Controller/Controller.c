@@ -1,8 +1,13 @@
-#include "Queue/Queue.h"
+#include "Address/Address.h"
+#include "BlockTransferer/BlockTransferer.h"
 #include "Controller.h"
+#include "CacheLine/CacheLine.h"
+#include "Block/Block.h"
+#include "Block_Queue/Block_Queue.h"
+#include "Queue/Queue.h"
 #include "Global_Variables.h"
 #include "Cache/Cache.h"
-#include "Block_Queue/Block_Queue.h"
+#include "Set/Set.h"
 
 void CheckBufferSize();
 void PutInWriteBuffer(Block* existing);
@@ -10,7 +15,7 @@ void PutInVictimCache(Block* existing);
 
 Controller* Constructor_L1Controller(){
     Controller* l1ControllerCon = malloc(sizeof(l1ControllerCon));
-    l1ControllerCon->dataFromL2 = malloc(sizeof(Block));
+    l1ControllerCon->blockQueue = Constructor_BlockQueue();
     l1ControllerCon->cache = Constructor_Cache(64);
     l1ControllerCon->transferer = Constructor_Transferer();
     l1ControllerCon->waiting = false;
@@ -22,7 +27,6 @@ Controller* Constructor_L2Controller(){
     l2ControllerCon->cache = Constructor_Cache(256);
     l2ControllerCon->transferer = Constructor_Transferer();
     l2ControllerCon->waiting = false;
-    l2ControllerCon->dataFromL2 = NULL;
     return l2ControllerCon;
 }
 
@@ -66,9 +70,9 @@ void PutInVictimCache(Block* existing){
 }
 
 void SetL1ControllerData(){
-    Block* toStore = l1Controller->dataFromL2;
-    Set* set = getSetByIndex(&l1Controller->cache->HashTable,toStore->address.Index);
-    Block* existing = get(&set->HashTable,toStore->address.Tag);
+    Block toStore = DequeueBlock(l1Controller->blockQueue);
+    Set* set = getSetByIndex(&l1Controller->cache->HashTable,toStore.address.Index);
+    Block* existing = get(&set->HashTable,toStore.address.Tag);
     if(existing != NULL){
         if(existing->dirtyBit == false){
             PutInWriteBuffer(existing);
@@ -77,7 +81,7 @@ void SetL1ControllerData(){
         }
     }
     CheckSetSize(set);
-    put(&set->HashTable,toStore);
+    put(&set->HashTable,&toStore);
 }
 
 CacheLine* L1ProcessInstruction(Instruction instruction){
@@ -138,7 +142,7 @@ void TEMP_putInL1Set(Address* address,Set* set,char value[64]){
     l1Controller->waiting = false;
     block->dirtyBit = true;
     block->validBit = true;
-    Dequeue(l1Controller->transferer->TransferQueue);
+    //Dequeue(l1Controller->transferer->TransferQueue);
     printf("Temp write:%s\n",GetData(l1Data,toWriteTo->dataLine));
 }
 
@@ -151,7 +155,8 @@ void L1_write(Instruction instruction, char value[64])
     }else if(existing == NULL){
         bool found = CheckVictimCacheAndWriteBuffer(instruction,value);
         if(found == false){
-            TEMP_putInL1Set(&instruction.address,set,value);
+            Enqueue(l2Controller->transferer->TransferQueue,instruction);
+            //TEMP_putInL1Set(&instruction.address,set,value);
         }
     }
     CheckSetSize(set);

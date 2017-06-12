@@ -1,10 +1,11 @@
 //
 // Created by chad on 5/25/17.
 //
-
-#include <printf.h>
-#include <Global_Variables.h>
 #include "Cache.h"
+#include "Global_Variables.h"
+#include "Set/Set.h"
+#include "BlockTransferer/BlockTransferer.h"
+#include "Set/Set.h"
 
 Cache* Constructor_Cache(int numberOfSets){
     Cache* cache = malloc(sizeof(Cache));

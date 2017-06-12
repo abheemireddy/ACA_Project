@@ -5,10 +5,9 @@
 #ifndef ACA_PROJECT_GLOBAL_VARIABLES_H
 #define ACA_PROJECT_GLOBAL_VARIABLES_H
 
+#include "Controller/Controller.h"
 #include "Processor/processor.h"
 #include "Buffers/buffers.h"
-#include "Controller/Controller.h"
-#include "Controller/Controller.h"
 #include "Data/DataStore.h"
 #include "DRAM/DRAM.h"
 

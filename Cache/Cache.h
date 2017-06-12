@@ -4,10 +4,11 @@
 
 #ifndef ACA_PROJECT_CACHE_H
 #define ACA_PROJECT_CACHE_H
-#include "Set/Set.h"
 #include <stdlib.h>
 #include <stdio.h>
-#include "BlockTransferer/BlockTransferer.h"
+#include "uthash_files/include/uthash.h"
+
+typedef struct SetTag Set;
 
 typedef struct CacheTag{
     Set *HashTable;

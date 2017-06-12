@@ -7,8 +7,6 @@
 #include <stdbool.h>
 #include "uthash_files/include/uthash.h"
 
-struct BlockTag;//forward declaration
-
 typedef struct BufferTag {
     bool isWriteBuffer;//otherwise is victim cache
     UT_hash_handle hh; /* make this structure hashable*/

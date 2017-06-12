@@ -2,6 +2,7 @@
 // Created by chad on 5/24/17.
 //
 #include "Block.h"
+#include "CacheLine/CacheLine.h"
 
 Block* Constructor_Block(Address address){
     Block* block = malloc(sizeof(Block));

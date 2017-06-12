@@ -30,9 +30,8 @@ int main(){
     int ClockCycleCount = 0;
     while(!isEmpty(processor->InstructionHolder->TransferQueue)){
         if(!isEmpty(processor->InstructionHolder->TransferQueue)){
-            if(l1Controller->dataFromL2 != NULL){
+            if(!isBlockQueueEmpty(l1Controller->blockQueue)){
                 SetL1ControllerData();
-                l1Controller->dataFromL2 = NULL;
                 l1Controller->waiting = false;
             }
             if(l1Controller->waiting == false){

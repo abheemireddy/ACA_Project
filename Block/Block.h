@@ -5,11 +5,13 @@
 #ifndef ACA_PROJECT_BLOCK_H
 #define ACA_PROJECT_BLOCK_H
 #include <stdbool.h>
-#include "CacheLine/CacheLine.h"
-#include "Address/Address.h"
 #include <stdlib.h>
 #include <stdio.h>
 #include <printf.h>
+#include "uthash_files/include/uthash.h"
+#include "Address/Address.h"
+
+typedef struct CacheLineTag CacheLine;
 
 typedef struct BlockTag{
     int size;

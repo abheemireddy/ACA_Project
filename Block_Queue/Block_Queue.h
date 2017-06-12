@@ -1,19 +1,12 @@
 //
-// Created by root on 6/10/17.
-//
-
-#ifndef ACA_PROJECT_BLOCK_QUEUE_H
-#define ACA_PROJECT_BLOCK_QUEUE_H
-//
 // Created by chad on 5/24/17.
 //
-
-#ifndef ACA_PROJECT_QUEUE_H
-#define ACA_PROJECT_QUEUE_H
-#include "Block/Block.h"
+#ifndef ACA_PROJECT_BLOCK_QUEUE_H
+#define ACA_PROJECT_BLOCK_QUEUE_H
 #include <stdlib.h>
 #include <stdio.h>
 #include <stdbool.h>
+#include "Block/Block.h"
 
 typedef struct NodeTag {
     Block block;
@@ -43,7 +36,5 @@ bool EnqueueBlock(struct BlockQueueTag *queue, Block block);
 Block DequeueBlock(struct BlockQueueTag *blockQueue);
 bool isBlockQueueEmpty(struct BlockQueueTag* blockQueue);
 void print_BlockQueue(struct BlockQueueTag* blockQueue);
-
-#endif //ACA_PROJECT_QUEUE_H
 
 #endif //ACA_PROJECT_BLOCK_QUEUE_H
