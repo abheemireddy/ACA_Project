@@ -123,8 +123,6 @@ Controller.h
 /home/abheemireddy/ACA_Project/Controller/Controller.h
 CacheLine/CacheLine.h
 /home/abheemireddy/ACA_Project/Controller/CacheLine/CacheLine.h
-Block/Block.h
-/home/abheemireddy/ACA_Project/Controller/Block/Block.h
 Block_Queue/Block_Queue.h
 /home/abheemireddy/ACA_Project/Controller/Block_Queue/Block_Queue.h
 Queue/Queue.h
@@ -143,12 +141,12 @@ stdbool.h
 -
 Instruction/Instruction.h
 /home/abheemireddy/ACA_Project/Controller/Instruction/Instruction.h
+Block/Block.h
+/home/abheemireddy/ACA_Project/Controller/Block/Block.h
 
 /home/abheemireddy/ACA_Project/DRAM/DRAM.c
 DRAM.h
 /home/abheemireddy/ACA_Project/DRAM/DRAM.h
-Block/Block.h
-/home/abheemireddy/ACA_Project/DRAM/Block/Block.h
 BlockTransferer/BlockTransferer.h
 /home/abheemireddy/ACA_Project/DRAM/BlockTransferer/BlockTransferer.h
 Block_Queue/Block_Queue.h
@@ -157,6 +155,8 @@ Block_Queue/Block_Queue.h
 /home/abheemireddy/ACA_Project/DRAM/DRAM.h
 uthash.h
 /home/abheemireddy/ACA_Project/DRAM/uthash.h
+Address/Address.h
+/home/abheemireddy/ACA_Project/DRAM/Address/Address.h
 
 /home/abheemireddy/ACA_Project/Data/DataStore.c
 stdlib.h
@@ -337,6 +337,8 @@ Queue/Queue.h
 /home/abheemireddy/ACA_Project/Queue/Queue.h
 Block_Queue/Block_Queue.h
 /home/abheemireddy/ACA_Project/Block_Queue/Block_Queue.h
+Controller/Controller.h
+/home/abheemireddy/ACA_Project/Controller/Controller.h
 Processor/processor.h
 /home/abheemireddy/ACA_Project/Processor/processor.h
 Data_Structure_Examples/DataStore/DataStore_Examples.h
@@ -421,10 +423,14 @@ stdbool.h
 -
 Instruction/Instruction.h
 Controller/Instruction/Instruction.h
+Block/Block.h
+Controller/Block/Block.h
 
 DRAM/DRAM.h
 uthash.h
 DRAM/uthash.h
+Address/Address.h
+DRAM/Address/Address.h
 
 Data/DataStore.h
 
