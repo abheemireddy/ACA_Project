@@ -6,7 +6,7 @@
 #include "DRAM_Examples.h"
 
 void Add_to_DRAM(){
-    DRAM dram = Constructor_DRAM();
+    /*DRAM dram = Constructor_DRAM();
 
     Address* address = Constructor_Address("0010010001000101");
     DRamBlock* block = Constructor_DRamBlock(*address,"this is the value");
@@ -14,5 +14,5 @@ void Add_to_DRAM(){
 
     int count = dram.CountBlocks(&dram.HashTable);
 
-    printf("# of blocks in main memory:%d\n",count);
+    printf("# of blocks in main memory:%d\n",count);*/
 }

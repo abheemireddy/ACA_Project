@@ -168,7 +168,7 @@ void WriteBlockToL2Controller(Block block2Write){
         }
         //char value[64] =
         BlockOnBus* blockOnBus = Constructor_BlockOnBus(l2Controller,block2Write,10);
-        EnqueueBlock(dRAM->blockQueue,*blockOnBus);
+        EnqueueBlock(dRAM->writeBlockQueue,*blockOnBus);
     }
     CheckSetSize(set);
     CheckBufferSize();
@@ -189,7 +189,7 @@ void ProcessDRamInstruction(Address blockAddressToFind){
     DRamBlock* dramBlock = getBlock(&dRAM->HashTable,blockAddressToFind.bitStringValue);
     Block* block = Constructor_Block(blockAddressToFind);
     if(block != NULL){
-        BlockOnBus* blockOnBus = Constructor_BlockOnBus(,*block,10);
+        BlockOnBus* blockOnBus = Constructor_BlockOnBus(dRAM,*block,10);
         EnqueueBlock(l2Controller->writeBlockQueue,*blockOnBus);
     }else{
         printf("ERROR. Block not found in DRAM");
@@ -197,7 +197,7 @@ void ProcessDRamInstruction(Address blockAddressToFind){
 }
 
 void WriteBlockToDRAM(Block block2Write){
-    DRamBlock* ramBlock = dRAM->getBlock(&dRAM->HashTable,block2Write.address.bitStringValue);
+    DRamBlock* ramBlock = getBlock(&dRAM->HashTable,block2Write.address.bitStringValue);
     DRamBlock* newdRam = Constructor_DRamBlock(block2Write.address,"Some value");
     if(ramBlock != NULL){
         removeBlockFromDRAM(&dRAM->HashTable,ramBlock);
