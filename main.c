@@ -43,7 +43,6 @@ int main(){
                 Block blockReceived = flushedFromBufers.blockOnBus;
                 if (blockReceived.isIdle == true) {
                     blockReceived.isIdle = false;
-                    l1Controller->waiting = false;
                 }
                 WriteBlockToL1Controller(blockReceived);
                 DequeueBlock(l2Controller->writeBlockQueue);

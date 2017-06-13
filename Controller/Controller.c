@@ -56,16 +56,16 @@ void CheckSetSize(Set* set){
 void CheckBufferSize(){
     int victimCacheCount = CountBlocksInBuffer(&l1VictimCache->HashTable);
     int writeBufferCount = CountBlocksInBuffer(&l1WriteBuffer->HashTable);
-    if(victimCacheCount >= 2){
+    if(victimCacheCount > 2){
         WriteBackToL2(l1VictimCache,&l1VictimCache->HashTable);
     }
-    if(writeBufferCount >= 5){
+    if(writeBufferCount > 5){
         WriteBackToL2(l1WriteBuffer,&l1WriteBuffer->HashTable);
     }
 }
 void CheckL2BufferSize(){
     int writeBufferCount = CountBlocksInBuffer(&l2WriteBuffer->HashTable);
-    if(writeBufferCount >= 5){
+    if(writeBufferCount > 5){
         Block* s;
         Block* tmp;
         HASH_ITER(hh,l2WriteBuffer->HashTable,s,tmp){ //write everything in buffer to DRam
@@ -82,28 +82,20 @@ void PutInL2WriteBuffer(Block* existing){
 }
 
 void PutInWriteBuffer(Block* existing){
-    if(CountBlocksInBuffer(&l1WriteBuffer->HashTable) >= 2){
-        WriteBackToL2(l1WriteBuffer,&l1WriteBuffer->HashTable);
-    }
     putBlockInBuffer(&l1WriteBuffer->HashTable,existing);
+    CheckBufferSize();
 }
 
 void PutInVictimCache(Block* existing){
-    if(CountBlocksInBuffer(&l1VictimCache->HashTable) >= 5){
-        WriteBackToL2(l1VictimCache,&l1VictimCache->HashTable);
-    }
     putBlockInBuffer(&l1VictimCache->HashTable,existing);
+    CheckBufferSize();
 }
 
 void WriteBlockToL1Controller(Block toStore){
     Set* set = getSetByIndex(&l1Controller->cache->HashTable,toStore.address.Index);
     Block* existing = get(&set->HashTable,toStore.address.Tag);
     if(existing != NULL){
-        if(existing->dirtyBit == false){
-            PutInWriteBuffer(existing);
-        }else{
-            PutInVictimCache(existing);
-        }
+        removeFromTable(&set->HashTable,existing);
     }
     put(&set->HashTable,&toStore);
     CheckSetSize(set);
