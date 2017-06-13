@@ -6,6 +6,8 @@
 #include "DRAM.h"
 #include "BlockTransferer/BlockTransferer.h"
 #include "Block_Queue/Block_Queue.h"
+#include "CacheLine/CacheLine.h"
+
 DRAM* Constructor_DRAM(){
     DRAM* dram = malloc(sizeof(DRAM));
     dram->HashTable = NULL;
@@ -14,10 +16,14 @@ DRAM* Constructor_DRAM(){
     return dram;
 }
 
-DRamBlock* Constructor_DRamBlock(Address address,char value[64]){
+DRamBlock* Constructor_DRamBlock(Address address,char value[64][8]){
     DRamBlock* ramBlock = malloc(sizeof(DRamBlock));
     ramBlock->address = address;
-    strcpy(ramBlock->data,value);
+    int i;
+    for(i = 0;i<8;i++){
+        strcpy(ramBlock->data[i],value[i]);
+    }
+    
     return ramBlock;
 }
 

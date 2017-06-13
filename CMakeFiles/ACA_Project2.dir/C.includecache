@@ -177,6 +177,8 @@ BlockTransferer/BlockTransferer.h
 /home/abheemireddy/ACA_Project/DRAM/BlockTransferer/BlockTransferer.h
 Block_Queue/Block_Queue.h
 /home/abheemireddy/ACA_Project/DRAM/Block_Queue/Block_Queue.h
+CacheLine/CacheLine.h
+/home/abheemireddy/ACA_Project/DRAM/CacheLine/CacheLine.h
 
 /home/abheemireddy/ACA_Project/DRAM/DRAM.h
 uthash.h

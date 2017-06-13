@@ -12,11 +12,11 @@ typedef struct BlockQueueTag BlockQueue;
 
 typedef struct DRamBlockTag{
     Address address;
-    char data[64];
+    char data[64][8];
     UT_hash_handle hh; /* make this structure hashable*/
 } DRamBlock;
 
-DRamBlock* Constructor_DRamBlock(Address address,char value[64]);
+DRamBlock* Constructor_DRamBlock(Address address,char value[64][8]);
 
 typedef struct DRAMTag {
     Transferer* transferer;

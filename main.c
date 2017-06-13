@@ -81,7 +81,6 @@ int main(){
         Set* set2 = getSetByIndex(&l2Controller->cache->HashTable,blockAddressToGetForL1->Index);
         Block* block = Constructor_Block(*blockAddressToGetForL1);
         put(&set2->HashTable,block);*/
-
         //L2 Controller
 
         //1. Check for writebacks from L1 and Data from L2
@@ -100,7 +99,6 @@ int main(){
                     }
                 }
                 WriteBlockToL2Controller(blockReceived);
-
                 DequeueBlock(l2Controller->writeBlockQueue);
             } else {
                 break;
@@ -126,7 +124,7 @@ int main(){
                     blockReceived.isIdle = false;
                     l1Controller->waiting = false;
                 }
-                WriteBlockToDRAM(blockReceived);
+                WriteBlockToDRAM(flushedFromBufers);
                 DequeueBlock(dRAM->writeBlockQueue);
             } else {
                 break;
@@ -134,8 +132,8 @@ int main(){
         }
         //2. Process instructions from L2
         if (!isEmpty(dRAM->transferer->TransferQueue)) {
-            Address addressToFindInDRam = GetNextInstruction(dRAM->transferer).address;
-            ProcessDRamInstruction(addressToFindInDRam);
+            Instruction DRamInstruction = GetNextInstruction(dRAM->transferer);
+            ProcessDRamInstruction(DRamInstruction);
         }
         ClockCycleCount += 1;
     }

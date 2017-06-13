@@ -227,23 +227,25 @@ void FindBlockInL2(Address DataToFind){
     }
 }
 
-void ProcessDRamInstruction(Address blockAddressToFind){
-    DRamBlock* dramBlock = getBlock(&dRAM->HashTable,blockAddressToFind.bitStringValue);
-    Block* block = Constructor_Block(blockAddressToFind);
-    if(block != NULL){
+void ProcessDRamInstruction(Instruction instruction){
+    DRamBlock* dramBlock = getBlock(&dRAM->HashTable,instruction.address.bitStringValue);
+    if(dramBlock != NULL){
+        Block* block = Constructor_Block(instruction.address);
         BlockOnBus* blockOnBus = Constructor_BlockOnBus(dRAM,*block,ClockCycleCount + 2);
         EnqueueBlock(l2Controller->writeBlockQueue,blockOnBus);
     }else{
-        printf("ERROR. Block not found in DRAM");
+        DRamBlock* dramBlock = Constructor_DRamBlock(instruction.address,instruction.data);
+        putBlock(&dRAM->HashTable,dramBlock);
     }
 }
 
-void WriteBlockToDRAM(Block block2Write){
-    DRamBlock* ramBlock = getBlock(&dRAM->HashTable,block2Write.address.bitStringValue);
-    DRamBlock* newdRam = Constructor_DRamBlock(block2Write.address,"Some value");
+
+void WriteBlockToDRAM(BlockOnBus* block2Write){
+    DRamBlock* ramBlock = getBlock(&dRAM->HashTable,block2Write->blockOnBus.address.bitStringValue);
     if(ramBlock != NULL){
         removeBlockFromDRAM(&dRAM->HashTable,ramBlock);
     }
+    DRamBlock* newdRam = Constructor_DRamBlock(block2Write->blockOnBus.address,block2Write->valueBeingTransferred);
     putBlock(&dRAM->HashTable,newdRam);
 }
 

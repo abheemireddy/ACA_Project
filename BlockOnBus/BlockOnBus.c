@@ -20,12 +20,15 @@ BlockOnBus* Constructor_BlockOnBus(void* controller,Block block,int howLongUntiB
     HASH_ITER(hh,block.HashTable,s,tmp){
         if(controller == l1Controller){
             char* data = GetData(l1Data,s->dataLine);
+            s->dataLine = i;
             strcpy(blockOnBus->valueBeingTransferred[i],data);
         }else if(controller == l2Controller){
             char* data = GetData(l2Data,s->dataLine);
+            s->dataLine = i;
             strcpy(blockOnBus->valueBeingTransferred[i],data);
         }else if(controller == dRAM){
             DRamBlock* ramBlock = getBlock(&dRAM->HashTable,block.address.bitStringValue);
+            s->dataLine = i;
             strcpy(blockOnBus->valueBeingTransferred[i], ramBlock->data);
         }
         i += 1;
