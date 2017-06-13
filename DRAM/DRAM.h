@@ -22,14 +22,7 @@ typedef struct DRAMTag {
     Transferer* transferer;
     UT_hash_handle hh; /* make this structure hashable*/
     DRamBlock *HashTable; //This is my hashTable for blocks
-    BlockQueue* blockQueue;
-
-    void (*removeBlockFromDRAM)(DRamBlock** HashTable,DRamBlock* blockToRemove);
-    void (*putBlock)(DRamBlock** HashTable,DRamBlock *value);
-    int (*CountBlocks)(DRamBlock** HashTable);
-    DRamBlock* (*getBlock)(DRamBlock** HashTable,int key);
-    void (*print_all_blocks)(DRamBlock** HashTable);
-
+    BlockQueue* writeBlockQueue;
 } DRAM;
 
 DRAM Constructor_DRAM();

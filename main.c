@@ -82,13 +82,13 @@ int main(){
             }
 
             //DRAM
-            while(!isBlockQueueEmpty(dRAM->blockQueue)){
-                BlockOnBus flushedFromBufers = PeekBlock(dRAM->blockQueue);
+            while(!isBlockQueueEmpty(dRAM->writeBlockQueue)){
+                BlockOnBus flushedFromBufers = PeekBlock(dRAM->writeBlockQueue);
                 int clockCycleWhenAvailable = flushedFromBufers.clockCycleWhenBlockIsAvailable;
                 if(clockCycleWhenAvailable >= ClockCycleCount){
                     Block blockReceived = flushedFromBufers.blockOnBus;
                     WriteBlockToDRAM(blockReceived);
-                    DequeueBlock(dRAM->blockQueue);
+                    DequeueBlock(dRAM->writeBlockQueue);
                 }else{
                     break;
                 }

@@ -21,16 +21,14 @@ BlockOnBus* Constructor_BlockOnBus(void* controller,Block block,int howLongUntiB
         if(controller == l1Controller){
             char* data = GetData(l1Data,s->dataLine);
             strcpy(blockOnBus->valueBeingTransferred[i],data);
-            i += 1;
         }else if(controller == l2Controller){
             char* data = GetData(l2Data,s->dataLine);
             strcpy(blockOnBus->valueBeingTransferred[i],data);
-            i += 1;
         }else if(controller == dRAM){
-            /*char* data = GetData(l2Data,s->dataLine);
-            strcpy(blockOnBus->valueBeingTransferred[i],data);
-            i += 1;*/
+            DRamBlock* ramBlock = getBlock(&dRAM->HashTable,block.address.bitStringValue);
+            strcpy(blockOnBus->valueBeingTransferred[i], ramBlock->data);
         }
+        i += 1;
     }
     //strcpy(blockOnBus->valueBeingTransferred,value);
 }
