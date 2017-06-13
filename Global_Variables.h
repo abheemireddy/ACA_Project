@@ -19,6 +19,7 @@ Buffer* l1WriteBuffer;
 Buffer* l1VictimCache;
 Buffer* l2WriteBuffer;
 DataStore* l1Data;
+DataStore* l2Data;
 DRAM* dRAM;
 
 #endif //ACA_PROJECT_GLOBAL_VARIABLES_H

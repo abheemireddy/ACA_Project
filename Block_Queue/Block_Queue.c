@@ -6,7 +6,7 @@
 //
 #include "Block_Queue.h"
 
-Node* Constructor_BlockNode(Block block){
+Node* Constructor_BlockNode(BlockOnBus block){
     Node* node = malloc(sizeof(Node));
     node->block = block;
     return node;
@@ -24,12 +24,12 @@ BlockQueue* Constructor_BlockQueue() {
 void print_BlockQueue(BlockQueue* blockQueue){
     Node* current = blockQueue->head;
     while (current->prev != NULL) {
-        printf("Node Instruction:%d\n",current->block.address.bitStringValue);
+        printf("Node Instruction:%d\n",current->block.blockOnBus.address.bitStringValue);
         current = current->prev;
     }
 }
 
-bool EnqueueBlock(BlockQueue *queue, Block block) {
+bool EnqueueBlock(BlockQueue *queue, BlockOnBus block) {
     Node* node = Constructor_BlockNode(block);
     if ((queue == NULL) || (node == NULL)) {
         return false;
@@ -53,9 +53,9 @@ bool EnqueueBlock(BlockQueue *queue, Block block) {
     return true;
 }
 
-Block PeekBlock(BlockQueue *queue) {
+BlockOnBus PeekBlock(BlockQueue *queue) {
     if (isBlockQueueEmpty(queue)){
-        Block emptyInstruction = {};
+        BlockOnBus emptyInstruction = {};
         printf("Empty BlockQueue");
         return emptyInstruction;
     }
@@ -63,9 +63,9 @@ Block PeekBlock(BlockQueue *queue) {
     return node->block;
 }
 
-Block DequeueBlock(BlockQueue *queue) {
+BlockOnBus DequeueBlock(BlockQueue *queue) {
     if (isBlockQueueEmpty(queue)){
-        Block emptyInstruction = {};
+        BlockOnBus emptyInstruction = {};
         printf("Trying to dequeue from empty queue");
         return emptyInstruction;
     }

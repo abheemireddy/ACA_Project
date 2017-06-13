@@ -33,7 +33,8 @@ void WriteBackToL2(Buffer* buffer,Block** HashTable){
     HASH_ITER(hh,*HashTable,s,tmp){
         printf("Flushing to L2: %d\n",s->address.bitStringValue);
         removeBlockFromBuffer(&buffer->HashTable,s);
-        EnqueueBlock(l2Controller->blockQueue,*s);
+        BlockOnBus* blockOnBus = Constructor_BlockOnBus(*s,0,"value");
+        EnqueueBlock(l2Controller->writeBlockQueue,*blockOnBus);
     }
 }
 

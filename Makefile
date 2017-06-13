@@ -177,6 +177,33 @@ Block/Block.c.s:
 	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/Block/Block.c.s
 .PHONY : Block/Block.c.s
 
+BlockOnBus/BlockOnBus.o: BlockOnBus/BlockOnBus.c.o
+
+.PHONY : BlockOnBus/BlockOnBus.o
+
+# target to build an object file
+BlockOnBus/BlockOnBus.c.o:
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/BlockOnBus/BlockOnBus.c.o
+.PHONY : BlockOnBus/BlockOnBus.c.o
+
+BlockOnBus/BlockOnBus.i: BlockOnBus/BlockOnBus.c.i
+
+.PHONY : BlockOnBus/BlockOnBus.i
+
+# target to preprocess a source file
+BlockOnBus/BlockOnBus.c.i:
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/BlockOnBus/BlockOnBus.c.i
+.PHONY : BlockOnBus/BlockOnBus.c.i
+
+BlockOnBus/BlockOnBus.s: BlockOnBus/BlockOnBus.c.s
+
+.PHONY : BlockOnBus/BlockOnBus.s
+
+# target to generate assembly for a file
+BlockOnBus/BlockOnBus.c.s:
+	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/BlockOnBus/BlockOnBus.c.s
+.PHONY : BlockOnBus/BlockOnBus.c.s
+
 BlockTransferer/BlockTransferer.o: BlockTransferer/BlockTransferer.c.o
 
 .PHONY : BlockTransferer/BlockTransferer.o
@@ -786,6 +813,9 @@ help:
 	@echo "... Block/Block.o"
 	@echo "... Block/Block.i"
 	@echo "... Block/Block.s"
+	@echo "... BlockOnBus/BlockOnBus.o"
+	@echo "... BlockOnBus/BlockOnBus.i"
+	@echo "... BlockOnBus/BlockOnBus.s"
 	@echo "... BlockTransferer/BlockTransferer.o"
 	@echo "... BlockTransferer/BlockTransferer.i"
 	@echo "... BlockTransferer/BlockTransferer.s"

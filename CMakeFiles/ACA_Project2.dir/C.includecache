@@ -34,6 +34,14 @@ uthash_files/include/uthash.h
 Address/Address.h
 /home/abheemireddy/ACA_Project/Block/Address/Address.h
 
+/home/abheemireddy/ACA_Project/BlockOnBus/BlockOnBus.c
+BlockOnBus.h
+/home/abheemireddy/ACA_Project/BlockOnBus/BlockOnBus.h
+
+/home/abheemireddy/ACA_Project/BlockOnBus/BlockOnBus.h
+Block/Block.h
+-
+
 /home/abheemireddy/ACA_Project/BlockTransferer/BlockTransferer.c
 Block/Block.h
 /home/abheemireddy/ACA_Project/BlockTransferer/Block/Block.h
@@ -57,8 +65,8 @@ stdio.h
 -
 stdbool.h
 -
-Block/Block.h
-/home/abheemireddy/ACA_Project/Block_Queue/Block/Block.h
+BlockOnBus/BlockOnBus.h
+-
 
 /home/abheemireddy/ACA_Project/Buffers/buffers.c
 buffers.h
@@ -143,6 +151,8 @@ Instruction/Instruction.h
 /home/abheemireddy/ACA_Project/Controller/Instruction/Instruction.h
 Block/Block.h
 /home/abheemireddy/ACA_Project/Controller/Block/Block.h
+BlockOnBus/BlockOnBus.h
+/home/abheemireddy/ACA_Project/Controller/BlockOnBus/BlockOnBus.h
 
 /home/abheemireddy/ACA_Project/DRAM/DRAM.c
 DRAM.h
@@ -380,6 +390,10 @@ Block/uthash_files/include/uthash.h
 Address/Address.h
 Block/Address/Address.h
 
+BlockOnBus/BlockOnBus.h
+Block/Block.h
+-
+
 BlockTransferer/BlockTransferer.h
 Instruction/Instruction.h
 BlockTransferer/Instruction/Instruction.h
@@ -391,8 +405,8 @@ stdio.h
 -
 stdbool.h
 -
-Block/Block.h
-Block_Queue/Block/Block.h
+BlockOnBus/BlockOnBus.h
+-
 
 Buffers/buffers.h
 stdbool.h
@@ -425,6 +439,8 @@ Instruction/Instruction.h
 Controller/Instruction/Instruction.h
 Block/Block.h
 Controller/Block/Block.h
+BlockOnBus/BlockOnBus.h
+Controller/BlockOnBus/BlockOnBus.h
 
 DRAM/DRAM.h
 uthash.h
