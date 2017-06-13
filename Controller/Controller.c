@@ -18,7 +18,7 @@ Controller* Constructor_L1Controller(){
     l1ControllerCon->cache = Constructor_Cache(64);
     l1ControllerCon->transferer = Constructor_Transferer();
     l1ControllerCon->waiting = false;
-    l1ControllerCon->controllerIsIdleUntilItReceivesThisBlock;
+    l1ControllerCon->controllerIsIdleUntilItReceivesThisBlock = NULL;
     return l1ControllerCon;
 }
 
@@ -28,7 +28,7 @@ Controller* Constructor_L2Controller(){
     l2ControllerCon->transferer = Constructor_Transferer();
     l2ControllerCon->writeBlockQueue = Constructor_BlockQueue();
     l2ControllerCon->waiting = false;
-    l2ControllerCon->controllerIsIdleUntilItReceivesThisBlock;
+    l2ControllerCon->controllerIsIdleUntilItReceivesThisBlock = NULL;
     return l2ControllerCon;
 }
 void CheckL2SetSize(Set* set){
@@ -222,7 +222,7 @@ void FindBlockInL2(Instruction instruction){
     if(block != NULL){
         if(block->isIdle == true){
             l2Controller->waiting == true;
-            l2Controller->controllerIsIdleUntilItReceivesThisBlock = *block;
+            l2Controller->controllerIsIdleUntilItReceivesThisBlock = block;
             return;
         }
         BlockOnBus* blockOnBus = Constructor_BlockOnBus(l2Controller,*block,ClockCycleCount + 2);
@@ -246,7 +246,9 @@ void ProcessDRamInstruction(Instruction instruction){
         putCacheLine(&newBlockForMemory->HashTable,cacheLine);
         BlockOnBus* dramBlock = Constructor_BlockOnBusDRAM(*newBlockForMemory);
         putBlock(&dRAM->HashTable,dramBlock);
+        EnqueueBlock(l2Controller->writeBlockQueue,dramBlock);//send back to l2
     }
+    Dequeue(dRAM->transferer->TransferQueue);//will always process the instruction.
 }
 
 
@@ -265,7 +267,7 @@ void WriteToController(Instruction instruction, char value[64])
     Block* existing = get(&set->HashTable,instruction.address.Tag);
     if(existing != NULL){
         if(existing->isIdle == true){
-            l1Controller->controllerIsIdleUntilItReceivesThisBlock = *existing;
+            l1Controller->controllerIsIdleUntilItReceivesThisBlock = existing;
             l1Controller->waiting = true;
             return;
         }
@@ -324,7 +326,7 @@ CacheLine* L1_read(Instruction instruction)
     if(block != NULL){
         if(block->isIdle == true){
             l1Controller->waiting = true;
-            l1Controller->controllerIsIdleUntilItReceivesThisBlock = *block;
+            l1Controller->controllerIsIdleUntilItReceivesThisBlock = block;
             return NULL;
         }
         if(block->validBit == true){

@@ -17,7 +17,7 @@ typedef struct ControllerTag{
     Cache* cache;
     Transferer* transferer;
     BlockQueue* writeBlockQueue;
-    Block controllerIsIdleUntilItReceivesThisBlock;
+    Block* controllerIsIdleUntilItReceivesThisBlock;
 } Controller;
 
 Controller* Constructor_L1Controller();

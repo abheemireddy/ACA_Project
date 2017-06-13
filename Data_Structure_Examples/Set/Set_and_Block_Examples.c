@@ -1,6 +1,8 @@
 //
 // Created by chad on 6/2/17.
 //
+#include <Cache/Cache.h>
+#include <Global_Variables.h>
 #include "Set_and_Block_Examples.h"
 
 void ExampleUsingSetHash(){
@@ -19,6 +21,16 @@ Block* GetDummyBlockInstance(char* data){
     Block* toAdd = Constructor_Block(*address1);
     return toAdd;
 }
+
+void TestIfHashTableCaresAboutAddressOrValue(){ //conclusion: only about value!  As it should be in a hash table
+    Set* set = getSetByIndex(&l1Controller->cache->HashTable,0);
+    Address* address1 = Constructor_Address("0000000000000000");
+    Block* block1 = Constructor_Block(*address1);
+    Block* block2 = Constructor_Block(*address1);
+    put(&set->HashTable,block1);
+    put(&set->HashTable,block2);
+}
+
 void AddTooManyBlocksTest(){
     Address* address1 = Constructor_Address("0000000000000000");
     Set* set = Constructor_Set(4,*address1);

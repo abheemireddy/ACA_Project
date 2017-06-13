@@ -12,5 +12,6 @@
 void AddTooManyBlocksTest();
 Block* GetDummyBlockInstance(char* data);
 void ExampleUsingSetHash();
+void TestIfHashTableCaresAboutAddressOrValue();
 
 #endif //ACA_PROJECT_SET_AND_BLOCK_EXAMPLES_H
