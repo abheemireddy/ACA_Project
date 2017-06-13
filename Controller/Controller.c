@@ -167,7 +167,7 @@ void WriteBlockToL2Controller(Block block2Write){
             printf("ERROR. Data in L1 that is not in L2");
         }
         //char value[64] =
-        BlockOnBus* blockOnBus = Constructor_BlockOnBus(l2Controller,block2Write,10);
+        BlockOnBus* blockOnBus = Constructor_BlockOnBus(l2Controller,block2Write,ClockCycleCount + 2);
         EnqueueBlock(dRAM->writeBlockQueue,*blockOnBus);
     }
     CheckSetSize(set);
@@ -177,7 +177,7 @@ void FindBlockInL2(Address DataToFind){
     Set* set = getSetByIndex(&l2Controller->cache->HashTable,DataToFind.Index);
     Block* block = get(&set->HashTable,DataToFind.Tag);
     if(block != NULL){
-        BlockOnBus* blockOnBus = Constructor_BlockOnBus(l2Controller,*block,10);
+        BlockOnBus* blockOnBus = Constructor_BlockOnBus(l2Controller,*block,ClockCycleCount + 2);
         EnqueueBlock(l1Controller->writeBlockQueue,*blockOnBus);
     }else{
         Instruction* emptyInstruction = Constructor_Instruction(-1,"",DataToFind);
@@ -189,7 +189,7 @@ void ProcessDRamInstruction(Address blockAddressToFind){
     DRamBlock* dramBlock = getBlock(&dRAM->HashTable,blockAddressToFind.bitStringValue);
     Block* block = Constructor_Block(blockAddressToFind);
     if(block != NULL){
-        BlockOnBus* blockOnBus = Constructor_BlockOnBus(dRAM,*block,10);
+        BlockOnBus* blockOnBus = Constructor_BlockOnBus(dRAM,*block,ClockCycleCount + 2);
         EnqueueBlock(l2Controller->writeBlockQueue,*blockOnBus);
     }else{
         printf("ERROR. Block not found in DRAM");

@@ -30,7 +30,7 @@ int main(){
 
     StoreFileInstructionsIntoProcessorQueue(processor);
 
-    int ClockCycleCount = 0;
+    ClockCycleCount = 0;
     while(!isEmpty(processor->InstructionHolder->TransferQueue)){
         if(!isEmpty(processor->InstructionHolder->TransferQueue)){
             while(!isBlockQueueEmpty(l1Controller->writeBlockQueue)){//check for blocks from l2
@@ -38,9 +38,12 @@ int main(){
                 int clockCycleWhenAvailable = flushedFromBufers.clockCycleWhenBlockIsAvailable;
                 if(clockCycleWhenAvailable >= ClockCycleCount){
                     Block blockReceived = flushedFromBufers.blockOnBus;
+                    if(blockReceived.isIdle == true){
+                        blockReceived.isIdle = false;
+                        l1Controller->waiting = false;
+                    }
                     WriteBlockToL1Controller(blockReceived);
                     DequeueBlock(l2Controller->writeBlockQueue);
-                    l1Controller->waiting = false;
                 }else{
                     break;
                 }
@@ -68,6 +71,10 @@ int main(){
                 int clockCycleWhenAvailable = flushedFromBufers.clockCycleWhenBlockIsAvailable;
                 if(clockCycleWhenAvailable >= ClockCycleCount){
                     Block blockReceived = flushedFromBufers.blockOnBus;
+                    if(blockReceived.isIdle == true){
+                        blockReceived.isIdle = false;
+                        l1Controller->waiting = false;
+                    }
                     WriteBlockToL2Controller(blockReceived);
                     DequeueBlock(l2Controller->writeBlockQueue);
                 }else{
@@ -87,6 +94,10 @@ int main(){
                 int clockCycleWhenAvailable = flushedFromBufers.clockCycleWhenBlockIsAvailable;
                 if(clockCycleWhenAvailable >= ClockCycleCount){
                     Block blockReceived = flushedFromBufers.blockOnBus;
+                    if(blockReceived.isIdle == true){
+                        blockReceived.isIdle = false;
+                        l1Controller->waiting = false;
+                    }
                     WriteBlockToDRAM(blockReceived);
                     DequeueBlock(dRAM->writeBlockQueue);
                 }else{
