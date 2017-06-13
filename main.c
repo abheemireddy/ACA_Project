@@ -44,6 +44,11 @@ int main(){
                 if (blockReceived.isIdle == true) {
                     blockReceived.isIdle = false;
                 }
+                if(l1Controller->waiting == true){
+                    if(blockReceived.address.Tag == l1Controller->controllerIsIdleUntilItReceivesThisBlock->address.Tag){
+                        l1Controller->waiting = false;
+                    }
+                }
                 WriteBlockToL1Controller(blockReceived);
                 DequeueBlock(l2Controller->writeBlockQueue);
             } else {
@@ -78,7 +83,11 @@ int main(){
                 Block blockReceived = flushedFromBufers.blockOnBus;
                 if (blockReceived.isIdle == true) {
                     blockReceived.isIdle = false;
-                    l1Controller->waiting = false;
+                }
+                if(l2Controller->waiting == true){
+                    if(blockReceived.address.Tag == l2Controller->controllerIsIdleUntilItReceivesThisBlock->address.Tag){
+                        l2Controller->waiting = false;
+                    }
                 }
                 WriteBlockToL2Controller(blockReceived);
                 DequeueBlock(l2Controller->writeBlockQueue);

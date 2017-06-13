@@ -18,6 +18,7 @@ Controller* Constructor_L1Controller(){
     l1ControllerCon->cache = Constructor_Cache(64);
     l1ControllerCon->transferer = Constructor_Transferer();
     l1ControllerCon->waiting = false;
+    l1ControllerCon->controllerIsIdleUntilItReceivesThisBlock = NULL;
     return l1ControllerCon;
 }
 
@@ -27,6 +28,7 @@ Controller* Constructor_L2Controller(){
     l2ControllerCon->transferer = Constructor_Transferer();
     l2ControllerCon->writeBlockQueue = Constructor_BlockQueue();
     l2ControllerCon->waiting = false;
+    l2ControllerCon->controllerIsIdleUntilItReceivesThisBlock = NULL;
     return l2ControllerCon;
 }
 void CheckL2SetSize(Set* set){
@@ -207,6 +209,11 @@ void FindBlockInL2(Address DataToFind){
     Set* set = getSetByIndex(&l2Controller->cache->HashTable,DataToFind.Index);
     Block* block = get(&set->HashTable,DataToFind.Tag);
     if(block != NULL){
+        if(block->isIdle == true){
+            l2Controller->waiting == true;
+            l2Controller->controllerIsIdleUntilItReceivesThisBlock = block;
+            return;
+        }
         BlockOnBus* blockOnBus = Constructor_BlockOnBus(l2Controller,*block,ClockCycleCount + 2);
         EnqueueBlock(l1Controller->writeBlockQueue,*blockOnBus);
     }else{
@@ -244,6 +251,7 @@ void WriteToController(Instruction instruction, char value[64])
     Block* existing = get(&set->HashTable,instruction.address.Tag);
     if(existing != NULL){
         if(existing->isIdle == true){
+            l1Controller->controllerIsIdleUntilItReceivesThisBlock = existing;
             l1Controller->waiting = true;
             return;
         }
@@ -300,6 +308,11 @@ CacheLine* L1_read(Instruction instruction)
     Set* set = getSetByIndex(&l1Controller->cache->HashTable,instruction.address.Index);
     Block* block = get(&set->HashTable,instruction.address.Tag);
     if(block != NULL){
+        if(block->isIdle == true){
+            l1Controller->waiting = true;
+            l1Controller->controllerIsIdleUntilItReceivesThisBlock = block;
+            return NULL;
+        }
         if(block->validBit == true){
             CacheLine* cacheLine = getCacheLineByOffset(&block->HashTable,instruction.address.Offset);
             return cacheLine;
