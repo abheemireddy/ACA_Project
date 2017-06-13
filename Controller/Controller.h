@@ -29,13 +29,15 @@ CacheLine* L1_read(Instruction instruction);
 void WriteBlockToL1Controller(Block toStore);
 
 bool CheckL2WriteBuffer(Block block2Write);
-void WriteBlockToL2Controller(Block block);
+void WriteBlockToL2Controller(BlockOnBus* blockOnBus2Write);
 void L2WriteBlock(Block block);
-void FindBlockInL2(Address DataToFind);
+void FindBlockInL2(Instruction instruction);
 void CheckL2SetSize(struct SetTag* set);
 void CheckL2BufferSize();
 void PutInL2WriteBuffer(Block* existing);
 
 void ProcessDRamInstruction(Instruction instruction);
 void WriteBlockToDRAM(BlockOnBus* block2Write);
+
+
 #endif

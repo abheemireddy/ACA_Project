@@ -13,6 +13,7 @@ typedef struct BlockOnBusTag{
     Block blockOnBus;
     int clockCycleWhenBlockIsAvailable;
     char valueBeingTransferred[64][8];
+    UT_hash_handle hh; /* make this structure hashable*/
 }BlockOnBus;
 
 BlockOnBus* Constructor_BlockOnBus(void* controller,Block block,int howLongUntiBlockIsTransferred);

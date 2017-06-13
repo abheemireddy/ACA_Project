@@ -27,12 +27,13 @@ BlockOnBus* Constructor_BlockOnBus(void* controller,Block block,int howLongUntiB
             s->dataLine = i;
             strcpy(blockOnBus->valueBeingTransferred[i],data);
         }else if(controller == dRAM){
-            DRamBlock* ramBlock = getBlock(&dRAM->HashTable,block.address.bitStringValue);
+            BlockOnBus* ramBlock = getBlock(&dRAM->HashTable,block.address.bitStringValue);
             s->dataLine = i;
-            strcpy(blockOnBus->valueBeingTransferred[i], ramBlock->data);
+            strcpy(blockOnBus->valueBeingTransferred[i], ramBlock->valueBeingTransferred[i]);
         }
         i += 1;
     }
     return blockOnBus;
 }
+
 

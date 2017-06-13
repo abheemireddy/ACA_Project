@@ -189,27 +189,36 @@ void TEMP_putInL1Set(Address* address,Set* set,char value[64]){
     printf("Temp write:%s\n",GetData(l1Data,toWriteTo->dataLine));
 }
 
-void WriteBlockToL2Controller(Block block2Write){
+void WriteBlockToL2Controller(BlockOnBus* blockOnBus2Write){
+    CacheLine* s;
+    CacheLine* tmp;
+    int i = 0;
+    HASH_ITER(hh,blockOnBus2Write->blockOnBus.HashTable,s,tmp){
+        s->dataLine = StoreData(l2Data,blockOnBus2Write->valueBeingTransferred[s->dataLine]); //TransferBlockDataToL2
+    }
+    Block block2Write = blockOnBus2Write->blockOnBus;
+
     Set* set = getSetByIndex(&l2Controller->cache->HashTable,block2Write.address.Index);
     Block* block = get(&set->HashTable,block2Write.address.Tag);
 
     if(block != NULL){
         removeFromTable(&set->HashTable,block);
-        put(&set->HashTable,&block2Write);
-    }else if(block == NULL){
+    }
+    put(&set->HashTable,&block2Write);
+    /*else if(block == NULL){
         bool found = CheckL2WriteBuffer(block2Write);
         if(found == false){
             printf("ERROR. Data in L1 that is not in L2");
         }
         BlockOnBus* blockOnBus = Constructor_BlockOnBus(l2Controller,block2Write,ClockCycleCount + 2);
         EnqueueBlock(dRAM->writeBlockQueue,blockOnBus);
-    }
+    }*/
     CheckL2SetSize(set);
     CheckL2BufferSize();
 }
-void FindBlockInL2(Address DataToFind){
-    Set* set = getSetByIndex(&l2Controller->cache->HashTable,DataToFind.Index);
-    Block* block = get(&set->HashTable,DataToFind.Tag);
+void FindBlockInL2(Instruction instruction){
+    Set* set = getSetByIndex(&l2Controller->cache->HashTable,instruction.address.Index);
+    Block* block = get(&set->HashTable,instruction.address.Tag);
     if(block != NULL){
         if(block->isIdle == true){
             l2Controller->waiting == true;
@@ -219,34 +228,35 @@ void FindBlockInL2(Address DataToFind){
         BlockOnBus* blockOnBus = Constructor_BlockOnBus(l2Controller,*block,ClockCycleCount + 2);
         EnqueueBlock(l1Controller->writeBlockQueue,blockOnBus);
     }else{
-        Block* idlePlaceHolder = Constructor_Block(DataToFind);
+        Block* idlePlaceHolder = Constructor_Block(instruction.address);
         idlePlaceHolder->isIdle = true;//Now we have marked this block in our set as idle
         put(&set->HashTable,idlePlaceHolder);
-        Instruction* emptyInstruction = Constructor_Instruction(-1,"",DataToFind);
-        Enqueue(dRAM->transferer->TransferQueue,*emptyInstruction);
+        Enqueue(dRAM->transferer->TransferQueue,instruction);
     }
 }
 
 void ProcessDRamInstruction(Instruction instruction){
-    DRamBlock* dramBlock = getBlock(&dRAM->HashTable,instruction.address.bitStringValue);
+    BlockOnBus* dramBlock = getBlock(&dRAM->HashTable,instruction.address.bitStringValue);
     if(dramBlock != NULL){
-        Block* block = Constructor_Block(instruction.address);
-        BlockOnBus* blockOnBus = Constructor_BlockOnBus(dRAM,*block,ClockCycleCount + 2);
+        BlockOnBus* blockOnBus = getBlock(&dRAM->HashTable,instruction.address.bitStringValue);
         EnqueueBlock(l2Controller->writeBlockQueue,blockOnBus);
     }else{
-        DRamBlock* dramBlock = Constructor_DRamBlock(instruction.address,instruction.data);
+        Block* newBlockForMemory = Constructor_Block(instruction.address);//Does not exist in memory yet, i.e. first time write
+        CacheLine* cacheLine = Constructor_CacheLine(instruction.address,instruction.data);
+        putCacheLine(&newBlockForMemory->HashTable,cacheLine);
+        BlockOnBus* dramBlock = Constructor_BlockOnBusDRAM(*newBlockForMemory);
         putBlock(&dRAM->HashTable,dramBlock);
     }
 }
 
 
+
 void WriteBlockToDRAM(BlockOnBus* block2Write){
-    DRamBlock* ramBlock = getBlock(&dRAM->HashTable,block2Write->blockOnBus.address.bitStringValue);
+    BlockOnBus* ramBlock = getBlock(&dRAM->HashTable,block2Write->blockOnBus.address.bitStringValue);
     if(ramBlock != NULL){
         removeBlockFromDRAM(&dRAM->HashTable,ramBlock);
     }
-    DRamBlock* newdRam = Constructor_DRamBlock(block2Write->blockOnBus.address,block2Write->valueBeingTransferred);
-    putBlock(&dRAM->HashTable,newdRam);
+    putBlock(&dRAM->HashTable,block2Write);
 }
 
 void WriteToController(Instruction instruction, char value[64])
