@@ -15,6 +15,17 @@ CMakeFiles/ACA_Project2.dir/BlockOnBus/BlockOnBus.c.o: BlockOnBus/BlockOnBus.c
 CMakeFiles/ACA_Project2.dir/BlockOnBus/BlockOnBus.c.o: BlockOnBus/BlockOnBus.h
 CMakeFiles/ACA_Project2.dir/BlockOnBus/BlockOnBus.c.o: Address/Address.h
 CMakeFiles/ACA_Project2.dir/BlockOnBus/BlockOnBus.c.o: Block/Block.h
+CMakeFiles/ACA_Project2.dir/BlockOnBus/BlockOnBus.c.o: BlockOnBus/BlockOnBus.h
+CMakeFiles/ACA_Project2.dir/BlockOnBus/BlockOnBus.c.o: Buffers/buffers.h
+CMakeFiles/ACA_Project2.dir/BlockOnBus/BlockOnBus.c.o: Cache/Cache.h
+CMakeFiles/ACA_Project2.dir/BlockOnBus/BlockOnBus.c.o: CacheLine/CacheLine.h
+CMakeFiles/ACA_Project2.dir/BlockOnBus/BlockOnBus.c.o: Controller/Controller.h
+CMakeFiles/ACA_Project2.dir/BlockOnBus/BlockOnBus.c.o: DRAM/DRAM.h
+CMakeFiles/ACA_Project2.dir/BlockOnBus/BlockOnBus.c.o: Data/DataStore.h
+CMakeFiles/ACA_Project2.dir/BlockOnBus/BlockOnBus.c.o: Global_Variables.h
+CMakeFiles/ACA_Project2.dir/BlockOnBus/BlockOnBus.c.o: Instruction/Instruction.h
+CMakeFiles/ACA_Project2.dir/BlockOnBus/BlockOnBus.c.o: Processor/processor.h
+CMakeFiles/ACA_Project2.dir/BlockOnBus/BlockOnBus.c.o: Set/Set.h
 CMakeFiles/ACA_Project2.dir/BlockOnBus/BlockOnBus.c.o: uthash_files/include/uthash.h
 
 CMakeFiles/ACA_Project2.dir/BlockTransferer/BlockTransferer.c.o: BlockTransferer/BlockTransferer.c
@@ -143,7 +154,17 @@ CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/DRAM/DRAM_Examples.c.o: DRAM
 CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/DRAM/DRAM_Examples.c.o: uthash_files/include/uthash.h
 
 CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/DataStore/DataStore_Examples.c.o: Data_Structure_Examples/DataStore/DataStore_Examples.c
+CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/DataStore/DataStore_Examples.c.o: Address/Address.h
+CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/DataStore/DataStore_Examples.c.o: Block/Block.h
+CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/DataStore/DataStore_Examples.c.o: BlockOnBus/BlockOnBus.h
+CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/DataStore/DataStore_Examples.c.o: Buffers/buffers.h
+CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/DataStore/DataStore_Examples.c.o: Controller/Controller.h
+CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/DataStore/DataStore_Examples.c.o: DRAM/DRAM.h
 CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/DataStore/DataStore_Examples.c.o: Data/DataStore.h
+CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/DataStore/DataStore_Examples.c.o: Global_Variables.h
+CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/DataStore/DataStore_Examples.c.o: Instruction/Instruction.h
+CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/DataStore/DataStore_Examples.c.o: Processor/processor.h
+CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/DataStore/DataStore_Examples.c.o: uthash_files/include/uthash.h
 
 CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Queue/Queue_the_examples.c.o: Data_Structure_Examples/Queue/Queue_the_examples.c
 CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Queue/Queue_the_examples.c.o: Data_Structure_Examples/Queue/Queue_the_examples.h
