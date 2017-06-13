@@ -32,7 +32,6 @@ int main(){
     StoreFileInstructionsIntoProcessorQueue(processor);
 
     ClockCycleCount = 0;
-
     //L1 Controller
 
     //1. Check for blocks being sent to L1 from L2
@@ -46,7 +45,7 @@ int main(){
                     blockReceived.isIdle = false;
                 }
                 if(l1Controller->waiting == true){
-                    if(blockReceived.address.Tag == l1Controller->controllerIsIdleUntilItReceivesThisBlock->address.Tag){
+                    if(blockReceived.address.Tag == l1Controller->controllerIsIdleUntilItReceivesThisBlock.address.Tag){
                         l1Controller->waiting = false;
                     }
                 }
@@ -94,7 +93,7 @@ int main(){
                 }
                 if (l2Controller->waiting == true) {
                     if (blockReceived.address.Tag ==
-                        l2Controller->controllerIsIdleUntilItReceivesThisBlock->address.Tag) {
+                        l2Controller->controllerIsIdleUntilItReceivesThisBlock.address.Tag) {
                         l2Controller->waiting = false;
                     }
                 }
@@ -105,7 +104,7 @@ int main(){
             }
         }
         //2. Process requests for data from L1
-        while(!isEmpty(l2Controller->transferer->TransferQueue) && l2Controller->waiting == false) {//there is something to process
+        if(!isEmpty(l2Controller->transferer->TransferQueue) && l2Controller->waiting == false) {//there is something to process
             Instruction blockInstructionFromL1 = Peek(l2Controller->transferer->TransferQueue);
             FindBlockInL2(blockInstructionFromL1);
         }
@@ -113,7 +112,7 @@ int main(){
         //DRAM
 
         //1. Check for writebacks from L2
-        while (!isBlockQueueEmpty(dRAM->writeBlockQueue)) {
+        if (!isBlockQueueEmpty(dRAM->writeBlockQueue)) {
             BlockOnBus* flushedFromBufers = PeekBlock(dRAM->writeBlockQueue);
             int clockCycleWhenAvailable = flushedFromBufers->clockCycleWhenBlockIsAvailable;
             if (clockCycleWhenAvailable <= ClockCycleCount) {

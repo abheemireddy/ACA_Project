@@ -13,11 +13,11 @@ typedef struct BlockQueueTag BlockQueue;
 typedef struct SetTag Set;
 
 typedef struct ControllerTag{
+    Block controllerIsIdleUntilItReceivesThisBlock;
     bool waiting;
     Cache* cache;
     Transferer* transferer;
     BlockQueue* writeBlockQueue;
-    Block* controllerIsIdleUntilItReceivesThisBlock;
 } Controller;
 
 Controller* Constructor_L1Controller();

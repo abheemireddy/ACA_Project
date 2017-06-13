@@ -14,21 +14,25 @@ void PutInVictimCache(Block* existing);
 
 Controller* Constructor_L1Controller(){
     Controller* l1ControllerCon = malloc(sizeof(l1ControllerCon));
+    Address* address = Constructor_Address("0000000000000000");
+    l1ControllerCon->controllerIsIdleUntilItReceivesThisBlock = *Constructor_Block(*address);//will be overwritten later on
+
     l1ControllerCon->writeBlockQueue = Constructor_BlockQueue();
     l1ControllerCon->cache = Constructor_Cache(64);
     l1ControllerCon->transferer = Constructor_Transferer();
     l1ControllerCon->waiting = false;
-    l1ControllerCon->controllerIsIdleUntilItReceivesThisBlock = NULL;
     return l1ControllerCon;
 }
 
 Controller* Constructor_L2Controller(){
     Controller* l2ControllerCon = malloc(sizeof(l2ControllerCon));
+    Address* address = Constructor_Address("0000000000000000");
+    l2ControllerCon->controllerIsIdleUntilItReceivesThisBlock = *Constructor_Block(*address);//will be overwritten later on
+
     l2ControllerCon->cache = Constructor_Cache(256);
     l2ControllerCon->transferer = Constructor_Transferer();
     l2ControllerCon->writeBlockQueue = Constructor_BlockQueue();
     l2ControllerCon->waiting = false;
-    l2ControllerCon->controllerIsIdleUntilItReceivesThisBlock = NULL;
     return l2ControllerCon;
 }
 void CheckL2SetSize(Set* set){
@@ -222,7 +226,7 @@ void FindBlockInL2(Instruction instruction){
     if(block != NULL){
         if(block->isIdle == true){
             l2Controller->waiting == true;
-            l2Controller->controllerIsIdleUntilItReceivesThisBlock = block;
+            l2Controller->controllerIsIdleUntilItReceivesThisBlock = *block;
             return;
         }
         BlockOnBus* blockOnBus = Constructor_BlockOnBus(l2Controller,*block,ClockCycleCount + 2);
@@ -267,7 +271,7 @@ void WriteToController(Instruction instruction, char value[64])
     Block* existing = get(&set->HashTable,instruction.address.Tag);
     if(existing != NULL){
         if(existing->isIdle == true){
-            l1Controller->controllerIsIdleUntilItReceivesThisBlock = existing;
+            l1Controller->controllerIsIdleUntilItReceivesThisBlock = *existing;
             l1Controller->waiting = true;
             return;
         }
@@ -326,7 +330,7 @@ CacheLine* L1_read(Instruction instruction)
     if(block != NULL){
         if(block->isIdle == true){
             l1Controller->waiting = true;
-            l1Controller->controllerIsIdleUntilItReceivesThisBlock = block;
+            l1Controller->controllerIsIdleUntilItReceivesThisBlock = *block;
             return NULL;
         }
         if(block->validBit == true){

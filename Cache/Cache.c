@@ -20,9 +20,7 @@ Cache* Constructor_Cache(int numberOfSets){
         Set* set = Constructor_Set(4,*address);
         putSet(&cache->HashTable,set);
         setAddress += 8;
-
     }
-    //printf("Number of sets in cache:%d\n",CountSets(&cache->HashTable));
     return cache;
 }
 
