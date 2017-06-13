@@ -60,7 +60,7 @@ int main(){
             CacheLine *read = ProcessL1Instruction(nextInstructionForL1ControllerToProcess);
             if (nextInstructionForL1ControllerToProcess.instruction == 2) {
                 if (read == NULL) {
-                    printf("Did not find in cache, waiting");
+                    printf("Did not find in cache");
                 } else {
                     printf("Read from: %d val %s\n", read->address.bitStringValue, GetData(l1Data, read->dataLine));
                     Dequeue(l1Controller->transferer->TransferQueue);

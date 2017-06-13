@@ -31,9 +31,11 @@ void WriteBackToL2(Buffer* buffer,Block** HashTable){
     Block* tmp;
     HASH_ITER(hh,*HashTable,s,tmp){
         printf("Flushing to L2: %d\n",s->address.bitStringValue);
-        removeBlockFromBuffer(&buffer->HashTable,s);
-        BlockOnBus* blockOnBus = Constructor_BlockOnBus(l1Controller,*s,0);
-        EnqueueBlock(l2Controller->writeBlockQueue,*blockOnBus);
+        if(s->dirtyBit == true){
+            removeBlockFromBuffer(&buffer->HashTable,s);
+            BlockOnBus* blockOnBus = Constructor_BlockOnBus(l1Controller,*s,0);
+            EnqueueBlock(l2Controller->writeBlockQueue,*blockOnBus);
+        }
     }
 }
 
