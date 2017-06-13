@@ -6,11 +6,11 @@
 #include "DRAM.h"
 #include "BlockTransferer/BlockTransferer.h"
 #include "Block_Queue/Block_Queue.h"
-DRAM Constructor_DRAM(){
-    DRAM dram = {};
-    dram.HashTable = NULL;
-    dram.transferer = Constructor_Transferer();
-    dram.writeBlockQueue = Constructor_BlockQueue();
+DRAM* Constructor_DRAM(){
+    DRAM* dram = malloc(sizeof(DRAM));
+    dram->HashTable = NULL;
+    dram->transferer = Constructor_Transferer();
+    dram->writeBlockQueue = Constructor_BlockQueue();
     return dram;
 }
 

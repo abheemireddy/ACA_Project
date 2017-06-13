@@ -18,6 +18,7 @@ void changeStackSize();
 int run_examples();
 
 int main(){
+    dRAM = Constructor_DRAM();
     l1Data = Constructor_DataStore();
     l2Data = Constructor_DataStore();
     l1WriteBuffer = Constructor_Buffer();
@@ -61,14 +62,16 @@ int main(){
                 Instruction nextInstructionFromProcessor = Dequeue(processor->InstructionHolder->TransferQueue);
                 Enqueue(l1Controller->transferer->TransferQueue, nextInstructionFromProcessor);
             }
-            Instruction nextInstructionForL1ControllerToProcess = GetNextInstruction(l1Controller->transferer);
-            CacheLine *read = ProcessL1Instruction(nextInstructionForL1ControllerToProcess);
-            if (nextInstructionForL1ControllerToProcess.instruction == 2) {
-                if (read == NULL) {
-                    printf("Did not find in cache");
-                } else {
-                    printf("Read from: %d val %s\n", read->address.bitStringValue, GetData(l1Data, read->dataLine));
-                    Dequeue(l1Controller->transferer->TransferQueue);
+            if(!isEmpty(l1Controller->transferer->TransferQueue)){
+                Instruction nextInstructionForL1ControllerToProcess = GetNextInstruction(l1Controller->transferer);
+                CacheLine *read = ProcessL1Instruction(nextInstructionForL1ControllerToProcess);
+                if (nextInstructionForL1ControllerToProcess.instruction == 2) {
+                    if (read == NULL) {
+                        printf("Did not find in cache");
+                    } else {
+                        printf("Read from: %d val %s\n", read->address.bitStringValue, GetData(l1Data, read->dataLine));
+                        Dequeue(l1Controller->transferer->TransferQueue);
+                    }
                 }
             }
         }
@@ -84,8 +87,9 @@ int main(){
                 if (blockReceived.isIdle == true) {
                     blockReceived.isIdle = false;
                 }
-                if(l2Controller->waiting == true){
-                    if(blockReceived.address.Tag == l2Controller->controllerIsIdleUntilItReceivesThisBlock->address.Tag){
+                if (l2Controller->waiting == true) {
+                    if (blockReceived.address.Tag ==
+                        l2Controller->controllerIsIdleUntilItReceivesThisBlock->address.Tag) {
                         l2Controller->waiting = false;
                     }
                 }
@@ -96,8 +100,8 @@ int main(){
             }
         }
         //2. Process requests for data from L1
-        if (l2Controller->waiting == false) {
-            if (!isEmpty(l2Controller->transferer->TransferQueue)) {//there is something to process
+        if (!isEmpty(l2Controller->transferer->TransferQueue)) {//there is something to process
+            if (l2Controller->waiting == false) {
                 Address blockAddressToGetForL1 = Peek(l2Controller->transferer->TransferQueue).address;
                 FindBlockInL2(blockAddressToGetForL1);
             }

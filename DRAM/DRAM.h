@@ -25,7 +25,7 @@ typedef struct DRAMTag {
     BlockQueue* writeBlockQueue;
 } DRAM;
 
-DRAM Constructor_DRAM();
+DRAM* Constructor_DRAM();
 
 void removeBlockFromDRAM(DRamBlock** HashTable,DRamBlock* blockToRemove);
 void putBlock(DRamBlock** HashTable,DRamBlock *value);
