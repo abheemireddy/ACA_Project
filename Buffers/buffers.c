@@ -34,7 +34,7 @@ void WriteBackToL2(Buffer* buffer,Block** HashTable){
         if(s->dirtyBit == true){
             removeBlockFromBuffer(&buffer->HashTable,s);
             BlockOnBus* blockOnBus = Constructor_BlockOnBus(l1Controller,*s,0);
-            EnqueueBlock(l2Controller->writeBlockQueue,*blockOnBus);
+            EnqueueBlock(l2Controller->writeBlockQueue,blockOnBus);
         }
     }
 }

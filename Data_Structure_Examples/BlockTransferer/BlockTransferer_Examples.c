@@ -8,11 +8,11 @@
 void StoreAndGetFromBlockTransferer(){
     Address* address1 = Constructor_Address("0000000000000000");
     Transferer* transferer = Constructor_Transferer();
-    Instruction* instruction = Constructor_Instruction(0,"this is the stored data",*address1);
+    Instruction* instruction = Constructor_Instruction(0,"this",*address1);
 
     transferer->TransferQueue->Enqueue(transferer->TransferQueue,*instruction);
 
-    instruction = Constructor_Instruction(1,"different data",*address1);
+    instruction = Constructor_Instruction(1,"differe",*address1);
     transferer->TransferQueue->Enqueue(transferer->TransferQueue,*instruction);
 
     Instruction nextToBeExecuted =  transferer->GetNextInstruction(transferer);

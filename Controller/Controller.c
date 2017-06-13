@@ -18,7 +18,7 @@ Controller* Constructor_L1Controller(){
     l1ControllerCon->cache = Constructor_Cache(64);
     l1ControllerCon->transferer = Constructor_Transferer();
     l1ControllerCon->waiting = false;
-    l1ControllerCon->controllerIsIdleUntilItReceivesThisBlock = NULL;
+    l1ControllerCon->controllerIsIdleUntilItReceivesThisBlock;
     return l1ControllerCon;
 }
 
@@ -28,7 +28,7 @@ Controller* Constructor_L2Controller(){
     l2ControllerCon->transferer = Constructor_Transferer();
     l2ControllerCon->writeBlockQueue = Constructor_BlockQueue();
     l2ControllerCon->waiting = false;
-    l2ControllerCon->controllerIsIdleUntilItReceivesThisBlock = NULL;
+    l2ControllerCon->controllerIsIdleUntilItReceivesThisBlock;
     return l2ControllerCon;
 }
 void CheckL2SetSize(Set* set){
@@ -75,7 +75,7 @@ void CheckL2BufferSize(){
         HASH_ITER(hh,l2WriteBuffer->HashTable,s,tmp){ //write everything in buffer to DRam
             if(s->dirtyBit == true){
                 BlockOnBus* toWriteBack = Constructor_BlockOnBus(dRAM,*s,ClockCycleCount + 2);
-                EnqueueBlock(dRAM->writeBlockQueue,*toWriteBack);
+                EnqueueBlock(dRAM->writeBlockQueue,toWriteBack);
             }
         }
     }
@@ -101,6 +101,7 @@ void WriteBlockToL1Controller(Block toStore){
     Block* existing = get(&set->HashTable,toStore.address.Tag);
     if(existing != NULL){
         removeFromTable(&set->HashTable,existing);
+        DequeueBlock(l1Controller->writeBlockQueue);
     }
     toStore.isIdle = false;
     put(&set->HashTable,&toStore);
@@ -191,6 +192,7 @@ void TEMP_putInL1Set(Address* address,Set* set,char value[64]){
 void WriteBlockToL2Controller(Block block2Write){
     Set* set = getSetByIndex(&l2Controller->cache->HashTable,block2Write.address.Index);
     Block* block = get(&set->HashTable,block2Write.address.Tag);
+
     if(block != NULL){
         removeFromTable(&set->HashTable,block);
         put(&set->HashTable,&block2Write);
@@ -200,7 +202,7 @@ void WriteBlockToL2Controller(Block block2Write){
             printf("ERROR. Data in L1 that is not in L2");
         }
         BlockOnBus* blockOnBus = Constructor_BlockOnBus(l2Controller,block2Write,ClockCycleCount + 2);
-        EnqueueBlock(dRAM->writeBlockQueue,*blockOnBus);
+        EnqueueBlock(dRAM->writeBlockQueue,blockOnBus);
     }
     CheckL2SetSize(set);
     CheckL2BufferSize();
@@ -211,11 +213,11 @@ void FindBlockInL2(Address DataToFind){
     if(block != NULL){
         if(block->isIdle == true){
             l2Controller->waiting == true;
-            l2Controller->controllerIsIdleUntilItReceivesThisBlock = block;
+            l2Controller->controllerIsIdleUntilItReceivesThisBlock = *block;
             return;
         }
         BlockOnBus* blockOnBus = Constructor_BlockOnBus(l2Controller,*block,ClockCycleCount + 2);
-        EnqueueBlock(l1Controller->writeBlockQueue,*blockOnBus);
+        EnqueueBlock(l1Controller->writeBlockQueue,blockOnBus);
     }else{
         Block* idlePlaceHolder = Constructor_Block(DataToFind);
         idlePlaceHolder->isIdle = true;//Now we have marked this block in our set as idle
@@ -225,23 +227,25 @@ void FindBlockInL2(Address DataToFind){
     }
 }
 
-void ProcessDRamInstruction(Address blockAddressToFind){
-    DRamBlock* dramBlock = getBlock(&dRAM->HashTable,blockAddressToFind.bitStringValue);
-    Block* block = Constructor_Block(blockAddressToFind);
-    if(block != NULL){
+void ProcessDRamInstruction(Instruction instruction){
+    DRamBlock* dramBlock = getBlock(&dRAM->HashTable,instruction.address.bitStringValue);
+    if(dramBlock != NULL){
+        Block* block = Constructor_Block(instruction.address);
         BlockOnBus* blockOnBus = Constructor_BlockOnBus(dRAM,*block,ClockCycleCount + 2);
-        EnqueueBlock(l2Controller->writeBlockQueue,*blockOnBus);
+        EnqueueBlock(l2Controller->writeBlockQueue,blockOnBus);
     }else{
-        printf("ERROR. Block not found in DRAM");
+        DRamBlock* dramBlock = Constructor_DRamBlock(instruction.address,instruction.data);
+        putBlock(&dRAM->HashTable,dramBlock);
     }
 }
 
-void WriteBlockToDRAM(Block block2Write){
-    DRamBlock* ramBlock = getBlock(&dRAM->HashTable,block2Write.address.bitStringValue);
-    DRamBlock* newdRam = Constructor_DRamBlock(block2Write.address,"Some value");
+
+void WriteBlockToDRAM(BlockOnBus* block2Write){
+    DRamBlock* ramBlock = getBlock(&dRAM->HashTable,block2Write->blockOnBus.address.bitStringValue);
     if(ramBlock != NULL){
         removeBlockFromDRAM(&dRAM->HashTable,ramBlock);
     }
+    DRamBlock* newdRam = Constructor_DRamBlock(block2Write->blockOnBus.address,block2Write->valueBeingTransferred);
     putBlock(&dRAM->HashTable,newdRam);
 }
 
@@ -251,7 +255,7 @@ void WriteToController(Instruction instruction, char value[64])
     Block* existing = get(&set->HashTable,instruction.address.Tag);
     if(existing != NULL){
         if(existing->isIdle == true){
-            l1Controller->controllerIsIdleUntilItReceivesThisBlock = existing;
+            l1Controller->controllerIsIdleUntilItReceivesThisBlock = *existing;
             l1Controller->waiting = true;
             return;
         }
@@ -310,7 +314,7 @@ CacheLine* L1_read(Instruction instruction)
     if(block != NULL){
         if(block->isIdle == true){
             l1Controller->waiting = true;
-            l1Controller->controllerIsIdleUntilItReceivesThisBlock = block;
+            l1Controller->controllerIsIdleUntilItReceivesThisBlock = *block;
             return NULL;
         }
         if(block->validBit == true){

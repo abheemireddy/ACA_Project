@@ -20,12 +20,18 @@ Cache* Constructor_Cache(int numberOfSets){
         Set* set = Constructor_Set(4,*address);
         putSet(&cache->HashTable,set);
         setAddress += 8;
+
     }
     //printf("Number of sets in cache:%d\n",CountSets(&cache->HashTable));
     return cache;
 }
 
 void putSet(Set** HashTable,Set* value) {  //key is useFrequency of the block.  Seems magical
+    Block *hashTableStoresInThisBlock;
+    HASH_FIND_INT( *HashTable,&value->address.Index, hashTableStoresInThisBlock );//find block_id and put into hashTableStoresInThisBlock
+    if(hashTableStoresInThisBlock != NULL){
+        HASH_DEL( *HashTable, hashTableStoresInThisBlock);//should not happen, but keeps from inseting repeated values
+    }
     HASH_ADD_INT(*HashTable, address.Index, value );
     //The last parameter is a pointer to the structure being added
 }

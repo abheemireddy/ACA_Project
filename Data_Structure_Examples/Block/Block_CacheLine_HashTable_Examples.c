@@ -10,12 +10,12 @@ int AddCacheLinesToBlock(){
     Block* block = Constructor_Block(*address1);
     CacheLine* case1 = Constructor_CacheLine(*address1,"some data");
     CacheLine* case2 = Constructor_CacheLine(*address2,"some other data");
-    block->putCacheLine(&block->HashTable,case1);
+    putCacheLine(&block->HashTable,case1);
     CacheLine* cacheLine2 = case2;
-    block->putCacheLine(&block->HashTable,case2);
-    int count = block->CountCacheLines(&block->HashTable);
+    putCacheLine(&block->HashTable,case2);
+    int count = CountCacheLines(&block->HashTable);
     printf("Count: %d",count);
-    CacheLine* returned = block->getCacheLineByOffset(&block->HashTable,cacheLine2->address.Offset);
+    CacheLine* returned = getCacheLineByOffset(&block->HashTable,cacheLine2->address.Offset);
     char* data = GetData(l1Data,returned->dataLine);
     printf("data at offset: %s\n",data);
 }

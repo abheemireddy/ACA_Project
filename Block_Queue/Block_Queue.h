@@ -6,14 +6,14 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <stdbool.h>
-#include <BlockOnBus/BlockOnBus.h>
+#include "BlockOnBus/BlockOnBus.h"
 
 typedef struct NodeTag {
-    BlockOnBus block;
+    BlockOnBus* block;
     struct NodeTag* prev;
 } Node;
 
-Node* Constructor_BlockNode(BlockOnBus block);
+Node* Constructor_BlockNode(BlockOnBus* block);
 
 typedef struct BlockQueueTag {
     Node *head;
@@ -24,9 +24,9 @@ typedef struct BlockQueueTag {
 
 BlockQueue* Constructor_BlockQueue();
 
-BlockOnBus PeekBlock(struct BlockQueueTag *blockQueue);
-bool EnqueueBlock(struct BlockQueueTag *queue, BlockOnBus block);
-BlockOnBus DequeueBlock(struct BlockQueueTag *blockQueue);
+BlockOnBus* PeekBlock(struct BlockQueueTag *blockQueue);
+bool EnqueueBlock(struct BlockQueueTag *queue, BlockOnBus* block);
+BlockOnBus* DequeueBlock(struct BlockQueueTag *blockQueue);
 bool isBlockQueueEmpty(struct BlockQueueTag* blockQueue);
 void print_BlockQueue(struct BlockQueueTag* blockQueue);
 

@@ -8,8 +8,8 @@
 
 typedef struct CacheTag Cache;
 typedef struct TransfererTag Transferer;
-typedef struct BlockQueueTag BlockQueue;
 typedef struct CacheLineTag CacheLine;
+typedef struct BlockQueueTag BlockQueue;
 typedef struct SetTag Set;
 
 typedef struct ControllerTag{
@@ -17,7 +17,7 @@ typedef struct ControllerTag{
     Cache* cache;
     Transferer* transferer;
     BlockQueue* writeBlockQueue;
-    Block* controllerIsIdleUntilItReceivesThisBlock;
+    Block controllerIsIdleUntilItReceivesThisBlock;
 } Controller;
 
 Controller* Constructor_L1Controller();
@@ -32,10 +32,10 @@ bool CheckL2WriteBuffer(Block block2Write);
 void WriteBlockToL2Controller(Block block);
 void L2WriteBlock(Block block);
 void FindBlockInL2(Address DataToFind);
-void WriteBlockToDRAM(Block block);
 void CheckL2SetSize(struct SetTag* set);
 void CheckL2BufferSize();
 void PutInL2WriteBuffer(Block* existing);
 
-void ProcessDRamInstruction(Address blockAddressToFind);
+void ProcessDRamInstruction(Instruction instruction);
+void WriteBlockToDRAM(BlockOnBus* block2Write);
 #endif

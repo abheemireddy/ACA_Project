@@ -14,21 +14,6 @@ typedef struct SetTag {
     Address address;
     UT_hash_handle hh;
     struct BlockTag *HashTable;
-
-    void (*AddBlock)(struct SetTag set,struct BlockTag** HashTable,struct BlockTag** blockToAdd);
-
-    bool (*IsBlockInSet)(struct SetTag set,struct BlockTag newBlock);
-    void (*put)(struct BlockTag** HashTable,struct BlockTag *value);
-    void (*replaceByUseFrequency)(struct BlockTag** HashTable,int key);
-    struct BlockTag* (*getByUseFrequency)(struct BlockTag** HashTable,int key);
-    void (*removeFromTable)(struct BlockTag** HashTable,struct BlockTag *blockToRemove);
-    void (*delete_all)(struct BlockTag** HashTable);
-    int (*Count)(struct BlockTag** HashTable);
-
-    struct BlockTag* (*get)(struct BlockTag** HashTable,int key);
-    void (*SortHash)(struct BlockTag** HashTable);
-    void (*print_blocks_in_set)(struct BlockTag** HashTable);
-    struct BlockTag* (*GetLeastUsed)(struct BlockTag** HashTable);
 } Set;
 
 struct BlockTag* GetLeastUsed(struct BlockTag** HashTable);

@@ -36,33 +36,29 @@ bool IsBlockInSet(Set set,Block newBlock){
 }
 
 void put(Block** HashTable,Block *value) {
-    if(value->address.bitString == NULL){
+    if(value == NULL){
         printf("The passed block needs to have attribute address set");
+    }
+    Block *hashTableStoresInThisBlock;
+    HASH_FIND_INT( *HashTable,&value->address.Tag, hashTableStoresInThisBlock );//find block_id and put into hashTableStoresInThisBlock
+    if(hashTableStoresInThisBlock != NULL){
+        HASH_DEL( *HashTable, hashTableStoresInThisBlock);//should not happen, but keeps from inseting repeated values
     }
     HASH_ADD_INT(*HashTable, address.Tag,value );
 }
 
-void replaceByUseFrequency(Block** HashTable,int key) {
-    struct BlockTag *hashTableStoresInThisBlock;//to store getter
-
-    HASH_FIND_INT(*HashTable, &key, hashTableStoresInThisBlock);  /* id already in the hash? */
-    if (hashTableStoresInThisBlock==NULL) {
-        hashTableStoresInThisBlock = (struct BlockTag*)malloc(sizeof(struct BlockTag));
-        hashTableStoresInThisBlock->useFrequency = key;
-        HASH_ADD_INT( *HashTable, address.Tag, hashTableStoresInThisBlock );  /* id: name of key field */
-    }
-}
-
 Block* get(Block** HashTable,int key) {
+    if(*HashTable == NULL){
+        return NULL;
+    }
     Block *hashTableStoresInThisBlock;
 
-    HASH_FIND_INT( *HashTable, &key, hashTableStoresInThisBlock );//find block_id and put into hashTableStoresInThisBlock
+    HASH_FIND_INT( *HashTable,&key, hashTableStoresInThisBlock );//find block_id and put into hashTableStoresInThisBlock
     if(hashTableStoresInThisBlock != NULL){
         hashTableStoresInThisBlock->useFrequency += 1;
     }
     return hashTableStoresInThisBlock;
 }
-
 
 //delete from hashmap
 void removeFromTable(Block** HashTable,Block *blockToRemove) {
@@ -71,7 +67,8 @@ void removeFromTable(Block** HashTable,Block *blockToRemove) {
 
 //Delete all items from hash
 void delete_all(Block** HashTable) {
-    struct BlockTag *current_block, *tmp;
+    struct BlockTag *current_block;
+    Block* tmp;
 
     HASH_ITER(hh, *HashTable, current_block, tmp) {
         HASH_DEL(*HashTable,current_block);  /* delete; users advances to next */

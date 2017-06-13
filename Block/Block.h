@@ -14,7 +14,6 @@
 typedef struct CacheLineTag CacheLine;
 
 typedef struct BlockTag{
-    int size;
 
     bool isIdle;
 
@@ -26,19 +25,6 @@ typedef struct BlockTag{
     CacheLine *HashTable;
 
     Address address;
-
-    void (*Set_Offset)(struct CacheLineTag* block,char* offset);
-    bool (*IsInBlock)(Address address);
-
-    void (*putCacheLine)(struct CacheLineTag** HashTable, struct CacheLineTag* value);
-    struct CacheLineTag* (*getCacheLineByOffset)(struct CacheLineTag** HashTable,int key);
-    void (*removeCacheLineFromTable)(struct CacheLineTag** HashTable,struct CacheLineTag* blockToRemove);
-    void (*deleteAllCacheLine)(struct CacheLineTag** HashTable);
-    int (*CountCacheLines)(struct CacheLineTag** HashTable);
-    void (*replaceCacheLine)(UT_hash_handle hh,struct CacheLineTag** HashTable,struct CacheLineTag* value);
-    struct CacheLineTag* (*getCacheLine)(struct CacheLineTag** HashTable,char* key);
-    void (*print_cache_lines_in_set)(struct CacheLineTag** HashTable);
-
 
     UT_hash_handle hh; /* make this structure hashable*/
 } Block;//Block is synonymous for struct BlockTag (they mean the same thing).
