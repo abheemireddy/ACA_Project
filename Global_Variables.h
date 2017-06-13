@@ -21,5 +21,6 @@ Buffer* l2WriteBuffer;
 DataStore* l1Data;
 DataStore* l2Data;
 DRAM* dRAM;
+int ClockCycleCount;
 
 #endif //ACA_PROJECT_GLOBAL_VARIABLES_H
