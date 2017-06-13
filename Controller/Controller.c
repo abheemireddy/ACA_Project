@@ -29,7 +29,16 @@ Controller* Constructor_L2Controller(){
     l2ControllerCon->waiting = false;
     return l2ControllerCon;
 }
-
+void CheckL2SetSize(Set* set){
+    int countInSet = Count(&set->HashTable);
+    while(countInSet >= 4){
+        SortHash(&set->HashTable);
+        Block* leastUsed = GetLeastUsed(&set->HashTable);
+        removeFromTable(&set->HashTable,leastUsed);
+        PutInL2WriteBuffer(leastUsed);
+    }
+    CheckBufferSize();
+}
 void CheckSetSize(Set* set){
     int countInSet = Count(&set->HashTable);
     if(countInSet >= 4){
@@ -53,6 +62,23 @@ void CheckBufferSize(){
     if(writeBufferCount >= 5){
         WriteBackToL2(l1WriteBuffer,&l1WriteBuffer->HashTable);
     }
+}
+void CheckL2BufferSize(){
+    int writeBufferCount = CountBlocksInBuffer(&l2WriteBuffer->HashTable);
+    if(writeBufferCount >= 5){
+        Block* s;
+        Block* tmp;
+        HASH_ITER(hh,l2WriteBuffer->HashTable,s,tmp){ //write everything in buffer to DRam
+            printf("address: %d\n",s->address.bitStringValue);
+            BlockOnBus* toWriteBack = Constructor_BlockOnBus(dRAM,*s,ClockCycleCount + 2);
+            EnqueueBlock(dRAM->writeBlockQueue,*toWriteBack);
+        }
+    }
+}
+
+void PutInL2WriteBuffer(Block* existing){
+    putBlockInBuffer(&l1WriteBuffer->HashTable,existing);
+    CheckL2BufferSize();
 }
 
 void PutInWriteBuffer(Block* existing){
@@ -79,8 +105,8 @@ void WriteBlockToL1Controller(Block toStore){
             PutInVictimCache(existing);
         }
     }
-    CheckSetSize(set);
     put(&set->HashTable,&toStore);
+    CheckSetSize(set);
 }
 
 CacheLine* ProcessL1Instruction(Instruction instruction){
@@ -111,8 +137,7 @@ bool CheckVictimCacheAndWriteBuffer(Instruction instruction,char value[64]){
     Block* victimBlock = getBlockFromBuffer(&l1VictimCache->HashTable,instruction.address.bitStringValue);
     Block* writeBlock = getBlockFromBuffer(&l1WriteBuffer->HashTable,instruction.address.bitStringValue);
     if(victimBlock == NULL && writeBlock == NULL){
-        Enqueue(l2Controller->transferer->TransferQueue,instruction);
-        l1Controller->waiting = true;
+        return false;
     }else{
         if(victimBlock != NULL){
             CacheLine* victimCacheLine = getCacheLineByOffset(&victimBlock->HashTable,instruction.address.Offset);
@@ -128,14 +153,17 @@ bool CheckVictimCacheAndWriteBuffer(Instruction instruction,char value[64]){
             return true;
         }
     }
+    printf("Error in CheckVictimCacheAndWriteBuffer.  Statements should not get this far");
     return false;
 }
 
 bool CheckL2WriteBuffer(Block block2Write){
     Block* writeBlock = getBlockFromBuffer(&l2WriteBuffer->HashTable,block2Write.address.bitStringValue);
+    //checkBuffer
     if(writeBlock != NULL){
         removeBlockFromBuffer(&l2WriteBuffer->HashTable,&block2Write);
-        putBlockInBuffer(&l2WriteBuffer->HashTable,&block2Write);
+        Set* set = getSetByIndex(&l2Controller->cache->HashTable,block2Write.address.Index);
+        put(&set->HashTable,&block2Write);//no need to put on block queue, just write directly from buffer to cache
         return true;
     }
     return false;
@@ -166,12 +194,11 @@ void WriteBlockToL2Controller(Block block2Write){
         if(found == false){
             printf("ERROR. Data in L1 that is not in L2");
         }
-        //char value[64] =
         BlockOnBus* blockOnBus = Constructor_BlockOnBus(l2Controller,block2Write,ClockCycleCount + 2);
         EnqueueBlock(dRAM->writeBlockQueue,*blockOnBus);
     }
-    CheckSetSize(set);
-    CheckBufferSize();
+    CheckL2SetSize(set);
+    CheckL2BufferSize();
 }
 void FindBlockInL2(Address DataToFind){
     Set* set = getSetByIndex(&l2Controller->cache->HashTable,DataToFind.Index);
@@ -180,6 +207,9 @@ void FindBlockInL2(Address DataToFind){
         BlockOnBus* blockOnBus = Constructor_BlockOnBus(l2Controller,*block,ClockCycleCount + 2);
         EnqueueBlock(l1Controller->writeBlockQueue,*blockOnBus);
     }else{
+        Block* idlePlaceHolder = Constructor_Block(DataToFind);
+        idlePlaceHolder->isIdle = true;//Now we have marked this block in our set as idle
+        put(&set->HashTable,idlePlaceHolder);
         Instruction* emptyInstruction = Constructor_Instruction(-1,"",DataToFind);
         Enqueue(dRAM->transferer->TransferQueue,*emptyInstruction);
     }
@@ -214,8 +244,10 @@ void WriteToController(Instruction instruction, char value[64])
     }else if(existing == NULL){
         bool found = CheckVictimCacheAndWriteBuffer(instruction,value);
         if(found == false){
+            Block* idlePlaceHolder = Constructor_Block(instruction.address);
+            idlePlaceHolder->isIdle = true;//Now we have marked this block in our set as idle
+            put(&set->HashTable,idlePlaceHolder);
             Enqueue(l2Controller->transferer->TransferQueue,instruction);
-            //TEMP_putInL1Set(&instruction.address,set,value);
         }
     }
     CheckSetSize(set);
@@ -273,8 +305,10 @@ CacheLine* L1_read(Instruction instruction)
         Block *victimBlock = getBlockFromBuffer(&l1VictimCache->HashTable, instruction.address.bitStringValue);
         Block *writeBlock = getBlockFromBuffer(&l1WriteBuffer->HashTable, instruction.address.bitStringValue);
         if (victimBlock == NULL && writeBlock == NULL) {
+            Block* idlePlaceHolder = Constructor_Block(instruction.address);
+            idlePlaceHolder->isIdle = true;//Now we have marked this block in our set as idle
+            put(&set->HashTable,idlePlaceHolder);
             Enqueue(l2Controller->transferer->TransferQueue, instruction);
-            l1Controller->waiting = true;
             return NULL;
         } else {
             if (victimBlock != NULL) {

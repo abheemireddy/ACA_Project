@@ -14,7 +14,6 @@ CacheLine* SearchInBuffers(Instruction instruction){
     Block* writeBlock = getBlockFromBuffer(&l1WriteBuffer->HashTable,instruction.address.bitStringValue);
     if(victimBlock == NULL && writeBlock == NULL){
         Enqueue(l2Controller->transferer->TransferQueue,instruction);
-        l1Controller->waiting = true;
         return NULL;
     }else{
         if(victimBlock != NULL){
