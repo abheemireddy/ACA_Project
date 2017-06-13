@@ -30,6 +30,6 @@ BlockOnBus* Constructor_BlockOnBus(void* controller,Block block,int howLongUntiB
         }
         i += 1;
     }
-    //strcpy(blockOnBus->valueBeingTransferred,value);
+    return blockOnBus;
 }
 

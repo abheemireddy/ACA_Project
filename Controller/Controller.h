@@ -8,8 +8,8 @@
 
 typedef struct CacheTag Cache;
 typedef struct TransfererTag Transferer;
-typedef struct BlockQueueTag BlockQueue;
 typedef struct CacheLineTag CacheLine;
+typedef struct BlockQueueTag BlockQueue;
 typedef struct SetTag Set;
 
 typedef struct ControllerTag{
@@ -17,7 +17,7 @@ typedef struct ControllerTag{
     Cache* cache;
     Transferer* transferer;
     BlockQueue* writeBlockQueue;
-    Block* controllerIsIdleUntilItReceivesThisBlock;
+    Block controllerIsIdleUntilItReceivesThisBlock;
 } Controller;
 
 Controller* Constructor_L1Controller();

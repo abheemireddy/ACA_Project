@@ -35,9 +35,9 @@ void BuildL1Cache(Cache* cache){
             Block* block = Constructor_Block(set->address);
 
             CacheLine* cacheLine = Constructor_CacheLine(block->address,"cacheLine data");
-            block->putCacheLine(&block->HashTable,cacheLine);
+            putCacheLine(&block->HashTable,cacheLine);
 
-            int cache_count = block->CountCacheLines(&block->HashTable);
+            int cache_count = CountCacheLines(&block->HashTable);
             printf("\ncache:%d\n",cache_count);
 
             put(&set->HashTable,block);

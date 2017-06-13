@@ -65,8 +65,14 @@ Instruction/Instruction.h
 /home/abheemireddy/ACA_Project/BlockTransferer/Instruction/Instruction.h
 
 /home/abheemireddy/ACA_Project/Block_Queue/Block_Queue.c
+Cache/Cache.h
+/home/abheemireddy/ACA_Project/Block_Queue/Cache/Cache.h
 Block_Queue.h
 /home/abheemireddy/ACA_Project/Block_Queue/Block_Queue.h
+Global_Variables.h
+/home/abheemireddy/ACA_Project/Block_Queue/Global_Variables.h
+Set/Set.h
+/home/abheemireddy/ACA_Project/Block_Queue/Set/Set.h
 
 /home/abheemireddy/ACA_Project/Block_Queue/Block_Queue.h
 stdlib.h
@@ -76,7 +82,7 @@ stdio.h
 stdbool.h
 -
 BlockOnBus/BlockOnBus.h
--
+/home/abheemireddy/ACA_Project/Block_Queue/BlockOnBus/BlockOnBus.h
 
 /home/abheemireddy/ACA_Project/Buffers/buffers.c
 buffers.h
@@ -418,7 +424,7 @@ stdio.h
 stdbool.h
 -
 BlockOnBus/BlockOnBus.h
--
+Block_Queue/BlockOnBus/BlockOnBus.h
 
 Buffers/buffers.h
 stdbool.h

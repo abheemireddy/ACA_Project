@@ -3,7 +3,7 @@
 //
 #include "Instruction.h"
 
-Instruction* Constructor_Instruction(int instructionNumber,char data[64],Address address){
+Instruction* Constructor_Instruction(int instructionNumber,char data[8],Address address){
     Instruction* instruction = malloc(sizeof(Instruction));
     instruction->instruction = instructionNumber;
     instruction->address = address;

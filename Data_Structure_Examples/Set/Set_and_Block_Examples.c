@@ -75,6 +75,6 @@ void AddTooManyBlocksTest(){
 
     printf("\nCount:%d\n",Count(&set->HashTable));
 
-    set->SortHash(&set->HashTable);
+    SortHash(&set->HashTable);
     print_blocks_in_set(&set->HashTable);
 }

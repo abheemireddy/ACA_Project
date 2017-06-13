@@ -38,15 +38,15 @@ int main(){
     //1. Check for blocks being sent to L1 from L2
     while(!isEmpty(processor->InstructionHolder->TransferQueue)) {
         while (!isBlockQueueEmpty(l1Controller->writeBlockQueue)) {//check for blocks from l2
-            BlockOnBus flushedFromBufers = PeekBlock(l1Controller->writeBlockQueue);
-            int clockCycleWhenAvailable = flushedFromBufers.clockCycleWhenBlockIsAvailable;
+            BlockOnBus* flushedFromBufers = PeekBlock(l1Controller->writeBlockQueue);
+            int clockCycleWhenAvailable = flushedFromBufers->clockCycleWhenBlockIsAvailable;
             if (clockCycleWhenAvailable >= ClockCycleCount) {
-                Block blockReceived = flushedFromBufers.blockOnBus;
+                Block blockReceived = flushedFromBufers->blockOnBus;
                 if (blockReceived.isIdle == true) {
                     blockReceived.isIdle = false;
                 }
                 if(l1Controller->waiting == true){
-                    if(blockReceived.address.Tag == l1Controller->controllerIsIdleUntilItReceivesThisBlock->address.Tag){
+                    if(blockReceived.address.Tag == l1Controller->controllerIsIdleUntilItReceivesThisBlock.address.Tag){
                         l1Controller->waiting = false;
                     }
                 }
@@ -56,9 +56,10 @@ int main(){
                 break;
             }
         }
+
         //2. If L1 is not blocked, process the next request from the processor
         if (l1Controller->waiting == false) {
-            if (!isEmpty(l1Controller->transferer->TransferQueue)) {
+            if (isEmpty(l1Controller->transferer->TransferQueue)) {
                 Instruction nextInstructionFromProcessor = Dequeue(processor->InstructionHolder->TransferQueue);
                 Enqueue(l1Controller->transferer->TransferQueue, nextInstructionFromProcessor);
             }
@@ -75,25 +76,31 @@ int main(){
                 }
             }
         }
+        /*//test piece of code I was using
+        Address* blockAddressToGetForL1 = Constructor_Address("00000000000000000");
+        Set* set2 = getSetByIndex(&l2Controller->cache->HashTable,blockAddressToGetForL1->Index);
+        Block* block = Constructor_Block(*blockAddressToGetForL1);
+        put(&set2->HashTable,block);*/
 
         //L2 Controller
 
         //1. Check for writebacks from L1 and Data from L2
         while (!isBlockQueueEmpty(l2Controller->writeBlockQueue)) { //write back blocks from l1
-            BlockOnBus flushedFromBufers = PeekBlock(l2Controller->writeBlockQueue);
-            int clockCycleWhenAvailable = flushedFromBufers.clockCycleWhenBlockIsAvailable;
+            BlockOnBus* flushedFromBufers = PeekBlock(l2Controller->writeBlockQueue);
+            int clockCycleWhenAvailable = flushedFromBufers->clockCycleWhenBlockIsAvailable;
             if (clockCycleWhenAvailable >= ClockCycleCount) {
-                Block blockReceived = flushedFromBufers.blockOnBus;
+                Block blockReceived = flushedFromBufers->blockOnBus;
                 if (blockReceived.isIdle == true) {
                     blockReceived.isIdle = false;
                 }
                 if (l2Controller->waiting == true) {
                     if (blockReceived.address.Tag ==
-                        l2Controller->controllerIsIdleUntilItReceivesThisBlock->address.Tag) {
+                        l2Controller->controllerIsIdleUntilItReceivesThisBlock.address.Tag) {
                         l2Controller->waiting = false;
                     }
                 }
                 WriteBlockToL2Controller(blockReceived);
+
                 DequeueBlock(l2Controller->writeBlockQueue);
             } else {
                 break;
@@ -111,10 +118,10 @@ int main(){
 
         //1. Check for writebacks from L2
         while (!isBlockQueueEmpty(dRAM->writeBlockQueue)) {
-            BlockOnBus flushedFromBufers = PeekBlock(dRAM->writeBlockQueue);
-            int clockCycleWhenAvailable = flushedFromBufers.clockCycleWhenBlockIsAvailable;
+            BlockOnBus* flushedFromBufers = PeekBlock(dRAM->writeBlockQueue);
+            int clockCycleWhenAvailable = flushedFromBufers->clockCycleWhenBlockIsAvailable;
             if (clockCycleWhenAvailable >= ClockCycleCount) {
-                Block blockReceived = flushedFromBufers.blockOnBus;
+                Block blockReceived = flushedFromBufers->blockOnBus;
                 if (blockReceived.isIdle == true) {
                     blockReceived.isIdle = false;
                     l1Controller->waiting = false;
