@@ -19,6 +19,7 @@ int run_examples();
 
 int main(){
     l1Data = Constructor_DataStore();
+    l2Data = Constructor_DataStore();
     l1WriteBuffer = Constructor_Buffer();
     l2WriteBuffer = Constructor_Buffer();
     l1VictimCache = Constructor_Buffer();
@@ -32,13 +33,13 @@ int main(){
     int ClockCycleCount = 0;
     while(!isEmpty(processor->InstructionHolder->TransferQueue)){
         if(!isEmpty(processor->InstructionHolder->TransferQueue)){
-            while(!isBlockQueueEmpty(l1Controller->blockQueue)){//check for blocks from l2
-                BlockOnBus flushedFromBufers = PeekBlock(l1Controller->blockQueue);
+            while(!isBlockQueueEmpty(l1Controller->writeBlockQueue)){//check for blocks from l2
+                BlockOnBus flushedFromBufers = PeekBlock(l1Controller->writeBlockQueue);
                 int clockCycleWhenAvailable = flushedFromBufers.clockCycleWhenBlockIsAvailable;
                 if(clockCycleWhenAvailable >= ClockCycleCount){
                     Block blockReceived = flushedFromBufers.blockOnBus;
                     WriteBlockToL1Controller(blockReceived);
-                    DequeueBlock(l2Controller->blockQueue);
+                    DequeueBlock(l2Controller->writeBlockQueue);
                     l1Controller->waiting = false;
                 }else{
                     break;
@@ -62,21 +63,21 @@ int main(){
             }
 
             //L2 Controller
-            while(!isBlockQueueEmpty(l2Controller->blockQueue)){ //write back blocks from l1
-                BlockOnBus flushedFromBufers = PeekBlock(l2Controller->blockQueue);
+            while(!isBlockQueueEmpty(l2Controller->writeBlockQueue)){ //write back blocks from l1
+                BlockOnBus flushedFromBufers = PeekBlock(l2Controller->writeBlockQueue);
                 int clockCycleWhenAvailable = flushedFromBufers.clockCycleWhenBlockIsAvailable;
                 if(clockCycleWhenAvailable >= ClockCycleCount){
                     Block blockReceived = flushedFromBufers.blockOnBus;
                     WriteBlockToL2Controller(blockReceived);
-                    DequeueBlock(l2Controller->blockQueue);
+                    DequeueBlock(l2Controller->writeBlockQueue);
                 }else{
                     break;
                 }
             }
             if(l2Controller->waiting == false){
                 if(!isEmpty(l2Controller->transferer->TransferQueue)) {//there is something to process
-                    Instruction nextInstructionFromL1 = GetNextInstruction(l2Controller->transferer);
-                    ProcessL2Instruction(nextInstructionFromL1);
+                    Address blockAddressToGetForL1 = Peek(l2Controller->transferer->TransferQueue).address;
+                    FindBlockInL2(blockAddressToGetForL1);
                 }
             }
 
@@ -93,13 +94,12 @@ int main(){
                 }
             }
             if(!isEmpty(dRAM->transferer->TransferQueue)){
-                Instruction nextInstructionFromL2 = GetNextInstruction(dRAM->transferer);
-                ProcessDRamInstruction(nextInstructionFromL2);
+                Address addressToFindInDRam = GetNextInstruction(dRAM->transferer).address;
+                ProcessDRamInstruction(addressToFindInDRam);
             }
         }
         ClockCycleCount += 1;
     }
-    print_BlockQueue(l2Controller->blockQueue);
     printf("Clock Cycles taken:%d\n",ClockCycleCount);
 
     //run_examples();//Examples of using the data structures

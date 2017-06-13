@@ -14,7 +14,7 @@ void PutInVictimCache(Block* existing);
 
 Controller* Constructor_L1Controller(){
     Controller* l1ControllerCon = malloc(sizeof(l1ControllerCon));
-    l1ControllerCon->blockQueue = Constructor_BlockQueue();
+    l1ControllerCon->writeBlockQueue = Constructor_BlockQueue();
     l1ControllerCon->cache = Constructor_Cache(64);
     l1ControllerCon->transferer = Constructor_Transferer();
     l1ControllerCon->waiting = false;
@@ -25,6 +25,7 @@ Controller* Constructor_L2Controller(){
     Controller* l2ControllerCon = malloc(sizeof(l2ControllerCon));
     l2ControllerCon->cache = Constructor_Cache(256);
     l2ControllerCon->transferer = Constructor_Transferer();
+    l2ControllerCon->writeBlockQueue = Constructor_BlockQueue();
     l2ControllerCon->waiting = false;
     return l2ControllerCon;
 }
@@ -165,29 +166,31 @@ void WriteBlockToL2Controller(Block block2Write){
         if(found == false){
             printf("ERROR. Data in L1 that is not in L2");
         }
+        //char value[64] =
         BlockOnBus* blockOnBus = Constructor_BlockOnBus(block2Write,10,"some value");
         EnqueueBlock(dRAM->blockQueue,*blockOnBus);
     }
     CheckSetSize(set);
     CheckBufferSize();
 }
-void ProcessL2Instruction(Instruction instruction){
-    Set* set = getSetByIndex(&l2Controller->cache->HashTable,instruction.address.Index);
-    Block* block = get(&set->HashTable,instruction.address.Tag);
+void FindBlockInL2(Address DataToFind){
+    Set* set = getSetByIndex(&l2Controller->cache->HashTable,DataToFind.Index);
+    Block* block = get(&set->HashTable,DataToFind.Tag);
     if(block != NULL){
         BlockOnBus* blockOnBus = Constructor_BlockOnBus(*block,10,"some value");
-        EnqueueBlock(l1Controller->blockQueue,*blockOnBus);
+        EnqueueBlock(l1Controller->writeBlockQueue,*blockOnBus);
     }else{
-        Enqueue(dRAM->transferer->TransferQueue,instruction);
+        Instruction* emptyInstruction = Constructor_Instruction(-1,"",DataToFind);
+        Enqueue(dRAM->transferer->TransferQueue,*emptyInstruction);
     }
 }
 
-void ProcessDRamInstruction(Instruction instruction){
-    DRamBlock* dramBlock = getBlock(&dRAM->HashTable,instruction.address.bitStringValue);
-    Block* block = Constructor_Block(instruction.address);
+void ProcessDRamInstruction(Address blockAddressToFind){
+    DRamBlock* dramBlock = getBlock(&dRAM->HashTable,blockAddressToFind.bitStringValue);
+    Block* block = Constructor_Block(blockAddressToFind);
     if(block != NULL){
         BlockOnBus* blockOnBus = Constructor_BlockOnBus(*block,10,"some value");
-        EnqueueBlock(l2Controller->blockQueue,*blockOnBus);
+        EnqueueBlock(l2Controller->writeBlockQueue,*blockOnBus);
     }else{
         printf("ERROR. Block not found in DRAM");
     }

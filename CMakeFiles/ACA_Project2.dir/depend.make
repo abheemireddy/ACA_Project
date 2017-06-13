@@ -53,6 +53,7 @@ CMakeFiles/ACA_Project2.dir/Cache/Cache.c.o: Cache/Cache.c
 CMakeFiles/ACA_Project2.dir/Cache/Cache.c.o: Cache/Cache.h
 CMakeFiles/ACA_Project2.dir/Cache/Cache.c.o: Address/Address.h
 CMakeFiles/ACA_Project2.dir/Cache/Cache.c.o: Block/Block.h
+CMakeFiles/ACA_Project2.dir/Cache/Cache.c.o: BlockOnBus/BlockOnBus.h
 CMakeFiles/ACA_Project2.dir/Cache/Cache.c.o: BlockTransferer/BlockTransferer.h
 CMakeFiles/ACA_Project2.dir/Cache/Cache.c.o: Buffers/buffers.h
 CMakeFiles/ACA_Project2.dir/Cache/Cache.c.o: Controller/Controller.h
@@ -68,6 +69,7 @@ CMakeFiles/ACA_Project2.dir/CacheLine/CacheLine.c.o: CacheLine/CacheLine.c
 CMakeFiles/ACA_Project2.dir/CacheLine/CacheLine.c.o: CacheLine/CacheLine.h
 CMakeFiles/ACA_Project2.dir/CacheLine/CacheLine.c.o: Address/Address.h
 CMakeFiles/ACA_Project2.dir/CacheLine/CacheLine.c.o: Block/Block.h
+CMakeFiles/ACA_Project2.dir/CacheLine/CacheLine.c.o: BlockOnBus/BlockOnBus.h
 CMakeFiles/ACA_Project2.dir/CacheLine/CacheLine.c.o: Buffers/buffers.h
 CMakeFiles/ACA_Project2.dir/CacheLine/CacheLine.c.o: Controller/Controller.h
 CMakeFiles/ACA_Project2.dir/CacheLine/CacheLine.c.o: DRAM/DRAM.h
@@ -114,6 +116,7 @@ CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Block/Block_CacheLine_HashTa
 CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Block/Block_CacheLine_HashTable_Examples.c.o: Data_Structure_Examples/Block/Block_CacheLine_HashTable_Examples.h
 CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Block/Block_CacheLine_HashTable_Examples.c.o: Address/Address.h
 CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Block/Block_CacheLine_HashTable_Examples.c.o: Block/Block.h
+CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Block/Block_CacheLine_HashTable_Examples.c.o: BlockOnBus/BlockOnBus.h
 CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Block/Block_CacheLine_HashTable_Examples.c.o: Buffers/buffers.h
 CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Block/Block_CacheLine_HashTable_Examples.c.o: CacheLine/CacheLine.h
 CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Block/Block_CacheLine_HashTable_Examples.c.o: Controller/Controller.h
@@ -165,6 +168,7 @@ CMakeFiles/ACA_Project2.dir/Processor/processor.c.o: Processor/processor.c
 CMakeFiles/ACA_Project2.dir/Processor/processor.c.o: Processor/processor.h
 CMakeFiles/ACA_Project2.dir/Processor/processor.c.o: Address/Address.h
 CMakeFiles/ACA_Project2.dir/Processor/processor.c.o: Block/Block.h
+CMakeFiles/ACA_Project2.dir/Processor/processor.c.o: BlockOnBus/BlockOnBus.h
 CMakeFiles/ACA_Project2.dir/Processor/processor.c.o: BlockTransferer/BlockTransferer.h
 CMakeFiles/ACA_Project2.dir/Processor/processor.c.o: Controller/Controller.h
 CMakeFiles/ACA_Project2.dir/Processor/processor.c.o: Instruction/Instruction.h

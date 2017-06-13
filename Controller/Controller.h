@@ -4,6 +4,7 @@
 #include <stdbool.h>
 #include "Instruction/Instruction.h"
 #include "Block/Block.h"
+#include "BlockOnBus/BlockOnBus.h"
 
 typedef struct CacheTag Cache;
 typedef struct TransfererTag Transferer;
@@ -14,7 +15,7 @@ typedef struct ControllerTag{
     bool waiting;
     Cache* cache;
     Transferer* transferer;
-    BlockQueue* blockQueue;
+    BlockQueue* writeBlockQueue;
 } Controller;
 
 Controller* Constructor_L1Controller();
@@ -28,8 +29,8 @@ void WriteBlockToL1Controller(Block toStore);
 bool CheckL2WriteBuffer(Block block2Write);
 void WriteBlockToL2Controller(Block block);
 void L2WriteBlock(Block block);
-void ProcessL2Instruction(Instruction instruction);
+void FindBlockInL2(Address DataToFind);
 void WriteBlockToDRAM(Block block);
 
-void ProcessDRamInstruction(Instruction instruction);
+void ProcessDRamInstruction(Address blockAddressToFind);
 #endif

@@ -151,6 +151,8 @@ Instruction/Instruction.h
 /home/abheemireddy/ACA_Project/Controller/Instruction/Instruction.h
 Block/Block.h
 /home/abheemireddy/ACA_Project/Controller/Block/Block.h
+BlockOnBus/BlockOnBus.h
+/home/abheemireddy/ACA_Project/Controller/BlockOnBus/BlockOnBus.h
 
 /home/abheemireddy/ACA_Project/DRAM/DRAM.c
 DRAM.h
@@ -437,6 +439,8 @@ Instruction/Instruction.h
 Controller/Instruction/Instruction.h
 Block/Block.h
 Controller/Block/Block.h
+BlockOnBus/BlockOnBus.h
+Controller/BlockOnBus/BlockOnBus.h
 
 DRAM/DRAM.h
 uthash.h
