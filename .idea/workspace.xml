@@ -12,39 +12,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="874cd3ee-283a-48e2-bbb0-bde542e13d07" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ACA_Project2" afterPath="$PROJECT_DIR$/ACA_Project2" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Address/Address.c.o" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Address/Address.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Block/Block.c.o" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Block/Block.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/BlockTransferer/BlockTransferer.c.o" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/BlockTransferer/BlockTransferer.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.o" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Cache/Cache.c.o" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Cache/Cache.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/CacheLine/CacheLine.c.o" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/CacheLine/CacheLine.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/DRAM/DRAM.c.o" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/DRAM/DRAM.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Data/DataStore.c.o" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Data/DataStore.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Block/Block_CacheLine_HashTable_Examples.c.o" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Block/Block_CacheLine_HashTable_Examples.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/BlockTransferer/BlockTransferer_Examples.c.o" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/BlockTransferer/BlockTransferer_Examples.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/DRAM/DRAM_Examples.c.o" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/DRAM/DRAM_Examples.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/DataStore/DataStore_Examples.c.o" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/DataStore/DataStore_Examples.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Queue/Queue_the_examples.c.o" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Queue/Queue_the_examples.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Set/Set_and_Block_Examples.c.o" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Set/Set_and_Block_Examples.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Queue/Queue.c.o" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Queue/Queue.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Set/Set.c.o" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Set/Set.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/main.c.o" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/main.c.o" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ACA_Project.cbp" afterPath="$PROJECT_DIR$/ACA_Project.cbp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeCache.txt" afterPath="$PROJECT_DIR$/CMakeCache.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/C.includecache" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/C.includecache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/DependInfo.cmake" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/DependInfo.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/build.make" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/build.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/depend.internal" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/depend.internal" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/flags.make" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/flags.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/CMakeDirectoryInformation.cmake" afterPath="$PROJECT_DIR$/CMakeFiles/CMakeDirectoryInformation.cmake" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/CMakeOutput.log" afterPath="$PROJECT_DIR$/CMakeFiles/CMakeOutput.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/Makefile2" afterPath="$PROJECT_DIR$/CMakeFiles/Makefile2" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/TargetDirectories.txt" afterPath="$PROJECT_DIR$/CMakeFiles/TargetDirectories.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/clion-log.txt" afterPath="$PROJECT_DIR$/CMakeFiles/clion-log.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Makefile" afterPath="$PROJECT_DIR$/Makefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake_install.cmake" afterPath="$PROJECT_DIR$/cmake_install.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input.txt" afterPath="$PROJECT_DIR$/input.txt" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <ignored path="$PROJECT_DIR$/CMakeFiles/" />
@@ -80,26 +49,32 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="input.txt" pinned="false" current-in-tab="false">
+      <file leaf-file-name="input.txt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/input.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="113">
+              <caret line="10" column="12" lean-forward="true" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="processor.c" pinned="false" current-in-tab="true">
+      <file leaf-file-name="processor.c" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Processor/processor.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="28" column="22" lean-forward="false" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
-              <folding>
-                <marker date="1497430461700" expanded="true" signature="179:409" ph="{...}" />
-                <marker date="1497430461700" expanded="true" signature="441:568" ph="{...}" />
-                <marker date="1497430461700" expanded="true" signature="637:2505" ph="{...}" />
-              </folding>
+            <state relative-caret-position="294">
+              <caret line="35" column="9" lean-forward="false" selection-start-line="35" selection-start-column="9" selection-end-line="35" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="input2.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Tests/input2.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="12" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="29" selection-end-column="10" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -793,7 +768,7 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="false" name="ACA_Project2" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" EXPLICIT_BUILD_TARGET_NAME="all">
+    <configuration default="false" name="ACA_Project2" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ACA_Project" TARGET_NAME="ACA_Project2" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ACA_Project" RUN_TARGET_NAME="ACA_Project2">
       <envs />
       <method />
     </configuration>
@@ -833,14 +808,7 @@
       <workItem from="1497307612370" duration="37000" />
       <workItem from="1497307692875" duration="86501000" />
       <workItem from="1497429958558" duration="201000" />
-      <workItem from="1497430468152" duration="43000" />
-    </task>
-    <task id="LOCAL-00185" summary="Project builds and runs.  We now use the 64 Byte data store.">
-      <created>1497187643007</created>
-      <option name="number" value="00185" />
-      <option name="presentableId" value="LOCAL-00185" />
-      <option name="project" value="LOCAL" />
-      <updated>1497187643007</updated>
+      <workItem from="1497430468152" duration="123000" />
     </task>
     <task id="LOCAL-00186" summary="Fixed fscanf.  Now reading a char array of size 64.">
       <created>1497188839198</created>
@@ -1178,11 +1146,18 @@
       <option name="project" value="LOCAL" />
       <updated>1497429079061</updated>
     </task>
-    <option name="localTasksCounter" value="234" />
+    <task id="LOCAL-00234" summary="Moved to 81 summer folder for loki.  This changes the makefile.">
+      <created>1497430538739</created>
+      <option name="number" value="00234" />
+      <option name="presentableId" value="LOCAL-00234" />
+      <option name="project" value="LOCAL" />
+      <updated>1497430538739</updated>
+    </task>
+    <option name="localTasksCounter" value="235" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="334726000" />
+    <option name="totallyTimeSpent" value="334806000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="954" extended-state="6" />
@@ -1190,10 +1165,10 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1509434" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27946538" sideWeight="0.32991913" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27946538" sideWeight="0.32830188" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3282532" sideWeight="0.5460916" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27946538" sideWeight="0.67008084" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.48845688" sideWeight="0.43396226" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.48845688" sideWeight="0.5703504" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.48845688" sideWeight="0.4296496" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32442284" sideWeight="0.4916442" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1216,7 +1191,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Logic checks to see if there is any instructions in for the controller to execute before executing.  I had missed putting in this check." />
     <MESSAGE value="Trying to fix a bug with the HashTable's memory being overwritten" />
     <MESSAGE value="Now the BusOnBlock transfers the block and data, while modifying the cacheLine's line number to point to the new block of data." />
     <MESSAGE value="Changed Memory to just store BlockOnBus instances.  I didn't want to do more data transfer work.  The name is confusing and I'll have to make a typedef to fix it." />
@@ -1241,7 +1215,8 @@
     <MESSAGE value="Added cacheLine NULL check to write buffer cache.  I also fixed some issues with using victim block where I should have been using the write block." />
     <MESSAGE value="Got rid of that stupid error.  Now using the MFU policy." />
     <MESSAGE value="Added some check logic to keep it from idling so often :)." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added some check logic to keep it from idling so often :)." />
+    <MESSAGE value="Moved to 81 summer folder for loki.  This changes the makefile." />
+    <option name="LAST_COMMIT_MESSAGE" value="Moved to 81 summer folder for loki.  This changes the makefile." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1430,6 +1405,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="218">
           <caret line="17" column="28" lean-forward="false" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1444,13 +1420,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
           <caret line="25" column="25" lean-forward="false" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/input2.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="7" column="9" lean-forward="false" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -1606,23 +1575,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/input.txt">
+    <entry file="file://$PROJECT_DIR$/Processor/processor.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="294">
+          <caret line="35" column="9" lean-forward="false" selection-start-line="35" selection-start-column="9" selection-end-line="35" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Processor/processor.c">
+    <entry file="file://$PROJECT_DIR$/Tests/input2.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="28" column="22" lean-forward="false" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
-          <folding>
-            <marker date="1497430461700" expanded="true" signature="179:409" ph="{...}" />
-            <marker date="1497430461700" expanded="true" signature="441:568" ph="{...}" />
-            <marker date="1497430461700" expanded="true" signature="637:2505" ph="{...}" />
-          </folding>
+        <state relative-caret-position="120">
+          <caret line="8" column="12" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="29" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/input.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="10" column="12" lean-forward="true" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+          <folding />
         </state>
       </provider>
     </entry>
