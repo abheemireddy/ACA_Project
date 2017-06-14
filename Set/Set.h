@@ -10,10 +10,10 @@
 #include "Address/Address.h"
 
 typedef struct SetTag {
+    struct BlockTag *HashTable;
     int numberOfBlocks;
     Address address;
     UT_hash_handle hh;
-    struct BlockTag *HashTable;
 } Set;
 
 struct BlockTag* GetLeastUsed(struct BlockTag** HashTable);

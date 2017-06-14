@@ -171,20 +171,24 @@ BlockOnBus/BlockOnBus.h
 /home/abheemireddy/ACA_Project/Controller/BlockOnBus/BlockOnBus.h
 
 /home/abheemireddy/ACA_Project/DRAM/DRAM.c
+Global_Variables.h
+-
 DRAM.h
 /home/abheemireddy/ACA_Project/DRAM/DRAM.h
+BlockOnBus/BlockOnBus.h
+/home/abheemireddy/ACA_Project/DRAM/BlockOnBus/BlockOnBus.h
 BlockTransferer/BlockTransferer.h
 /home/abheemireddy/ACA_Project/DRAM/BlockTransferer/BlockTransferer.h
 Block_Queue/Block_Queue.h
 /home/abheemireddy/ACA_Project/DRAM/Block_Queue/Block_Queue.h
-CacheLine/CacheLine.h
-/home/abheemireddy/ACA_Project/DRAM/CacheLine/CacheLine.h
 
 /home/abheemireddy/ACA_Project/DRAM/DRAM.h
 uthash.h
 /home/abheemireddy/ACA_Project/DRAM/uthash.h
 Address/Address.h
 /home/abheemireddy/ACA_Project/DRAM/Address/Address.h
+Block/Block.h
+/home/abheemireddy/ACA_Project/DRAM/Block/Block.h
 
 /home/abheemireddy/ACA_Project/Data/DataStore.c
 stdlib.h
@@ -253,6 +257,10 @@ Address/Address.h
 /home/abheemireddy/ACA_Project/Data_Structure_Examples/Queue/Address/Address.h
 
 /home/abheemireddy/ACA_Project/Data_Structure_Examples/Set/Set_and_Block_Examples.c
+Cache/Cache.h
+-
+Global_Variables.h
+-
 Set_and_Block_Examples.h
 /home/abheemireddy/ACA_Project/Data_Structure_Examples/Set/Set_and_Block_Examples.h
 
@@ -467,6 +475,8 @@ uthash.h
 DRAM/uthash.h
 Address/Address.h
 DRAM/Address/Address.h
+Block/Block.h
+DRAM/Block/Block.h
 
 Data/DataStore.h
 

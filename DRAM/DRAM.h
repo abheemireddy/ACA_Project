@@ -6,31 +6,26 @@
 #define ACA_PROJECT_DRAM_H
 #include "uthash.h"
 #include "Address/Address.h"
+#include "Block/Block.h"
 
 typedef struct TransfererTag Transferer;
 typedef struct BlockQueueTag BlockQueue;
-
-typedef struct DRamBlockTag{
-    Address address;
-    char data[64][8];
-    UT_hash_handle hh; /* make this structure hashable*/
-} DRamBlock;
-
-DRamBlock* Constructor_DRamBlock(Address address,char value[64][8]);
+typedef struct BlockOnBusTag BlockOnBus;
 
 typedef struct DRAMTag {
     Transferer* transferer;
     UT_hash_handle hh; /* make this structure hashable*/
-    DRamBlock *HashTable; //This is my hashTable for blocks
+    BlockOnBus *HashTable; //This is my hashTable for blocks
     BlockQueue* writeBlockQueue;
 } DRAM;
 
 DRAM* Constructor_DRAM();
 
-void removeBlockFromDRAM(DRamBlock** HashTable,DRamBlock* blockToRemove);
-void putBlock(DRamBlock** HashTable,DRamBlock *value);
-int CountBlocks(DRamBlock** HashTable);
-DRamBlock* getBlock(DRamBlock** HashTable,int key);
-void print_all_blocks(DRamBlock** HashTable);
+void removeBlockFromDRAM(BlockOnBus** HashTable,BlockOnBus* blockToRemove);
+void putBlock(BlockOnBus** HashTable,BlockOnBus *value);
+int CountBlocks(BlockOnBus** HashTable);
+BlockOnBus* getBlock(BlockOnBus** HashTable,int key);
+void print_all_blocks(BlockOnBus** HashTable);
 
+BlockOnBus* Constructor_BlockOnBusDRAM(Block* block);
 #endif //ACA_PROJECT_DRAM_H

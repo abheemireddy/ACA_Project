@@ -9,7 +9,7 @@
 #include "Global_Variables.h"
 
 
-BlockOnBus* Constructor_BlockOnBus(void* controller,Block block,int howLongUntiBlockIsTransferred){
+BlockOnBus* Constructor_BlockOnBus(void* controller,Block* block,int howLongUntiBlockIsTransferred){
     BlockOnBus* blockOnBus = malloc(sizeof(BlockOnBus));
     blockOnBus->blockOnBus = block;
     blockOnBus->clockCycleWhenBlockIsAvailable = howLongUntiBlockIsTransferred;
@@ -17,7 +17,7 @@ BlockOnBus* Constructor_BlockOnBus(void* controller,Block block,int howLongUntiB
     int i = 0;
     CacheLine* s;
     CacheLine* tmp;
-    HASH_ITER(hh,block.HashTable,s,tmp){
+    HASH_ITER(hh,block->HashTable,s,tmp){
         if(controller == l1Controller){
             char* data = GetData(l1Data,s->dataLine);
             s->dataLine = i;
@@ -27,12 +27,13 @@ BlockOnBus* Constructor_BlockOnBus(void* controller,Block block,int howLongUntiB
             s->dataLine = i;
             strcpy(blockOnBus->valueBeingTransferred[i],data);
         }else if(controller == dRAM){
-            DRamBlock* ramBlock = getBlock(&dRAM->HashTable,block.address.bitStringValue);
+            BlockOnBus* ramBlock = getBlock(&dRAM->HashTable,block->address.bitStringValue);
             s->dataLine = i;
-            strcpy(blockOnBus->valueBeingTransferred[i], ramBlock->data);
+            strcpy(blockOnBus->valueBeingTransferred[i], ramBlock->valueBeingTransferred[i]);
         }
         i += 1;
     }
     return blockOnBus;
 }
+
 

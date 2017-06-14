@@ -126,8 +126,13 @@ CMakeFiles/ACA_Project2.dir/DRAM/DRAM.c.o: Block/Block.h
 CMakeFiles/ACA_Project2.dir/DRAM/DRAM.c.o: BlockOnBus/BlockOnBus.h
 CMakeFiles/ACA_Project2.dir/DRAM/DRAM.c.o: BlockTransferer/BlockTransferer.h
 CMakeFiles/ACA_Project2.dir/DRAM/DRAM.c.o: Block_Queue/Block_Queue.h
-CMakeFiles/ACA_Project2.dir/DRAM/DRAM.c.o: CacheLine/CacheLine.h
+CMakeFiles/ACA_Project2.dir/DRAM/DRAM.c.o: Buffers/buffers.h
+CMakeFiles/ACA_Project2.dir/DRAM/DRAM.c.o: Controller/Controller.h
+CMakeFiles/ACA_Project2.dir/DRAM/DRAM.c.o: DRAM/DRAM.h
+CMakeFiles/ACA_Project2.dir/DRAM/DRAM.c.o: Data/DataStore.h
+CMakeFiles/ACA_Project2.dir/DRAM/DRAM.c.o: Global_Variables.h
 CMakeFiles/ACA_Project2.dir/DRAM/DRAM.c.o: Instruction/Instruction.h
+CMakeFiles/ACA_Project2.dir/DRAM/DRAM.c.o: Processor/processor.h
 CMakeFiles/ACA_Project2.dir/DRAM/DRAM.c.o: uthash_files/include/uthash.h
 
 CMakeFiles/ACA_Project2.dir/Data/DataStore.c.o: Data/DataStore.c
@@ -187,6 +192,15 @@ CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Set/Set_and_Block_Examples.c
 CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Set/Set_and_Block_Examples.c.o: Data_Structure_Examples/Set/Set_and_Block_Examples.h
 CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Set/Set_and_Block_Examples.c.o: Address/Address.h
 CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Set/Set_and_Block_Examples.c.o: Block/Block.h
+CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Set/Set_and_Block_Examples.c.o: BlockOnBus/BlockOnBus.h
+CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Set/Set_and_Block_Examples.c.o: Buffers/buffers.h
+CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Set/Set_and_Block_Examples.c.o: Cache/Cache.h
+CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Set/Set_and_Block_Examples.c.o: Controller/Controller.h
+CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Set/Set_and_Block_Examples.c.o: DRAM/DRAM.h
+CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Set/Set_and_Block_Examples.c.o: Data/DataStore.h
+CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Set/Set_and_Block_Examples.c.o: Global_Variables.h
+CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Set/Set_and_Block_Examples.c.o: Instruction/Instruction.h
+CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Set/Set_and_Block_Examples.c.o: Processor/processor.h
 CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Set/Set_and_Block_Examples.c.o: Set/Set.h
 CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Set/Set_and_Block_Examples.c.o: uthash_files/include/uthash.h
 
