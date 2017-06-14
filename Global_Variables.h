@@ -22,5 +22,6 @@ DataStore* l1Data;
 DataStore* l2Data;
 DRAM* dRAM;
 int ClockCycleCount;
-
+Block L1controllerIsIdleUntilItReceivesThisBlock;
+Block L2controllerIsIdleUntilItReceivesThisBlock;
 #endif //ACA_PROJECT_GLOBAL_VARIABLES_H

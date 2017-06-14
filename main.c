@@ -40,12 +40,12 @@ int main(){
             BlockOnBus* flushedFromBufers = PeekBlock(l1Controller->writeBlockQueue);
             int clockCycleWhenAvailable = flushedFromBufers->clockCycleWhenBlockIsAvailable;
             if (clockCycleWhenAvailable <= ClockCycleCount) {
-                Block blockReceived = flushedFromBufers->blockOnBus;
-                if (blockReceived.isIdle == true) {
-                    blockReceived.isIdle = false;
+                Block* blockReceived = flushedFromBufers->blockOnBus;
+                if (blockReceived->isIdle == true) {
+                    blockReceived->isIdle = false;
                 }
                 if(l1Controller->waiting == true){
-                    if(blockReceived.address.Tag == l1Controller->controllerIsIdleUntilItReceivesThisBlock.address.Tag){
+                    if(blockReceived->address.Tag == L1controllerIsIdleUntilItReceivesThisBlock.address.Tag){
                         l1Controller->waiting = false;
                     }
                 }
@@ -56,6 +56,7 @@ int main(){
             }
         }
 
+        Set* settt = getSetByIndex(&l1Controller->cache->HashTable,0);
         //2. If L1 is not blocked, process the next request from the processor
         while(l1Controller->waiting == false && !isEmpty(processor->InstructionHolder->TransferQueue)){
             Instruction nextInstructionFromProcessor = Dequeue(processor->InstructionHolder->TransferQueue);
@@ -87,13 +88,13 @@ int main(){
             BlockOnBus* flushedFromBufers = PeekBlock(l2Controller->writeBlockQueue);
             int clockCycleWhenAvailable = flushedFromBufers->clockCycleWhenBlockIsAvailable;
             if (clockCycleWhenAvailable <= ClockCycleCount) {
-                Block blockReceived = flushedFromBufers->blockOnBus;
-                if (blockReceived.isIdle == true) {
-                    blockReceived.isIdle = false;
+                Block* blockReceived = flushedFromBufers->blockOnBus;
+                if (blockReceived->isIdle == true) {
+                    blockReceived->isIdle = false;
                 }
                 if (l2Controller->waiting == true) {
-                    if (blockReceived.address.Tag ==
-                        l2Controller->controllerIsIdleUntilItReceivesThisBlock.address.Tag) {
+                    if (blockReceived->address.Tag ==
+                        L2controllerIsIdleUntilItReceivesThisBlock.address.Tag) {
                         l2Controller->waiting = false;
                     }
                 }
@@ -116,9 +117,9 @@ int main(){
             BlockOnBus* flushedFromBufers = PeekBlock(dRAM->writeBlockQueue);
             int clockCycleWhenAvailable = flushedFromBufers->clockCycleWhenBlockIsAvailable;
             if (clockCycleWhenAvailable <= ClockCycleCount) {
-                Block blockReceived = flushedFromBufers->blockOnBus;
-                if (blockReceived.isIdle == true) {
-                    blockReceived.isIdle = false;
+                Block* blockReceived = flushedFromBufers->blockOnBus;
+                if (blockReceived->isIdle == true) {
+                    blockReceived->isIdle = false;
                     l1Controller->waiting = false;
                 }
                 WriteBlockToDRAM(flushedFromBufers);

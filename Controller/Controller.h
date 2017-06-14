@@ -13,7 +13,6 @@ typedef struct BlockQueueTag BlockQueue;
 typedef struct SetTag Set;
 
 typedef struct ControllerTag{
-    Block controllerIsIdleUntilItReceivesThisBlock;
     bool waiting;
     Cache* cache;
     Transferer* transferer;
@@ -26,7 +25,7 @@ Controller* Constructor_L2Controller();
 CacheLine* ProcessL1Instruction(Instruction instruction);
 void WriteToController(Instruction instruction, char value[64]);
 CacheLine* L1_read(Instruction instruction);
-void WriteBlockToL1Controller(Block toStore);
+void WriteBlockToL1Controller(Block* toStore);
 
 bool CheckL2WriteBuffer(Block block2Write);
 void WriteBlockToL2Controller(BlockOnBus* blockOnBus2Write);

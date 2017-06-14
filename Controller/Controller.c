@@ -14,8 +14,6 @@ void PutInVictimCache(Block* existing);
 
 Controller* Constructor_L1Controller(){
     Controller* l1ControllerCon = malloc(sizeof(l1ControllerCon));
-    Address* address = Constructor_Address("0000000000000000");
-    l1ControllerCon->controllerIsIdleUntilItReceivesThisBlock = *Constructor_Block(*address);//will be overwritten later on
 
     l1ControllerCon->writeBlockQueue = Constructor_BlockQueue();
     l1ControllerCon->cache = Constructor_Cache(64);
@@ -26,8 +24,6 @@ Controller* Constructor_L1Controller(){
 
 Controller* Constructor_L2Controller(){
     Controller* l2ControllerCon = malloc(sizeof(l2ControllerCon));
-    Address* address = Constructor_Address("0000000000000000");
-    l2ControllerCon->controllerIsIdleUntilItReceivesThisBlock = *Constructor_Block(*address);//will be overwritten later on
 
     l2ControllerCon->cache = Constructor_Cache(256);
     l2ControllerCon->transferer = Constructor_Transferer();
@@ -78,7 +74,7 @@ void CheckL2BufferSize(){
         Block* tmp;
         HASH_ITER(hh,l2WriteBuffer->HashTable,s,tmp){ //write everything in buffer to DRam
             if(s->dirtyBit == true){
-                BlockOnBus* toWriteBack = Constructor_BlockOnBus(dRAM,*s,ClockCycleCount + 2);
+                BlockOnBus* toWriteBack = Constructor_BlockOnBus(dRAM,s,ClockCycleCount + 2);
                 EnqueueBlock(dRAM->writeBlockQueue,toWriteBack);
             }
         }
@@ -100,15 +96,15 @@ void PutInVictimCache(Block* existing){
     CheckBufferSize();
 }
 
-void WriteBlockToL1Controller(Block toStore){
-    Set* set = getSetByIndex(&l1Controller->cache->HashTable,toStore.address.Index);
-    Block* existing = get(&set->HashTable,toStore.address.Tag);
+void WriteBlockToL1Controller(Block* toStore){
+    Set* set = getSetByIndex(&l1Controller->cache->HashTable,toStore->address.Index);
+    Block* existing = get(&set->HashTable,toStore->address.Tag);
     if(existing != NULL){
         removeFromTable(&set->HashTable,existing);
-        DequeueBlock(l1Controller->writeBlockQueue);
     }
-    toStore.isIdle = false;
-    put(&set->HashTable,&toStore);
+    toStore->isIdle = false;
+    put(&set->HashTable,toStore);
+    DequeueBlock(l1Controller->writeBlockQueue);
     CheckSetSize(set);
 }
 
@@ -197,18 +193,17 @@ void WriteBlockToL2Controller(BlockOnBus* blockOnBus2Write){
     CacheLine* s;
     CacheLine* tmp;
     int i = 0;
-    HASH_ITER(hh,blockOnBus2Write->blockOnBus.HashTable,s,tmp){
+    HASH_ITER(hh,blockOnBus2Write->blockOnBus->HashTable,s,tmp){
         s->dataLine = StoreData(l2Data,blockOnBus2Write->valueBeingTransferred[s->dataLine]); //TransferBlockDataToL2
     }
-    Block block2Write = blockOnBus2Write->blockOnBus;
 
-    Set* set = getSetByIndex(&l2Controller->cache->HashTable,block2Write.address.Index);
-    Block* block = get(&set->HashTable,block2Write.address.Tag);
+    Set* set = getSetByIndex(&l2Controller->cache->HashTable,blockOnBus2Write->blockOnBus->address.Index);
+    Block* block = get(&set->HashTable,blockOnBus2Write->blockOnBus->address.Tag);
 
     if(block != NULL){
         removeFromTable(&set->HashTable,block);
     }
-    put(&set->HashTable,&block2Write);
+    put(&set->HashTable,blockOnBus2Write->blockOnBus);
     /*else if(block == NULL){
         bool found = CheckL2WriteBuffer(block2Write);
         if(found == false){
@@ -226,11 +221,12 @@ void FindBlockInL2(Instruction instruction){
     if(block != NULL){
         if(block->isIdle == true){
             l2Controller->waiting == true;
-            l2Controller->controllerIsIdleUntilItReceivesThisBlock = *block;
+            L2controllerIsIdleUntilItReceivesThisBlock = *block;
             return;
         }
-        BlockOnBus* blockOnBus = Constructor_BlockOnBus(l2Controller,*block,ClockCycleCount + 2);
+        BlockOnBus* blockOnBus = Constructor_BlockOnBus(l2Controller,block,ClockCycleCount + 2);
         EnqueueBlock(l1Controller->writeBlockQueue,blockOnBus);
+        Dequeue(l2Controller->transferer->TransferQueue);
     }else{
         Block* idlePlaceHolder = Constructor_Block(instruction.address);
         idlePlaceHolder->isIdle = true;//Now we have marked this block in our set as idle
@@ -240,17 +236,19 @@ void FindBlockInL2(Instruction instruction){
 }
 
 void ProcessDRamInstruction(Instruction instruction){
-    BlockOnBus* dramBlock = getBlock(&dRAM->HashTable,instruction.address.bitStringValue);
-    if(dramBlock != NULL){
+    BlockOnBus* checkDramBlock = getBlock(&dRAM->HashTable,instruction.address.bitStringValue);
+    if(checkDramBlock != NULL){
         BlockOnBus* blockOnBus = getBlock(&dRAM->HashTable,instruction.address.bitStringValue);
         EnqueueBlock(l2Controller->writeBlockQueue,blockOnBus);
     }else{
         Block* newBlockForMemory = Constructor_Block(instruction.address);//Does not exist in memory yet, i.e. first time write
         CacheLine* cacheLine = Constructor_CacheLine(instruction.address,instruction.data);
+        cacheLine->dataLine = 0;
         putCacheLine(&newBlockForMemory->HashTable,cacheLine);
-        BlockOnBus* dramBlock = Constructor_BlockOnBusDRAM(*newBlockForMemory);
-        putBlock(&dRAM->HashTable,dramBlock);
-        EnqueueBlock(l2Controller->writeBlockQueue,dramBlock);//send back to l2
+        BlockOnBus* newDramBlock = Constructor_BlockOnBusDRAM(newBlockForMemory);
+        strcpy(newDramBlock->valueBeingTransferred[0],instruction.data);
+        putBlock(&dRAM->HashTable,newDramBlock);
+        EnqueueBlock(l2Controller->writeBlockQueue,newDramBlock);//send back to l2
     }
     Dequeue(dRAM->transferer->TransferQueue);//will always process the instruction.
 }
@@ -258,7 +256,7 @@ void ProcessDRamInstruction(Instruction instruction){
 
 
 void WriteBlockToDRAM(BlockOnBus* block2Write){
-    BlockOnBus* ramBlock = getBlock(&dRAM->HashTable,block2Write->blockOnBus.address.bitStringValue);
+    BlockOnBus* ramBlock = getBlock(&dRAM->HashTable,block2Write->blockOnBus->address.bitStringValue);
     if(ramBlock != NULL){
         removeBlockFromDRAM(&dRAM->HashTable,ramBlock);
     }
@@ -271,7 +269,7 @@ void WriteToController(Instruction instruction, char value[64])
     Block* existing = get(&set->HashTable,instruction.address.Tag);
     if(existing != NULL){
         if(existing->isIdle == true){
-            l1Controller->controllerIsIdleUntilItReceivesThisBlock = *existing;
+            L1controllerIsIdleUntilItReceivesThisBlock = *existing;
             l1Controller->waiting = true;
             return;
         }
@@ -330,7 +328,7 @@ CacheLine* L1_read(Instruction instruction)
     if(block != NULL){
         if(block->isIdle == true){
             l1Controller->waiting = true;
-            l1Controller->controllerIsIdleUntilItReceivesThisBlock = *block;
+            L1controllerIsIdleUntilItReceivesThisBlock = *block;
             return NULL;
         }
         if(block->validBit == true){

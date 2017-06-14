@@ -10,12 +10,12 @@
 typedef struct ControllerTag Controller;
 
 typedef struct BlockOnBusTag{
-    Block blockOnBus;
+    Block* blockOnBus;
     int clockCycleWhenBlockIsAvailable;
     char valueBeingTransferred[64][8];
     UT_hash_handle hh; /* make this structure hashable*/
 }BlockOnBus;
 
-BlockOnBus* Constructor_BlockOnBus(void* controller,Block block,int howLongUntiBlockIsTransferred);
+BlockOnBus* Constructor_BlockOnBus(void* controller,Block* block,int howLongUntiBlockIsTransferred);
 
 #endif //ACA_PROJECT_BLOCKONBUS_H

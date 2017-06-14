@@ -27,5 +27,5 @@ int CountBlocks(BlockOnBus** HashTable);
 BlockOnBus* getBlock(BlockOnBus** HashTable,int key);
 void print_all_blocks(BlockOnBus** HashTable);
 
-BlockOnBus* Constructor_BlockOnBusDRAM(Block block);
+BlockOnBus* Constructor_BlockOnBusDRAM(Block* block);
 #endif //ACA_PROJECT_DRAM_H

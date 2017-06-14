@@ -16,7 +16,7 @@ DRAM* Constructor_DRAM(){
     dram->writeBlockQueue = Constructor_BlockQueue();
     return dram;
 }
-BlockOnBus* Constructor_BlockOnBusDRAM(Block block){
+BlockOnBus* Constructor_BlockOnBusDRAM(Block* block){
     BlockOnBus* blockOnBus = malloc(sizeof(BlockOnBus));
     blockOnBus->blockOnBus = block;
     blockOnBus->clockCycleWhenBlockIsAvailable = ClockCycleCount;
@@ -24,10 +24,10 @@ BlockOnBus* Constructor_BlockOnBusDRAM(Block block){
 }
 
 void putBlock(BlockOnBus** HashTable,BlockOnBus *value) {  //key is useFrequency of the block.  Seems magical
-    if(value->blockOnBus.address.bitString == NULL){
+    if(value->blockOnBus->address.bitString == NULL){
         printf("The passed block needs to have attribute address set");
     }
-    HASH_ADD_INT(*HashTable, blockOnBus.address.bitStringValue,value );
+    HASH_ADD_INT(*HashTable, blockOnBus->address.bitStringValue,value );
 }
 
 void removeBlockFromDRAM(BlockOnBus** HashTable,BlockOnBus* blockToRemove) {
@@ -51,6 +51,6 @@ void print_all_blocks(BlockOnBus** HashTable) {
     BlockOnBus* s;
     BlockOnBus* tmp;
     HASH_ITER(hh,*HashTable,s,tmp){
-        printf("address: %d\n",s->blockOnBus.address.bitStringValue);
+        printf("address: %d\n",s->blockOnBus->address.bitStringValue);
     }
 }
