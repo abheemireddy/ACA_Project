@@ -136,7 +136,7 @@ void WriteBlockToL1Controller(Block* toStore){
     Set* set = getSetByIndex(&l1Controller->cache->HashTable,toStore->address.Index);
     Block* existing = get(&set->HashTable,toStore->address.Tag);
     if(existing != NULL){
-        printf("Block already in L1, overwriting Block:%d\n",toStore->address.bitStringValue);
+        printf("Block in L1...Writing, Block:%d\n",toStore->address.bitStringValue);
         removeFromTable(&set->HashTable,existing);
     }
     toStore->isIdle = false;
@@ -163,12 +163,12 @@ void WriteToBlock(Block* existing,Instruction instruction,char value[64]){
         putCacheLine(&existing->HashTable,cacheLine);
         toWriteTo = getCacheLineByOffset(&existing->HashTable,instruction.address.Offset);
     }else{
-        printf("CacheLine did not already exist.  Writing to CacheLien:%d\n",instruction.address.bitStringValue);
+        //printf("CacheLine did not already exist.  Writing to CacheLine:%d\n",instruction.address.bitStringValue);
     }
     toWriteTo->dataLine = StoreData(l1Data,value);
     existing->dirtyBit = true;
     existing->validBit = true;
-    printf("Brought data back to Processor:%d val:%s\n",toWriteTo->address.bitStringValue,GetData(l1Data,toWriteTo->dataLine));
+    printf("***Brought data back to Processor:%d val:%s\n",toWriteTo->address.bitStringValue,GetData(l1Data,toWriteTo->dataLine));
     Dequeue(l1Controller->transferer->TransferQueue);
 }
 
@@ -226,6 +226,7 @@ bool CheckL2WriteBuffer(Block* block2Write){
         Dequeue(l2Controller->transferer->TransferQueue);
         return true;
     }
+    printf("Did not find block in L2's write buffer\n");
     return false;
 }
 
@@ -241,7 +242,7 @@ void WriteBlockToL2Controller(BlockOnBus* blockOnBus2Write){
     Block* block = get(&set->HashTable,blockOnBus2Write->blockOnBus->address.Tag);
 
     if(block != NULL){
-        printf("Found block in L2.  Re-writing, Block:%d\n",block->address.bitStringValue);
+        printf("Found block in L2... Writing, Block:%d\n",block->address.bitStringValue);
         removeFromTable(&set->HashTable,block);
     }
     put(&set->HashTable,blockOnBus2Write->blockOnBus);
@@ -294,6 +295,7 @@ void ProcessDRamInstruction(Instruction instruction){
         BlockOnBus* newDramBlock = Constructor_BlockOnBusDRAM(newBlockForMemory);
         strcpy(newDramBlock->valueBeingTransferred[0],instruction.data);
         putBlock(&dRAM->HashTable,newDramBlock);
+        printf("Sending block to L2, Block:%d\n",newDramBlock->blockOnBus->address.bitStringValue);
         EnqueueBlock(l2Controller->writeBlockQueue,newDramBlock);//send back to l2
     }
     Dequeue(dRAM->transferer->TransferQueue);//will always process the instruction.
