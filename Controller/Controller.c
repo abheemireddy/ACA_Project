@@ -31,6 +31,32 @@ Controller* Constructor_L2Controller(){
     l2ControllerCon->waiting = false;
     return l2ControllerCon;
 }
+
+void PushDownBlockInL1(Block* block2Find){
+    Set* set = getSetByIndex(&l1Controller->cache->HashTable,block2Find->address.Index);
+    Block* block = get(&set->HashTable,block2Find->address.Tag);
+    Block* toWriteToMemory;
+    if(block != NULL) {
+        toWriteToMemory = block;
+    }
+    if (block == NULL) {
+        //check victim and write buffer
+        Block *victimBlock = getBlockFromBuffer(&l1VictimCache->HashTable, block2Find->address.bitStringValue);
+        Block *writeBlock = getBlockFromBuffer(&l1WriteBuffer->HashTable, block2Find->address.bitStringValue);
+        if (victimBlock == NULL && writeBlock == NULL) {
+            toWriteToMemory = block2Find;//Block is not in L1, just push down what was in L2.
+        } else {
+            if (victimBlock != NULL) {
+                toWriteToMemory = victimBlock;
+            } else if (writeBlock != NULL) {
+                toWriteToMemory = writeBlock;
+            }
+        }
+    }
+    BlockOnBus* toWrite = Constructor_BlockOnBus(dRAM,toWriteToMemory,ClockCycleCount + 2);
+    EnqueueBlock(dRAM->writeBlockQueue,toWrite);
+}
+
 void CheckL2SetSize(Set* set){
     int countInSet = Count(&set->HashTable);
     while(countInSet >= 4){
@@ -39,6 +65,8 @@ void CheckL2SetSize(Set* set){
         removeFromTable(&set->HashTable,leastUsed);
         if(leastUsed->dirtyBit == true){
             PutInL2WriteBuffer(leastUsed);
+        }else{
+            PushDownBlockInL1(leastUsed);
         }
     }
     CheckBufferSize();
@@ -73,10 +101,7 @@ void CheckL2BufferSize(){
         Block* s;
         Block* tmp;
         HASH_ITER(hh,l2WriteBuffer->HashTable,s,tmp){ //write everything in buffer to DRam
-            if(s->dirtyBit == true){
-                BlockOnBus* toWriteBack = Constructor_BlockOnBus(dRAM,s,ClockCycleCount + 2);
-                EnqueueBlock(dRAM->writeBlockQueue,toWriteBack);
-            }
+            PushDownBlockInL1(s);
         }
     }
 }

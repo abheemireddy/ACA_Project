@@ -67,7 +67,7 @@ BlockOnBus* PeekBlock(BlockQueue *queue) {
 
 BlockOnBus* DequeueBlock(BlockQueue *queue) {
     if (isBlockQueueEmpty(queue)){
-        printf("Trying to dequeue from empty queue");
+        printf("Trying to dequeue from empty queue\n");
         return NULL;
     }
     Node* node = queue->head;

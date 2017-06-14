@@ -35,7 +35,7 @@ int main(){
     //L1 Controller
 
     //1. Check for blocks being sent to L1 from L2
-    while(!isEmpty(processor->InstructionHolder->TransferQueue)) {
+    while(!isEmpty(processor->InstructionHolder->TransferQueue) || !isEmpty(l1Controller->transferer->TransferQueue)) {
         while (!isBlockQueueEmpty(l1Controller->writeBlockQueue)) {//check for blocks from l2
             BlockOnBus* flushedFromBufers = PeekBlock(l1Controller->writeBlockQueue);
             int clockCycleWhenAvailable = flushedFromBufers->clockCycleWhenBlockIsAvailable;
@@ -56,13 +56,14 @@ int main(){
             }
         }
 
-        Set* settt = getSetByIndex(&l1Controller->cache->HashTable,0);
+        //Set* settt = getSetByIndex(&l1Controller->cache->HashTable,0);
         //2. If L1 is not blocked, process the next request from the processor
         while(l1Controller->waiting == false && !isEmpty(processor->InstructionHolder->TransferQueue)){
             Instruction nextInstructionFromProcessor = Dequeue(processor->InstructionHolder->TransferQueue);
             Enqueue(l1Controller->transferer->TransferQueue, nextInstructionFromProcessor);
             if(!isEmpty(l1Controller->transferer->TransferQueue)){
                 Instruction nextInstructionForL1ControllerToProcess = GetNextInstruction(l1Controller->transferer);
+                printf("location:%d\n",nextInstructionForL1ControllerToProcess.address.bitStringValue);
                 CacheLine *read = ProcessL1Instruction(nextInstructionForL1ControllerToProcess);
                 if (nextInstructionForL1ControllerToProcess.instruction == 2) {
                     if (read == NULL) {
@@ -74,12 +75,6 @@ int main(){
                 }
             }
         }
-        /*//test piece of code I was using
-        Address* blockAddressToGetForL1 = Constructor_Address("00000000000000000");
-        Set* set2 = getSetByIndex(&l2Controller->cache->HashTable,blockAddressToGetForL1->Index);
-        Block* block = Constructor_Block(*blockAddressToGetForL1);
-        put(&set2->HashTable,block);*/
-
 
         //L2 Controller
 
