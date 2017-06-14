@@ -1,0 +1,35 @@
+P to L1C: CPUWrite to 5 value:10
+Checking both L1 buffers for Block:5
+Block not in L1. Marking L1 block as idle, Block:5
+P to L1C: CPURead from 5
+Putting L1 Controller in idle.  Trying to write from a block already being written to, Block:5
+Checking L2's write buffer for Block:5
+Did not find block in L2's write buffer
+Putting L2 block on idle, Block:5
+Storing block in memory, Block:5
+Sending block to L2, Block:5
+Found block in L2... Writing, Block:5
+Found block in L2.  Sending to L1, Block:5
+L1 Controller being released from idle
+Block in L1...Writing, Block:5
+P to L1C: CPUWrite to 57 value:12
+***Brought data back to Processor:5 val:10 at clock cycle:3
+P to L1C: CPURead from 5
+***Successfully read from L1: 5 val 10 at clock cycle:3
+P to L1C: CPUWrite to 5 value:20
+Checking both L1 buffers for Block:57
+Block not in L1. Marking L1 block as idle, Block:57
+Putting L1 Controller in idle.  Trying to write from a block already being written to, Block:57
+Checking L2's write buffer for Block:57
+Did not find block in L2's write buffer
+Putting L2 block on idle, Block:57
+Storing block in memory, Block:57
+Sending block to L2, Block:57
+Found block in L2... Writing, Block:57
+Found block in L2.  Sending to L1, Block:57
+L1 Controller being released from idle
+Block in L1...Writing, Block:57
+***Brought data back to Processor:57 val:12 at clock cycle:6
+***Successfully read from L1: 5 val 10 at clock cycle:6
+***Brought data back to Processor:5 val:20 at clock cycle:6
+Clock Cycles taken:7

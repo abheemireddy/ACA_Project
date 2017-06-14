@@ -690,87 +690,6 @@ Set/Set.c.s:
 	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/Set/Set.c.s
 .PHONY : Set/Set.c.s
 
-aca/L1Data.o: aca/L1Data.c.o
-
-.PHONY : aca/L1Data.o
-
-# target to build an object file
-aca/L1Data.c.o:
-	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/aca/L1Data.c.o
-.PHONY : aca/L1Data.c.o
-
-aca/L1Data.i: aca/L1Data.c.i
-
-.PHONY : aca/L1Data.i
-
-# target to preprocess a source file
-aca/L1Data.c.i:
-	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/aca/L1Data.c.i
-.PHONY : aca/L1Data.c.i
-
-aca/L1Data.s: aca/L1Data.c.s
-
-.PHONY : aca/L1Data.s
-
-# target to generate assembly for a file
-aca/L1Data.c.s:
-	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/aca/L1Data.c.s
-.PHONY : aca/L1Data.c.s
-
-aca/L2Data.o: aca/L2Data.c.o
-
-.PHONY : aca/L2Data.o
-
-# target to build an object file
-aca/L2Data.c.o:
-	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/aca/L2Data.c.o
-.PHONY : aca/L2Data.c.o
-
-aca/L2Data.i: aca/L2Data.c.i
-
-.PHONY : aca/L2Data.i
-
-# target to preprocess a source file
-aca/L2Data.c.i:
-	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/aca/L2Data.c.i
-.PHONY : aca/L2Data.c.i
-
-aca/L2Data.s: aca/L2Data.c.s
-
-.PHONY : aca/L2Data.s
-
-# target to generate assembly for a file
-aca/L2Data.c.s:
-	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/aca/L2Data.c.s
-.PHONY : aca/L2Data.c.s
-
-aca/MainMemory.o: aca/MainMemory.c.o
-
-.PHONY : aca/MainMemory.o
-
-# target to build an object file
-aca/MainMemory.c.o:
-	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/aca/MainMemory.c.o
-.PHONY : aca/MainMemory.c.o
-
-aca/MainMemory.i: aca/MainMemory.c.i
-
-.PHONY : aca/MainMemory.i
-
-# target to preprocess a source file
-aca/MainMemory.c.i:
-	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/aca/MainMemory.c.i
-.PHONY : aca/MainMemory.c.i
-
-aca/MainMemory.s: aca/MainMemory.c.s
-
-.PHONY : aca/MainMemory.s
-
-# target to generate assembly for a file
-aca/MainMemory.c.s:
-	$(MAKE) -f CMakeFiles/ACA_Project2.dir/build.make CMakeFiles/ACA_Project2.dir/aca/MainMemory.c.s
-.PHONY : aca/MainMemory.c.s
-
 main.o: main.c.o
 
 .PHONY : main.o
@@ -870,15 +789,6 @@ help:
 	@echo "... Set/Set.o"
 	@echo "... Set/Set.i"
 	@echo "... Set/Set.s"
-	@echo "... aca/L1Data.o"
-	@echo "... aca/L1Data.i"
-	@echo "... aca/L1Data.s"
-	@echo "... aca/L2Data.o"
-	@echo "... aca/L2Data.i"
-	@echo "... aca/L2Data.s"
-	@echo "... aca/MainMemory.o"
-	@echo "... aca/MainMemory.i"
-	@echo "... aca/MainMemory.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

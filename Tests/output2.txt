@@ -1,0 +1,98 @@
+P to L1C: CPUWrite to 1 value:1
+Checking both L1 buffers for Block:1
+Block not in L1. Marking L1 block as idle, Block:1
+P to L1C: CPURead from 1
+Putting L1 Controller in idle.  Trying to write from a block already being written to, Block:1
+Checking L2's write buffer for Block:1
+Did not find block in L2's write buffer
+Putting L2 block on idle, Block:1
+Storing block in memory, Block:1
+Sending block to L2, Block:1
+Found block in L2... Writing, Block:1
+Found block in L2.  Sending to L1, Block:1
+L1 Controller being released from idle
+Block in L1...Writing, Block:1
+P to L1C: CPUWrite to 2 value:2
+***Brought data back to Processor:1 val:1 at clock cycle:3
+P to L1C: CPURead from 2
+***Successfully read from L1: 1 val 1 at clock cycle:3
+P to L1C: CPUWrite to 3 value:3
+Found valid CacheLine.  Writing to CacheLine2
+***Brought data back to Processor:2 val:2 at clock cycle:3
+P to L1C: CPURead from 3
+***Successfully read from L1: 2 val 2 at clock cycle:3
+P to L1C: CPUWrite to 4 value:4
+Found valid CacheLine.  Writing to CacheLine3
+***Brought data back to Processor:3 val:3 at clock cycle:3
+P to L1C: CPURead from 4
+***Successfully read from L1: 3 val 3 at clock cycle:3
+P to L1C: CPUWrite to 5 value:5
+Found valid CacheLine.  Writing to CacheLine4
+***Brought data back to Processor:4 val:4 at clock cycle:3
+P to L1C: CPURead from 5
+***Successfully read from L1: 4 val 4 at clock cycle:3
+P to L1C: CPUWrite to 6 value:6
+Found valid CacheLine.  Writing to CacheLine5
+***Brought data back to Processor:5 val:5 at clock cycle:3
+P to L1C: CPURead from 6
+***Successfully read from L1: 5 val 5 at clock cycle:3
+P to L1C: CPUWrite to 7 value:7
+Found valid CacheLine.  Writing to CacheLine6
+***Brought data back to Processor:6 val:6 at clock cycle:3
+P to L1C: CPURead from 7
+***Successfully read from L1: 6 val 6 at clock cycle:3
+P to L1C: CPUWrite to 8 value:8
+Found valid CacheLine.  Writing to CacheLine7
+***Brought data back to Processor:7 val:7 at clock cycle:3
+P to L1C: CPURead from 8
+***Successfully read from L1: 7 val 7 at clock cycle:3
+P to L1C: CPUWrite to 9 value:9
+Checking both L1 buffers for Block:8
+Block not in L1. Marking L1 block as idle, Block:8
+P to L1C: CPURead from 9
+Putting L1 Controller in idle.  Trying to write from a block already being written to, Block:8
+Checking L2's write buffer for Block:8
+Did not find block in L2's write buffer
+Putting L2 block on idle, Block:8
+Storing block in memory, Block:8
+Sending block to L2, Block:8
+Found block in L2... Writing, Block:8
+Found block in L2.  Sending to L1, Block:8
+L1 Controller being released from idle
+Block in L1...Writing, Block:8
+P to L1C: CPUWrite to 10 value:10
+***Brought data back to Processor:8 val:8 at clock cycle:6
+P to L1C: CPURead from 10
+***Successfully read from L1: 8 val 8 at clock cycle:6
+P to L1C: CPUWrite to 11 value:11
+Found valid CacheLine.  Writing to CacheLine9
+***Brought data back to Processor:9 val:9 at clock cycle:6
+P to L1C: CPURead from 11
+***Successfully read from L1: 9 val 9 at clock cycle:6
+P to L1C: CPUWrite to 12 value:12
+Found valid CacheLine.  Writing to CacheLine10
+***Brought data back to Processor:10 val:10 at clock cycle:6
+P to L1C: CPURead from 12
+***Successfully read from L1: 10 val 10 at clock cycle:6
+P to L1C: CPUWrite to 13 value:13
+Found valid CacheLine.  Writing to CacheLine11
+***Brought data back to Processor:11 val:11 at clock cycle:6
+P to L1C: CPURead from 13
+***Successfully read from L1: 11 val 11 at clock cycle:6
+P to L1C: CPUWrite to 14 value:14
+Found valid CacheLine.  Writing to CacheLine12
+***Brought data back to Processor:12 val:12 at clock cycle:6
+P to L1C: CPURead from 14
+***Successfully read from L1: 12 val 12 at clock cycle:6
+P to L1C: CPUWrite to 15 value:15
+Found valid CacheLine.  Writing to CacheLine13
+***Brought data back to Processor:13 val:13 at clock cycle:6
+P to L1C: CPURead from 15
+***Successfully read from L1: 13 val 13 at clock cycle:6
+Found valid CacheLine.  Writing to CacheLine14
+***Brought data back to Processor:14 val:14 at clock cycle:6
+***Successfully read from L1: 14 val 14 at clock cycle:6
+Found valid CacheLine.  Writing to CacheLine15
+***Brought data back to Processor:15 val:15 at clock cycle:6
+***Successfully read from L1: 15 val 15 at clock cycle:6
+Clock Cycles taken:7

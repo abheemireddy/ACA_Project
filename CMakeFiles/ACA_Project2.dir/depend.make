@@ -232,15 +232,6 @@ CMakeFiles/ACA_Project2.dir/Set/Set.c.o: Address/Address.h
 CMakeFiles/ACA_Project2.dir/Set/Set.c.o: Block/Block.h
 CMakeFiles/ACA_Project2.dir/Set/Set.c.o: uthash_files/include/uthash.h
 
-CMakeFiles/ACA_Project2.dir/aca/L1Data.c.o: aca/L1Data.c
-CMakeFiles/ACA_Project2.dir/aca/L1Data.c.o: aca/L1Data.h
-
-CMakeFiles/ACA_Project2.dir/aca/L2Data.c.o: aca/L2Data.c
-CMakeFiles/ACA_Project2.dir/aca/L2Data.c.o: aca/L2Data.h
-
-CMakeFiles/ACA_Project2.dir/aca/MainMemory.c.o: aca/MainMemory.c
-CMakeFiles/ACA_Project2.dir/aca/MainMemory.c.o: aca/MainMemory.h
-
 CMakeFiles/ACA_Project2.dir/main.c.o: Block_Queue/Block_Queue.h
 CMakeFiles/ACA_Project2.dir/main.c.o: Buffers/buffers.h
 CMakeFiles/ACA_Project2.dir/main.c.o: Cache/Cache.h

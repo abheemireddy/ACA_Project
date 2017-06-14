@@ -25,9 +25,6 @@ set(CMAKE_DEPENDS_CHECK_C
   "/home/abheemireddy/ACA_Project/Processor/processor.c" "/home/abheemireddy/ACA_Project/CMakeFiles/ACA_Project2.dir/Processor/processor.c.o"
   "/home/abheemireddy/ACA_Project/Queue/Queue.c" "/home/abheemireddy/ACA_Project/CMakeFiles/ACA_Project2.dir/Queue/Queue.c.o"
   "/home/abheemireddy/ACA_Project/Set/Set.c" "/home/abheemireddy/ACA_Project/CMakeFiles/ACA_Project2.dir/Set/Set.c.o"
-  "/home/abheemireddy/ACA_Project/aca/L1Data.c" "/home/abheemireddy/ACA_Project/CMakeFiles/ACA_Project2.dir/aca/L1Data.c.o"
-  "/home/abheemireddy/ACA_Project/aca/L2Data.c" "/home/abheemireddy/ACA_Project/CMakeFiles/ACA_Project2.dir/aca/L2Data.c.o"
-  "/home/abheemireddy/ACA_Project/aca/MainMemory.c" "/home/abheemireddy/ACA_Project/CMakeFiles/ACA_Project2.dir/aca/MainMemory.c.o"
   "/home/abheemireddy/ACA_Project/main.c" "/home/abheemireddy/ACA_Project/CMakeFiles/ACA_Project2.dir/main.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")

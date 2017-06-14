@@ -19,6 +19,7 @@ typedef struct AddressTag{
 } Address;
 
 Address* Constructor_Address(char* bitString);
+Address* Constructor_AddressConvertForL2(char* bitString);
 
 char* GetChar(char* originalString,int start,int length,char* substring);
 int fromBinary(char *s);

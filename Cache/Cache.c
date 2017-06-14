@@ -16,7 +16,7 @@ Cache* Constructor_Cache(int numberOfSets){
     for(i = 0;i<cache->NumberOfSets;i++){
         char bitString[18];
         strcpy(bitString,int2bin(setAddress));
-        Address* address = Constructor_Address(bitString);
+        Address* address = Constructor_AddressConvertForL2(bitString);
         Set* set = Constructor_Set(4,*address);
         putSet(&cache->HashTable,set);
         setAddress += 8;
