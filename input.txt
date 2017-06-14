@@ -1,9 +1,7 @@
 CPUWrite 0 1
 CPUWrite 2048 1
 CPUWrite 4096 1
-CPUWrite 6144 1
 CPUWrite 2048 1
 CPUWrite 4096 1
-CPUWrite 6144 1
 CPURead 2048 1
 CPURead 0

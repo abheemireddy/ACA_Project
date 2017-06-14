@@ -1,4 +1,4 @@
-# Install script for directory: /home/ccrowe/csci8150-summer17/ACA_Project
+# Install script for directory: /home/ccrowe/HDR_Cache/ACA_Project
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/ccrowe/csci8150-summer17/ACA_Project/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/ccrowe/HDR_Cache/ACA_Project/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

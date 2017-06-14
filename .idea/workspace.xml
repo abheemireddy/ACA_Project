@@ -13,13 +13,39 @@
   <component name="ChangeListManager">
     <list default="true" id="874cd3ee-283a-48e2-bbb0-bde542e13d07" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ACA_Project2" afterPath="$PROJECT_DIR$/ACA_Project2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Address/Address.c.o" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Address/Address.c.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Block/Block.c.o" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Block/Block.c.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/BlockTransferer/BlockTransferer.c.o" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/BlockTransferer/BlockTransferer.c.o" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.o" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Cache/Cache.c.o" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Cache/Cache.c.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/CacheLine/CacheLine.c.o" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/CacheLine/CacheLine.c.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/DRAM/DRAM.c.o" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/DRAM/DRAM.c.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Data/DataStore.c.o" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Data/DataStore.c.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Block/Block_CacheLine_HashTable_Examples.c.o" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Block/Block_CacheLine_HashTable_Examples.c.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/BlockTransferer/BlockTransferer_Examples.c.o" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/BlockTransferer/BlockTransferer_Examples.c.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/DRAM/DRAM_Examples.c.o" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/DRAM/DRAM_Examples.c.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/DataStore/DataStore_Examples.c.o" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/DataStore/DataStore_Examples.c.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Queue/Queue_the_examples.c.o" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Queue/Queue_the_examples.c.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Set/Set_and_Block_Examples.c.o" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Set/Set_and_Block_Examples.c.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Queue/Queue.c.o" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Queue/Queue.c.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Set/Set.c.o" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Set/Set.c.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/main.c.o" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/main.c.o" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Buffers/buffers.c" afterPath="$PROJECT_DIR$/Buffers/buffers.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Buffers/buffers.h" afterPath="$PROJECT_DIR$/Buffers/buffers.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ACA_Project.cbp" afterPath="$PROJECT_DIR$/ACA_Project.cbp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeCache.txt" afterPath="$PROJECT_DIR$/CMakeCache.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/C.includecache" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/C.includecache" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/DependInfo.cmake" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/DependInfo.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/build.make" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/build.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/depend.internal" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/depend.internal" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/flags.make" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/flags.make" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/CMakeDirectoryInformation.cmake" afterPath="$PROJECT_DIR$/CMakeFiles/CMakeDirectoryInformation.cmake" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/CMakeOutput.log" afterPath="$PROJECT_DIR$/CMakeFiles/CMakeOutput.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/Makefile2" afterPath="$PROJECT_DIR$/CMakeFiles/Makefile2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/TargetDirectories.txt" afterPath="$PROJECT_DIR$/CMakeFiles/TargetDirectories.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/clion-log.txt" afterPath="$PROJECT_DIR$/CMakeFiles/clion-log.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controller/Controller.c" afterPath="$PROJECT_DIR$/Controller/Controller.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Set/Set.c" afterPath="$PROJECT_DIR$/Set/Set.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Set/Set.h" afterPath="$PROJECT_DIR$/Set/Set.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Makefile" afterPath="$PROJECT_DIR$/Makefile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake_install.cmake" afterPath="$PROJECT_DIR$/cmake_install.cmake" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input.txt" afterPath="$PROJECT_DIR$/input.txt" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -37,8 +63,8 @@
       <file leaf-file-name="Controller.c" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Controller/Controller.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="70" column="42" lean-forward="true" selection-start-line="70" selection-start-column="42" selection-end-line="70" selection-end-column="42" />
+            <state relative-caret-position="344">
+              <caret line="94" column="15" lean-forward="true" selection-start-line="94" selection-start-column="14" selection-end-line="94" selection-end-column="15" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -49,7 +75,7 @@
       <file leaf-file-name="buffers.c" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Buffers/buffers.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="774">
+            <state relative-caret-position="918">
               <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
               <folding />
             </state>
@@ -59,7 +85,7 @@
       <file leaf-file-name="buffers.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Buffers/buffers.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
+            <state relative-caret-position="162">
               <caret line="9" column="26" lean-forward="false" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
               <folding />
             </state>
@@ -69,8 +95,8 @@
       <file leaf-file-name="input.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/input.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="3" column="15" lean-forward="false" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
+            <state relative-caret-position="72">
+              <caret line="4" column="15" lean-forward="true" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -79,7 +105,7 @@
       <file leaf-file-name="processor.c" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Processor/processor.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
+            <state relative-caret-position="738">
               <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
               <folding>
                 <element signature="e#1#25#0" expanded="true" />
@@ -91,8 +117,8 @@
       <file leaf-file-name="Set.c" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Set/Set.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
-              <caret line="103" column="5" lean-forward="true" selection-start-line="103" selection-start-column="5" selection-end-line="103" selection-end-column="5" />
+            <state relative-caret-position="278">
+              <caret line="108" column="10" lean-forward="false" selection-start-line="108" selection-start-column="10" selection-end-line="108" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -101,7 +127,7 @@
       <file leaf-file-name="Set.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Set/Set.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
+            <state relative-caret-position="540">
               <caret line="30" column="6" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="30" selection-end-column="6" />
               <folding />
             </state>
@@ -111,7 +137,7 @@
       <file leaf-file-name="L1_Cache.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/L1_Cache.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
+            <state relative-caret-position="1134">
               <caret line="63" column="40" lean-forward="false" selection-start-line="63" selection-start-column="40" selection-end-line="63" selection-end-column="40" />
               <folding />
             </state>
@@ -121,7 +147,7 @@
       <file leaf-file-name="main.c" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="222">
+            <state relative-caret-position="1674">
               <caret line="93" column="0" lean-forward="false" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
               <folding>
                 <element signature="e#0#24#0" expanded="true" />
@@ -133,7 +159,7 @@
       <file leaf-file-name="Cache.c" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Cache/Cache.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
+            <state relative-caret-position="378">
               <caret line="21" column="24" lean-forward="false" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
               <folding />
             </state>
@@ -144,7 +170,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>L1 Controller b</find>
       <find>L1 Controller be</find>
       <find>L1 Controller bei</find>
       <find>L1 Controller bein</find>
@@ -159,7 +184,6 @@
       <find>PutInVictimCache</find>
       <find>Checking both L1 buffers for</find>
       <find>WRiting</find>
-      <find>WRiting</find>
       <find>WRiting t</find>
       <find>WRiting to</find>
       <find>WRiting to ca</find>
@@ -169,11 +193,13 @@
       <find>Found block in victim cache</find>
       <find>CheckVictimCacheAnd</find>
       <find>Tag</find>
-      <find>SortHash</find>
       <find>Moving</find>
       <find>CheckVictimCacheAndWriteBuffer</find>
-      <find>S</find>
       <find>Sort</find>
+      <find>S</find>
+      <find>So</find>
+      <find>Sor</find>
+      <find>SortHash</find>
     </findStrings>
     <replaceStrings>
       <replace>tests/</replace>
@@ -264,8 +290,8 @@
         <option value="$PROJECT_DIR$/L1_Cache.h" />
         <option value="$PROJECT_DIR$/Buffers/buffers.c" />
         <option value="$PROJECT_DIR$/Buffers/buffers.h" />
-        <option value="$PROJECT_DIR$/input.txt" />
         <option value="$PROJECT_DIR$/Set/Set.c" />
+        <option value="$PROJECT_DIR$/input.txt" />
         <option value="$PROJECT_DIR$/Controller/Controller.c" />
       </list>
     </option>
@@ -277,10 +303,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="65" />
-    <option name="y" value="-4" />
-    <option name="width" value="1855" />
-    <option name="height" value="954" />
+    <option name="x" value="64" />
+    <option name="y" value="-11" />
+    <option name="width" value="1857" />
+    <option name="height" value="962" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -818,6 +844,8 @@
       <workItem from="1497307692875" duration="86501000" />
       <workItem from="1497429958558" duration="201000" />
       <workItem from="1497430468152" duration="5451000" />
+      <workItem from="1497467616837" duration="88000" />
+      <workItem from="1497467806871" duration="930000" />
     </task>
     <task id="LOCAL-00189" summary="l1 controller, successfully moving data to the victim cache and write buffer">
       <created>1497195600168</created>
@@ -1166,24 +1194,24 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="340134000" />
+    <option name="totallyTimeSpent" value="341152000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="-4" width="1855" height="954" extended-state="6" />
+    <frame x="64" y="-11" width="1857" height="962" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4690158" sideWeight="0.6264151" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18955043" sideWeight="0.57520217" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3282532" sideWeight="0.5460916" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29769138" sideWeight="0.60431266" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.48845688" sideWeight="0.3967655" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.48845688" sideWeight="0.6097035" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32442284" sideWeight="0.4916442" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.48845688" sideWeight="0.3902965" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1509434" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32806805" sideWeight="0.49380055" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29769138" sideWeight="0.39568734" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29769138" sideWeight="0.37142858" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1247,19 +1275,34 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/Controller/Controller.c</url>
-          <line>387</line>
+          <line>389</line>
           <option name="timeStamp" value="617" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/Controller/Controller.c</url>
-          <line>365</line>
+          <line>367</line>
           <option name="timeStamp" value="638" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/Controller/Controller.c</url>
+          <line>66</line>
+          <option name="timeStamp" value="648" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/Controller/Controller.c</url>
+          <line>85</line>
+          <option name="timeStamp" value="649" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/Controller/Controller.c</url>
+          <line>76</line>
+          <option name="timeStamp" value="651" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="645" />
+      <option name="time" value="653" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="CMakeRunConfiguration">
@@ -1395,7 +1438,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="218">
           <caret line="17" column="28" lean-forward="false" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1480,7 +1522,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1505,7 +1546,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1513,7 +1553,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="12" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="29" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1521,13 +1560,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="217">
           <caret line="33" column="69" lean-forward="false" selection-start-line="33" selection-start-column="69" selection-end-line="33" selection-end-column="69" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Cache/Cache.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
+        <state relative-caret-position="378">
           <caret line="21" column="24" lean-forward="false" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
           <folding />
         </state>
@@ -1535,7 +1573,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Processor/processor.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
+        <state relative-caret-position="738">
           <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
           <folding>
             <element signature="e#1#25#0" expanded="true" />
@@ -1545,7 +1583,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/L1_Cache.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
+        <state relative-caret-position="1134">
           <caret line="63" column="40" lean-forward="false" selection-start-line="63" selection-start-column="40" selection-end-line="63" selection-end-column="40" />
           <folding />
         </state>
@@ -1553,7 +1591,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Set/Set.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
+        <state relative-caret-position="540">
           <caret line="30" column="6" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="30" selection-end-column="6" />
           <folding />
         </state>
@@ -1561,7 +1599,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
+        <state relative-caret-position="1674">
           <caret line="93" column="0" lean-forward="false" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
           <folding>
             <element signature="e#0#24#0" expanded="true" />
@@ -1571,7 +1609,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Buffers/buffers.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
+        <state relative-caret-position="162">
           <caret line="9" column="26" lean-forward="false" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
           <folding />
         </state>
@@ -1579,7 +1617,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Buffers/buffers.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="774">
+        <state relative-caret-position="918">
           <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
           <folding />
         </state>
@@ -1587,24 +1625,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/input.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="15" lean-forward="false" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
+        <state relative-caret-position="72">
+          <caret line="4" column="15" lean-forward="true" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Set/Set.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="103" column="5" lean-forward="true" selection-start-line="103" selection-start-column="5" selection-end-line="103" selection-end-column="5" />
+        <state relative-caret-position="278">
+          <caret line="108" column="10" lean-forward="false" selection-start-line="108" selection-start-column="10" selection-end-line="108" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Controller/Controller.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="70" column="42" lean-forward="true" selection-start-line="70" selection-start-column="42" selection-end-line="70" selection-end-column="42" />
+        <state relative-caret-position="344">
+          <caret line="94" column="15" lean-forward="true" selection-start-line="94" selection-start-column="14" selection-end-line="94" selection-end-column="15" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>

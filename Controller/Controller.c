@@ -66,7 +66,7 @@ void CheckL2SetSize(Set* set){
     while(countInSet > 4){
         SortHash(&set->HashTable);
         Block* leastUsed = GetLeastUsed(&set->HashTable);
-        HASH_DELETE(hh,set->HashTable,leastUsed);//removed from L2
+        //removed from L2
         if(leastUsed->dirtyBit == true){
             PutInL2WriteBuffer(leastUsed);
             printf("Moving block to L2's Write Buffer.  Block:%d\n",leastUsed->address.bitStringValue);
@@ -76,6 +76,7 @@ void CheckL2SetSize(Set* set){
             leastUsed->address = *adjustedAddress;
             PushDownBlockInL1(leastUsed);
         }
+        HASH_DELETE(hh,set->HashTable,leastUsed);
     }
     //CheckBufferSize();
 }
@@ -84,7 +85,8 @@ void CheckSetSize(Set* set){
     if(countInSet > 4){
         SortHash(&set->HashTable);
         Block* leastUsed = GetLeastUsed(&set->HashTable);
-        removeFromTable(&set->HashTable,leastUsed);
+        HASH_DELETE(hh,set->HashTable,leastUsed);
+        //removeFromTable(&set->HashTable,leastUsed);
         if(leastUsed->dirtyBit == true){
             PutInWriteBuffer(leastUsed);
             printf("Moving block to L1's Write Buffer.  Block:%d\n",leastUsed->address.bitStringValue);
