@@ -2,6 +2,4 @@ CPUWrite 0 1
 CPUWrite 2048 2
 CPUWrite 4096 1
 CPUWrite 6144 1
-CPUWrite 8192 1
-CPUWrite 10240 1
 CPURead 0

@@ -16,7 +16,7 @@ Controller* Constructor_L1Controller(){
     Controller* l1ControllerCon = malloc(sizeof(l1ControllerCon));
 
     l1ControllerCon->writeBlockQueue = Constructor_BlockQueue();
-    l1ControllerCon->cache = Constructor_Cache(256);
+    l1ControllerCon->cache = Constructor_Cache(64);
     l1ControllerCon->transferer = Constructor_Transferer();
     l1ControllerCon->waiting = false;
     return l1ControllerCon;
@@ -25,7 +25,7 @@ Controller* Constructor_L1Controller(){
 Controller* Constructor_L2Controller(){
     Controller* l2ControllerCon = malloc(sizeof(l2ControllerCon));
 
-    l2ControllerCon->cache = Constructor_Cache(512);
+    l2ControllerCon->cache = Constructor_Cache(256);
     l2ControllerCon->transferer = Constructor_Transferer();
     l2ControllerCon->writeBlockQueue = Constructor_BlockQueue();
     l2ControllerCon->waiting = false;

@@ -33,11 +33,14 @@ char *int2bin(int n) { //function from quora
 }
 
 Address* Constructor_AddressConvertForL2(char* bitString){
-    char* output = malloc(6);
-    GetChar(bitString,0,5,output);
+    //8 for tag
+    //6 for index
+    //3 for offset
+    char* output = malloc(9);
+    GetChar(bitString,0,8,output);
     char* TagString = output;
-    output = malloc(10);
-    GetChar(bitString,5,9,output);
+    output = malloc(7);
+    GetChar(bitString,8,6,output);
     char* IndexString = output;
     output = malloc(4);
     GetChar(bitString,14,3,output);
@@ -58,6 +61,9 @@ Address* Constructor_AddressConvertForL2(char* bitString){
 }
 
 Address* Constructor_Address(char* bitString){
+    //6 for tag
+    //8 for index
+    //3 for offset
     char* output = malloc(7);
     GetChar(bitString,0,6,output);
     char* TagString = output;
