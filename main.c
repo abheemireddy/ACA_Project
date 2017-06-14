@@ -35,7 +35,7 @@ int main(){
     //L1 Controller
 
     //1. Check for blocks being sent to L1 from L2
-    while(!isEmpty(processor->InstructionHolder->TransferQueue) || !isEmpty(l1Controller->transferer->TransferQueue)) {
+    while(!isEmpty(processor->InstructionHolder->TransferQueue) || !isEmpty(l1Controller->transferer->TransferQueue) || !isEmpty(l2Controller->transferer->TransferQueue) || !isEmpty(dRAM->transferer->TransferQueue)) {
         while (!isBlockQueueEmpty(l1Controller->writeBlockQueue)) {//check for blocks from l2
             BlockOnBus* flushedFromBufers = PeekBlock(l1Controller->writeBlockQueue);
             int clockCycleWhenAvailable = flushedFromBufers->clockCycleWhenBlockIsAvailable;
