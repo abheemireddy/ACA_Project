@@ -298,11 +298,15 @@ void ProcessDRamInstruction(Instruction instruction){
     BlockOnBus* checkDramBlock = getBlock(&dRAM->HashTable,instruction.address.bitStringValue);
     if(checkDramBlock != NULL){
         BlockOnBus* blockOnBus = getBlock(&dRAM->HashTable,instruction.address.bitStringValue);
+        blockOnBus->blockOnBus->dirtyBit = false;
+        blockOnBus->blockOnBus->validBit = true;
         printf("Found block in memory, sending to L2, Block:%d\n",instruction.address.bitStringValue);
         EnqueueBlock(l2Controller->writeBlockQueue,blockOnBus);
     }else{
         printf("Storing block in memory, Block:%d\n",instruction.address.bitStringValue);
         Block* newBlockForMemory = Constructor_Block(instruction.address);//Does not exist in memory yet, i.e. first time write
+        newBlockForMemory->dirtyBit = false;
+        newBlockForMemory->validBit = true;
         CacheLine* cacheLine = Constructor_CacheLine(instruction.address,instruction.data);
         cacheLine->dataLine = 0;
         putCacheLine(&newBlockForMemory->HashTable,cacheLine);
@@ -322,6 +326,8 @@ void WriteBlockToDRAM(BlockOnBus* block2Write){
     if(ramBlock != NULL){
         removeBlockFromDRAM(&dRAM->HashTable,ramBlock);
     }
+    ramBlock->blockOnBus->validBit = true;
+    ramBlock->blockOnBus->dirtyBit = false;
     putBlock(&dRAM->HashTable,block2Write);
 }
 
