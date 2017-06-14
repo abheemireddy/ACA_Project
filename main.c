@@ -59,7 +59,7 @@ int main(){
 
         //Set* settt = getSetByIndex(&l1Controller->cache->HashTable,0);
         //2. If L1 is not blocked, process the next request from the processor
-        while(l1Controller->waiting == false && (!isEmpty(processor->InstructionHolder->TransferQueue) || !isEmpty(l1Controller->transferer->TransferQueue))){
+        if(l1Controller->waiting == false && (!isEmpty(processor->InstructionHolder->TransferQueue) || !isEmpty(l1Controller->transferer->TransferQueue))){
             if(!isEmpty(processor->InstructionHolder->TransferQueue)){
                 Instruction nextInstructionFromProcessor = Dequeue(processor->InstructionHolder->TransferQueue);
                 if(nextInstructionFromProcessor.instruction == 1){
@@ -116,7 +116,7 @@ int main(){
         //DRAM
 
         //1. Check for writebacks from L2
-        if (!isBlockQueueEmpty(dRAM->writeBlockQueue)) {
+        while (!isBlockQueueEmpty(dRAM->writeBlockQueue)) {
             BlockOnBus* flushedFromBufers = PeekBlock(dRAM->writeBlockQueue);
             int clockCycleWhenAvailable = flushedFromBufers->clockCycleWhenBlockIsAvailable;
             if (clockCycleWhenAvailable <= ClockCycleCount) {
@@ -132,7 +132,7 @@ int main(){
             }
         }
         //2. Process instructions from L2
-        while(!isEmpty(dRAM->transferer->TransferQueue)) {
+        if(!isEmpty(dRAM->transferer->TransferQueue)) {
             Instruction DRamInstruction = GetNextInstruction(dRAM->transferer);
             ProcessDRamInstruction(DRamInstruction);
         }

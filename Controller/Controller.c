@@ -161,7 +161,7 @@ CacheLine* ProcessL1Instruction(Instruction instruction){
     }
 }
 
-void WriteToBlock(Block* existing,Instruction instruction,char value[8]){
+CacheLine* WriteToBlock(Block* existing,Instruction instruction,char value[8]){
     CacheLine* toWriteTo = getCacheLineByOffset(&existing->HashTable,instruction.address.Offset);
     if(toWriteTo == NULL){
         printf("No Existing Valid CacheLine.  Writing to CacheLine%d\n",instruction.address.bitStringValue);
@@ -176,6 +176,7 @@ void WriteToBlock(Block* existing,Instruction instruction,char value[8]){
     existing->validBit = true;
     printf("***Brought data back to Processor:%d val:%s at clock cycle:%d\n",toWriteTo->address.bitStringValue,GetData(l1Data,toWriteTo->dataLine),ClockCycleCount);
     Dequeue(l1Controller->transferer->TransferQueue);
+    return toWriteTo;
 }
 
 bool CheckVictimCacheAndWriteBuffer(Instruction instruction,char value[8]){
@@ -385,7 +386,7 @@ CacheLine* L1_read(Instruction instruction)
             return NULL;
         }
         if(block->validBit == true){
-            CacheLine* cacheLine = getCacheLineByOffset(&block->HashTable,instruction.address.Offset);
+            CacheLine* cacheLine = WriteToBlock(block,instruction,instruction.data);
             return cacheLine;
         }else{
             block = NULL;
