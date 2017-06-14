@@ -203,7 +203,13 @@ bool CheckVictimCacheAndWriteBuffer(Instruction instruction,char value[8]){
             return true;
         }else if(writeBlock != NULL){
             printf("Found block in write buffer");
-            CacheLine* writeBufferCacheLine = getCacheLineByOffset(&victimBlock->HashTable,instruction.address.Offset);
+            CacheLine* writeBufferCacheLine = getCacheLineByOffset(&writeBlock->HashTable,instruction.address.Offset);
+            if(writeBufferCacheLine == NULL){
+                printf("No Existing Valid CacheLine in victimCache.  Writing to CacheLine%d\n",instruction.address.bitStringValue);
+                CacheLine* cacheLine = Constructor_CacheLine(instruction.address,value);
+                putCacheLine(&writeBlock->HashTable,cacheLine);
+                writeBufferCacheLine = getCacheLineByOffset(&writeBlock->HashTable,instruction.address.Offset);
+            }
             writeBufferCacheLine->dataLine = StoreData(l1Data,value);
             writeBlock->dirtyBit = true;
             writeBlock->isIdle = false;
