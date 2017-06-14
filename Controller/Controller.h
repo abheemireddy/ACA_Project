@@ -27,7 +27,7 @@ void WriteToController(Instruction instruction, char value[64]);
 CacheLine* L1_read(Instruction instruction);
 void WriteBlockToL1Controller(Block* toStore);
 
-bool CheckL2WriteBuffer(Block block2Write);
+bool CheckL2WriteBuffer(Block* block2Write);
 void WriteBlockToL2Controller(BlockOnBus* blockOnBus2Write);
 void L2WriteBlock(Block block);
 void FindBlockInL2(Instruction instruction);
