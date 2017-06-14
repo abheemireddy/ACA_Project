@@ -8,44 +8,44 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/ccrowe/ACA_Project"/>
+				<Option working_dir="/home/ccrowe/csci8150-summer17/ACA_Project"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/ccrowe/ACA_Project/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/ccrowe/ACA_Project/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/ccrowe/ACA_Project/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/ccrowe/ACA_Project/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -f &quot;/home/ccrowe/csci8150-summer17/ACA_Project/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/ccrowe/csci8150-summer17/ACA_Project/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/ccrowe/csci8150-summer17/ACA_Project/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/ccrowe/csci8150-summer17/ACA_Project/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/ccrowe/ACA_Project"/>
+				<Option working_dir="/home/ccrowe/csci8150-summer17/ACA_Project"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/ccrowe/ACA_Project/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/ccrowe/ACA_Project/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/ccrowe/ACA_Project/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/ccrowe/ACA_Project/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -f &quot;/home/ccrowe/csci8150-summer17/ACA_Project/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/ccrowe/csci8150-summer17/ACA_Project/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/ccrowe/csci8150-summer17/ACA_Project/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/ccrowe/csci8150-summer17/ACA_Project/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/ccrowe/ACA_Project"/>
+				<Option working_dir="/home/ccrowe/csci8150-summer17/ACA_Project"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/ccrowe/ACA_Project/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/ccrowe/ACA_Project/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/ccrowe/ACA_Project/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/ccrowe/ACA_Project/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -f &quot;/home/ccrowe/csci8150-summer17/ACA_Project/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/ccrowe/csci8150-summer17/ACA_Project/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/ccrowe/csci8150-summer17/ACA_Project/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/ccrowe/csci8150-summer17/ACA_Project/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="ACA_Project2">
-				<Option output="/home/ccrowe/ACA_Project/ACA_Project2" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/ccrowe/ACA_Project"/>
+				<Option output="/home/ccrowe/csci8150-summer17/ACA_Project/ACA_Project2" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/ccrowe/csci8150-summer17/ACA_Project"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/ccrowe/ACA_Project/."/>
-					<Add directory="/home/ccrowe/ACA_Project/uthash_files/include"/>
+					<Add directory="/home/ccrowe/csci8150-summer17/ACA_Project/."/>
+					<Add directory="/home/ccrowe/csci8150-summer17/ACA_Project/uthash_files/include"/>
 					<Add directory="/usr/include/c++/6"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
 					<Add directory="/usr/include/c++/6/backward"/>
@@ -56,21 +56,21 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/ccrowe/ACA_Project/Makefile&quot;  VERBOSE=1 ACA_Project2"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/ccrowe/ACA_Project/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/ccrowe/ACA_Project/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/ccrowe/ACA_Project/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -f &quot;/home/ccrowe/csci8150-summer17/ACA_Project/Makefile&quot;  VERBOSE=1 ACA_Project2"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/ccrowe/csci8150-summer17/ACA_Project/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/ccrowe/csci8150-summer17/ACA_Project/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/ccrowe/csci8150-summer17/ACA_Project/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="ACA_Project2/fast">
-				<Option output="/home/ccrowe/ACA_Project/ACA_Project2" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/ccrowe/ACA_Project"/>
+				<Option output="/home/ccrowe/csci8150-summer17/ACA_Project/ACA_Project2" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/ccrowe/csci8150-summer17/ACA_Project"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/ccrowe/ACA_Project/."/>
-					<Add directory="/home/ccrowe/ACA_Project/uthash_files/include"/>
+					<Add directory="/home/ccrowe/csci8150-summer17/ACA_Project/."/>
+					<Add directory="/home/ccrowe/csci8150-summer17/ACA_Project/uthash_files/include"/>
 					<Add directory="/usr/include/c++/6"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/6"/>
 					<Add directory="/usr/include/c++/6/backward"/>
@@ -81,149 +81,149 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -f &quot;/home/ccrowe/ACA_Project/Makefile&quot;  VERBOSE=1 ACA_Project2/fast"/>
-					<CompileFile command="/usr/bin/make -f &quot;/home/ccrowe/ACA_Project/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -f &quot;/home/ccrowe/ACA_Project/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -f &quot;/home/ccrowe/ACA_Project/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -f &quot;/home/ccrowe/csci8150-summer17/ACA_Project/Makefile&quot;  VERBOSE=1 ACA_Project2/fast"/>
+					<CompileFile command="/usr/bin/make -f &quot;/home/ccrowe/csci8150-summer17/ACA_Project/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -f &quot;/home/ccrowe/csci8150-summer17/ACA_Project/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -f &quot;/home/ccrowe/csci8150-summer17/ACA_Project/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/ccrowe/ACA_Project/Address/Address.c">
+		<Unit filename="/home/ccrowe/csci8150-summer17/ACA_Project/Address/Address.c">
 			<Option target="ACA_Project2"/>
 		</Unit>
-		<Unit filename="/home/ccrowe/ACA_Project/Address/Address.h">
+		<Unit filename="/home/ccrowe/csci8150-summer17/ACA_Project/Address/Address.h">
 			<Option target="ACA_Project2"/>
 		</Unit>
-		<Unit filename="/home/ccrowe/ACA_Project/Block/Block.c">
+		<Unit filename="/home/ccrowe/csci8150-summer17/ACA_Project/Block/Block.c">
 			<Option target="ACA_Project2"/>
 		</Unit>
-		<Unit filename="/home/ccrowe/ACA_Project/Block/Block.h">
+		<Unit filename="/home/ccrowe/csci8150-summer17/ACA_Project/Block/Block.h">
 			<Option target="ACA_Project2"/>
 		</Unit>
-		<Unit filename="/home/ccrowe/ACA_Project/BlockOnBus/BlockOnBus.c">
+		<Unit filename="/home/ccrowe/csci8150-summer17/ACA_Project/BlockOnBus/BlockOnBus.c">
 			<Option target="ACA_Project2"/>
 		</Unit>
-		<Unit filename="/home/ccrowe/ACA_Project/BlockOnBus/BlockOnBus.h">
+		<Unit filename="/home/ccrowe/csci8150-summer17/ACA_Project/BlockOnBus/BlockOnBus.h">
 			<Option target="ACA_Project2"/>
 		</Unit>
-		<Unit filename="/home/ccrowe/ACA_Project/BlockTransferer/BlockTransferer.c">
+		<Unit filename="/home/ccrowe/csci8150-summer17/ACA_Project/BlockTransferer/BlockTransferer.c">
 			<Option target="ACA_Project2"/>
 		</Unit>
-		<Unit filename="/home/ccrowe/ACA_Project/BlockTransferer/BlockTransferer.h">
+		<Unit filename="/home/ccrowe/csci8150-summer17/ACA_Project/BlockTransferer/BlockTransferer.h">
 			<Option target="ACA_Project2"/>
 		</Unit>
-		<Unit filename="/home/ccrowe/ACA_Project/Block_Queue/Block_Queue.c">
+		<Unit filename="/home/ccrowe/csci8150-summer17/ACA_Project/Block_Queue/Block_Queue.c">
 			<Option target="ACA_Project2"/>
 		</Unit>
-		<Unit filename="/home/ccrowe/ACA_Project/Block_Queue/Block_Queue.h">
+		<Unit filename="/home/ccrowe/csci8150-summer17/ACA_Project/Block_Queue/Block_Queue.h">
 			<Option target="ACA_Project2"/>
 		</Unit>
-		<Unit filename="/home/ccrowe/ACA_Project/Buffers/buffers.c">
+		<Unit filename="/home/ccrowe/csci8150-summer17/ACA_Project/Buffers/buffers.c">
 			<Option target="ACA_Project2"/>
 		</Unit>
-		<Unit filename="/home/ccrowe/ACA_Project/Buffers/buffers.h">
+		<Unit filename="/home/ccrowe/csci8150-summer17/ACA_Project/Buffers/buffers.h">
 			<Option target="ACA_Project2"/>
 		</Unit>
-		<Unit filename="/home/ccrowe/ACA_Project/Cache/Cache.c">
+		<Unit filename="/home/ccrowe/csci8150-summer17/ACA_Project/Cache/Cache.c">
 			<Option target="ACA_Project2"/>
 		</Unit>
-		<Unit filename="/home/ccrowe/ACA_Project/Cache/Cache.h">
+		<Unit filename="/home/ccrowe/csci8150-summer17/ACA_Project/Cache/Cache.h">
 			<Option target="ACA_Project2"/>
 		</Unit>
-		<Unit filename="/home/ccrowe/ACA_Project/CacheLine/CacheLine.c">
+		<Unit filename="/home/ccrowe/csci8150-summer17/ACA_Project/CacheLine/CacheLine.c">
 			<Option target="ACA_Project2"/>
 		</Unit>
-		<Unit filename="/home/ccrowe/ACA_Project/CacheLine/CacheLine.h">
+		<Unit filename="/home/ccrowe/csci8150-summer17/ACA_Project/CacheLine/CacheLine.h">
 			<Option target="ACA_Project2"/>
 		</Unit>
-		<Unit filename="/home/ccrowe/ACA_Project/Controller/Controller.c">
+		<Unit filename="/home/ccrowe/csci8150-summer17/ACA_Project/Controller/Controller.c">
 			<Option target="ACA_Project2"/>
 		</Unit>
-		<Unit filename="/home/ccrowe/ACA_Project/Controller/Controller.h">
+		<Unit filename="/home/ccrowe/csci8150-summer17/ACA_Project/Controller/Controller.h">
 			<Option target="ACA_Project2"/>
 		</Unit>
-		<Unit filename="/home/ccrowe/ACA_Project/DRAM/DRAM.c">
+		<Unit filename="/home/ccrowe/csci8150-summer17/ACA_Project/DRAM/DRAM.c">
 			<Option target="ACA_Project2"/>
 		</Unit>
-		<Unit filename="/home/ccrowe/ACA_Project/DRAM/DRAM.h">
+		<Unit filename="/home/ccrowe/csci8150-summer17/ACA_Project/DRAM/DRAM.h">
 			<Option target="ACA_Project2"/>
 		</Unit>
-		<Unit filename="/home/ccrowe/ACA_Project/Data/DataStore.c">
+		<Unit filename="/home/ccrowe/csci8150-summer17/ACA_Project/Data/DataStore.c">
 			<Option target="ACA_Project2"/>
 		</Unit>
-		<Unit filename="/home/ccrowe/ACA_Project/Data/DataStore.h">
+		<Unit filename="/home/ccrowe/csci8150-summer17/ACA_Project/Data/DataStore.h">
 			<Option target="ACA_Project2"/>
 		</Unit>
-		<Unit filename="/home/ccrowe/ACA_Project/Data_Structure_Examples/Block/Block_CacheLine_HashTable_Examples.c">
+		<Unit filename="/home/ccrowe/csci8150-summer17/ACA_Project/Data_Structure_Examples/Block/Block_CacheLine_HashTable_Examples.c">
 			<Option target="ACA_Project2"/>
 		</Unit>
-		<Unit filename="/home/ccrowe/ACA_Project/Data_Structure_Examples/Block/Block_CacheLine_HashTable_Examples.h">
+		<Unit filename="/home/ccrowe/csci8150-summer17/ACA_Project/Data_Structure_Examples/Block/Block_CacheLine_HashTable_Examples.h">
 			<Option target="ACA_Project2"/>
 		</Unit>
-		<Unit filename="/home/ccrowe/ACA_Project/Data_Structure_Examples/BlockTransferer/BlockTransferer_Examples.c">
+		<Unit filename="/home/ccrowe/csci8150-summer17/ACA_Project/Data_Structure_Examples/BlockTransferer/BlockTransferer_Examples.c">
 			<Option target="ACA_Project2"/>
 		</Unit>
-		<Unit filename="/home/ccrowe/ACA_Project/Data_Structure_Examples/BlockTransferer/BlockTransferer_Examples.h">
+		<Unit filename="/home/ccrowe/csci8150-summer17/ACA_Project/Data_Structure_Examples/BlockTransferer/BlockTransferer_Examples.h">
 			<Option target="ACA_Project2"/>
 		</Unit>
-		<Unit filename="/home/ccrowe/ACA_Project/Data_Structure_Examples/DRAM/DRAM_Examples.c">
+		<Unit filename="/home/ccrowe/csci8150-summer17/ACA_Project/Data_Structure_Examples/DRAM/DRAM_Examples.c">
 			<Option target="ACA_Project2"/>
 		</Unit>
-		<Unit filename="/home/ccrowe/ACA_Project/Data_Structure_Examples/DRAM/DRAM_Examples.h">
+		<Unit filename="/home/ccrowe/csci8150-summer17/ACA_Project/Data_Structure_Examples/DRAM/DRAM_Examples.h">
 			<Option target="ACA_Project2"/>
 		</Unit>
-		<Unit filename="/home/ccrowe/ACA_Project/Data_Structure_Examples/DataStore/DataStore_Examples.c">
+		<Unit filename="/home/ccrowe/csci8150-summer17/ACA_Project/Data_Structure_Examples/DataStore/DataStore_Examples.c">
 			<Option target="ACA_Project2"/>
 		</Unit>
-		<Unit filename="/home/ccrowe/ACA_Project/Data_Structure_Examples/DataStore/DataStore_Examples.h">
+		<Unit filename="/home/ccrowe/csci8150-summer17/ACA_Project/Data_Structure_Examples/DataStore/DataStore_Examples.h">
 			<Option target="ACA_Project2"/>
 		</Unit>
-		<Unit filename="/home/ccrowe/ACA_Project/Data_Structure_Examples/Queue/Queue_the_examples.c">
+		<Unit filename="/home/ccrowe/csci8150-summer17/ACA_Project/Data_Structure_Examples/Queue/Queue_the_examples.c">
 			<Option target="ACA_Project2"/>
 		</Unit>
-		<Unit filename="/home/ccrowe/ACA_Project/Data_Structure_Examples/Queue/Queue_the_examples.h">
+		<Unit filename="/home/ccrowe/csci8150-summer17/ACA_Project/Data_Structure_Examples/Queue/Queue_the_examples.h">
 			<Option target="ACA_Project2"/>
 		</Unit>
-		<Unit filename="/home/ccrowe/ACA_Project/Data_Structure_Examples/Set/Set_and_Block_Examples.c">
+		<Unit filename="/home/ccrowe/csci8150-summer17/ACA_Project/Data_Structure_Examples/Set/Set_and_Block_Examples.c">
 			<Option target="ACA_Project2"/>
 		</Unit>
-		<Unit filename="/home/ccrowe/ACA_Project/Data_Structure_Examples/Set/Set_and_Block_Examples.h">
+		<Unit filename="/home/ccrowe/csci8150-summer17/ACA_Project/Data_Structure_Examples/Set/Set_and_Block_Examples.h">
 			<Option target="ACA_Project2"/>
 		</Unit>
-		<Unit filename="/home/ccrowe/ACA_Project/Global_Variables.h">
+		<Unit filename="/home/ccrowe/csci8150-summer17/ACA_Project/Global_Variables.h">
 			<Option target="ACA_Project2"/>
 		</Unit>
-		<Unit filename="/home/ccrowe/ACA_Project/Instruction/Instruction.c">
+		<Unit filename="/home/ccrowe/csci8150-summer17/ACA_Project/Instruction/Instruction.c">
 			<Option target="ACA_Project2"/>
 		</Unit>
-		<Unit filename="/home/ccrowe/ACA_Project/Instruction/Instruction.h">
+		<Unit filename="/home/ccrowe/csci8150-summer17/ACA_Project/Instruction/Instruction.h">
 			<Option target="ACA_Project2"/>
 		</Unit>
-		<Unit filename="/home/ccrowe/ACA_Project/L1_Cache.h">
+		<Unit filename="/home/ccrowe/csci8150-summer17/ACA_Project/L1_Cache.h">
 			<Option target="ACA_Project2"/>
 		</Unit>
-		<Unit filename="/home/ccrowe/ACA_Project/Processor/processor.c">
+		<Unit filename="/home/ccrowe/csci8150-summer17/ACA_Project/Processor/processor.c">
 			<Option target="ACA_Project2"/>
 		</Unit>
-		<Unit filename="/home/ccrowe/ACA_Project/Processor/processor.h">
+		<Unit filename="/home/ccrowe/csci8150-summer17/ACA_Project/Processor/processor.h">
 			<Option target="ACA_Project2"/>
 		</Unit>
-		<Unit filename="/home/ccrowe/ACA_Project/Queue/Queue.c">
+		<Unit filename="/home/ccrowe/csci8150-summer17/ACA_Project/Queue/Queue.c">
 			<Option target="ACA_Project2"/>
 		</Unit>
-		<Unit filename="/home/ccrowe/ACA_Project/Queue/Queue.h">
+		<Unit filename="/home/ccrowe/csci8150-summer17/ACA_Project/Queue/Queue.h">
 			<Option target="ACA_Project2"/>
 		</Unit>
-		<Unit filename="/home/ccrowe/ACA_Project/Set/Set.c">
+		<Unit filename="/home/ccrowe/csci8150-summer17/ACA_Project/Set/Set.c">
 			<Option target="ACA_Project2"/>
 		</Unit>
-		<Unit filename="/home/ccrowe/ACA_Project/Set/Set.h">
+		<Unit filename="/home/ccrowe/csci8150-summer17/ACA_Project/Set/Set.h">
 			<Option target="ACA_Project2"/>
 		</Unit>
-		<Unit filename="/home/ccrowe/ACA_Project/main.c">
+		<Unit filename="/home/ccrowe/csci8150-summer17/ACA_Project/main.c">
 			<Option target="ACA_Project2"/>
 		</Unit>
-		<Unit filename="/home/ccrowe/ACA_Project/CMakeLists.txt">
+		<Unit filename="/home/ccrowe/csci8150-summer17/ACA_Project/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>
