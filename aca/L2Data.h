@@ -5,7 +5,7 @@ typedef struct Cache2Block
 {
 	int valid;  // is the block valid?
 	int dirty;  // is the block dirty?
-	unsigned char data[64]; // the actual data in the block
+	unsigned char data[8]; // the actual data in the block
 	int tag;    // only 3 bits
 } c2b;
 

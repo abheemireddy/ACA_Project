@@ -7,7 +7,7 @@
 
 typedef struct DataStoreTag{
     int currentLine;
-    char Data[64][64];
+    char Data[8][8];
 } DataStore;
 
 

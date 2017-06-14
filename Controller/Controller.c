@@ -155,7 +155,7 @@ CacheLine* ProcessL1Instruction(Instruction instruction){
     }
 }
 
-void WriteToBlock(Block* existing,Instruction instruction,char value[64]){
+void WriteToBlock(Block* existing,Instruction instruction,char value[8]){
     CacheLine* toWriteTo = getCacheLineByOffset(&existing->HashTable,instruction.address.Offset);
     if(toWriteTo == NULL){
         printf("Found valid CacheLine.  Writing to CacheLine%d\n",instruction.address.bitStringValue);
@@ -172,7 +172,7 @@ void WriteToBlock(Block* existing,Instruction instruction,char value[64]){
     Dequeue(l1Controller->transferer->TransferQueue);
 }
 
-bool CheckVictimCacheAndWriteBuffer(Instruction instruction,char value[64]){
+bool CheckVictimCacheAndWriteBuffer(Instruction instruction,char value[8]){
     printf("Checking both L1 buffers for Block:%d\n",instruction.address.bitStringValue);
     Block* victimBlock = getBlockFromBuffer(&l1VictimCache->HashTable,instruction.address.bitStringValue);
     Block* writeBlock = getBlockFromBuffer(&l1WriteBuffer->HashTable,instruction.address.bitStringValue);
@@ -311,7 +311,7 @@ void WriteBlockToDRAM(BlockOnBus* block2Write){
     putBlock(&dRAM->HashTable,block2Write);
 }
 
-void WriteToController(Instruction instruction, char value[64])
+void WriteToController(Instruction instruction, char value[8])
 {
     Set* set = getSetByIndex(&l1Controller->cache->HashTable,instruction.address.Index);
     Block* existing = get(&set->HashTable,instruction.address.Tag);

@@ -1,0 +1,30 @@
+CPUWrite 1 1
+CPURead 1
+CPUWrite 2 2
+CPURead 2
+CPUWrite 3 3
+CPURead 3
+CPUWrite 4 4
+CPURead 4
+CPUWrite 5 5
+CPURead 5
+CPUWrite 6 6
+CPURead 6
+CPUWrite 7 7
+CPURead 7
+CPUWrite 8 8
+CPURead 8
+CPUWrite 9 9
+CPURead 9
+CPUWrite 10 10
+CPURead 10
+CPUWrite 11 11
+CPURead 11
+CPUWrite 12 12
+CPURead 12
+CPUWrite 13 13
+CPURead 13
+CPUWrite 14 14
+CPURead 14
+CPUWrite 15 15
+CPURead 15

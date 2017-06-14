@@ -12,7 +12,7 @@ typedef struct ControllerTag Controller;
 typedef struct BlockOnBusTag{
     Block* blockOnBus;
     int clockCycleWhenBlockIsAvailable;
-    char valueBeingTransferred[64][8];
+    char valueBeingTransferred[8][8];
     UT_hash_handle hh; /* make this structure hashable*/
 }BlockOnBus;
 

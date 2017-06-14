@@ -23,7 +23,7 @@ Controller* Constructor_L1Controller();
 Controller* Constructor_L2Controller();
 
 CacheLine* ProcessL1Instruction(Instruction instruction);
-void WriteToController(Instruction instruction, char value[64]);
+void WriteToController(Instruction instruction, char value[8]);
 CacheLine* L1_read(Instruction instruction);
 void WriteBlockToL1Controller(Block* toStore);
 
