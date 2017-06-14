@@ -16,7 +16,7 @@ Controller* Constructor_L1Controller(){
     Controller* l1ControllerCon = malloc(sizeof(l1ControllerCon));
 
     l1ControllerCon->writeBlockQueue = Constructor_BlockQueue();
-    l1ControllerCon->cache = Constructor_Cache(64);
+    l1ControllerCon->cache = Constructor_Cache(256);
     l1ControllerCon->transferer = Constructor_Transferer();
     l1ControllerCon->waiting = false;
     return l1ControllerCon;
@@ -25,7 +25,7 @@ Controller* Constructor_L1Controller(){
 Controller* Constructor_L2Controller(){
     Controller* l2ControllerCon = malloc(sizeof(l2ControllerCon));
 
-    l2ControllerCon->cache = Constructor_Cache(256);
+    l2ControllerCon->cache = Constructor_Cache(512);
     l2ControllerCon->transferer = Constructor_Transferer();
     l2ControllerCon->writeBlockQueue = Constructor_BlockQueue();
     l2ControllerCon->waiting = false;
@@ -63,7 +63,7 @@ void PushDownBlockInL1(Block* block2Find){
 
 void CheckL2SetSize(Set* set){
     int countInSet = Count(&set->HashTable);
-    while(countInSet >= 4){
+    while(countInSet > 4){
         SortHash(&set->HashTable);
         Block* leastUsed = GetLeastUsed(&set->HashTable);
         removeFromTable(&set->HashTable,leastUsed);//removed from L2
@@ -267,7 +267,7 @@ void FindBlockInL2(Instruction instruction){
             if(instruction.instruction == 1){
                 printf("Putting L2 Controller in idle from trying to write from a block already being written to, Block:%d\n",instruction.address.bitStringValue);
             }else{
-                printf("Putting L2 Controller in idle from trying to read from a block busy getting data downstream%d\n",instruction.address.bitStringValue);
+                printf("Putting L2 Controller in idle from trying to read from a block busy getting data downstream, Block::%d\n",instruction.address.bitStringValue);
             }
             l2Controller->waiting == true;
             L2controllerIsIdleUntilItReceivesThisBlock = *block;
