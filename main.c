@@ -76,7 +76,7 @@ int main(){
                     if (read == NULL) {
                         ///did not find in cache
                     } else {
-                        printf("***Successfully read from L1: %d val %s\n", read->address.bitStringValue, GetData(l1Data, read->dataLine));
+                        printf("***Successfully read from L1: %d val %s at clock cycle:%d\n", read->address.bitStringValue, GetData(l1Data, read->dataLine),ClockCycleCount);
                         Dequeue(l1Controller->transferer->TransferQueue);
                     }
                 }

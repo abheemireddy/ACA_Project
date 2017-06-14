@@ -168,7 +168,7 @@ void WriteToBlock(Block* existing,Instruction instruction,char value[64]){
     toWriteTo->dataLine = StoreData(l1Data,value);
     existing->dirtyBit = true;
     existing->validBit = true;
-    printf("***Brought data back to Processor:%d val:%s\n",toWriteTo->address.bitStringValue,GetData(l1Data,toWriteTo->dataLine));
+    printf("***Brought data back to Processor:%d val:%s at clock cycle:%d\n",toWriteTo->address.bitStringValue,GetData(l1Data,toWriteTo->dataLine),ClockCycleCount);
     Dequeue(l1Controller->transferer->TransferQueue);
 }
 
