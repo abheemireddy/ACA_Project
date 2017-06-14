@@ -220,24 +220,6 @@
 		<Unit filename="/home/abheemireddy/ACA_Project/Set/Set.h">
 			<Option target="ACA_Project2"/>
 		</Unit>
-		<Unit filename="/home/abheemireddy/ACA_Project/aca/L1Data.c">
-			<Option target="ACA_Project2"/>
-		</Unit>
-		<Unit filename="/home/abheemireddy/ACA_Project/aca/L1Data.h">
-			<Option target="ACA_Project2"/>
-		</Unit>
-		<Unit filename="/home/abheemireddy/ACA_Project/aca/L2Data.c">
-			<Option target="ACA_Project2"/>
-		</Unit>
-		<Unit filename="/home/abheemireddy/ACA_Project/aca/L2Data.h">
-			<Option target="ACA_Project2"/>
-		</Unit>
-		<Unit filename="/home/abheemireddy/ACA_Project/aca/MainMemory.c">
-			<Option target="ACA_Project2"/>
-		</Unit>
-		<Unit filename="/home/abheemireddy/ACA_Project/aca/MainMemory.h">
-			<Option target="ACA_Project2"/>
-		</Unit>
 		<Unit filename="/home/abheemireddy/ACA_Project/main.c">
 			<Option target="ACA_Project2"/>
 		</Unit>

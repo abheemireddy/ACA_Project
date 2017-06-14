@@ -352,24 +352,6 @@ uthash_files/include/uthash.h
 Address/Address.h
 /home/abheemireddy/ACA_Project/Set/Address/Address.h
 
-/home/abheemireddy/ACA_Project/aca/L1Data.c
-L1Data.h
-/home/abheemireddy/ACA_Project/aca/L1Data.h
-
-/home/abheemireddy/ACA_Project/aca/L1Data.h
-
-/home/abheemireddy/ACA_Project/aca/L2Data.c
-L2Data.h
-/home/abheemireddy/ACA_Project/aca/L2Data.h
-
-/home/abheemireddy/ACA_Project/aca/L2Data.h
-
-/home/abheemireddy/ACA_Project/aca/MainMemory.c
-MainMemory.h
-/home/abheemireddy/ACA_Project/aca/MainMemory.h
-
-/home/abheemireddy/ACA_Project/aca/MainMemory.h
-
 /home/abheemireddy/ACA_Project/main.c
 Queue/Queue.h
 /home/abheemireddy/ACA_Project/Queue/Queue.h

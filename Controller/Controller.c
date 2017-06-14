@@ -144,6 +144,8 @@ void WriteBlockToL1Controller(Block* toStore){
         removeFromTable(&set->HashTable,existing);
     }
     toStore->isIdle = false;
+    toStore->dirtyBit = false;
+    toStore->validBit = true;
     put(&set->HashTable,toStore);
     DequeueBlock(l1Controller->writeBlockQueue);
     CheckSetSize(set);
