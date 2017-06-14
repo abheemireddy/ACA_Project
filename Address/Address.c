@@ -32,6 +32,31 @@ char *int2bin(int n) { //function from quora
     return s;
 }
 
+Address* Constructor_AddressConvertForL2(char* bitString){
+    char* output = malloc(6);
+    GetChar(bitString,0,5,output);
+    char* TagString = output;
+    output = malloc(10);
+    GetChar(bitString,5,9,output);
+    char* IndexString = output;
+    output = malloc(4);
+    GetChar(bitString,14,3,output);
+    char* OffsetString = output;
+    int Tag = fromBinary(TagString);
+    int Index = fromBinary(IndexString);
+    int Offset = fromBinary(OffsetString);
+    int bitStringValue = fromBinary(bitString);
+
+    Address* address = malloc(sizeof(Address));
+    address->Tag = Tag;
+    address->Index = Index;
+    address->Offset = Offset;
+    strcpy(address->bitString,bitString);
+    address->bitStringValue = bitStringValue;
+    address->StartOfBlockBitStringValue = address->bitStringValue - address->Offset;
+    return address;
+}
+
 Address* Constructor_Address(char* bitString){
     char* output = malloc(7);
     GetChar(bitString,0,6,output);

@@ -72,10 +72,12 @@ void CheckL2SetSize(Set* set){
             printf("Moving block to L2's Write Buffer.  Block:%d\n",leastUsed->address.bitStringValue);
         }else{
             printf("Evicting block from L2.  It is clean, so look to evict the block from L1 too.  Block:%d\n",leastUsed->address.bitStringValue);
+            Address* adjustedAddress = Constructor_AddressConvertForL2(leastUsed->address.bitString);
+            leastUsed->address = *adjustedAddress;
             PushDownBlockInL1(leastUsed);
         }
     }
-    CheckBufferSize();
+    //CheckBufferSize();
 }
 void CheckSetSize(Set* set){
     int countInSet = Count(&set->HashTable);
@@ -111,6 +113,8 @@ void CheckL2BufferSize(){
         Block* s;
         Block* tmp;
         HASH_ITER(hh,l2WriteBuffer->HashTable,s,tmp){ //write everything in buffer to DRam
+            Address* adjustedAddress = Constructor_AddressConvertForL2(s->address.bitString);
+            s->address = *adjustedAddress;
             PushDownBlockInL1(s);
             printf("Flushing from L2's write buffer.  Also evicting these blocks from L1\n");
         }
@@ -231,6 +235,8 @@ bool CheckL2WriteBuffer(Block* block2Write){
 }
 
 void WriteBlockToL2Controller(BlockOnBus* blockOnBus2Write){
+    Address* adjustedAddress = Constructor_AddressConvertForL2(blockOnBus2Write->blockOnBus->address.bitString);
+    blockOnBus2Write->blockOnBus->address = *adjustedAddress;
     CacheLine* s;
     CacheLine* tmp;
     int i = 0;
@@ -250,6 +256,8 @@ void WriteBlockToL2Controller(BlockOnBus* blockOnBus2Write){
     CheckL2BufferSize();
 }
 void FindBlockInL2(Instruction instruction){
+    Address* adjustedAddress = Constructor_AddressConvertForL2(instruction.address.bitString);
+    instruction.address = *adjustedAddress;
     Set* set = getSetByIndex(&l2Controller->cache->HashTable,instruction.address.Index);
     Block* block = get(&set->HashTable,instruction.address.Tag);
     if(block != NULL){
@@ -264,6 +272,8 @@ void FindBlockInL2(Instruction instruction){
             return;
         }
         printf("Found block in L2.  Sending to L1, Block:%d\n",instruction.address.bitStringValue);
+        Address* re_adjustedAddress = Constructor_Address(instruction.address.bitString);
+        block->address = *re_adjustedAddress;
         BlockOnBus* blockOnBus = Constructor_BlockOnBus(l2Controller,block,ClockCycleCount + 2);
         EnqueueBlock(l1Controller->writeBlockQueue,blockOnBus);
         Dequeue(l2Controller->transferer->TransferQueue);
@@ -276,6 +286,8 @@ void FindBlockInL2(Instruction instruction){
         printf("Putting L2 block on idle, Block:%d\n",instruction.address.bitStringValue);
         idlePlaceHolder->isIdle = true;//Now we have marked this block in our set as idle
         put(&set->HashTable,idlePlaceHolder);
+        Address* re_adjustedAddress = Constructor_Address(instruction.address.bitString);
+        instruction.address = *re_adjustedAddress;
         Enqueue(dRAM->transferer->TransferQueue,instruction);
     }
 }
