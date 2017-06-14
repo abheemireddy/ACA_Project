@@ -18,7 +18,7 @@ typedef struct SetTag {
 
 struct BlockTag* GetLeastUsed(struct BlockTag** HashTable);
 Set* Constructor_Set(int numberOfBlocks,Address address);
-void AddBlock(Set set,struct BlockTag** HashTable,struct BlockTag** blockToAdd);
+void AddBlock(Set set,struct BlockTag** HashTable,struct BlockTag* blockToAdd);
 
 //HashTable functions
 bool IsBlockInSet(struct SetTag set,struct BlockTag newBlock);

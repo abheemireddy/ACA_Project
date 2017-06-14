@@ -164,12 +164,12 @@ CacheLine* ProcessL1Instruction(Instruction instruction){
 CacheLine* WriteToBlock(Block* existing,Instruction instruction,char value[8]){
     CacheLine* toWriteTo = getCacheLineByOffset(&existing->HashTable,instruction.address.Offset);
     if(toWriteTo == NULL){
-        printf("No Existing Valid CacheLine.  Writing to CacheLine%d\n",instruction.address.bitStringValue);
+        printf("No Existing Valid CacheLine.  Writing to CacheLine:%d\n",instruction.address.bitStringValue);
         CacheLine* cacheLine = Constructor_CacheLine(instruction.address,value);
         putCacheLine(&existing->HashTable,cacheLine);
         toWriteTo = getCacheLineByOffset(&existing->HashTable,instruction.address.Offset);
     }else{
-        printf("CacheLine already existed.  Writing to CacheLine:%d\n",instruction.address.bitStringValue);
+        //printf("CacheLine already existed.  Writing to CacheLine:%d\n",instruction.address.bitStringValue);
     }
     toWriteTo->dataLine = StoreData(l1Data,value);
     existing->dirtyBit = true;
@@ -180,7 +180,7 @@ CacheLine* WriteToBlock(Block* existing,Instruction instruction,char value[8]){
 }
 
 bool CheckVictimCacheAndWriteBuffer(Instruction instruction,char value[8]){
-    printf("Checking both L1 buffers for Block:%d\n",instruction.address.bitStringValue);
+    //printf("Checking both L1 buffers for Block:%d\n",instruction.address.bitStringValue);
     Block* victimBlock = getBlockFromBuffer(&l1VictimCache->HashTable,instruction.address.bitStringValue);
     Block* writeBlock = getBlockFromBuffer(&l1WriteBuffer->HashTable,instruction.address.bitStringValue);
     if(victimBlock == NULL && writeBlock == NULL){
@@ -200,7 +200,7 @@ bool CheckVictimCacheAndWriteBuffer(Instruction instruction,char value[8]){
             victimBlock->isIdle = false;
             Set* set = getSetByIndex(&l1Controller->cache->HashTable,victimBlock->address.Index);//write back to cache
             put(&set->HashTable,victimBlock);
-            removeBlockFromBuffer(&l1VictimCache->HashTable,victimBlock);
+            //removeBlockFromBuffer(&l1VictimCache->HashTable,victimBlock);
             return true;
         }else if(writeBlock != NULL){
             printf("Found block in write buffer");
@@ -216,7 +216,7 @@ bool CheckVictimCacheAndWriteBuffer(Instruction instruction,char value[8]){
             writeBlock->isIdle = false;
             Set* set = getSetByIndex(&l1Controller->cache->HashTable,writeBlock->address.Index);//write back to cache
             put(&set->HashTable,writeBlock);
-            removeBlockFromBuffer(&l1WriteBuffer->HashTable,writeBlock);
+            //removeBlockFromBuffer(&l1WriteBuffer->HashTable,writeBlock);
             return true;
         }
     }
@@ -349,6 +349,7 @@ void WriteBlockToDRAM(BlockOnBus* block2Write){
 void WriteToController(Instruction instruction, char value[8])
 {
     Set* set = getSetByIndex(&l1Controller->cache->HashTable,instruction.address.Index);
+    bool found1 = CheckVictimCacheAndWriteBuffer(instruction,value);
     Block* existing = get(&set->HashTable,instruction.address.Tag);
     if(existing != NULL){
         Address nextAddress = Peek(l1Controller->transferer->TransferQueue).address;
@@ -360,6 +361,10 @@ void WriteToController(Instruction instruction, char value[8])
         }
         WriteToBlock(existing,instruction,value);
     }else if(existing == NULL){
+        Set* setTest = getSetByIndex(&l1Controller->cache->HashTable,0);
+        if(setTest == NULL){
+            int p = 5;
+        }
         bool found = CheckVictimCacheAndWriteBuffer(instruction,value);
         if(found == false){
             printf("Block not in L1. Marking L1 block as idle, Block:%d\n",instruction.address.bitStringValue);

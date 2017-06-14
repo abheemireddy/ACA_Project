@@ -48,9 +48,6 @@ Buffer* Constructor_Buffer(){
 }
 
 void putBlockInBuffer(Block** HashTable,Block *value) {  //key is useFrequency of the block.  Seems magical
-    if(value->address.bitString == NULL){
-        printf("The passed block needs to have attribute address set");
-    }
     Block* tmp;
     HASH_REPLACE_INT(*HashTable, address.bitStringValue,value,tmp );
 }
