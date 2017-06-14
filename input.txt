@@ -1,0 +1,5 @@
+CPUWrite 5 10
+CPURead 5
+CPUWrite 57 12
+CPURead 5
+CPUWrite 5 20
