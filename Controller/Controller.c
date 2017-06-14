@@ -57,7 +57,7 @@ void PushDownBlockInL1(Block* block2Find){
             }
         }
     }
-    BlockOnBus* toWrite = Constructor_BlockOnBus(dRAM,toWriteToMemory,ClockCycleCount + 2);
+    BlockOnBus* toWrite = Constructor_BlockOnBus(dRAM,toWriteToMemory,ClockCycleCount + 0);
     EnqueueBlock(dRAM->writeBlockQueue,toWrite);
 }
 
@@ -66,7 +66,7 @@ void CheckL2SetSize(Set* set){
     while(countInSet >= 4){
         SortHash(&set->HashTable);
         Block* leastUsed = GetLeastUsed(&set->HashTable);
-        removeFromTable(&set->HashTable,leastUsed);
+        removeFromTable(&set->HashTable,leastUsed);//removed from L2
         if(leastUsed->dirtyBit == true){
             PutInL2WriteBuffer(leastUsed);
             printf("Moving block to L2's Write Buffer.  Block:%d\n",leastUsed->address.bitStringValue);

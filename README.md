@@ -32,7 +32,7 @@ L1 reads from its instruction queue and processes it.
     Data might be written/read at the Cacheline level and returned to the processor
     Otherwise the instruction is loaded onto the L2 instruction Queue
 L2 reads from its Bus Queue and processes any data that has been fully transferred
-    If Set or Buffer contains too many items, L1 is searched.  If a block is L1 is found, that L1 block is evicted from L1 and L2 and put on Memory's Bus line
+    If Set or Buffer contains too many items, L2 block is removed and L1 is searched.  If the block is found in L1, that L1 block is also evicted from L1 and put on Memory's Bus line
 L2 reads from its instruction queue and processes it
     If the block is found, the data and the block are loaded onto a Bus for L1
     If the block is not found, the instruction is loaded onto Memory's instruction Queue
