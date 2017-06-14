@@ -97,13 +97,13 @@ void print_blocks_in_set(Block** HashTable) {
 
 int block_comparator(Block* a,Block* b){
     if (a->useFrequency < b->useFrequency){
-        return 1;
+        return -1;
     }
     if (a->useFrequency == b->useFrequency){
         return 0;
     }
     if (a->useFrequency > b->useFrequency){
-        return -1;
+        return 1;
     }
 }
 

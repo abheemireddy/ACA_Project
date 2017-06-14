@@ -66,7 +66,7 @@ void CheckL2SetSize(Set* set){
     while(countInSet > 4){
         SortHash(&set->HashTable);
         Block* leastUsed = GetLeastUsed(&set->HashTable);
-        removeFromTable(&set->HashTable,leastUsed);//removed from L2
+        HASH_DELETE(hh,set->HashTable,leastUsed);//removed from L2
         if(leastUsed->dirtyBit == true){
             PutInL2WriteBuffer(leastUsed);
             printf("Moving block to L2's Write Buffer.  Block:%d\n",leastUsed->address.bitStringValue);
@@ -81,7 +81,7 @@ void CheckL2SetSize(Set* set){
 }
 void CheckSetSize(Set* set){
     int countInSet = Count(&set->HashTable);
-    if(countInSet >= 4){
+    if(countInSet > 4){
         SortHash(&set->HashTable);
         Block* leastUsed = GetLeastUsed(&set->HashTable);
         removeFromTable(&set->HashTable,leastUsed);
@@ -98,7 +98,7 @@ void CheckSetSize(Set* set){
 void CheckBufferSize(){
     int victimCacheCount = CountBlocksInBuffer(&l1VictimCache->HashTable);
     int writeBufferCount = CountBlocksInBuffer(&l1WriteBuffer->HashTable);
-    if(victimCacheCount > 2){
+    if(victimCacheCount > 5){
         printf("L1 Victim cache full.  Flushing L1's victim cache\n");
         WriteBackToL2(l1VictimCache,&l1VictimCache->HashTable);
     }
@@ -263,7 +263,7 @@ void WriteBlockToL2Controller(BlockOnBus* blockOnBus2Write){
 
     if(block != NULL){
         printf("Found block in L2... Writing, Block:%d\n",block->address.bitStringValue);
-        removeFromTable(&set->HashTable,block);
+        //removeFromTable(&set->HashTable,block);
     }
     put(&set->HashTable,blockOnBus2Write->blockOnBus);
     CheckL2SetSize(set);
@@ -276,7 +276,8 @@ void FindBlockInL2(Instruction instruction){
     Block* block = get(&set->HashTable,instruction.address.Tag);
 
     if(block != NULL){
-        if(block->isIdle == true){
+        Address nextAddress = Peek(l2Controller->transferer->TransferQueue).address;
+        if(block->isIdle == true && !((nextAddress.Tag == block->address.Tag) && (nextAddress.Index == block->address.Index) && (nextAddress.Offset == block->address.Offset))){
             if(instruction.instruction == 1){
                 printf("Putting L2 Controller in idle from trying to write from a block already being written to, Block:%d\n",instruction.address.bitStringValue);
             }else{
@@ -349,7 +350,8 @@ void WriteToController(Instruction instruction, char value[8])
     Set* set = getSetByIndex(&l1Controller->cache->HashTable,instruction.address.Index);
     Block* existing = get(&set->HashTable,instruction.address.Tag);
     if(existing != NULL){
-        if(existing->isIdle == true){
+        Address nextAddress = Peek(l1Controller->transferer->TransferQueue).address;
+        if(existing->isIdle == true && !((nextAddress.Tag == existing->address.Tag) && (nextAddress.Index == existing->address.Index) && (nextAddress.Offset == existing->address.Offset))){
             printf("Putting L1 Controller in idle.  Trying to write from a block already being written to, Block:%d\n",instruction.address.bitStringValue);
             L1controllerIsIdleUntilItReceivesThisBlock = *existing;
             l1Controller->waiting = true;
@@ -375,7 +377,8 @@ CacheLine* L1_read(Instruction instruction)
     Set* set = getSetByIndex(&l1Controller->cache->HashTable,instruction.address.Index);
     Block* block = get(&set->HashTable,instruction.address.Tag);
     if(block != NULL){
-        if(block->isIdle == true){
+        Address nextAddress = Peek(l1Controller->transferer->TransferQueue).address;
+        if(block->isIdle == true && !((nextAddress.Tag == block->address.Tag) && (nextAddress.Index == block->address.Index) && (nextAddress.Offset == block->address.Offset))){
             printf("Putting L1 Controller in idle.  Trying to read from a block busy getting data downstream%d\n",instruction.address.bitStringValue);
             l1Controller->waiting = true;
             L1controllerIsIdleUntilItReceivesThisBlock = *block;

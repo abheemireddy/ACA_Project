@@ -51,11 +51,8 @@ void putBlockInBuffer(Block** HashTable,Block *value) {  //key is useFrequency o
     if(value->address.bitString == NULL){
         printf("The passed block needs to have attribute address set");
     }
-    /*Block* alreadyInHashTable = getBlock(HashTable,value->address.bitStringValue);//overwrite duplicate keys
-    if(alreadyInHashTable != NULL){
-        removeBlockFromBuffer(HashTable,alreadyInHashTable);
-    }*/
-    HASH_ADD_INT(*HashTable, address.bitStringValue,value );
+    Block* tmp;
+    HASH_REPLACE_INT(*HashTable, address.bitStringValue,value,tmp );
 }
 
 void removeBlockFromBuffer(Block** HashTable,Block* blockToRemove) {
