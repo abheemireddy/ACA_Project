@@ -57,7 +57,7 @@ Block* get(Block** HashTable,int key) {
 }
 
 //delete from hashmap
-void removeFromTable(Block** HashTable,Block *blockToRemove) {
+void removeFromTable(Block** HashTable,Block* blockToRemove) {
     HASH_DEL( *HashTable, blockToRemove);//removes blocks of type block
 }
 
@@ -96,6 +96,12 @@ void print_blocks_in_set(Block** HashTable) {
 }
 
 int block_comparator(Block* a,Block* b){
+    if(a ==NULL){
+        return 1;
+    }
+    if(b == NULL){
+        return -1;
+    }
     if (a->useFrequency < b->useFrequency){
         return -1;
     }

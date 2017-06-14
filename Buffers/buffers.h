@@ -8,8 +8,6 @@
 #include "uthash_files/include/uthash.h"
 
 typedef struct BufferTag {
-    bool isWriteBuffer;//otherwise is victim cache
-    UT_hash_handle hh; /* make this structure hashable*/
     struct BlockTag *HashTable; //This is my hashTable for blocks
 
 } Buffer;
