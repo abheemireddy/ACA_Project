@@ -30,6 +30,7 @@ Clock Cycles begin
 L1 reads from processor queue onto an l1 instruction queue until l1 is forced to idle
 L1 reads from its instruction queue and processes it.
     Data might be written/read at the Cacheline level and returned to the processor
+    Anytime data is moved from the cache onto the buffer, the cache is sorted by LFU and the least frequently used item is moved in the buffer.
     Otherwise the instruction is loaded onto the L2 instruction Queue
 L2 reads from its Bus Queue and processes any data that has been fully transferred
     If Set or Buffer contains too many items, L2 block is removed and L1 is searched.  If the block is found in L1, that L1 block is also evicted from L1 and put on Memory's Bus line

@@ -274,6 +274,7 @@ void FindBlockInL2(Instruction instruction){
     instruction.address = *adjustedAddress;
     Set* set = getSetByIndex(&l2Controller->cache->HashTable,instruction.address.Index);
     Block* block = get(&set->HashTable,instruction.address.Tag);
+
     if(block != NULL){
         if(block->isIdle == true){
             if(instruction.instruction == 1){

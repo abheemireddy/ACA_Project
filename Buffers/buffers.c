@@ -29,10 +29,11 @@ CacheLine* SearchInBuffers(Instruction instruction){
 void WriteBackToL2(Buffer* buffer,Block** HashTable){
     Block* s;
     Block* tmp;
-    HASH_ITER(hh,*HashTable,s,tmp){
+
+    HASH_ITER(hh,buffer->HashTable,s,tmp){
+        HASH_DELETE(hh,buffer->HashTable,s);
         printf("Flushing to L2: %d\n",s->address.bitStringValue);
         if(s->dirtyBit == true){
-            removeBlockFromBuffer(&buffer->HashTable,s);
             BlockOnBus* blockOnBus = Constructor_BlockOnBus(l1Controller,s,ClockCycleCount + 1);//assume it takes 1 clock cycle to write back to main cache
             EnqueueBlock(l2Controller->writeBlockQueue,blockOnBus);
         }
@@ -58,7 +59,7 @@ void putBlockInBuffer(Block** HashTable,Block *value) {  //key is useFrequency o
 }
 
 void removeBlockFromBuffer(Block** HashTable,Block* blockToRemove) {
-    HASH_DEL( *HashTable, blockToRemove);//removes blocks of type block
+    HASH_DELETE( hh,*HashTable, blockToRemove);//removes blocks of type block
 }
 
 Block* getBlockFromBuffer(Block** HashTable,int key) {

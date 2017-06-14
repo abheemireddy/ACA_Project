@@ -39,12 +39,8 @@ void put(Block** HashTable,Block *value) {
     if(value == NULL){
         printf("The passed block needs to have attribute address set");
     }
-    Block *hashTableStoresInThisBlock;
-    HASH_FIND_INT( *HashTable,&value->address.Tag, hashTableStoresInThisBlock );//find block_id and put into hashTableStoresInThisBlock
-    if(hashTableStoresInThisBlock != NULL){
-        HASH_DEL( *HashTable, hashTableStoresInThisBlock);//should not happen, but keeps from inseting repeated values
-    }
-    HASH_ADD_INT(*HashTable, address.Tag,value );
+    Block* tmp;
+    HASH_REPLACE_INT(*HashTable,address.Tag,value,tmp);
 }
 
 Block* get(Block** HashTable,int key) {
@@ -101,13 +97,13 @@ void print_blocks_in_set(Block** HashTable) {
 
 int block_comparator(Block* a,Block* b){
     if (a->useFrequency < b->useFrequency){
-        return -1;
+        return 1;
     }
     if (a->useFrequency == b->useFrequency){
         return 0;
     }
     if (a->useFrequency > b->useFrequency){
-        return 1;
+        return -1;
     }
 }
 
