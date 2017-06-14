@@ -75,12 +75,6 @@ int main(){
                 }
             }
         }
-        /*//test piece of code I was using
-        Address* blockAddressToGetForL1 = Constructor_Address("00000000000000000");
-        Set* set2 = getSetByIndex(&l2Controller->cache->HashTable,blockAddressToGetForL1->Index);
-        Block* block = Constructor_Block(*blockAddressToGetForL1);
-        put(&set2->HashTable,block);*/
-
 
         //L2 Controller
 

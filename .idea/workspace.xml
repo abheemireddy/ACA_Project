@@ -13,26 +13,9 @@
   <component name="ChangeListManager">
     <list default="true" id="874cd3ee-283a-48e2-bbb0-bde542e13d07" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ACA_Project2" afterPath="$PROJECT_DIR$/ACA_Project2" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.o" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Cache/Cache.c.o" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Cache/Cache.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/CacheLine/CacheLine.c.o" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/CacheLine/CacheLine.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/DRAM/DRAM.c.o" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/DRAM/DRAM.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Block/Block_CacheLine_HashTable_Examples.c.o" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Block/Block_CacheLine_HashTable_Examples.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/DataStore/DataStore_Examples.c.o" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/DataStore/DataStore_Examples.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Set/Set_and_Block_Examples.c.o" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Data_Structure_Examples/Set/Set_and_Block_Examples.c.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Set/Set.c.o" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Set/Set.c.o" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/main.c.o" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/main.c.o" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BlockOnBus/BlockOnBus.c" afterPath="$PROJECT_DIR$/BlockOnBus/BlockOnBus.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BlockOnBus/BlockOnBus.h" afterPath="$PROJECT_DIR$/BlockOnBus/BlockOnBus.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Block_Queue/Block_Queue.c" afterPath="$PROJECT_DIR$/Block_Queue/Block_Queue.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Buffers/buffers.c" afterPath="$PROJECT_DIR$/Buffers/buffers.c" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controller/Controller.c" afterPath="$PROJECT_DIR$/Controller/Controller.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controller/Controller.h" afterPath="$PROJECT_DIR$/Controller/Controller.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DRAM/DRAM.c" afterPath="$PROJECT_DIR$/DRAM/DRAM.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DRAM/DRAM.h" afterPath="$PROJECT_DIR$/DRAM/DRAM.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Global_Variables.h" afterPath="$PROJECT_DIR$/Global_Variables.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Set/Set.h" afterPath="$PROJECT_DIR$/Set/Set.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.c" afterPath="$PROJECT_DIR$/main.c" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -51,8 +34,8 @@
       <file leaf-file-name="Controller.c" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Controller/Controller.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="155">
-              <caret line="121" column="0" lean-forward="false" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
+            <state relative-caret-position="288">
+              <caret line="102" column="35" lean-forward="false" selection-start-line="102" selection-start-column="35" selection-end-line="102" selection-end-column="35" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
               </folding>
@@ -63,18 +46,28 @@
       <file leaf-file-name="Block_Queue.c" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Block_Queue/Block_Queue.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="27" column="37" lean-forward="true" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
+            <state relative-caret-position="39">
+              <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DRAM.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/DRAM/DRAM.h">
+      <file leaf-file-name="input.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/input.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="29" column="45" lean-forward="false" selection-start-line="29" selection-start-column="45" selection-end-line="29" selection-end-column="45" />
+            <state relative-caret-position="54">
+              <caret line="3" column="9" lean-forward="true" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="processor.c" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Processor/processor.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="371">
+              <caret line="73" column="0" lean-forward="false" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -85,26 +78,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="276">
               <caret line="25" column="53" lean-forward="true" selection-start-line="25" selection-start-column="53" selection-end-line="25" selection-end-column="53" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BlockOnBus.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BlockOnBus/BlockOnBus.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="18" column="59" lean-forward="true" selection-start-line="18" selection-start-column="59" selection-end-line="18" selection-end-column="59" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="input.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/input.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="2" column="11" lean-forward="true" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -133,8 +106,8 @@
       <file leaf-file-name="main.c" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="65" column="0" lean-forward="false" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+            <state relative-caret-position="252">
+              <caret line="95" column="16" lean-forward="true" selection-start-line="95" selection-start-column="16" selection-end-line="95" selection-end-column="40" />
               <folding>
                 <element signature="e#0#24#0" expanded="true" />
               </folding>
@@ -142,14 +115,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Set.c" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Set/Set.c">
+      <file leaf-file-name="Queue.c" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Queue/Queue.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="291">
-              <caret line="57" column="54" lean-forward="true" selection-start-line="57" selection-start-column="54" selection-end-line="57" selection-end-column="54" />
-              <folding>
-                <element signature="e#38#56#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="486">
+              <caret line="60" column="16" lean-forward="true" selection-start-line="60" selection-start-column="16" selection-end-line="60" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Queue.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Queue/Queue.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="444">
+              <caret line="39" column="12" lean-forward="false" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="12" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -158,27 +139,10 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>useFrequency</find>
-      <find>REPL</find>
-      <find>Proces</find>
-      <find>ProcessIns</find>
-      <find>ProcessInst</find>
-      <find>ProcessInstru</find>
-      <find>ProcessInstr</find>
-      <find>DramI</find>
-      <find>Dram</find>
-      <find>I</find>
-      <find>Inst</find>
-      <find>Instruction</find>
-      <find>Instruction i</find>
-      <find>Instruction</find>
-      <find>Dr</find>
-      <find>D</find>
       <find>Constructor_DRamBlock</find>
       <find>Process</find>
       <find>riteBlockToL2</find>
       <find>WriteBlockToL2</find>
-      <find>WriteBlockToL2Controller</find>
       <find>DRamBlock</find>
       <find>ProcessDRamInstruction</find>
       <find>FindBlockInL2</find>
@@ -187,7 +151,24 @@
       <find>WriteToL1</find>
       <find>WriteBlock</find>
       <find>WriteBlockToL1</find>
+      <find>WriteBlockToL2Controller</find>
+      <find>W</find>
+      <find>Wrote</find>
+      <find>Wrote</find>
+      <find>Wrote to</find>
+      <find>Wrote to s</find>
+      <find>Wrote to set</find>
+      <find>D</find>
+      <find>Dequeu</find>
+      <find>Dequeue</find>
+      <find>Dequeue(</find>
+      <find>Dequeue(l</find>
+      <find>Dequeue(l1</find>
       <find>WriteToBlock</find>
+      <find>CheckL2SetSize</find>
+      <find>CheckL2BufferSize</find>
+      <find>PutInL2WriteBuffer</find>
+      <find>putBlockInBuffer</find>
     </findStrings>
     <replaceStrings>
       <replace>tests/</replace>
@@ -251,7 +232,6 @@
         <option value="$PROJECT_DIR$/CacheLine/CacheLine.h" />
         <option value="$PROJECT_DIR$/Queue/Queue.h" />
         <option value="$PROJECT_DIR$/Processor/processor.c" />
-        <option value="$PROJECT_DIR$/Queue/Queue.c" />
         <option value="$PROJECT_DIR$/Processor/processor.h" />
         <option value="$PROJECT_DIR$/CacheLine/CacheLine.c" />
         <option value="$PROJECT_DIR$/Data/DataStore.h" />
@@ -272,15 +252,16 @@
         <option value="$PROJECT_DIR$/Set/Set.c" />
         <option value="$PROJECT_DIR$/Global_Variables.h" />
         <option value="$PROJECT_DIR$/Controller/Controller.h" />
-        <option value="$PROJECT_DIR$/input.txt" />
         <option value="$PROJECT_DIR$/BlockOnBus/BlockOnBus.h" />
         <option value="$PROJECT_DIR$/DRAM/DRAM.h" />
-        <option value="$PROJECT_DIR$/main.c" />
         <option value="$PROJECT_DIR$/DRAM/DRAM.c" />
         <option value="$PROJECT_DIR$/Buffers/buffers.c" />
-        <option value="$PROJECT_DIR$/Controller/Controller.c" />
-        <option value="$PROJECT_DIR$/Block_Queue/Block_Queue.c" />
         <option value="$PROJECT_DIR$/BlockOnBus/BlockOnBus.c" />
+        <option value="$PROJECT_DIR$/Block_Queue/Block_Queue.c" />
+        <option value="$PROJECT_DIR$/input.txt" />
+        <option value="$PROJECT_DIR$/Queue/Queue.c" />
+        <option value="$PROJECT_DIR$/main.c" />
+        <option value="$PROJECT_DIR$/Controller/Controller.c" />
       </list>
     </option>
   </component>
@@ -846,21 +827,7 @@
       <workItem from="1497302109564" duration="5242000" />
       <workItem from="1497307589555" duration="19000" />
       <workItem from="1497307612370" duration="37000" />
-      <workItem from="1497307692875" duration="58833000" />
-    </task>
-    <task id="LOCAL-00165" summary="Set now indexes by using the Tag.  We have 17 bits total, 6 tag, 8 index, 3 offset">
-      <created>1497133771251</created>
-      <option name="number" value="00165" />
-      <option name="presentableId" value="LOCAL-00165" />
-      <option name="project" value="LOCAL" />
-      <updated>1497133771260</updated>
-    </task>
-    <task id="LOCAL-00166" summary="All of the defaults are correct.">
-      <created>1497134599875</created>
-      <option name="number" value="00166" />
-      <option name="presentableId" value="LOCAL-00166" />
-      <option name="project" value="LOCAL" />
-      <updated>1497134599875</updated>
+      <workItem from="1497307692875" duration="61890000" />
     </task>
     <task id="LOCAL-00167" summary="Working on L1Controller.  Added statement to read from L2 cache and wait for the result.">
       <created>1497135991844</created>
@@ -1191,26 +1158,41 @@
       <option name="project" value="LOCAL" />
       <updated>1497392880760</updated>
     </task>
-    <option name="localTasksCounter" value="214" />
+    <task id="LOCAL-00214" summary="I think I fixed another segmentation fault bug with using pointers.">
+      <created>1497401528976</created>
+      <option name="number" value="00214" />
+      <option name="presentableId" value="LOCAL-00214" />
+      <option name="project" value="LOCAL" />
+      <updated>1497401528976</updated>
+    </task>
+    <task id="LOCAL-00215" summary="Mostly working">
+      <created>1497402859960</created>
+      <option name="number" value="00215" />
+      <option name="presentableId" value="LOCAL-00215" />
+      <option name="project" value="LOCAL" />
+      <updated>1497402859960</updated>
+    </task>
+    <option name="localTasksCounter" value="216" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="306814000" />
+    <option name="totallyTimeSpent" value="309871000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="954" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3487242" sideWeight="0.37466308" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2964763" sideWeight="0.34555256" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3282532" sideWeight="0.5460916" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3596598" sideWeight="0.5309973" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32077765" sideWeight="0.31051213" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2964763" sideWeight="0.65444744" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32077765" sideWeight="0.3040431" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32520324" sideWeight="0.49380055" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2684636" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32902467" sideWeight="0.49595687" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3596598" sideWeight="0.4690027" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3596598" sideWeight="0.44097036" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1228,8 +1210,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="l1 controller, successfully moving data to the victim cache and write buffer" />
-    <MESSAGE value="Flushing data from victim and write buffer is working." />
     <MESSAGE value="Successfully flushing victim cache/write buffer to the l2Controller's blockQueue." />
     <MESSAGE value="Removed L2Controller.  We are just going to use the controller struct.  Builds." />
     <MESSAGE value="Added l2 controller constructor" />
@@ -1253,7 +1233,9 @@
     <MESSAGE value="Changed Memory to just store BlockOnBus instances.  I didn't want to do more data transfer work.  The name is confusing and I'll have to make a typedef to fix it." />
     <MESSAGE value="Changed block that makes the controller wait to a pointer.  That might fix my bug." />
     <MESSAGE value="Yay!  The program runs :).  Not done yet.  Committing b/c it finally builds and runs with a simple instruction!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Yay!  The program runs :).  Not done yet.  Committing b/c it finally builds and runs with a simple instruction!" />
+    <MESSAGE value="I think I fixed another segmentation fault bug with using pointers." />
+    <MESSAGE value="Mostly working" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mostly working" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1264,30 +1246,22 @@
           <option name="timeStamp" value="522" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/main.c</url>
-          <line>37</line>
-          <option name="timeStamp" value="543" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/main.c</url>
-          <line>65</line>
-          <option name="timeStamp" value="547" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/main.c</url>
-          <line>38</line>
-          <option name="timeStamp" value="551" />
+          <url>file://$PROJECT_DIR$/Queue/Queue.c</url>
+          <line>76</line>
+          <option name="timeStamp" value="553" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="553" />
+      <option name="time" value="564" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="CMakeRunConfiguration">
         <watch expression="set" />
         <watch expression="settt" />
+        <watch expression="processor" />
+        <watch expression="l1Controller" />
       </configuration>
     </watches-manager>
   </component>
@@ -1433,22 +1407,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Queue/Queue.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="39" column="12" lean-forward="false" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Processor/processor.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-106">
-          <caret line="26" column="9" lean-forward="false" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Global_Variables.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
@@ -1464,14 +1422,6 @@
           <folding>
             <element signature="e#90#110#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Queue/Queue.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="71" column="0" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1587,14 +1537,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/input.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="11" lean-forward="true" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Set/Set.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="291">
@@ -1637,14 +1579,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Block_Queue/Block_Queue.c">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="27" column="37" lean-forward="true" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/BlockOnBus/BlockOnBus.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="276">
@@ -1653,10 +1587,50 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Block_Queue/Block_Queue.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="39">
+          <caret line="69" column="0" lean-forward="false" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Processor/processor.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="371">
+          <caret line="73" column="0" lean-forward="false" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/input.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="9" lean-forward="true" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Queue/Queue.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="444">
+          <caret line="39" column="12" lean-forward="false" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Queue/Queue.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="60" column="16" lean-forward="true" selection-start-line="60" selection-start-column="16" selection-end-line="60" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="65" column="0" lean-forward="false" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+        <state relative-caret-position="252">
+          <caret line="95" column="16" lean-forward="true" selection-start-line="95" selection-start-column="16" selection-end-line="95" selection-end-column="40" />
           <folding>
             <element signature="e#0#24#0" expanded="true" />
           </folding>
@@ -1665,8 +1639,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Controller/Controller.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="121" column="0" lean-forward="false" selection-start-line="121" selection-start-column="0" selection-end-line="121" selection-end-column="0" />
+        <state relative-caret-position="288">
+          <caret line="102" column="35" lean-forward="false" selection-start-line="102" selection-start-column="35" selection-end-line="102" selection-end-column="35" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
           </folding>
