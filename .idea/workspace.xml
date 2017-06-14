@@ -11,19 +11,11 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="874cd3ee-283a-48e2-bbb0-bde542e13d07" name="Default" comment="Updated ReadME and changed time to write to blockQueue immediately instead of waiting.">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/aca/L1Data.c.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/aca/L2Data.c.o" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/aca/MainMemory.c.o" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ACA_Project2" afterPath="$PROJECT_DIR$/ACA_Project2" />
+    <list default="true" id="874cd3ee-283a-48e2-bbb0-bde542e13d07" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ACA_Project.cbp" afterPath="$PROJECT_DIR$/ACA_Project.cbp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/C.includecache" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/C.includecache" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/depend.internal" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/depend.internal" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/depend.make" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/depend.make" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeLists.txt" afterPath="$PROJECT_DIR$/CMakeLists.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controller/Controller.c" afterPath="$PROJECT_DIR$/Controller/Controller.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Makefile" afterPath="$PROJECT_DIR$/Makefile" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <ignored path="$PROJECT_DIR$/CMakeFiles/" />
@@ -807,14 +799,7 @@
       <workItem from="1497302109564" duration="5242000" />
       <workItem from="1497307589555" duration="19000" />
       <workItem from="1497307612370" duration="37000" />
-      <workItem from="1497307692875" duration="76608000" />
-    </task>
-    <task id="LOCAL-00177" summary="Changed header includes to quotes.  Sometimes CLion does the system &lt;&gt; includes. That causes issues.">
-      <created>1497148401508</created>
-      <option name="number" value="00177" />
-      <option name="presentableId" value="LOCAL-00177" />
-      <option name="project" value="LOCAL" />
-      <updated>1497148401508</updated>
+      <workItem from="1497307692875" duration="76650000" />
     </task>
     <task id="LOCAL-00178" summary="Finished l1 cache controller write">
       <created>1497149206767</created>
@@ -1152,11 +1137,18 @@
       <option name="project" value="LOCAL" />
       <updated>1497418523167</updated>
     </task>
-    <option name="localTasksCounter" value="226" />
+    <task id="LOCAL-00226" summary="Removed ACA folder and files.  Updated dirty bit/valid bit information for L1 and L2.">
+      <created>1497419323220</created>
+      <option name="number" value="00226" />
+      <option name="presentableId" value="LOCAL-00226" />
+      <option name="project" value="LOCAL" />
+      <updated>1497419323220</updated>
+    </task>
+    <option name="localTasksCounter" value="227" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="324589000" />
+    <option name="totallyTimeSpent" value="324631000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="954" extended-state="6" />
@@ -1190,7 +1182,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Going on a run,  I wanted to commit.  Doesn't build.  Will fix when I get back." />
     <MESSAGE value="Created BlockOnBus Data Structure and Constructor for each main portion of memory." />
     <MESSAGE value="Starting marking blocks as idle. The cache only waits when a block is idle is trying to be accessed." />
     <MESSAGE value="Have the write buffer working at the L2 level.  Blocks are also idle when waiting for data." />
@@ -1215,7 +1206,8 @@
     <MESSAGE value="Deleted junk ACA folder.  Adding to README for final submission." />
     <MESSAGE value="Extended ReadME" />
     <MESSAGE value="Updated ReadME and changed time to write to blockQueue immediately instead of waiting." />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated ReadME and changed time to write to blockQueue immediately instead of waiting." />
+    <MESSAGE value="Removed ACA folder and files.  Updated dirty bit/valid bit information for L1 and L2." />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed ACA folder and files.  Updated dirty bit/valid bit information for L1 and L2." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
