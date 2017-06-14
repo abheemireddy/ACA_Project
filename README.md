@@ -45,7 +45,7 @@ The loop continues until all instruction Queues are empty, i.e. all instructions
 
 SOURCE CODE:
 https://github.com/cpluspluscrowe/ACA_Project
-    Over 280 commits to GitHub for this project.
+    300+ commits to GitHub for this project
 
 TESTS/TEST EXECUTION TRACES AND OUTPUTS
 in folder:Tests
