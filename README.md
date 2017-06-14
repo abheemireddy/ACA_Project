@@ -3,7 +3,7 @@ By: Chad Crowe
 
 MAKING THE EXECUTABLE:
 Project was created using CMAKE
-1. cd to directory ACA_Project
+1. cd to directory /home/ccrowe/csci8150-summer17/ACA_Project
 2. Run "cmake ."
         This will create the makefile
 3. Run make

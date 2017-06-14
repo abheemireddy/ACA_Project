@@ -64,6 +64,7 @@ void PushDownBlockInL1(Block* block2Find){
 void CheckL2SetSize(Set* set){
     int countInSet = Count(&set->HashTable);
     while(countInSet > 4){
+        countInSet = Count(&set->HashTable);
         SortHash(&set->HashTable);
         Block* leastUsed = GetLeastUsed(&set->HashTable);
         //removed from L2
