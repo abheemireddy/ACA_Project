@@ -158,9 +158,12 @@ CacheLine* ProcessL1Instruction(Instruction instruction){
 void WriteToBlock(Block* existing,Instruction instruction,char value[64]){
     CacheLine* toWriteTo = getCacheLineByOffset(&existing->HashTable,instruction.address.Offset);
     if(toWriteTo == NULL){
+        printf("Found valid CacheLine.  Writing to CacheLine%d\n",instruction.address.bitStringValue);
         CacheLine* cacheLine = Constructor_CacheLine(instruction.address,value);
         putCacheLine(&existing->HashTable,cacheLine);
         toWriteTo = getCacheLineByOffset(&existing->HashTable,instruction.address.Offset);
+    }else{
+        printf("CacheLine did not already exist.  Writing to CacheLien:%d\n",instruction.address.bitStringValue);
     }
     toWriteTo->dataLine = StoreData(l1Data,value);
     existing->dirtyBit = true;
@@ -177,6 +180,7 @@ bool CheckVictimCacheAndWriteBuffer(Instruction instruction,char value[64]){
         return false;
     }else{
         if(victimBlock != NULL){
+            printf("Found block in victim cache\n");
             CacheLine* victimCacheLine = getCacheLineByOffset(&victimBlock->HashTable,instruction.address.Offset);
             victimCacheLine->dataLine = StoreData(l1Data,value);
             victimBlock->dirtyBit = true;
@@ -186,6 +190,7 @@ bool CheckVictimCacheAndWriteBuffer(Instruction instruction,char value[64]){
             removeBlockFromBuffer(&l1VictimCache->HashTable,victimBlock);
             return true;
         }else if(writeBlock != NULL){
+            printf("Found block in write buffer");
             CacheLine* writeBufferCacheLine = getCacheLineByOffset(&victimBlock->HashTable,instruction.address.Offset);
             writeBufferCacheLine->dataLine = StoreData(l1Data,value);
             writeBlock->dirtyBit = true;
@@ -201,13 +206,24 @@ bool CheckVictimCacheAndWriteBuffer(Instruction instruction,char value[64]){
     return false;
 }
 
-bool CheckL2WriteBuffer(Block block2Write){
-    Block* writeBlock = getBlockFromBuffer(&l2WriteBuffer->HashTable,block2Write.address.bitStringValue);
-    printf("Checking L2's write buffer for Block:%d\n",block2Write.address.bitStringValue);
+bool CheckL2WriteBuffer(Block* block2Write){
+    Block* writeBlock = getBlockFromBuffer(&l2WriteBuffer->HashTable,block2Write->address.bitStringValue);
+    printf("Checking L2's write buffer for Block:%d\n",block2Write->address.bitStringValue);
     if(writeBlock != NULL){
-        removeBlockFromBuffer(&l2WriteBuffer->HashTable,&block2Write);
-        Set* set = getSetByIndex(&l2Controller->cache->HashTable,block2Write.address.Index);
-        put(&set->HashTable,&block2Write);//no need to put on block queue, just write directly from buffer to cache
+        printf("Found block in write buffer\n");
+        removeBlockFromBuffer(&l2WriteBuffer->HashTable,block2Write);
+        Set* set = getSetByIndex(&l2Controller->cache->HashTable,block2Write->address.Index);
+        put(&set->HashTable,block2Write);//write directly from buffer to cache
+        if(block2Write->isIdle == true){
+            printf("Putting L2 Controller in idle from trying to access a block already being written to, Block:%d\n",block2Write->address.bitStringValue);
+            l2Controller->waiting == true;
+            L2controllerIsIdleUntilItReceivesThisBlock = *block2Write;
+            return true;
+        }
+        printf("Found block in L2.  Sending to L1, Block:%d\n",block2Write->address.bitStringValue);
+        BlockOnBus* blockOnBus = Constructor_BlockOnBus(l2Controller,block2Write,ClockCycleCount + 2);
+        EnqueueBlock(l1Controller->writeBlockQueue,blockOnBus);
+        Dequeue(l2Controller->transferer->TransferQueue);
         return true;
     }
     return false;
@@ -225,6 +241,7 @@ void WriteBlockToL2Controller(BlockOnBus* blockOnBus2Write){
     Block* block = get(&set->HashTable,blockOnBus2Write->blockOnBus->address.Tag);
 
     if(block != NULL){
+        printf("Found block in L2.  Re-writing, Block:%d\n",block->address.bitStringValue);
         removeFromTable(&set->HashTable,block);
     }
     put(&set->HashTable,blockOnBus2Write->blockOnBus);
@@ -245,11 +262,16 @@ void FindBlockInL2(Instruction instruction){
             L2controllerIsIdleUntilItReceivesThisBlock = *block;
             return;
         }
+        printf("Found block in L2.  Sending to L1, Block:%d\n",instruction.address.bitStringValue);
         BlockOnBus* blockOnBus = Constructor_BlockOnBus(l2Controller,block,ClockCycleCount + 2);
         EnqueueBlock(l1Controller->writeBlockQueue,blockOnBus);
         Dequeue(l2Controller->transferer->TransferQueue);
     }else{
         Block* idlePlaceHolder = Constructor_Block(instruction.address);
+        bool found = CheckL2WriteBuffer(idlePlaceHolder);
+        if(found == true){
+            return;
+        }
         printf("Putting L2 block on idle, Block:%d\n",instruction.address.bitStringValue);
         idlePlaceHolder->isIdle = true;//Now we have marked this block in our set as idle
         put(&set->HashTable,idlePlaceHolder);
@@ -261,6 +283,7 @@ void ProcessDRamInstruction(Instruction instruction){
     BlockOnBus* checkDramBlock = getBlock(&dRAM->HashTable,instruction.address.bitStringValue);
     if(checkDramBlock != NULL){
         BlockOnBus* blockOnBus = getBlock(&dRAM->HashTable,instruction.address.bitStringValue);
+        printf("Found block in memory, sending to L2, Block:%d\n",instruction.address.bitStringValue);
         EnqueueBlock(l2Controller->writeBlockQueue,blockOnBus);
     }else{
         printf("Storing block in memory, Block:%d\n",instruction.address.bitStringValue);
@@ -292,9 +315,7 @@ void WriteToController(Instruction instruction, char value[64])
     Block* existing = get(&set->HashTable,instruction.address.Tag);
     if(existing != NULL){
         if(existing->isIdle == true){
-            if(instruction.instruction == 1){
-                printf("Putting L1 Controller in idle.  Trying to write from a block already being written to, Block:%d\n",instruction.address.bitStringValue);
-            }
+            printf("Putting L1 Controller in idle.  Trying to write from a block already being written to, Block:%d\n",instruction.address.bitStringValue);
             L1controllerIsIdleUntilItReceivesThisBlock = *existing;
             l1Controller->waiting = true;
             return;
@@ -303,6 +324,7 @@ void WriteToController(Instruction instruction, char value[64])
     }else if(existing == NULL){
         bool found = CheckVictimCacheAndWriteBuffer(instruction,value);
         if(found == false){
+            printf("Block not in L1. Marking L1 block as idle, Block:%d\n",instruction.address.bitStringValue);
             Block* idlePlaceHolder = Constructor_Block(instruction.address);
             idlePlaceHolder->isIdle = true;//Now we have marked this block in our set as idle
             put(&set->HashTable,idlePlaceHolder);
@@ -311,40 +333,6 @@ void WriteToController(Instruction instruction, char value[64])
     }
     CheckSetSize(set);
     CheckBufferSize();
-	/*printf("P to L1C: CPUWrite (%d)\n", address.bitStringValue);
-	// check if address is valid
-	if (!L1Data[address.Index].valid) // block not valid
-	{
-		printf("L1C to L1D: Data\n");
-		printf("Hit\n");
-		L1Data[address.Index].data[address.Offset] = (unsigned char)value;
-		L1Data[address.Index].valid = 1;
-		L1Data[address.Index].dirty = 1;
-		L1Data[address.Index].tag = address.Tag;
-	}
-	else if (L1Data[address.Index].valid && L1Data[address.Index].tag == address.Tag)
-	{
-		printf("L1C to L1D: Data\n");
-		printf("Hit\n");
-		L1Data[address.Index].data[address.Offset] = (unsigned char)value;
-		L1Data[address.Index].dirty = 1;
-	}
-	else if (L1Data[address.Index].valid && L1Data[address.Index].tag != address.Tag) // not in Cache!
-	{
-		// check if dirty, we need to writeback
-		if (L1Data[address.Index].dirty)
-		{
-			printf("L1C to L2D: CPUWrite\n");
-			l2Write(address, value);
-		}
-		printf("L1C to L2C: CPURead\n");
-		L1Data[address.Index].dirty = 0;
-		L1Data[address.Index].tag = address.Tag;
-		//TODO : push the given address to read queue
-		l2Read(address, L1Data[address.Index].data);  // get data from L2
-		printf("L2C to L1C: Data\n");
-
-	}*/
 }
 
 CacheLine* L1_read(Instruction instruction)

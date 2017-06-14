@@ -46,6 +46,7 @@ int main(){
                 }
                 if(l1Controller->waiting == true){
                     if(blockReceived->address.Tag == L1controllerIsIdleUntilItReceivesThisBlock.address.Tag){
+                        printf("L1 Controller being released from idle\n");
                         l1Controller->waiting = false;
                     }
                 }
@@ -70,7 +71,6 @@ int main(){
             }
             if(!isEmpty(l1Controller->transferer->TransferQueue)){
                 Instruction nextInstructionForL1ControllerToProcess = GetNextInstruction(l1Controller->transferer);
-                printf("location:%d\n",nextInstructionForL1ControllerToProcess.address.bitStringValue);
                 CacheLine *read = ProcessL1Instruction(nextInstructionForL1ControllerToProcess);
                 if (nextInstructionForL1ControllerToProcess.instruction == 2) {
                     if (read == NULL) {
@@ -97,6 +97,7 @@ int main(){
                 if (l2Controller->waiting == true) {
                     if (blockReceived->address.Tag ==
                         L2controllerIsIdleUntilItReceivesThisBlock.address.Tag) {
+                        printf("L2 Controller being released from idle\n");
                         l2Controller->waiting = false;
                     }
                 }
