@@ -164,12 +164,12 @@ CacheLine* ProcessL1Instruction(Instruction instruction){
 void WriteToBlock(Block* existing,Instruction instruction,char value[8]){
     CacheLine* toWriteTo = getCacheLineByOffset(&existing->HashTable,instruction.address.Offset);
     if(toWriteTo == NULL){
-        printf("Found valid CacheLine.  Writing to CacheLine%d\n",instruction.address.bitStringValue);
+        printf("No Existing Valid CacheLine.  Writing to CacheLine%d\n",instruction.address.bitStringValue);
         CacheLine* cacheLine = Constructor_CacheLine(instruction.address,value);
         putCacheLine(&existing->HashTable,cacheLine);
         toWriteTo = getCacheLineByOffset(&existing->HashTable,instruction.address.Offset);
     }else{
-        //printf("CacheLine did not already exist.  Writing to CacheLine:%d\n",instruction.address.bitStringValue);
+        printf("CacheLine already existed.  Writing to CacheLine:%d\n",instruction.address.bitStringValue);
     }
     toWriteTo->dataLine = StoreData(l1Data,value);
     existing->dirtyBit = true;
@@ -188,6 +188,12 @@ bool CheckVictimCacheAndWriteBuffer(Instruction instruction,char value[8]){
         if(victimBlock != NULL){
             printf("Found block in victim cache\n");
             CacheLine* victimCacheLine = getCacheLineByOffset(&victimBlock->HashTable,instruction.address.Offset);
+            if(victimCacheLine == NULL){
+                printf("No Existing Valid CacheLine in victimCache.  Writing to CacheLine%d\n",instruction.address.bitStringValue);
+                CacheLine* cacheLine = Constructor_CacheLine(instruction.address,value);
+                putCacheLine(&victimBlock->HashTable,cacheLine);
+                victimCacheLine = getCacheLineByOffset(&victimBlock->HashTable,instruction.address.Offset);
+            }
             victimCacheLine->dataLine = StoreData(l1Data,value);
             victimBlock->dirtyBit = true;
             victimBlock->isIdle = false;
