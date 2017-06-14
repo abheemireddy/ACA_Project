@@ -50,7 +50,7 @@ int main(){
                     }
                 }
                 WriteBlockToL1Controller(blockReceived);
-                DequeueBlock(l2Controller->writeBlockQueue);
+                //DequeueBlock(l2Controller->writeBlockQueue);
             } else {
                 break;
             }
@@ -58,9 +58,16 @@ int main(){
 
         //Set* settt = getSetByIndex(&l1Controller->cache->HashTable,0);
         //2. If L1 is not blocked, process the next request from the processor
-        while(l1Controller->waiting == false && !isEmpty(processor->InstructionHolder->TransferQueue)){
-            Instruction nextInstructionFromProcessor = Dequeue(processor->InstructionHolder->TransferQueue);
-            Enqueue(l1Controller->transferer->TransferQueue, nextInstructionFromProcessor);
+        while(l1Controller->waiting == false && (!isEmpty(processor->InstructionHolder->TransferQueue) || !isEmpty(l1Controller->transferer->TransferQueue))){
+            if(!isEmpty(processor->InstructionHolder->TransferQueue)){
+                Instruction nextInstructionFromProcessor = Dequeue(processor->InstructionHolder->TransferQueue);
+                if(nextInstructionFromProcessor.instruction == 1){
+                    printf("P to L1C: CPUWrite to %d value:%s\n",nextInstructionFromProcessor.address.bitStringValue,nextInstructionFromProcessor.data);
+                }else{
+                    printf("P to L1C: CPURead from %d\n",nextInstructionFromProcessor.address.bitStringValue);
+                }
+                Enqueue(l1Controller->transferer->TransferQueue, nextInstructionFromProcessor);
+            }
             if(!isEmpty(l1Controller->transferer->TransferQueue)){
                 Instruction nextInstructionForL1ControllerToProcess = GetNextInstruction(l1Controller->transferer);
                 printf("location:%d\n",nextInstructionForL1ControllerToProcess.address.bitStringValue);
