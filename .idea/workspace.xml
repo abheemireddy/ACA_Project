@@ -12,7 +12,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="874cd3ee-283a-48e2-bbb0-bde542e13d07" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ACA_Project2" afterPath="$PROJECT_DIR$/ACA_Project2" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Address/Address.c.o" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Address/Address.c.o" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Block/Block.c.o" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Block/Block.c.o" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.o" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Buffers/buffers.c.o" />
@@ -21,20 +20,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Set/Set.c.o" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/Set/Set.c.o" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/main.c.o" afterPath="$PROJECT_DIR$/CMakeFiles/ACA_Project2.dir/main.c.o" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Address/Address.c" afterPath="$PROJECT_DIR$/Address/Address.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Address/Address.h" afterPath="$PROJECT_DIR$/Address/Address.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Block/Block.c" afterPath="$PROJECT_DIR$/Block/Block.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BlockOnBus/BlockOnBus.c" afterPath="$PROJECT_DIR$/BlockOnBus/BlockOnBus.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Buffers/buffers.c" afterPath="$PROJECT_DIR$/Buffers/buffers.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Cache/Cache.c" afterPath="$PROJECT_DIR$/Cache/Cache.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Controller/Controller.c" afterPath="$PROJECT_DIR$/Controller/Controller.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DRAM/DRAM.c" afterPath="$PROJECT_DIR$/DRAM/DRAM.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/DataStore.c" afterPath="$PROJECT_DIR$/Data/DataStore.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data/DataStore.h" afterPath="$PROJECT_DIR$/Data/DataStore.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Data_Structure_Examples/Block/Block_CacheLine_HashTable_Examples.c" afterPath="$PROJECT_DIR$/Data_Structure_Examples/Block/Block_CacheLine_HashTable_Examples.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Set/Set.c" afterPath="$PROJECT_DIR$/Set/Set.c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/input.txt" afterPath="$PROJECT_DIR$/input.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.c" afterPath="$PROJECT_DIR$/main.c" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <ignored path="$PROJECT_DIR$/CMakeFiles/" />
@@ -687,13 +672,6 @@
       <workItem from="1497429958558" duration="201000" />
       <workItem from="1497430468152" duration="5451000" />
     </task>
-    <task id="LOCAL-00193" summary="Added l2 controller constructor">
-      <created>1497208457962</created>
-      <option name="number" value="00193" />
-      <option name="presentableId" value="LOCAL-00193" />
-      <option name="project" value="LOCAL" />
-      <updated>1497208457977</updated>
-    </task>
     <task id="LOCAL-00194" summary="Fixed memory issue with single Controller when looking at sets.  I had to malloc space for the l2Data's Block.">
       <created>1497212041477</created>
       <option name="number" value="00194" />
@@ -1030,11 +1008,18 @@
       <option name="project" value="LOCAL" />
       <updated>1497476577388</updated>
     </task>
-    <option name="localTasksCounter" value="242" />
+    <task id="LOCAL-00242" summary="Finishing up project">
+      <created>1497501873854</created>
+      <option name="number" value="00242" />
+      <option name="presentableId" value="LOCAL-00242" />
+      <option name="project" value="LOCAL" />
+      <updated>1497501873854</updated>
+    </task>
+    <option name="localTasksCounter" value="243" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="355029000" />
+    <option name="totallyTimeSpent" value="355091000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1855" height="954" extended-state="6" />
@@ -1045,7 +1030,7 @@
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32806805" sideWeight="0.5439353" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4763062" sideWeight="0.5902965" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32442284" sideWeight="0.4916442" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4763062" sideWeight="0.4097035" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4763062" sideWeight="0.4097035" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1509434" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32806805" sideWeight="0.49380055" order="1" side_tool="false" content_ui="tabs" />
@@ -1081,7 +1066,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Now whenever I evict from L2 I also evict from L1." />
     <MESSAGE value="Added print statements to project" />
     <MESSAGE value="Added looking in cache to code." />
     <MESSAGE value="Added some comments." />
@@ -1106,7 +1090,8 @@
     <MESSAGE value="Fixing small bugs with buffers" />
     <MESSAGE value="Fixed tag/index sizes for controllers" />
     <MESSAGE value="Changed initial while statement." />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed initial while statement." />
+    <MESSAGE value="Finishing up project" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finishing up project" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
