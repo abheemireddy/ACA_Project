@@ -16,7 +16,7 @@ char* GetData(DataStore* dataStore,int lineNumber){
     return dataStore->Data[lineNumber];
 }
 
-int StoreData(DataStore* dataStore,char* dataToStore){
+int StoreData(DataStore* dataStore,char dataToStore[8]){
     strcpy(dataStore->Data[dataStore->currentLine],dataToStore);
     dataStore->currentLine += 1;
     return dataStore->currentLine-1;

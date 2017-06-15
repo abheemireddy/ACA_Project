@@ -14,6 +14,6 @@ typedef struct DataStoreTag{
 DataStore* Constructor_DataStore();
 
 char* GetData(DataStore* dataStore,int lineNumber);
-int StoreData(DataStore* dataStore,char* dataToStore);
+int StoreData(DataStore* dataStore,char dataToStore[8]);
 
 #endif //ACA_PROJECT_DATASTORE_H

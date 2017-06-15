@@ -16,7 +16,12 @@ Cache* Constructor_Cache(int numberOfSets){
     for(i = 0;i<cache->NumberOfSets;i++){
         char bitString[18];
         strcpy(bitString,int2bin(setAddress));
-        Address* address = Constructor_AddressConvertForL2(bitString);
+        Address* address = malloc(sizeof(Address));
+        if(numberOfSets == 1024){
+            address = Constructor_AddressConvertForL2(bitString);
+        }else if(numberOfSets == 512){
+            address = Constructor_Address(bitString);
+        }
         Set* set = Constructor_Set(4,*address);
         putSet(&cache->HashTable,set);
         setAddress += 8;
@@ -25,8 +30,8 @@ Cache* Constructor_Cache(int numberOfSets){
 }
 
 void putSet(Set** HashTable,Set* value) {  //key is useFrequency of the block.  Seems magical
-    Block *hashTableStoresInThisBlock;
-    Set* tmp;
+    Set *hashTableStoresInThisBlock = malloc(sizeof(Set));
+    Set* tmp = malloc(sizeof(Set));;
     HASH_REPLACE_INT(*HashTable, address.Index, value,tmp );
     //The last parameter is a pointer to the structure being added
 }
@@ -44,7 +49,7 @@ void replaceSet(UT_hash_handle hh,Set** HashTable,Set *value) {
 
 //look up item in hashmap
 Set* getSetByIndex(Set** HashTable,int key) {
-    Set* hashTableStoresInThisBlock;
+    Set* hashTableStoresInThisBlock = malloc(sizeof(Set));
 
     HASH_FIND_INT( *HashTable, &key, hashTableStoresInThisBlock );//find block_id and put into s
     return hashTableStoresInThisBlock;
@@ -57,7 +62,8 @@ void removeSetFromTable(Set** HashTable,Set* blockToRemove) {
 
 //Delete all items from hash
 void deleteAllSet(Set** HashTable) {
-    Set *current_block, *tmp;
+    Set *current_block = malloc(sizeof(Set));
+    Set* tmp = malloc(sizeof(Set));
 
     HASH_ITER(hh, *HashTable, current_block, tmp) {
         HASH_DEL(*HashTable,current_block);  /* delete; users advances to next */
@@ -73,8 +79,8 @@ int CountSets(Set** HashTable){
 }
 
 void print_sets(Set** HashTable) {
-    Set* s;
-    Set* tmp;
+    Set* s = malloc(sizeof(Set));
+    Set* tmp = malloc(sizeof(Set));
     HASH_ITER(hh,*HashTable,s,tmp){
         printf("address.Index: %d",s->address.Index);
     }

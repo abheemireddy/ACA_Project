@@ -16,7 +16,7 @@ Controller* Constructor_L1Controller(){
     Controller* l1ControllerCon = malloc(sizeof(l1ControllerCon));
 
     l1ControllerCon->writeBlockQueue = Constructor_BlockQueue();
-    l1ControllerCon->cache = Constructor_Cache(64);
+    l1ControllerCon->cache = Constructor_Cache(512);
     l1ControllerCon->transferer = Constructor_Transferer();
     l1ControllerCon->waiting = false;
     return l1ControllerCon;
@@ -25,7 +25,7 @@ Controller* Constructor_L1Controller(){
 Controller* Constructor_L2Controller(){
     Controller* l2ControllerCon = malloc(sizeof(l2ControllerCon));
 
-    l2ControllerCon->cache = Constructor_Cache(256);
+    l2ControllerCon->cache = Constructor_Cache(1024);
     l2ControllerCon->transferer = Constructor_Transferer();
     l2ControllerCon->writeBlockQueue = Constructor_BlockQueue();
     l2ControllerCon->waiting = false;
@@ -87,7 +87,6 @@ void CheckSetSize(Set* set){
         SortHash(&set->HashTable);
         Block* leastUsed = GetLeastUsed(&set->HashTable);
         HASH_DELETE(hh,set->HashTable,leastUsed);
-        //removeFromTable(&set->HashTable,leastUsed);
         if(leastUsed->dirtyBit == true){
             PutInWriteBuffer(leastUsed);
             printf("Moving block to L1's Write Buffer.  Block:%d\n",leastUsed->address.bitStringValue);
@@ -95,6 +94,7 @@ void CheckSetSize(Set* set){
             PutInVictimCache(leastUsed);
             printf("Moving block to L1's Victim Cache.  Block:%d\n",leastUsed->address.bitStringValue);
         }
+
     }
     CheckBufferSize();
 }
@@ -113,8 +113,8 @@ void CheckBufferSize(){
 void CheckL2BufferSize(){
     int writeBufferCount = CountBlocksInBuffer(&l2WriteBuffer->HashTable);
     if(writeBufferCount > 5){
-        Block* s;
-        Block* tmp;
+        Block* s = malloc(sizeof(Block));;
+        Block* tmp = malloc(sizeof(Block));;
         HASH_ITER(hh,l2WriteBuffer->HashTable,s,tmp){ //write everything in buffer to DRam
             Address* adjustedAddress = Constructor_AddressConvertForL2(s->address.bitString);
             s->address = *adjustedAddress;
@@ -255,8 +255,8 @@ bool CheckL2WriteBuffer(Block* block2Write){
 void WriteBlockToL2Controller(BlockOnBus* blockOnBus2Write){
     Address* adjustedAddress = Constructor_AddressConvertForL2(blockOnBus2Write->blockOnBus->address.bitString);
     blockOnBus2Write->blockOnBus->address = *adjustedAddress;
-    CacheLine* s;
-    CacheLine* tmp;
+    CacheLine* s = malloc(sizeof(CacheLine));
+    CacheLine* tmp = malloc(sizeof(CacheLine));
     int i = 0;
     HASH_ITER(hh,blockOnBus2Write->blockOnBus->HashTable,s,tmp){
         s->dataLine = StoreData(l2Data,blockOnBus2Write->valueBeingTransferred[s->dataLine]); //TransferBlockDataToL2
@@ -352,8 +352,13 @@ void WriteBlockToDRAM(BlockOnBus* block2Write){
 void WriteToController(Instruction instruction, char value[8])
 {
     Set* set = getSetByIndex(&l1Controller->cache->HashTable,instruction.address.Index);
-    bool found1 = CheckVictimCacheAndWriteBuffer(instruction,value);
-    Block* existing = get(&set->HashTable,instruction.address.Tag);
+    Block* existing;
+    if(set->HashTable != NULL){
+        bool found1 = CheckVictimCacheAndWriteBuffer(instruction,value);
+        existing = get(&set->HashTable,instruction.address.Tag);
+    }else{
+        existing = NULL;
+    }
     if(existing != NULL){
         Address nextAddress = Peek(l1Controller->transferer->TransferQueue).address;
         if(existing->isIdle == true && !((nextAddress.Tag == existing->address.Tag) && (nextAddress.Index == existing->address.Index) && (nextAddress.Offset == existing->address.Offset))){
@@ -364,10 +369,6 @@ void WriteToController(Instruction instruction, char value[8])
         }
         WriteToBlock(existing,instruction,value);
     }else if(existing == NULL){
-        Set* setTest = getSetByIndex(&l1Controller->cache->HashTable,0);
-        if(setTest == NULL){
-            int p = 5;
-        }
         bool found = CheckVictimCacheAndWriteBuffer(instruction,value);
         if(found == false){
             printf("Block not in L1. Marking L1 block as idle, Block:%d\n",instruction.address.bitStringValue);

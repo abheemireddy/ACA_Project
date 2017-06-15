@@ -11,7 +11,7 @@ int fromBinary(char* bitString){
 }
 
 
-char* GetChar(char* originalString,int start,int length,char* substring){
+char* GetChar(char originalString[18],int start,int length,char* substring){
     memcpy( substring, &originalString[start], length );
     substring[length] = '\0';
     return substring;
@@ -32,15 +32,15 @@ char *int2bin(int n) { //function from quora
     return s;
 }
 
-Address* Constructor_AddressConvertForL2(char* bitString){
+Address* Constructor_AddressConvertForL2(char bitString[18]){
     //8 for tag
     //6 for index
     //3 for offset
-    char* output = malloc(9);
-    GetChar(bitString,0,8,output);
+    char* output = malloc(5);
+    GetChar(bitString,0,4,output);
     char* TagString = output;
-    output = malloc(7);
-    GetChar(bitString,8,6,output);
+    output = malloc(11);
+    GetChar(bitString,4,10,output);
     char* IndexString = output;
     output = malloc(4);
     GetChar(bitString,14,3,output);
@@ -60,15 +60,15 @@ Address* Constructor_AddressConvertForL2(char* bitString){
     return address;
 }
 
-Address* Constructor_Address(char* bitString){
+Address* Constructor_Address(char bitString[18]){
     //6 for tag
     //8 for index
     //3 for offset
-    char* output = malloc(7);
-    GetChar(bitString,0,6,output);
+    char* output = malloc(6);
+    GetChar(bitString,0,5,output);
     char* TagString = output;
-    output = malloc(9);
-    GetChar(bitString,6,8,output);
+    output = malloc(10);
+    GetChar(bitString,5,9,output);
     char* IndexString = output;
     output = malloc(4);
     GetChar(bitString,14,3,output);

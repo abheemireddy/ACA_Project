@@ -27,14 +27,14 @@ CacheLine* SearchInBuffers(Instruction instruction){
 }
 
 void WriteBackToL2(Buffer* buffer,Block** HashTable){
-    Block* s;
-    Block* tmp;
+    Block* s = malloc(sizeof(Block));;
+    Block* tmp = malloc(sizeof(Block));;
 
     HASH_ITER(hh,buffer->HashTable,s,tmp){
         HASH_DELETE(hh,buffer->HashTable,s);
         printf("Flushing to L2: %d\n",s->address.bitStringValue);
         if(s->dirtyBit == true){
-            BlockOnBus* blockOnBus = Constructor_BlockOnBus(l1Controller,s,ClockCycleCount + 1);//assume it takes 1 clock cycle to write back to main cache
+            BlockOnBus* blockOnBus = Constructor_BlockOnBus(l1Controller,s,ClockCycleCount + 0);//assume it takes 1 clock cycle to write back to main cache
             EnqueueBlock(l2Controller->writeBlockQueue,blockOnBus);
         }
     }
@@ -42,24 +42,43 @@ void WriteBackToL2(Buffer* buffer,Block** HashTable){
 
 Buffer* Constructor_Buffer(){
     Buffer* buffer = malloc(sizeof(Buffer));
-    //Transferer transferer = Con
     buffer->HashTable = NULL;
     return buffer;
 }
 
 void putBlockInBuffer(Block** HashTable,Block *value) {  //key is useFrequency of the block.  Seems magical
-    Block* tmp;
+    if(value == NULL){
+        printf("The passed block needs to have attribute address set");
+    }
+    Block* tmp = malloc(sizeof(Block));
+    Block *hashTableStoresInThisBlock = malloc(sizeof(Block));
+    int bitStringValue = value->address.bitStringValue;
+    HASH_FIND_INT( *HashTable,&bitStringValue, hashTableStoresInThisBlock );//find block_id and put into hashTableStoresInThisBlock
+    if(hashTableStoresInThisBlock != NULL){
+        HASH_DELETE(hh,*HashTable,value);
+    }
+    Block* tmp2 = malloc(sizeof(Block));
     HASH_REPLACE_INT(*HashTable, address.bitStringValue,value,tmp );
 }
 
 void removeBlockFromBuffer(Block** HashTable,Block* blockToRemove) {
-    HASH_DELETE( hh,*HashTable, blockToRemove);//removes blocks of type block
+    if(*HashTable == NULL){
+        return;
+    }
+    Block *hashTableStoresInThisBlock = malloc(sizeof(Block));
+    int bitStringValue = blockToRemove->address.bitStringValue;
+    HASH_FIND_INT( *HashTable,&bitStringValue, hashTableStoresInThisBlock );//find block_id and put into hashTableStoresInThisBlock
+    if(hashTableStoresInThisBlock != NULL){
+        HASH_DELETE(hh,*HashTable,blockToRemove);
+    }
 }
 
 Block* getBlockFromBuffer(Block** HashTable,int key) {
-    Block *hashTableStoresInThisBlock;
-
-    HASH_FIND_INT( *HashTable, &key, hashTableStoresInThisBlock );//find block_id and put into hashTableStoresInThisBlock
+    if(*HashTable == NULL){
+        return NULL;
+    }
+    Block *hashTableStoresInThisBlock = malloc(sizeof(Block));
+    HASH_FIND_INT( *HashTable,&key, hashTableStoresInThisBlock );//find block_id and put into hashTableStoresInThisBlock
     return hashTableStoresInThisBlock;
 }
 
@@ -70,8 +89,8 @@ int CountBlocksInBuffer(Block** HashTable){
 }
 
 void print_all_blocks_in_buffer(Block** HashTable) {
-    Block* s;
-    Block* tmp;
+    Block* s = malloc(sizeof(Block));
+    Block* tmp = malloc(sizeof(Block));;
     HASH_ITER(hh,*HashTable,s,tmp){
         printf("address: %d\n",s->address.bitStringValue);
     }

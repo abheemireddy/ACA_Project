@@ -16,6 +16,6 @@ int AddCacheLinesToBlock(){
     int count = CountCacheLines(&block->HashTable);
     printf("Count: %d",count);
     CacheLine* returned = getCacheLineByOffset(&block->HashTable,cacheLine2->address.Offset);
-    char* data = GetData(l1Data,returned->dataLine);
-    printf("data at offset: %s\n",data);
+    char data[8];
+    strcpy(data,GetData(l1Data,returned->dataLine));
 }

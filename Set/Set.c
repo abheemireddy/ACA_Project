@@ -11,18 +11,6 @@ Set* Constructor_Set(int numberOfBlocks,Address address){
     set->address = address;
     set->numberOfBlocks = numberOfBlocks;
     set->HashTable = NULL;
-
-    /*int i;
-    int setAddress = address.bitStringValue;
-    for(i = 0;i<set->numberOfBlocks;i++){
-        char* bitString = int2bin(setAddress);
-        Address* address = Constructor_Address(bitString);
-        Block* block = Constructor_Block(*address);
-        block->validBit = false;
-        block->dirtyBit = false;
-        put(&set->HashTable,block);
-        setAddress += 256;
-    }*/
     return set;
 }
 
@@ -39,7 +27,13 @@ void put(Block** HashTable,Block *value) {
     if(value == NULL){
         printf("The passed block needs to have attribute address set");
     }
-    Block* tmp;
+    Block* tmp = malloc(sizeof(Block));;
+    Block *hashTableStoresInThisBlock = malloc(sizeof(Block));
+    int tag = value->address.Tag;
+    HASH_FIND_INT( *HashTable,&tag, hashTableStoresInThisBlock );//find block_id and put into hashTableStoresInThisBlock
+    if(hashTableStoresInThisBlock != NULL){
+        HASH_DELETE(hh,*HashTable,value);
+    }
     HASH_REPLACE_INT(*HashTable,address.Tag,value,tmp);
 }
 
@@ -47,7 +41,7 @@ Block* get(Block** HashTable,int key) {
     if(*HashTable == NULL){
         return NULL;
     }
-    Block *hashTableStoresInThisBlock;
+    Block *hashTableStoresInThisBlock = malloc(sizeof(Block));
 
     HASH_FIND_INT( *HashTable,&key, hashTableStoresInThisBlock );//find block_id and put into hashTableStoresInThisBlock
     if(hashTableStoresInThisBlock != NULL){
@@ -64,7 +58,7 @@ void removeFromTable(Block** HashTable,Block* blockToRemove) {
 //Delete all items from hash
 void delete_all(Block** HashTable) {
     struct BlockTag *current_block;
-    Block* tmp;
+    Block* tmp = malloc(sizeof(Block));;
 
     HASH_ITER(hh, *HashTable, current_block, tmp) {
         HASH_DEL(*HashTable,current_block);  /* delete; users advances to next */
@@ -80,16 +74,16 @@ int Count(Block** HashTable){
 }
 
 Block* GetLeastUsed(Block** HashTable){
-    Block* s;
-    Block* tmp;
+    Block* s = malloc(sizeof(Block));;
+    Block* tmp = malloc(sizeof(Block));;
     HASH_ITER(hh,*HashTable,s,tmp){
         return s;
     }
 }
 
 void print_blocks_in_set(Block** HashTable) {
-    Block* s;
-    Block* tmp;
+    Block* s = malloc(sizeof(Block));;
+    Block* tmp = malloc(sizeof(Block));;
     HASH_ITER(hh,*HashTable,s,tmp){
         printf("address: %s, LFU:%d\n",s->address.bitString,s->useFrequency);
     }

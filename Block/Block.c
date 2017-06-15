@@ -60,7 +60,7 @@ void replaceCacheLine(UT_hash_handle hh,CacheLine** HashTable,CacheLine *value) 
 
 //look up item in hashmap
 CacheLine* getCacheLineByOffset(CacheLine** HashTable,int key) {
-    CacheLine* hashTableStoresInThisBlock;
+    CacheLine* hashTableStoresInThisBlock = malloc(sizeof(CacheLine));
 
     HASH_FIND_INT( *HashTable, &key, hashTableStoresInThisBlock );//find block_id and put into s
     return hashTableStoresInThisBlock;
@@ -89,8 +89,8 @@ int CountCacheLines(CacheLine** HashTable){
 }
 
 void print_cache_lines_in_set(CacheLine** HashTable) {
-    CacheLine* s;
-    CacheLine* tmp;
+    CacheLine* s  = malloc(sizeof(CacheLine));
+    CacheLine* tmp = malloc(sizeof(CacheLine));
     HASH_ITER(hh,*HashTable,s,tmp){
         printf("address.bitString: %s",s->address.bitString);
     }

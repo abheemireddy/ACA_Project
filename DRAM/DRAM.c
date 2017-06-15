@@ -35,7 +35,7 @@ void removeBlockFromDRAM(BlockOnBus** HashTable,BlockOnBus* blockToRemove) {
 }
 
 BlockOnBus* getBlock(BlockOnBus** HashTable,int key) {
-    BlockOnBus *hashTableStoresInThisBlock;
+    BlockOnBus *hashTableStoresInThisBlock = malloc(sizeof(Block));
 
     HASH_FIND_INT( *HashTable, &key, hashTableStoresInThisBlock );//find block_id and put into hashTableStoresInThisBlock
     return hashTableStoresInThisBlock;

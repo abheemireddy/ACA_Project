@@ -48,6 +48,8 @@ int main(){
                     if(blockReceived->address.Tag == L1controllerIsIdleUntilItReceivesThisBlock.address.Tag){
                         printf("L1 Controller being released from idle\n");
                         l1Controller->waiting = false;
+                        Set* set = getSetByIndex(&l1Controller->cache->HashTable,blockReceived->address.Index);
+                        removeFromTable(&set->HashTable,blockReceived);
                     }
                 }
                 WriteBlockToL1Controller(blockReceived);
@@ -82,7 +84,8 @@ int main(){
                 }
             }
         }
-
+        /*Set* setTest = getSetByIndex(&l1Controller->cache->HashTable,511);
+        Block* blockTest = get(&setTest->HashTable,0);*/
         //L2 Controller
 
         //1. Check for writebacks from L1 and Data from L2
@@ -99,6 +102,8 @@ int main(){
                         L2controllerIsIdleUntilItReceivesThisBlock.address.Tag) {
                         printf("L2 Controller being released from idle\n");
                         l2Controller->waiting = false;
+                        Set* set = getSetByIndex(&l2Controller->cache->HashTable,blockReceived->address.Index);
+                        removeFromTable(&set->HashTable,blockReceived);
                     }
                 }
                 WriteBlockToL2Controller(flushedFromBufers);
